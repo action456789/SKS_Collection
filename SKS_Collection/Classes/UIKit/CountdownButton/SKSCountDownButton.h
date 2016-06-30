@@ -10,6 +10,8 @@
 
 @interface SKSCountDownButton : UIButton
 
-@property (nonatomic, assign) NSInteger second;
+typedef void (^SKSCountDownButtonClickedHandle)(void);
+
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth ClickdHandle:(SKSCountDownButtonClickedHandle)handle;
 
 @end

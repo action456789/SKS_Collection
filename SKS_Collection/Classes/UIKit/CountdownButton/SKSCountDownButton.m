@@ -7,61 +7,61 @@
 //
 
 #import "SKSCountDownButton.h"
-#import <objc/runtime.h>
+#import "NSTimer+SKSBlockSupurt.h"
 
 @implementation SKSCountDownButton {
-    dispatch_source_t _timer;
+    NSTimer           *_timer;
     NSString          *_titleForNormal;
-    NSInteger    _updateSecond;
+    NSTimeInterval    _second;
+    SKSCountDownButtonClickedHandle  _clickedHandle;
 }
 
-+ (void)load
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth ClickdHandle:(SKSCountDownButtonClickedHandle)handle
 {
-    Method originalMethod = class_getInstanceMethod([self class],
-                                                    @selector(sendAction:to:forEvent:));
-    Method swappedMethod = class_getInstanceMethod([self class],
-                                                   @selector(p_sendAction:to:forEvent:));
-    method_exchangeImplementations(originalMethod, swappedMethod);
-    
+    if(self = [super init]) {
+        _second = timeLenth > 0 ? timeLenth : 60;
+        [self addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
+        _clickedHandle = [handle copy];
+    }
+    return self;
 }
 
-- (void)setSecond:(NSInteger)second
+- (void)btnClicked
 {
-    _second = second > 0 ? second : 60;
-    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-}
-
-- (void)p_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
-{
-    _titleForNormal = [self titleForState:UIControlStateNormal];
     self.userInteractionEnabled = NO;
-    _updateSecond = _second + 1;
+    _titleForNormal = [self titleForState:UIControlStateNormal];
     [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)_second] forState:UIControlStateNormal];
-    [self startTimer];
-    [self p_sendAction:action to:target forEvent:event];
+    
+    [self p_startTimer];
+    
+    if (_clickedHandle) {
+        _clickedHandle();
+    }
 }
 
-- (void)startTimer
+- (void)p_startTimer
 {
-    NSTimeInterval interval = 1.0f;
-    NSTimeInterval delay = 0.0f;
-    [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)_updateSecond] forState:UIControlStateNormal];
-    dispatch_source_set_timer(_timer, dispatch_time(DISPATCH_TIME_NOW, delay), interval * NSEC_PER_SEC, 1.0 * NSEC_PER_SEC);
-    dispatch_source_set_event_handler(_timer, ^{
-        --_updateSecond;
-        [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)_updateSecond] forState:UIControlStateNormal];
-        if (_updateSecond < 0) {
-            self.userInteractionEnabled = YES;
+    __block NSInteger timeLeft = _second;
+    
+    _timer = [NSTimer sks_scheduledTimerWithTimeInterval:1.0f repeats:YES block:^{
+        timeLeft--;
+        if (timeLeft < 0) {
             [self setTitle:_titleForNormal forState:UIControlStateNormal];
-            dispatch_suspend(_timer);
+            self.userInteractionEnabled = YES;
+            [_timer invalidate];
+        } else {
+            [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)timeLeft] forState:UIControlStateNormal];
+            self.userInteractionEnabled = NO;
         }
-    });
-    dispatch_resume(_timer);
+    }];
 }
 
 - (void)dealloc
 {
-    dispatch_cancel(_timer);
+    if(_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 @end

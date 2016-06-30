@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RoundViewDemoVC.h
 //  SKS_Collection
 //
 //  Created by KeSen on 6/28/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RoundViewDemoVC : UIViewController
 
 @end
-

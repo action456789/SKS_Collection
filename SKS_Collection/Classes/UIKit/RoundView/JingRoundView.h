@@ -8,19 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-////////////
-//delegate//
-////////////
 @protocol JingRoundViewDelegate <NSObject>
 
 -(void) playStatuUpdate:(BOOL)playState;
 
 @end
 
-
-//////////////
-//@interface//
-//////////////
 @interface JingRoundView : UIView
 
 @property (assign, nonatomic) id<JingRoundViewDelegate> delegate;
