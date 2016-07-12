@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad
 {
+    self.view.backgroundColor = [UIColor blueColor];
     [self addCABasicAnimation];
 }
 

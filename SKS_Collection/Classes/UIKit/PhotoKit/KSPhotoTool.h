@@ -22,9 +22,6 @@ typedef void (^failure)(NSError *error);
 // 保存一张照片到某个相册中
 - (void)saveImage:(UIImage *)image inAsesetCollection:(PHAssetCollection *)collection success:(success)saveSuccess failure:(failure)saveFailure;
 
-// 获取所有照片
-- (NSArray *)allImages;
-
 // 获取某个相册里的所有照片
 - (NSArray *)imagesInAssetCollection:(PHAssetCollection *)collection;
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
+		10642B9D1D34DCC9001217CF /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B9C1D34DCC9001217CF /* CellItem.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -62,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		10642B9B1D34DCC9001217CF /* CellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellItem.h; sourceTree = "<group>"; };
+		10642B9C1D34DCC9001217CF /* CellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellItem.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -183,6 +189,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		10642B961D34D7D6001217CF /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10642B9A1D34DCB3001217CF /* CellItem */,
+				10642B971D34D80F001217CF /* RootViewController.h */,
+				10642B981D34D80F001217CF /* RootViewController.m */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		10642B9A1D34DCB3001217CF /* CellItem */ = {
+			isa = PBXGroup;
+			children = (
+				10642B9B1D34DCC9001217CF /* CellItem.h */,
+				10642B9C1D34DCC9001217CF /* CellItem.m */,
+			);
+			path = CellItem;
+			sourceTree = "<group>";
+		};
 		10DD982D1D226B1F00193A69 = {
 			isa = PBXGroup;
 			children = (
@@ -204,10 +229,11 @@
 		10DD98381D226B1F00193A69 /* SKS_Collection */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98F61D2279B100193A69 /* MainController */,
-				10DD98631D226B7D00193A69 /* Classes */,
 				10DD983C1D226B1F00193A69 /* AppDelegate.h */,
 				10DD983D1D226B1F00193A69 /* AppDelegate.m */,
+				10642B961D34D7D6001217CF /* RootViewController */,
+				10DD98F61D2279B100193A69 /* MainController */,
+				10DD98631D226B7D00193A69 /* Classes */,
 				10DD98421D226B1F00193A69 /* Main.storyboard */,
 				10DD98451D226B1F00193A69 /* Assets.xcassets */,
 				10DD98471D226B1F00193A69 /* LaunchScreen.storyboard */,
@@ -716,11 +742,13 @@
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
 				10DD990E1D227E3100193A69 /* RoundViewDemoVC.m in Sources */,
+				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10DD98D51D226B7D00193A69 /* NSString+KS_Font.m in Sources */,
 				10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */,
 				10DD98D91D226B7D00193A69 /* UIImageView+KSWebCache.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+KS_Animate.m in Sources */,
+				10642B9D1D34DCC9001217CF /* CellItem.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				10DD98EB1D226B7D00193A69 /* KSLayAnimationView.m in Sources */,
 				10DD98F01D226B7D00193A69 /* KK_DiskCacheFile.m in Sources */,
