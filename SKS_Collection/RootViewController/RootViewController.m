@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "CellItem.h"
 #import "CountDownButtonDemoVC.h"
-#import "RoundViewDemoVC.h"
+#import "RotateAnimateViewController.h"
 
 @interface RootViewController()<UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
@@ -37,7 +37,7 @@
 
 - (void)initData {
     _dataArray = @[  [CellItem itemWithName:@"倒计时按钮" objectClass:[CountDownButtonDemoVC class]]
-                    ,[CellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RoundViewDemoVC class]]
+                    ,[CellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
                   ];
     
     [_tableView reloadData];

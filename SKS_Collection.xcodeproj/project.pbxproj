@@ -53,7 +53,7 @@
 		10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98CD1D226B7D00193A69 /* KK_ThreadSafeArray.m */; };
 		10DD98F51D2278E300193A69 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DD98F41D2278E300193A69 /* libicucore.tbd */; };
 		10DD990B1D227D8C00193A69 /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD990A1D227D8C00193A69 /* CountDownButtonDemoVC.m */; };
-		10DD990E1D227E3100193A69 /* RoundViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD990D1D227E3100193A69 /* RoundViewDemoVC.m */; };
+		10DD990E1D227E3100193A69 /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD990D1D227E3100193A69 /* RotateAnimateViewController.m */; };
 		10DD99201D22802A00193A69 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991B1D22802A00193A69 /* background.jpg */; };
 		10DD99211D22802A00193A69 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991C1D22802A00193A69 /* girl.png */; };
 		10DD99221D22802A00193A69 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991D1D22802A00193A69 /* pause.png */; };
@@ -153,8 +153,8 @@
 		10DD98F41D2278E300193A69 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		10DD99091D227D8C00193A69 /* CountDownButtonDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonDemoVC.h; sourceTree = "<group>"; };
 		10DD990A1D227D8C00193A69 /* CountDownButtonDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButtonDemoVC.m; sourceTree = "<group>"; };
-		10DD990C1D227E3000193A69 /* RoundViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundViewDemoVC.h; sourceTree = "<group>"; };
-		10DD990D1D227E3100193A69 /* RoundViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundViewDemoVC.m; sourceTree = "<group>"; };
+		10DD990C1D227E3000193A69 /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
+		10DD990D1D227E3100193A69 /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
 		10DD991B1D22802A00193A69 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		10DD991C1D22802A00193A69 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		10DD991D1D22802A00193A69 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
@@ -571,8 +571,8 @@
 			children = (
 				10DD99091D227D8C00193A69 /* CountDownButtonDemoVC.h */,
 				10DD990A1D227D8C00193A69 /* CountDownButtonDemoVC.m */,
-				10DD990C1D227E3000193A69 /* RoundViewDemoVC.h */,
-				10DD990D1D227E3100193A69 /* RoundViewDemoVC.m */,
+				10DD990C1D227E3000193A69 /* RotateAnimateViewController.h */,
+				10DD990D1D227E3100193A69 /* RotateAnimateViewController.m */,
 			);
 			path = MainController;
 			sourceTree = "<group>";
@@ -741,7 +741,7 @@
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
-				10DD990E1D227E3100193A69 /* RoundViewDemoVC.m in Sources */,
+				10DD990E1D227E3100193A69 /* RotateAnimateViewController.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10DD98D51D226B7D00193A69 /* NSString+KS_Font.m in Sources */,
 				10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */,
