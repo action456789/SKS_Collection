@@ -6,13 +6,13 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "CellItem.h"
+#import "ListCellItem.h"
 
-@implementation CellItem
+@implementation ListCellItem
 
-+ (instancetype)itemWithName:(NSString *)name objectClass:(Class)objectClass {
-    
-    CellItem *item  = [[[self class] alloc] init];
++ (instancetype)itemWithName:(NSString *)name objectClass:(Class)objectClass
+{
+    ListCellItem *item  = [[[self class] alloc] init];
     item.name   = name;
     item.objectClass = objectClass;
     

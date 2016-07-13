@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CellItem : NSObject
+@interface ListCellItem : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) Class objectClass;

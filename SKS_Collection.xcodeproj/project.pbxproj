@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
-		10642B9D1D34DCC9001217CF /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B9C1D34DCC9001217CF /* CellItem.m */; };
+		10642B9D1D34DCC9001217CF /* ListCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B9C1D34DCC9001217CF /* ListCellItem.m */; };
+		10642BA91D364DDC001217CF /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642BA81D364DDC001217CF /* ListCell.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -66,8 +67,10 @@
 /* Begin PBXFileReference section */
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		10642B9B1D34DCC9001217CF /* CellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellItem.h; sourceTree = "<group>"; };
-		10642B9C1D34DCC9001217CF /* CellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellItem.m; sourceTree = "<group>"; };
+		10642B9B1D34DCC9001217CF /* ListCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCellItem.h; sourceTree = "<group>"; };
+		10642B9C1D34DCC9001217CF /* ListCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCellItem.m; sourceTree = "<group>"; };
+		10642BA71D364DDC001217CF /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		10642BA81D364DDC001217CF /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,8 +205,10 @@
 		10642B9A1D34DCB3001217CF /* CellItem */ = {
 			isa = PBXGroup;
 			children = (
-				10642B9B1D34DCC9001217CF /* CellItem.h */,
-				10642B9C1D34DCC9001217CF /* CellItem.m */,
+				10642B9B1D34DCC9001217CF /* ListCellItem.h */,
+				10642B9C1D34DCC9001217CF /* ListCellItem.m */,
+				10642BA71D364DDC001217CF /* ListCell.h */,
+				10642BA81D364DDC001217CF /* ListCell.m */,
 			);
 			path = CellItem;
 			sourceTree = "<group>";
@@ -739,6 +744,7 @@
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
+				10642BA91D364DDC001217CF /* ListCell.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
 				10DD990E1D227E3100193A69 /* RotateAnimateViewController.m in Sources */,
@@ -748,7 +754,7 @@
 				10DD98D91D226B7D00193A69 /* UIImageView+KSWebCache.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+KS_Animate.m in Sources */,
-				10642B9D1D34DCC9001217CF /* CellItem.m in Sources */,
+				10642B9D1D34DCC9001217CF /* ListCellItem.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				10DD98EB1D226B7D00193A69 /* KSLayAnimationView.m in Sources */,
 				10DD98F01D226B7D00193A69 /* KK_DiskCacheFile.m in Sources */,
