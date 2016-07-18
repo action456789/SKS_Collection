@@ -11,6 +11,7 @@
 #import "CountDownButtonDemoVC.h"
 #import "RotateAnimateViewController.h"
 #import "ListCell.h"
+#import "SlideTabBarDemoController.h"
 
 @interface RootViewController()<UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
@@ -41,6 +42,7 @@
 {
     _dataArray = @[  [ListCellItem itemWithName:@"倒计时按钮" objectClass:[CountDownButtonDemoVC class]]
                     ,[ListCellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
+                    ,[ListCellItem itemWithName:@"Slide Tab Bar" objectClass:[SlideTabBarDemoController class]]
                   ];
     
     [_tableView reloadData];
