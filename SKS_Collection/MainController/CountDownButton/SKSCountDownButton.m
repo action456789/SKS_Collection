@@ -16,7 +16,7 @@
     SKSCountDownButtonClickedHandle  _clickedHandle;
 }
 
-- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth ClickdHandle:(SKSCountDownButtonClickedHandle)handle
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(SKSCountDownButtonClickedHandle)handle
 {
     if(self = [super init]) {
         _second = timeLenth > 0 ? timeLenth : 60;
@@ -42,8 +42,8 @@
 - (void)p_startTimer
 {
     __block NSInteger timeLeft = _second;
-    
-    _timer = [NSTimer sks_scheduledTimerWithTimeInterval:1.0f repeats:YES block:^{
+
+    _timer = [NSTimer sks_scheduledTimerInCommonModesWithTimeInterval:1.0f repeats:YES block:^{
         timeLeft--;
         if (timeLeft < 0) {
             [self setTitle:_titleForNormal forState:UIControlStateNormal];
@@ -55,6 +55,7 @@
         }
     }];
 }
+
 
 - (void)dealloc
 {

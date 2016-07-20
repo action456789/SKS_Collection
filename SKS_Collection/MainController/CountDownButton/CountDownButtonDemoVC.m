@@ -14,7 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
-    SKSCountDownButton *btn = [[SKSCountDownButton alloc] initWithTimeLenth:10 ClickdHandle:^{
+    SKSCountDownButton *btn = [[SKSCountDownButton alloc] initWithTimeLenth:11 clickdHandle:^{
         NSLog(@"%s, %@", __func__, btn);
     }];
     

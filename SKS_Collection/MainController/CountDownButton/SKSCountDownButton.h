@@ -12,6 +12,6 @@
 
 typedef void (^SKSCountDownButtonClickedHandle)(void);
 
-- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth ClickdHandle:(SKSCountDownButtonClickedHandle)handle;
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(SKSCountDownButtonClickedHandle)handle;
 
 @end

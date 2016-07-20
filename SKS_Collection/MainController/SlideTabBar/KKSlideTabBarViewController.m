@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _cache = [[NSCache alloc] init];
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 

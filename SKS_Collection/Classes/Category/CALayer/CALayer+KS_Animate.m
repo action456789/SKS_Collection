@@ -10,9 +10,14 @@
 
 @implementation CALayer (KS_Animate)
 
--(void)pauseLayer
+- (void)pauseLayer
 {
     CALayer *layer = self;
+    
+    if (layer.speed == 0.0f) {
+        return;
+    }
+    
     CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
     
     // 让CALayer的时间停止走动
@@ -21,9 +26,13 @@
     layer.timeOffset = pausedTime;
 }
 
--(void)resumeLayer
+- (void)resumeLayer
 {
     CALayer *layer = self;
+    
+    if (layer.speed == 1.0f) {
+        return;
+    }
     
     CFTimeInterval pausedTime = layer.timeOffset;
     // 1. 让CALayer的时间继续行走
