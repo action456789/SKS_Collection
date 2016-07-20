@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RotateAnimateViewController : UIViewController
+@interface RotateAnimateViewController : BaseViewController
 
 @end

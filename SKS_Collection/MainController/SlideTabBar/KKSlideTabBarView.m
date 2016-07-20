@@ -140,7 +140,7 @@ static NSString *kItemButtonColor = @"#808080";
 {
     [_topContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self);
-        make.top.mas_equalTo(self.mas_top);
+        make.top.mas_equalTo(self.mas_top).offset(44);
         make.height.mas_equalTo(@(kTopViewHeight));
     }];
     

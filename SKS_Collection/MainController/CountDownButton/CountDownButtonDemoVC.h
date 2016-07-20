@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface CountDownButtonDemoVC : UIViewController
+@interface CountDownButtonDemoVC : BaseViewController
 
 @end

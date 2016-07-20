@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */; };
+		103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */; };
+		103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */; };
+		103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */; };
+		103A55531D3CCCF200366D8F /* SlideTabBarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */; };
+		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10642B9D1D34DCC9001217CF /* ListCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B9C1D34DCC9001217CF /* ListCellItem.m */; };
 		10642BA91D364DDC001217CF /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642BA81D364DDC001217CF /* ListCell.m */; };
-		1092D86A1D3CC97200E0069E /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1092D8611D3CC97200E0069E /* RotateAnimateViewController.m */; };
-		1092D86B1D3CC97200E0069E /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1092D8641D3CC97200E0069E /* CountDownButtonDemoVC.m */; };
-		1092D86C1D3CC97200E0069E /* KKSlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1092D8671D3CC97200E0069E /* KKSlideTabBarView.m */; };
-		1092D86D1D3CC97200E0069E /* KKSlideTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1092D8691D3CC97200E0069E /* KKSlideTabBarViewController.m */; };
-		1092D8701D3CC9CD00E0069E /* SlideTabBarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1092D86F1D3CC9CD00E0069E /* SlideTabBarDemoController.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -47,10 +48,6 @@
 		10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98AC1D226B7D00193A69 /* KK_DownloaderModal.m */; };
 		10DD98E81D226B7D00193A69 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B01D226B7D00193A69 /* Reachability.m */; };
 		10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B21D226B7D00193A69 /* Reachability+KS.m */; };
-		10DD98EA1D226B7D00193A69 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B61D226B7D00193A69 /* SKSCountDownButton.m */; };
-		10DD98EB1D226B7D00193A69 /* KSLayAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98BA1D226B7D00193A69 /* KSLayAnimationView.m */; };
-		10DD98EC1D226B7D00193A69 /* MBProgressHUD+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98BC1D226B7D00193A69 /* MBProgressHUD+KS.m */; };
-		10DD98ED1D226B7D00193A69 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98BD1D226B7D00193A69 /* MBProgressHUD.bundle */; };
 		10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C01D226B7D00193A69 /* KSPhotoTool.m */; };
 		10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C41D226B7D00193A69 /* JingRoundView.m */; };
 		10DD98F01D226B7D00193A69 /* KK_DiskCacheFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C71D226B7D00193A69 /* KK_DiskCacheFile.m */; };
@@ -64,26 +61,29 @@
 		10DD99231D22802A00193A69 /* play_bg_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991E1D22802A00193A69 /* play_bg_p.png */; };
 		10DD99241D22802A00193A69 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991F1D22802A00193A69 /* start.png */; };
 		10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD996A1D24F48600193A69 /* UIDevice+KS.m */; };
+		10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */; };
 		85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103A55431D3CCCF200366D8F /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
+		103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
+		103A55461D3CCCF200366D8F /* CountDownButtonDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonDemoVC.h; sourceTree = "<group>"; };
+		103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButtonDemoVC.m; sourceTree = "<group>"; };
+		103A55491D3CCCF200366D8F /* KKSlideTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarView.h; sourceTree = "<group>"; };
+		103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarView.m; sourceTree = "<group>"; };
+		103A554B1D3CCCF200366D8F /* KKSlideTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarViewController.h; sourceTree = "<group>"; };
+		103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarViewController.m; sourceTree = "<group>"; };
+		103A554D1D3CCCF200366D8F /* SlideTabBarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarDemoController.h; sourceTree = "<group>"; };
+		103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarDemoController.m; sourceTree = "<group>"; };
+		103A55551D3CCD1900366D8F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		10642B9B1D34DCC9001217CF /* ListCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCellItem.h; sourceTree = "<group>"; };
 		10642B9C1D34DCC9001217CF /* ListCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCellItem.m; sourceTree = "<group>"; };
 		10642BA71D364DDC001217CF /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
 		10642BA81D364DDC001217CF /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
-		1092D8601D3CC97200E0069E /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
-		1092D8611D3CC97200E0069E /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
-		1092D8631D3CC97200E0069E /* CountDownButtonDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonDemoVC.h; sourceTree = "<group>"; };
-		1092D8641D3CC97200E0069E /* CountDownButtonDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButtonDemoVC.m; sourceTree = "<group>"; };
-		1092D8661D3CC97200E0069E /* KKSlideTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarView.h; sourceTree = "<group>"; };
-		1092D8671D3CC97200E0069E /* KKSlideTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarView.m; sourceTree = "<group>"; };
-		1092D8681D3CC97200E0069E /* KKSlideTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarViewController.h; sourceTree = "<group>"; };
-		1092D8691D3CC97200E0069E /* KKSlideTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarViewController.m; sourceTree = "<group>"; };
-		1092D86E1D3CC9CD00E0069E /* SlideTabBarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarDemoController.h; sourceTree = "<group>"; };
-		1092D86F1D3CC9CD00E0069E /* SlideTabBarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarDemoController.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,13 +147,6 @@
 		10DD98B01D226B7D00193A69 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		10DD98B11D226B7D00193A69 /* Reachability+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reachability+KS.h"; sourceTree = "<group>"; };
 		10DD98B21D226B7D00193A69 /* Reachability+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reachability+KS.m"; sourceTree = "<group>"; };
-		10DD98B51D226B7D00193A69 /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
-		10DD98B61D226B7D00193A69 /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
-		10DD98B91D226B7D00193A69 /* KSLayAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLayAnimationView.h; sourceTree = "<group>"; };
-		10DD98BA1D226B7D00193A69 /* KSLayAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLayAnimationView.m; sourceTree = "<group>"; };
-		10DD98BB1D226B7D00193A69 /* MBProgressHUD+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+KS.h"; sourceTree = "<group>"; };
-		10DD98BC1D226B7D00193A69 /* MBProgressHUD+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+KS.m"; sourceTree = "<group>"; };
-		10DD98BD1D226B7D00193A69 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		10DD98BF1D226B7D00193A69 /* KSPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPhotoTool.h; sourceTree = "<group>"; };
 		10DD98C01D226B7D00193A69 /* KSPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPhotoTool.m; sourceTree = "<group>"; };
 		10DD98C31D226B7D00193A69 /* JingRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JingRoundView.h; sourceTree = "<group>"; };
@@ -174,6 +167,8 @@
 		10DD991F1D22802A00193A69 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		10DD99691D24F48600193A69 /* UIDevice+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+KS.h"; sourceTree = "<group>"; };
 		10DD996A1D24F48600193A69 /* UIDevice+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+KS.m"; sourceTree = "<group>"; };
+		10F4DFC91D3E26C600E0D223 /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
+		10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 		6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +196,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		103A55411D3CCCF200366D8F /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				103A55421D3CCCF200366D8F /* AnimatePauseAndResume */,
+				103A55451D3CCCF200366D8F /* CountDownButton */,
+				103A55481D3CCCF200366D8F /* SlideTabBar */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		103A55421D3CCCF200366D8F /* AnimatePauseAndResume */ = {
+			isa = PBXGroup;
+			children = (
+				103A55431D3CCCF200366D8F /* RotateAnimateViewController.h */,
+				103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */,
+			);
+			path = AnimatePauseAndResume;
+			sourceTree = "<group>";
+		};
+		103A55451D3CCCF200366D8F /* CountDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				10F4DFC91D3E26C600E0D223 /* SKSCountDownButton.h */,
+				10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */,
+				103A55461D3CCCF200366D8F /* CountDownButtonDemoVC.h */,
+				103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */,
+			);
+			path = CountDownButton;
+			sourceTree = "<group>";
+		};
+		103A55481D3CCCF200366D8F /* SlideTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				103A55491D3CCCF200366D8F /* KKSlideTabBarView.h */,
+				103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */,
+				103A554B1D3CCCF200366D8F /* KKSlideTabBarViewController.h */,
+				103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */,
+				103A554D1D3CCCF200366D8F /* SlideTabBarDemoController.h */,
+				103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */,
+			);
+			path = SlideTabBar;
+			sourceTree = "<group>";
+		};
+		103A55541D3CCCFA00366D8F /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				103A55551D3CCD1900366D8F /* BaseViewController.h */,
+				103A55561D3CCD1900366D8F /* BaseViewController.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		10642B961D34D7D6001217CF /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,37 +267,6 @@
 				10642BA81D364DDC001217CF /* ListCell.m */,
 			);
 			path = CellItem;
-			sourceTree = "<group>";
-		};
-		1092D85F1D3CC97200E0069E /* AnimatePauseAndResume */ = {
-			isa = PBXGroup;
-			children = (
-				1092D8601D3CC97200E0069E /* RotateAnimateViewController.h */,
-				1092D8611D3CC97200E0069E /* RotateAnimateViewController.m */,
-			);
-			path = AnimatePauseAndResume;
-			sourceTree = "<group>";
-		};
-		1092D8621D3CC97200E0069E /* CountDownButton */ = {
-			isa = PBXGroup;
-			children = (
-				1092D8631D3CC97200E0069E /* CountDownButtonDemoVC.h */,
-				1092D8641D3CC97200E0069E /* CountDownButtonDemoVC.m */,
-			);
-			path = CountDownButton;
-			sourceTree = "<group>";
-		};
-		1092D8651D3CC97200E0069E /* SlideTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				1092D8661D3CC97200E0069E /* KKSlideTabBarView.h */,
-				1092D8671D3CC97200E0069E /* KKSlideTabBarView.m */,
-				1092D8681D3CC97200E0069E /* KKSlideTabBarViewController.h */,
-				1092D8691D3CC97200E0069E /* KKSlideTabBarViewController.m */,
-				1092D86E1D3CC9CD00E0069E /* SlideTabBarDemoController.h */,
-				1092D86F1D3CC9CD00E0069E /* SlideTabBarDemoController.m */,
-			);
-			path = SlideTabBar;
 			sourceTree = "<group>";
 		};
 		10DD982D1D226B1F00193A69 = {
@@ -276,8 +292,9 @@
 			children = (
 				10DD983C1D226B1F00193A69 /* AppDelegate.h */,
 				10DD983D1D226B1F00193A69 /* AppDelegate.m */,
+				103A55541D3CCCFA00366D8F /* BaseClasses */,
+				103A55411D3CCCF200366D8F /* MainController */,
 				10642B961D34D7D6001217CF /* RootViewController */,
-				10DD98F61D2279B100193A69 /* MainController */,
 				10DD98631D226B7D00193A69 /* Classes */,
 				10DD98421D226B1F00193A69 /* Main.storyboard */,
 				10DD98451D226B1F00193A69 /* Assets.xcassets */,
@@ -540,41 +557,10 @@
 		10DD98B31D226B7D00193A69 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98B41D226B7D00193A69 /* CountdownButton */,
-				10DD98B71D226B7D00193A69 /* MBProgressHUD */,
 				10DD98BE1D226B7D00193A69 /* PhotoKit */,
 				10DD98C11D226B7D00193A69 /* RoundView */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		10DD98B41D226B7D00193A69 /* CountdownButton */ = {
-			isa = PBXGroup;
-			children = (
-				10DD98B51D226B7D00193A69 /* SKSCountDownButton.h */,
-				10DD98B61D226B7D00193A69 /* SKSCountDownButton.m */,
-			);
-			path = CountdownButton;
-			sourceTree = "<group>";
-		};
-		10DD98B71D226B7D00193A69 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				10DD98B81D226B7D00193A69 /* CustomerView */,
-				10DD98BB1D226B7D00193A69 /* MBProgressHUD+KS.h */,
-				10DD98BC1D226B7D00193A69 /* MBProgressHUD+KS.m */,
-				10DD98BD1D226B7D00193A69 /* MBProgressHUD.bundle */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		10DD98B81D226B7D00193A69 /* CustomerView */ = {
-			isa = PBXGroup;
-			children = (
-				10DD98B91D226B7D00193A69 /* KSLayAnimationView.h */,
-				10DD98BA1D226B7D00193A69 /* KSLayAnimationView.m */,
-			);
-			path = CustomerView;
 			sourceTree = "<group>";
 		};
 		10DD98BE1D226B7D00193A69 /* PhotoKit */ = {
@@ -609,16 +595,6 @@
 				10DD98CD1D226B7D00193A69 /* KK_ThreadSafeArray.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		10DD98F61D2279B100193A69 /* MainController */ = {
-			isa = PBXGroup;
-			children = (
-				1092D85F1D3CC97200E0069E /* AnimatePauseAndResume */,
-				1092D8621D3CC97200E0069E /* CountDownButton */,
-				1092D8651D3CC97200E0069E /* SlideTabBar */,
-			);
-			path = MainController;
 			sourceTree = "<group>";
 		};
 		10DD991A1D22802A00193A69 /* img */ = {
@@ -714,7 +690,6 @@
 				10DD98491D226B1F00193A69 /* LaunchScreen.storyboard in Resources */,
 				10DD99241D22802A00193A69 /* start.png in Resources */,
 				10DD99201D22802A00193A69 /* background.jpg in Resources */,
-				10DD98ED1D226B7D00193A69 /* MBProgressHUD.bundle in Resources */,
 				10DD99221D22802A00193A69 /* pause.png in Resources */,
 				10DD98461D226B1F00193A69 /* Assets.xcassets in Resources */,
 				10DD99231D22802A00193A69 /* play_bg_p.png in Resources */,
@@ -782,9 +757,10 @@
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
+				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				10642BA91D364DDC001217CF /* ListCell.m in Sources */,
-				1092D86D1D3CC97200E0069E /* KKSlideTabBarViewController.m in Sources */,
+				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
@@ -795,34 +771,32 @@
 				10DD98D01D226B7D00193A69 /* CALayer+KS_Animate.m in Sources */,
 				10642B9D1D34DCC9001217CF /* ListCellItem.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
-				10DD98EB1D226B7D00193A69 /* KSLayAnimationView.m in Sources */,
 				10DD98F01D226B7D00193A69 /* KK_DiskCacheFile.m in Sources */,
+				103A55531D3CCCF200366D8F /* SlideTabBarDemoController.m in Sources */,
 				10DD98F11D226B7D00193A69 /* KK_DiskCacheSqlLite.m in Sources */,
 				10DD98E51D226B7D00193A69 /* KSSaveTool.m in Sources */,
-				1092D8701D3CC9CD00E0069E /* SlideTabBarDemoController.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				10DD98E41D226B7D00193A69 /* KSSerialization.m in Sources */,
-				1092D86C1D3CC97200E0069E /* KKSlideTabBarView.m in Sources */,
+				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
+				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				10DD98E01D226B7D00193A69 /* UIView+Tool.m in Sources */,
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
-				1092D86B1D3CC97200E0069E /* CountDownButtonDemoVC.m in Sources */,
+				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98D31D226B7D00193A69 /* NSString+KK_File.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
-				10DD98EC1D226B7D00193A69 /* MBProgressHUD+KS.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+KS_Hash.m in Sources */,
 				10DD98DC1D226B7D00193A69 /* UIColor+Hex.m in Sources */,
 				10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
-				1092D86A1D3CC97200E0069E /* RotateAnimateViewController.m in Sources */,
+				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+SKSBlockSupurt.m in Sources */,
 				10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */,
-				10DD98EA1D226B7D00193A69 /* SKSCountDownButton.m in Sources */,
 				10DD98D71D226B7D00193A69 /* NSString+KS_Regular.m in Sources */,
 				10DD98D41D226B7D00193A69 /* NSString+KK_URL.m in Sources */,
 			);

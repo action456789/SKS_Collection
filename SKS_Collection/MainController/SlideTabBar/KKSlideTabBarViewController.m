@@ -44,7 +44,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame itemTitles:(NSMutableArray *)itemTitles controllers:(NSMutableArray *)controllers
 {
-    _tabBar = [[KKSlideTabBarView alloc] initWithFrame:self.view.frame itemTitles:itemTitles controllers:controllers];
+    _tabBar = [[KKSlideTabBarView alloc] initWithFrame:frame itemTitles:itemTitles controllers:controllers];
     _tabBar.delegate = self;
     [_tabBar setCurrentPage:0 withAnimate:NO];
     //_tabBar.navigationController = [FsSharedDataManager sharedInstance].navigationController;
