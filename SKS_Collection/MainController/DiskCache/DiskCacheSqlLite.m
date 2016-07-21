@@ -6,10 +6,10 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import "KK_DiskCacheSqlLite.h"
+#import "DiskCacheSqlLite.h"
 #import <FMDB/FMDB.h>
 
-@interface KK_DiskCacheSqlLite()
+@interface DiskCacheSqlLite()
 
 @property (nonatomic, copy) NSString *dbPath;
 @property (nonatomic, strong) FMDatabase *db;
@@ -19,7 +19,7 @@
 
 #define DATABASE_KEY @"com.kesen.www"
 
-@implementation KK_DiskCacheSqlLite
+@implementation DiskCacheSqlLite
 
 - (instancetype)init
 {
@@ -81,7 +81,7 @@
     return _dbQueue;
 }
 
-- (BOOL)dbSaveItemWithKey:(NSString *)key value:(NSData *)value {
+- (BOOL)dbAddItemWithKey:(NSString *)key value:(NSData *)value {
     if (!self.db) return NO;
     
     [self.db beginTransaction];

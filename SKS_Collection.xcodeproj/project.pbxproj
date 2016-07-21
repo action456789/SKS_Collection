@@ -14,8 +14,6 @@
 		103A55531D3CCCF200366D8F /* SlideTabBarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
-		10642B9D1D34DCC9001217CF /* ListCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B9C1D34DCC9001217CF /* ListCellItem.m */; };
-		10642BA91D364DDC001217CF /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642BA81D364DDC001217CF /* ListCell.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -26,7 +24,6 @@
 		10DD98D01D226B7D00193A69 /* CALayer+KS_Animate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD986C1D226B7D00193A69 /* CALayer+KS_Animate.m */; };
 		10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD986E1D226B7D00193A69 /* Foundation+Log.m */; };
 		10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98711D226B7D00193A69 /* NSDate+KS.m */; };
-		10DD98D31D226B7D00193A69 /* NSString+KK_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98741D226B7D00193A69 /* NSString+KK_File.m */; };
 		10DD98D41D226B7D00193A69 /* NSString+KK_URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98761D226B7D00193A69 /* NSString+KK_URL.m */; };
 		10DD98D51D226B7D00193A69 /* NSString+KS_Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98781D226B7D00193A69 /* NSString+KS_Font.m */; };
 		10DD98D61D226B7D00193A69 /* NSString+KS_Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD987A1D226B7D00193A69 /* NSString+KS_Hash.m */; };
@@ -50,8 +47,6 @@
 		10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B21D226B7D00193A69 /* Reachability+KS.m */; };
 		10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C01D226B7D00193A69 /* KSPhotoTool.m */; };
 		10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C41D226B7D00193A69 /* JingRoundView.m */; };
-		10DD98F01D226B7D00193A69 /* KK_DiskCacheFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C71D226B7D00193A69 /* KK_DiskCacheFile.m */; };
-		10DD98F11D226B7D00193A69 /* KK_DiskCacheSqlLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C91D226B7D00193A69 /* KK_DiskCacheSqlLite.m */; };
 		10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98CB1D226B7D00193A69 /* KK_ObserveredMutableArray.m */; };
 		10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98CD1D226B7D00193A69 /* KK_ThreadSafeArray.m */; };
 		10DD98F51D2278E300193A69 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DD98F41D2278E300193A69 /* libicucore.tbd */; };
@@ -63,6 +58,11 @@
 		10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD996A1D24F48600193A69 /* UIDevice+KS.m */; };
 		10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */; };
 		10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */; };
+		10F4DFD41D40748900E0D223 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFD11D40748900E0D223 /* ListCell.m */; };
+		10F4DFD51D40748900E0D223 /* ListCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFD31D40748900E0D223 /* ListCellItem.m */; };
+		10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFDE1D40981500E0D223 /* DiskCacheSqlLite.m */; };
+		10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFE41D40983F00E0D223 /* DiskCacheFile.m */; };
+		10F4DFE81D40A01400E0D223 /* NSFileManager+SKS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFE71D40A01400E0D223 /* NSFileManager+SKS.m */; };
 		85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
@@ -81,10 +81,6 @@
 		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		10642B9B1D34DCC9001217CF /* ListCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCellItem.h; sourceTree = "<group>"; };
-		10642B9C1D34DCC9001217CF /* ListCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCellItem.m; sourceTree = "<group>"; };
-		10642BA71D364DDC001217CF /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
-		10642BA81D364DDC001217CF /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,8 +98,6 @@
 		10DD986E1D226B7D00193A69 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		10DD98701D226B7D00193A69 /* NSDate+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KS.h"; sourceTree = "<group>"; };
 		10DD98711D226B7D00193A69 /* NSDate+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KS.m"; sourceTree = "<group>"; };
-		10DD98731D226B7D00193A69 /* NSString+KK_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KK_File.h"; sourceTree = "<group>"; };
-		10DD98741D226B7D00193A69 /* NSString+KK_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KK_File.m"; sourceTree = "<group>"; };
 		10DD98751D226B7D00193A69 /* NSString+KK_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KK_URL.h"; sourceTree = "<group>"; };
 		10DD98761D226B7D00193A69 /* NSString+KK_URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KK_URL.m"; sourceTree = "<group>"; };
 		10DD98771D226B7D00193A69 /* NSString+KS_Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KS_Font.h"; sourceTree = "<group>"; };
@@ -152,10 +146,6 @@
 		10DD98C01D226B7D00193A69 /* KSPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPhotoTool.m; sourceTree = "<group>"; };
 		10DD98C31D226B7D00193A69 /* JingRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JingRoundView.h; sourceTree = "<group>"; };
 		10DD98C41D226B7D00193A69 /* JingRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JingRoundView.m; sourceTree = "<group>"; };
-		10DD98C61D226B7D00193A69 /* KK_DiskCacheFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_DiskCacheFile.h; sourceTree = "<group>"; };
-		10DD98C71D226B7D00193A69 /* KK_DiskCacheFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KK_DiskCacheFile.m; sourceTree = "<group>"; };
-		10DD98C81D226B7D00193A69 /* KK_DiskCacheSqlLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_DiskCacheSqlLite.h; sourceTree = "<group>"; };
-		10DD98C91D226B7D00193A69 /* KK_DiskCacheSqlLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KK_DiskCacheSqlLite.m; sourceTree = "<group>"; };
 		10DD98CA1D226B7D00193A69 /* KK_ObserveredMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_ObserveredMutableArray.h; sourceTree = "<group>"; };
 		10DD98CB1D226B7D00193A69 /* KK_ObserveredMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KK_ObserveredMutableArray.m; sourceTree = "<group>"; };
 		10DD98CC1D226B7D00193A69 /* KK_ThreadSafeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_ThreadSafeArray.h; sourceTree = "<group>"; };
@@ -172,6 +162,16 @@
 		10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		10F4DFCD1D3F861900E0D223 /* BlurEffectDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurEffectDemoController.h; sourceTree = "<group>"; };
 		10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurEffectDemoController.m; sourceTree = "<group>"; };
+		10F4DFD01D40748900E0D223 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		10F4DFD11D40748900E0D223 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		10F4DFD21D40748900E0D223 /* ListCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCellItem.h; sourceTree = "<group>"; };
+		10F4DFD31D40748900E0D223 /* ListCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCellItem.m; sourceTree = "<group>"; };
+		10F4DFDD1D40981500E0D223 /* DiskCacheSqlLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLite.h; sourceTree = "<group>"; };
+		10F4DFDE1D40981500E0D223 /* DiskCacheSqlLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLite.m; sourceTree = "<group>"; };
+		10F4DFE31D40983F00E0D223 /* DiskCacheFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheFile.h; sourceTree = "<group>"; };
+		10F4DFE41D40983F00E0D223 /* DiskCacheFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheFile.m; sourceTree = "<group>"; };
+		10F4DFE61D40A01400E0D223 /* NSFileManager+SKS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+SKS.h"; path = "SKS_Collection/Classes/Category/NSFileManager/NSFileManager+SKS.h"; sourceTree = SOURCE_ROOT; };
+		10F4DFE71D40A01400E0D223 /* NSFileManager+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+SKS.m"; path = "SKS_Collection/Classes/Category/NSFileManager/NSFileManager+SKS.m"; sourceTree = SOURCE_ROOT; };
 		20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 		6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +202,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				10F4DFD61D4097DB00E0D223 /* DiskCache */,
 				10F4DFCC1D3F85FE00E0D223 /* BlurEffect */,
 				103A55421D3CCCF200366D8F /* AnimatePauseAndResume */,
 				103A55451D3CCCF200366D8F /* CountDownButton */,
@@ -255,22 +256,14 @@
 		10642B961D34D7D6001217CF /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				10642B9A1D34DCB3001217CF /* CellItem */,
+				10F4DFD01D40748900E0D223 /* ListCell.h */,
+				10F4DFD11D40748900E0D223 /* ListCell.m */,
+				10F4DFD21D40748900E0D223 /* ListCellItem.h */,
+				10F4DFD31D40748900E0D223 /* ListCellItem.m */,
 				10642B971D34D80F001217CF /* RootViewController.h */,
 				10642B981D34D80F001217CF /* RootViewController.m */,
 			);
 			path = RootViewController;
-			sourceTree = "<group>";
-		};
-		10642B9A1D34DCB3001217CF /* CellItem */ = {
-			isa = PBXGroup;
-			children = (
-				10642B9B1D34DCC9001217CF /* ListCellItem.h */,
-				10642B9C1D34DCC9001217CF /* ListCellItem.m */,
-				10642BA71D364DDC001217CF /* ListCell.h */,
-				10642BA81D364DDC001217CF /* ListCell.m */,
-			);
-			path = CellItem;
 			sourceTree = "<group>";
 		};
 		10DD982D1D226B1F00193A69 = {
@@ -297,13 +290,9 @@
 				10DD983C1D226B1F00193A69 /* AppDelegate.h */,
 				10DD983D1D226B1F00193A69 /* AppDelegate.m */,
 				103A55541D3CCCFA00366D8F /* BaseClasses */,
-				103A55411D3CCCF200366D8F /* MainController */,
 				10642B961D34D7D6001217CF /* RootViewController */,
+				103A55411D3CCCF200366D8F /* MainController */,
 				10DD98631D226B7D00193A69 /* Classes */,
-				10DD98421D226B1F00193A69 /* Main.storyboard */,
-				10DD98451D226B1F00193A69 /* Assets.xcassets */,
-				10DD98471D226B1F00193A69 /* LaunchScreen.storyboard */,
-				10DD984A1D226B1F00193A69 /* Info.plist */,
 				10DD98391D226B1F00193A69 /* Supporting Files */,
 			);
 			path = SKS_Collection;
@@ -312,6 +301,10 @@
 		10DD98391D226B1F00193A69 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10DD98421D226B1F00193A69 /* Main.storyboard */,
+				10DD98451D226B1F00193A69 /* Assets.xcassets */,
+				10DD98471D226B1F00193A69 /* LaunchScreen.storyboard */,
+				10DD984A1D226B1F00193A69 /* Info.plist */,
 				10DD983A1D226B1F00193A69 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -344,6 +337,7 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				10F4DFE91D40A02200E0D223 /* NSFileManager */,
 				10DD99681D24F48600193A69 /* UIDevice */,
 				10DD986A1D226B7D00193A69 /* CALayer */,
 				10DD986D1D226B7D00193A69 /* Foundation */,
@@ -389,8 +383,6 @@
 		10DD98721D226B7D00193A69 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98731D226B7D00193A69 /* NSString+KK_File.h */,
-				10DD98741D226B7D00193A69 /* NSString+KK_File.m */,
 				10DD98751D226B7D00193A69 /* NSString+KK_URL.h */,
 				10DD98761D226B7D00193A69 /* NSString+KK_URL.m */,
 				10DD98771D226B7D00193A69 /* NSString+KS_Font.h */,
@@ -589,10 +581,6 @@
 		10DD98C51D226B7D00193A69 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98C61D226B7D00193A69 /* KK_DiskCacheFile.h */,
-				10DD98C71D226B7D00193A69 /* KK_DiskCacheFile.m */,
-				10DD98C81D226B7D00193A69 /* KK_DiskCacheSqlLite.h */,
-				10DD98C91D226B7D00193A69 /* KK_DiskCacheSqlLite.m */,
 				10DD98CA1D226B7D00193A69 /* KK_ObserveredMutableArray.h */,
 				10DD98CB1D226B7D00193A69 /* KK_ObserveredMutableArray.m */,
 				10DD98CC1D226B7D00193A69 /* KK_ThreadSafeArray.h */,
@@ -629,6 +617,26 @@
 				10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */,
 			);
 			path = BlurEffect;
+			sourceTree = "<group>";
+		};
+		10F4DFD61D4097DB00E0D223 /* DiskCache */ = {
+			isa = PBXGroup;
+			children = (
+				10F4DFDD1D40981500E0D223 /* DiskCacheSqlLite.h */,
+				10F4DFDE1D40981500E0D223 /* DiskCacheSqlLite.m */,
+				10F4DFE31D40983F00E0D223 /* DiskCacheFile.h */,
+				10F4DFE41D40983F00E0D223 /* DiskCacheFile.m */,
+			);
+			path = DiskCache;
+			sourceTree = "<group>";
+		};
+		10F4DFE91D40A02200E0D223 /* NSFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				10F4DFE61D40A01400E0D223 /* NSFileManager+SKS.h */,
+				10F4DFE71D40A01400E0D223 /* NSFileManager+SKS.m */,
+			);
+			path = NSFileManager;
 			sourceTree = "<group>";
 		};
 		DA4A57A0974FF2C2D6DBB9D4 /* Pods */ = {
@@ -767,12 +775,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
+				10F4DFD41D40748900E0D223 /* ListCell.m in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
 				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
+				10F4DFE81D40A01400E0D223 /* NSFileManager+SKS.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
-				10642BA91D364DDC001217CF /* ListCell.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
@@ -783,16 +792,16 @@
 				10DD98D91D226B7D00193A69 /* UIImageView+KSWebCache.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+KS_Animate.m in Sources */,
-				10642B9D1D34DCC9001217CF /* ListCellItem.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
-				10DD98F01D226B7D00193A69 /* KK_DiskCacheFile.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarDemoController.m in Sources */,
-				10DD98F11D226B7D00193A69 /* KK_DiskCacheSqlLite.m in Sources */,
 				10DD98E51D226B7D00193A69 /* KSSaveTool.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				10DD98E41D226B7D00193A69 /* KSSerialization.m in Sources */,
+				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
 				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
+				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
+				10F4DFD51D40748900E0D223 /* ListCellItem.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				10DD98E01D226B7D00193A69 /* UIView+Tool.m in Sources */,
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
@@ -800,7 +809,6 @@
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
-				10DD98D31D226B7D00193A69 /* NSString+KK_File.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
@@ -926,6 +934,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SKS_Collection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SenKe.SKS-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -938,6 +947,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SKS_Collection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SenKe.SKS-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";

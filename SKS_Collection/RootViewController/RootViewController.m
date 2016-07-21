@@ -14,9 +14,11 @@
 #import "SlideTabBarDemoController.h"
 #import "BlurEffectDemoController.h"
 
+static NSString *kCellIdentifier = @"kCellIdentifier";
+
 @interface RootViewController()<UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
-    NSArray<ListCellItem *> *_dataArray;
+    NSArray<ListCellItem *> *_dataSourceArray;
 }
 @end
 
@@ -27,41 +29,44 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self addTableView];
     [self initData];
-    
 }
 
 - (void)addTableView
 {
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
-    [self.view addSubview:_tableView];
-    _tableView.rowHeight = 50.f;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.rowHeight = 50.f;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [_tableView registerClass:[ListCell class] forCellReuseIdentifier:kCellIdentifier];
+    [self.view addSubview:_tableView];
 }
 
 - (void)initData
 {
-    _dataArray = @[  [ListCellItem itemWithName:@"倒计时按钮" objectClass:[CountDownButtonDemoVC class]]
-                    ,[ListCellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
-                    ,[ListCellItem itemWithName:@"Slide Tab Bar" objectClass:[SlideTabBarDemoController class]]
-                    ,[ListCellItem itemWithName:@"模糊效果" objectClass:[BlurEffectDemoController class]]
-                  ];
-    
-    [_tableView reloadData];
+    _dataSourceArray = @[  [ListCellItem itemWithName:@"倒计时按钮" objectClass:[CountDownButtonDemoVC class]]
+                           ,[ListCellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
+                           ,[ListCellItem itemWithName:@"Slide Tab Bar" objectClass:[SlideTabBarDemoController class]]
+                           ,[ListCellItem itemWithName:@"模糊效果" objectClass:[BlurEffectDemoController class]]
+                           ];
 }
 
-#pragma mark - tableView Delegate 
+#pragma mark - tableView Delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataArray.count;
+    return _dataSourceArray.count;
 }
 
 #pragma mark - tableView DataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *kCellIdentifier = @"kCellIdentifier";
     ListCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (!cell) {
         cell = [[ListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
@@ -75,14 +80,14 @@
         cell.backgroundColor = [UIColor whiteColor];
     }
     
-    cell.textLabel.text = _dataArray[indexPath.row].name;
+    cell.textLabel.text = _dataSourceArray[indexPath.row].name;
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *controller = [_dataArray[indexPath.row].objectClass new];
+    UIViewController *controller = [_dataSourceArray[indexPath.row].objectClass new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end

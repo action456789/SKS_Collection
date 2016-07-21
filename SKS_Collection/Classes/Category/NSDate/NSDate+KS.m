@@ -60,9 +60,9 @@
 //删除日期中月和日中前面的0，如2013-01-02返回2013-1-2
 + (NSString *)dateWithNoHead0:(NSDateComponents *)cmps
 {
-    NSString *day = [NSString stringWithFormat:@"%ld", cmps.day];
-    NSString *month = [NSString stringWithFormat:@"%ld", cmps.month];
-    NSString *year = [NSString stringWithFormat:@"%ld", cmps.year];
+    NSString *day = [NSString stringWithFormat:@"%ld", (long)cmps.day];
+    NSString *month = [NSString stringWithFormat:@"%ld", (long)cmps.month];
+    NSString *year = [NSString stringWithFormat:@"%ld", (long)cmps.year];
     
     if ([day characterAtIndex:0] == '0') {
         NSRange range = {1, 1};

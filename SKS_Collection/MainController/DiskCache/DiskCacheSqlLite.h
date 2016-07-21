@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KK_DiskCacheSqlLite : NSObject
+@interface DiskCacheSqlLite : NSObject
 
-- (BOOL)dbSaveItemWithKey:(NSString *)key value:(NSData *)value;
+- (BOOL)dbAddItemWithKey:(NSString *)key value:(NSData *)value;
 
 - (NSData *)dbGetItemWithKey:(NSString *)key;
 
