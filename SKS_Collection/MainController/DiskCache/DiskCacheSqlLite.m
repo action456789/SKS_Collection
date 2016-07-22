@@ -8,13 +8,16 @@
 
 #import "DiskCacheSqlLite.h"
 #import <FMDB/FMDB.h>
+#import "NSFileManager+File.h"
+#import "NSString+Code.h"
 
 @interface DiskCacheSqlLite()
-
-@property (nonatomic, copy) NSString *dbPath;
-@property (nonatomic, strong) FMDatabase *db;
-@property (nonatomic, strong) FMDatabaseQueue *dbQueue;
-
+{
+    NSCache *_memoryCache;
+    NSString *_dbFilePath;
+    FMDatabase *_db;
+    FMDatabaseQueue *_dbQueue;
+}
 @end
 
 #define DATABASE_KEY @"com.kesen.www"
@@ -25,7 +28,13 @@
 {
     self = [super init];
     if (self) {
-        NSLog(@"%@", self.dbPath);
+        
+        _dbQueue = [FMDatabaseQueue databaseQueueWithPath:_dbFilePath];
+        _memoryCache = [[NSCache alloc] init];
+        _isTableEncrypt = NO;
+        
+        [self _createDbFile];
+        [self _openDb];
     }
     return self;
 }
@@ -36,98 +45,112 @@
     }
 }
 
-- (void)deleteDBFile {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    [fileManager removeItemAtPath:self.dbPath error:nil];
+#pragma mark -init
+
+- (void)_createDbFile
+{
+    [NSFileManager createFoldWithDirectory:kCacheDirectory withFoldName:@"DiskCacheSqlLite" success:^(NSString *newFoldDirectory) {
+        [NSFileManager createFileWithDirectory:newFoldDirectory withName:@"Cache.db" success:^(NSString *newFilePath) {
+            _dbFilePath = newFilePath;
+        } failure:nil];
+    } failure:nil];
 }
 
-- (NSString *)dbPath {
-    if (!_dbPath) {
-        NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *dbFileName = [[[NSBundle mainBundle] bundleIdentifier] stringByAppendingPathExtension:@"db"];
-        _dbPath = [caches stringByAppendingPathComponent:dbFileName];
-    }
-    return _dbPath;
-}
-
-// open db
-- (FMDatabase *)db {
-    if (!_db) {
-        _db = [FMDatabase databaseWithPath:self.dbPath];
+- (void)_openDb
+{
+    [_dbQueue inDatabase:^(FMDatabase *db) {
+        _db = [FMDatabase databaseWithPath:_dbFilePath];
         if ([_db open]) {
-            // 加密数据库文件
-            [_db setKey:DATABASE_KEY];
-            BOOL result = [_db executeUpdate:@"create table if not exists manifest (key text, value blob)"];
-            NSLog(@"creare %@",result?@"success":@"fail");
+            if (_isTableEncrypt) {
+                [_db setKey:DATABASE_KEY];
+            }
+            BOOL result = [_db executeUpdate:@"create table if not exists cache_table (key text PRIMARY KEY, value blob, create_date text, update_date text)"];
+            NSLog(@"DiskCacheSqlLite:creare db %@",result?@"success":@"fail");
         } else {
-            NSLog(@"Could not open db.");
-            return nil;
+            NSLog(@"DiskCacheSqlLite:Could not open db.");
         }
-        
         [_db setShouldCacheStatements:YES];
+    }];
+}
+
+- (NSString *)_nowDateString
+{
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss zzz";
+    
+    return [fmt stringFromDate:[NSDate date]];
+}
+
+#pragma mark - add, delete, update, select
+
+- (void)dbAddItemWithKey:(NSString *)key value:(id<NSCoding>)object
+{
+    if (!_db) return;
+    
+    NSString *encodeKey = [key encodedString];
+    [_memoryCache setObject:object forKey:encodeKey];
+    
+    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
+        BOOL result = [_db executeUpdate:@"insert into cache_table (key, value, create_date) values (?, ?, ?)", encodeKey, data, [self _nowDateString]];
+        *rollback = !result;
+    }];
+}
+
+- (id<NSCoding>)dbGetItemWithKey:(NSString *)key
+{
+    NSString *encodeKey = [key encodedString];
+    id data = nil;//[_memoryCache objectForKey:encodeKey];
+    
+    if (data) {
+        return data;
+    } else {
+        FMResultSet *rs = [_db executeQuery:@"select value from cache_table where key = ?", encodeKey];
+        while ([rs next]) {
+            data = [rs dataForColumn:@"value"];
+            break;
+        }
+        [rs close];
+        
+        id object = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        return object;
     }
-    return _db;
 }
 
-- (FMDatabaseQueue *)dbQueue {
-    if (!_dbQueue) {
-        _dbQueue = [FMDatabaseQueue databaseQueueWithPath:self.dbPath];
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            [db setKey:DATABASE_KEY];
-            BOOL result = [db executeUpdate:@"create table if not exists manifest (key text, value blob)"];
-            NSLog(@"creare %@",result?@"success":@"fail");
-        }];
-    }
-    return _dbQueue;
+- (void)dbUpdateItemWithKey:(NSString *)key value:(id<NSCoding>)object
+{
+    if (!_db) return;
+    
+    NSString *encodeKey = [key encodedString];
+    [_memoryCache setObject:object forKey:encodeKey];
+    
+    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
+        BOOL result = [_db executeUpdate:@"update cache_table set value = ?, update_date = ? where key = ?", data, [self _nowDateString], encodeKey];
+        *rollback = !result;
+    }];
 }
 
-- (BOOL)dbAddItemWithKey:(NSString *)key value:(NSData *)value {
-    if (!self.db) return NO;
+- (void)dbDeleteItemWithKey:(NSString *)key
+{
+    if (!_db) return;
     
-    [self.db beginTransaction];
-    BOOL result = [self.db executeUpdate:@"insert into manifest (key, value) values (?, ?)", key, value];
-    [self.db commit];
-
-    return result;
+    NSString *encodeKey = [key encodedString];
+    [_memoryCache removeObjectForKey:encodeKey];
+    
+    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        BOOL result = [_db executeUpdate:@"delete from cache_table where key = ?", encodeKey];
+        *rollback = !result;
+    }];
 }
 
-- (NSData *)dbGetItemWithKey:(NSString *)key {
-    
-    FMResultSet *rs = [self.db  executeQuery:@"select value from manifest where key = ?", key];
-    NSData *data = nil;
-    while ([rs next]) {
-        data = [rs dataForColumn:@"value"];
-    }
-    [rs close];
-    return data;
-}
-
-- (BOOL)dbUpdateItemWithKey:(NSString *)key value:(NSData *)data {
-    if (!self.db) return NO;
-    
-    [self.db beginTransaction];
-    BOOL result = [self.db executeUpdate:@"update manifest set value = ? where key = ?", data, key];
-    [self.db commit];
-    
-    return result;
-}
-
-- (BOOL)dbDeleteItemWithKey:(NSString *)key {
-    if (!self.db) return NO;
-    
-    [self.db beginTransaction];
-    BOOL result = [self.db executeUpdate:@"delete from manifest where key = ?", key];
-    [self.db commit];
-    
-    return result;
-}
-
-- (NSDictionary *)dbAllKeysAndValues {
-    if (!self.db) return nil;
+- (NSDictionary *)dbAllKeysAndValues
+{
+    if (!_db) return nil;
     NSMutableDictionary *dict = nil;
 
     NSString *sql = @"SELECT key, value FROM manifest";
-    FMResultSet *rs = [self.db  executeQuery:sql];
+    FMResultSet *rs = [_db  executeQuery:sql];
     while ([rs next]) {
         NSString *key = [rs stringForColumn:@"key"];
         NSData *data = [rs dataForColumn:@"value"];
@@ -136,16 +159,19 @@
     return dict;
 }
 
+#pragma mark - other
+
 // dbQueue多线程测试
 // 当执行特别多条sql（比如10000条）语句时，使用 dbQueue 会比不使用 dbQueue 高出一个数量级
-- (void)test_BatabaseQueue {
+- (void)test_BatabaseQueue
+{
     
     __block NSMutableDictionary *dict = nil;
     
     dispatch_time_t now = dispatch_time(DISPATCH_TIME_NOW, 0);
 
-    [self.dbQueue inDatabase:^(FMDatabase *db) {
-        NSString *sql = @"SELECT key, value FROM manifest";
+    [_dbQueue inDatabase:^(FMDatabase *db) {
+        NSString *sql = @"SELECT key, value FROM cache_table";
 
         int i = 10000;
         while (i) {
@@ -161,9 +187,9 @@
     dispatch_time_t now1 = dispatch_time(DISPATCH_TIME_NOW, 0);
 
     int i = 10000;
-    NSString *sql = @"SELECT key, value FROM manifest";
+    NSString *sql = @"SELECT key, value FROM cache_table";
     while (i) {
-        [self.db  executeQuery:sql];
+        [_db  executeQuery:sql];
         i--;
     }
 

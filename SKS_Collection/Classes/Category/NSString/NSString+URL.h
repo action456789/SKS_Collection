@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (KK_URL)
+@interface NSString (URL)
 
 @end

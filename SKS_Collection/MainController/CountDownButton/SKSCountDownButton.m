@@ -7,7 +7,7 @@
 //
 
 #import "SKSCountDownButton.h"
-#import "NSTimer+SKSBlockSupurt.h"
+#import "NSTimer+BlockSupurt.h"
 
 @implementation SKSCountDownButton {
     NSTimer           *_timer;

@@ -13,6 +13,8 @@
 #import "ListCell.h"
 #import "SlideTabBarDemoController.h"
 #import "BlurEffectDemoController.h"
+#import "FileCacheDemoController.h"
+#import "DiskCacheSqlLiteDemoController.h"
 
 static NSString *kCellIdentifier = @"kCellIdentifier";
 
@@ -48,6 +50,8 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
                            ,[ListCellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
                            ,[ListCellItem itemWithName:@"Slide Tab Bar" objectClass:[SlideTabBarDemoController class]]
                            ,[ListCellItem itemWithName:@"模糊效果" objectClass:[BlurEffectDemoController class]]
+                           ,[ListCellItem itemWithName:@"文件缓存" objectClass:[FileCacheDemoController class]]
+                           ,[ListCellItem itemWithName:@"sqlite缓存" objectClass:[DiskCacheSqlLiteDemoController class]]
                            ];
 }
 

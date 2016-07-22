@@ -4,12 +4,12 @@
 //  Created by Tom Corwine on 5/30/12.
 //
 
-#import "NSString+KS_Hash.h"
+#import "NSString+Hash.h"
 
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
 
-@implementation NSString (KS_Hash)
+@implementation NSString (Hash)
 
 - (NSString *)md5String
 {

@@ -10,15 +10,13 @@
 
 @interface DiskCacheFile : NSObject
 
-- (void)addItemWithKey:(NSString *)key value:(id<NSCoding>)object;
+- (void)setObject:(id<NSCoding>)object forKey:(NSString *)key;
 
-- (id<NSCoding>)getItemWithKey:(NSString *)key;
+- (id<NSCoding>)objectForKey:(NSString *)key;
 
-- (void)updateItemWithKey:(NSString *)key value:(id<NSCoding>)object;
+- (void)removeObjectForKey:(NSString *)key;
 
-- (void)deleteItemWithKey:(NSString *)key;
-
-- (void)deleteAllItems;
+- (void)removeAllObjects;
 
 // 缓存存在的时长，如 3 小时 为 expiredTimeInterval = 60 * 60 * 3
 @property (nonatomic, assign) NSTimeInterval expiredTimeInterval;

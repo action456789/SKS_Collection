@@ -6,7 +6,7 @@
 //  Copyright © 2015年 KeSen. All rights reserved.
 //
 
-#import "CALayer+KS_Animate.h"
+#import "CALayer+Animation.h"
 
 @implementation CALayer (KS_Animate)
 

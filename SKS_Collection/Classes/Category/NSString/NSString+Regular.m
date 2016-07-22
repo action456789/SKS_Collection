@@ -6,9 +6,9 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import "NSString+KS_Regular.h"
+#import "NSString+Regular.h"
 
-@implementation NSString (KS_Regular)
+@implementation NSString (Regular)
 
 /**
  *  使用iOS自带函数实现。

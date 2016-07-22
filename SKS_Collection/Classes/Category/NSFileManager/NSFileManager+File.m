@@ -6,7 +6,7 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "NSFileManager+SKS.h"
+#import "NSFileManager+File.h"
 
 #define PerformBlock(blockName, ...) \
     if (blockName) { \
@@ -156,12 +156,13 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *newFilePath = newFilePath = [directery stringByAppendingPathComponent:fileName];;
     
-    NSError *error = nil;
     BOOL result = [fileManager createFileAtPath:newFilePath contents:nil attributes:nil];
     if (result) {
         PerformBlock(success, newFilePath);
     } else {
-        PerformBlock(failure, error);
+        NSDictionary *userInfo = @{@"msg": @"创建文件失败"};
+        NSError *domainError = [NSError errorWithDomain:@"SuperKeSen" code:10001 userInfo:userInfo];
+        PerformBlock(failure, domainError);
     }
 }
 
@@ -175,7 +176,7 @@
     
     if (![fileManager fileExistsAtPath:directery]) {
         NSDictionary *userInfo = @{@"msg": @"文件/文件夹不存在"};
-        NSError *domainError = [NSError errorWithDomain:@"SuperKeSen" code:1000 userInfo:userInfo];
+        NSError *domainError = [NSError errorWithDomain:@"SuperKeSen" code:10000 userInfo:userInfo];
         PerformBlock(failure, domainError);
     }
     

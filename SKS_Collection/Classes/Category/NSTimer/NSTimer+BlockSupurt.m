@@ -6,9 +6,9 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import "NSTimer+SKSBlockSupurt.h"
+#import "NSTimer+BlockSupurt.h"
 
-@implementation NSTimer (SKSBlockSupurt)
+@implementation NSTimer (BlockSupurt)
 
 // NSRunloopDefaultMode
 + (NSTimer *)sks_scheduledTimerWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)())block

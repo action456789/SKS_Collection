@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (KS_Hash)
+@interface NSString (Hash)
 
 @property (readonly) NSString *md5String;
 @property (readonly) NSString *sha1String;

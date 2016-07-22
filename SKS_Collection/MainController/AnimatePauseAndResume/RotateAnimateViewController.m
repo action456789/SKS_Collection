@@ -7,7 +7,7 @@
 //
 
 #import "RotateAnimateViewController.h"
-#import "CALayer+KS_Animate.h"
+#import "CALayer+Animation.h"
 
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width

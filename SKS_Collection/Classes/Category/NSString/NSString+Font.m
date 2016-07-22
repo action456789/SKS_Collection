@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 柯森. All rights reserved.
 //
 
-#import "NSString+KS_Font.h"
+#import "NSString+Font.h"
 
 @implementation NSString (Font)
 

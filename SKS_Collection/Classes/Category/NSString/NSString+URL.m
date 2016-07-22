@@ -6,9 +6,9 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import "NSString+KK_URL.h"
+#import "NSString+URL.h"
 
-@implementation NSString (KK_URL)
+@implementation NSString (URL)
 
 /**
  *  返回 url 中的参数列表

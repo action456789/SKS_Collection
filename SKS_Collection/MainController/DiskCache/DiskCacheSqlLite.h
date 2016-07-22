@@ -10,14 +10,14 @@
 
 @interface DiskCacheSqlLite : NSObject
 
-- (BOOL)dbAddItemWithKey:(NSString *)key value:(NSData *)value;
+@property (nonatomic, assign) BOOL isTableEncrypt;
 
-- (NSData *)dbGetItemWithKey:(NSString *)key;
+- (void)dbAddItemWithKey:(NSString *)key value:(id<NSCoding>)object;
 
-- (BOOL)dbUpdateItemWithKey:(NSString *)key value:(NSData *)data;
+- (id<NSCoding>)dbGetItemWithKey:(NSString *)key;
 
-- (BOOL)dbDeleteItemWithKey:(NSString *)key;
+- (void)dbUpdateItemWithKey:(NSString *)key value:(id<NSCoding>)object;
 
-- (NSDictionary *)dbAllKeysAndValues;
+- (void)dbDeleteItemWithKey:(NSString *)key;
 
 @end

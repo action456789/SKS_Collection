@@ -7,7 +7,8 @@
 //
 
 #import "DiskCacheFile.h"
-#import "NSFileManager+SKS.h"
+#import "NSFileManager+File.h"
+#import "NSString+Code.h"
 
 #define kCachePrex @"com.kk.diskCacheFile."
 #define kioQueueName kCachePrex"ioSerialQueue."
@@ -15,8 +16,8 @@
 
 @interface DiskCacheFile ()
 {
-    NSCache       *_memoryCache;
-    NSString      *_cacheDirectory;
+    NSCache *_memoryCache;
+    NSString *_cacheDirectory;
     dispatch_queue_t _ioSerialQueue;
 }
 @end
@@ -28,59 +29,26 @@
         _memoryCache = [[NSCache alloc] init];
         _ioSerialQueue = dispatch_queue_create("com.ks.diskCacheFile.ioSerialQueue", DISPATCH_QUEUE_SERIAL); // DISPATCH_QUEUE_CONCURRENT
         
-        [self createCacheFold];
+        [self _createCacheFold];
     }
     return self;
 }
 
-- (void)createCacheFold
+- (void)_createCacheFold
 {
-    dispatch_async(_ioSerialQueue, ^{
-        [NSFileManager createFoldWithDirectory:kCacheDirectory withFoldName:@"DiskCache" success:^(NSString *newFoldDirectory) {
-            _cacheDirectory = newFoldDirectory;
-            NSLog(@"DiskCacheFile: create fold success");
-        } failure:^(NSError *error) {
-            NSLog(@"DiskCacheFile: create fold fail");
-        }];
-    });
+    [NSFileManager createFoldWithDirectory:kCacheDirectory withFoldName:@"DiskCache" success:^(NSString *newFoldDirectory) {
+        _cacheDirectory = newFoldDirectory;
+        NSLog(@"DiskCacheFile: create fold success");
+    } failure:^(NSError *error) {
+        NSLog(@"DiskCacheFile: create fold fail");
+    }];
 }
 
-#pragma mark -encode and decode
+#pragma mark kvo
 
-- (NSString *)encodedString:(NSString *)string
+- (void)setObject:(id<NSCoding>)object forKey:(NSString *)key
 {
-    if (!string.length) {
-        return @"";
-    }
-    
-    CFStringRef static const charsToEscape = CFSTR(",:/");
-    CFStringRef escapedString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                        (__bridge CFStringRef)string,
-                                                                        NULL,
-                                                                        charsToEscape,
-                                                                        kCFStringEncodingUTF8);
-    
-    return (__bridge_transfer NSString *)escapedString;
-}
-
-- (NSString *)decodedString:(NSString *)string
-{
-    if (!string.length) {
-        return @"";
-    }
-    
-    CFStringRef unescapedString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-                                                                                          (__bridge CFStringRef)string,
-                                                                                          CFSTR(""),
-                                                                                          kCFStringEncodingUTF8);
-    return (__bridge_transfer NSString *)unescapedString;
-}
-
-#pragma mark -add, delete, update, select
-
-- (void)addItemWithKey:(NSString *)key value:(id<NSCoding>)object
-{
-    NSString *encodedKey = [self encodedString:key];
+    NSString *encodedKey = [key encodedString];
     [_memoryCache setObject:object forKey:key];
     
     dispatch_async(_ioSerialQueue, ^{
@@ -92,9 +60,9 @@
     });
 }
 
-- (id)getItemWithKey:(NSString *)key
+- (id)objectForKey:(NSString *)key
 {
-    NSString *encodedKey = [self encodedString:key];
+    NSString *encodedKey = [key encodedString];
     id<NSCoding> object = [_memoryCache objectForKey:encodedKey];
     
     if (!object) {
@@ -107,9 +75,9 @@
     return object;
 }
 
-- (void)deleteItemWithKey:(NSString *)key
+- (void)removeObjectForKey:(NSString *)key
 {
-    NSString *encodedKey = [self encodedString:key];
+    NSString *encodedKey = [key encodedString];
     [_memoryCache removeObjectForKey:key];
     
     NSString *filePath = [_cacheDirectory stringByAppendingPathComponent:encodedKey];
@@ -123,7 +91,7 @@
     }
 }
 
-- (void)deleteAllItems
+- (void)removeAllObjects
 {
     [_memoryCache removeAllObjects];
     
@@ -135,7 +103,7 @@
 }
 
 # pragma mark - 触发日期
-- (void)trimToDate:(NSDate *)date
+- (void)_trimToDate:(NSDate *)date
 {
     __autoreleasing NSError *error = nil;
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtURL:[NSURL URLWithString:_cacheDirectory]
@@ -168,7 +136,7 @@
     if (expiredTimeInterval > 0) {
         double pastTimeInterval = [[NSDate date] timeIntervalSince1970] - expiredTimeInterval;
         NSDate *pastDate = [NSDate dateWithTimeIntervalSince1970:pastTimeInterval];
-        [self trimToDate:pastDate];
+        [self _trimToDate:pastDate];
     }
 }
 
