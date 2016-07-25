@@ -100,7 +100,7 @@
 - (id<NSCoding>)dbGetItemWithKey:(NSString *)key
 {
     NSString *encodeKey = [key encodedString];
-    id data = nil;//[_memoryCache objectForKey:encodeKey];
+    id data = [_memoryCache objectForKey:encodeKey];
     
     if (data) {
         return data;

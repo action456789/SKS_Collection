@@ -15,26 +15,24 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor grayColor];
-    
     DiskCacheSqlLite *cache = [[DiskCacheSqlLite alloc] init];
     
-    // add
+    // cache string
     NSString *string = @"我叫你一声，你敢答应吗";
     [cache dbAddItemWithKey:@"stringKey" value:string];
     NSLog(@"_____%@", [cache dbGetItemWithKey:@"stringKey"]);
     
-    // update
+    // update string cache
     [cache dbUpdateItemWithKey:@"stringKey" value:@"刘梦霞个傻逼"];
     NSLog(@"_____%@", [cache dbGetItemWithKey:@"stringKey"]);
     
-    // array
+    // cache array
     NSArray *array = @[@"sdfa", @"我是测试数据", @"贱人就是矫情"];
     NSString *arrayKey = @"arrayKey";
     [cache dbAddItemWithKey:arrayKey value:array];
     NSLog(@"_____%@", [cache dbGetItemWithKey:arrayKey]);
     
-    // image TODO: error
+    // cache image TODO: error
 //    [cache dbAddItemWithKey:@"imageKey" value:[UIImage imageNamed:@"girl"]];
 //    UIImage *imageFromCache = (UIImage *)[cache dbGetItemWithKey:@"imageKey"];
     

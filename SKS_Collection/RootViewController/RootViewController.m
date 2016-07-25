@@ -15,6 +15,9 @@
 #import "BlurEffectDemoController.h"
 #import "FileCacheDemoController.h"
 #import "DiskCacheSqlLiteDemoController.h"
+#import "GradientLayerDemoController.h"
+#import "GradientLayerDemo2Controller.h"
+#import "QRCodeViewController.h"
 
 static NSString *kCellIdentifier = @"kCellIdentifier";
 
@@ -52,6 +55,9 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
                            ,[ListCellItem itemWithName:@"模糊效果" objectClass:[BlurEffectDemoController class]]
                            ,[ListCellItem itemWithName:@"文件缓存" objectClass:[FileCacheDemoController class]]
                            ,[ListCellItem itemWithName:@"sqlite缓存" objectClass:[DiskCacheSqlLiteDemoController class]]
+                           ,[ListCellItem itemWithName:@"GradientLayer(渐变梯度图层)" objectClass:[GradientLayerDemoController class]]
+                           ,[ListCellItem itemWithName:@"GradientLayer动画" objectClass:[GradientLayerDemo2Controller class]]
+                           ,[ListCellItem itemWithName:@"扫描二维码" objectClass:[QRCodeViewController class]]
                            ];
 }
 

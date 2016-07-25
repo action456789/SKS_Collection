@@ -19,7 +19,6 @@ static NSString *arrayKey = @"arrayKey";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
     
     NSArray *array = @[@"sdfa", @"我是测试数据", @"贱人就是矫情"];
     _cacheFile = [[DiskCacheFile alloc] init];

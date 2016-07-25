@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */; };
+		1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2CE1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m */; };
+		1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D21D45F34F00D55DE0 /* QRCodeViewController.m */; };
+		1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D51D4600E700D55DE0 /* QRCodeView.m */; };
+		1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D81D46131000D55DE0 /* QRCodeMaskView.m */; };
 		103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */; };
 		103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */; };
 		103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */; };
@@ -70,6 +75,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1032C2CA1D45DF2E00D55DE0 /* GradientLayerDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerDemoController.h; sourceTree = "<group>"; };
+		1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerDemoController.m; sourceTree = "<group>"; };
+		1032C2CD1D45E22E00D55DE0 /* GradientLayerDemo2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerDemo2Controller.h; sourceTree = "<group>"; };
+		1032C2CE1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerDemo2Controller.m; sourceTree = "<group>"; };
+		1032C2D11D45F34F00D55DE0 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		1032C2D21D45F34F00D55DE0 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		1032C2D41D4600E700D55DE0 /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		1032C2D51D4600E700D55DE0 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		1032C2D71D46131000D55DE0 /* QRCodeMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeMaskView.h; sourceTree = "<group>"; };
+		1032C2D81D46131000D55DE0 /* QRCodeMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeMaskView.m; sourceTree = "<group>"; };
 		103A55431D3CCCF200366D8F /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
 		103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
 		103A55461D3CCCF200366D8F /* CountDownButtonDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonDemoVC.h; sourceTree = "<group>"; };
@@ -208,9 +223,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1032C2C91D45DF0800D55DE0 /* CAGradienLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1032C2CA1D45DF2E00D55DE0 /* GradientLayerDemoController.h */,
+				1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */,
+				1032C2CD1D45E22E00D55DE0 /* GradientLayerDemo2Controller.h */,
+				1032C2CE1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m */,
+			);
+			path = CAGradienLayer;
+			sourceTree = "<group>";
+		};
+		1032C2D01D45EF3F00D55DE0 /* QRCoder */ = {
+			isa = PBXGroup;
+			children = (
+				1032C2D41D4600E700D55DE0 /* QRCodeView.h */,
+				1032C2D51D4600E700D55DE0 /* QRCodeView.m */,
+				1032C2D71D46131000D55DE0 /* QRCodeMaskView.h */,
+				1032C2D81D46131000D55DE0 /* QRCodeMaskView.m */,
+				1032C2D11D45F34F00D55DE0 /* QRCodeViewController.h */,
+				1032C2D21D45F34F00D55DE0 /* QRCodeViewController.m */,
+			);
+			path = QRCoder;
+			sourceTree = "<group>";
+		};
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				1032C2D01D45EF3F00D55DE0 /* QRCoder */,
+				1032C2C91D45DF0800D55DE0 /* CAGradienLayer */,
 				10F4DFD61D4097DB00E0D223 /* DiskCache */,
 				10F4DFCC1D3F85FE00E0D223 /* BlurEffect */,
 				103A55421D3CCCF200366D8F /* AnimatePauseAndResume */,
@@ -786,6 +827,8 @@
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
+				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
+				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
@@ -820,14 +863,17 @@
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
+				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD98DC1D226B7D00193A69 /* UIColor+Hex.m in Sources */,
 				10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
+				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
 				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
+				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
 				10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */,
 				10DD98D71D226B7D00193A69 /* NSString+Regular.m in Sources */,
 				10DD98D41D226B7D00193A69 /* NSString+URL.m in Sources */,
