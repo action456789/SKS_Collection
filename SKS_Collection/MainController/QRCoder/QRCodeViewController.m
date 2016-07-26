@@ -11,6 +11,7 @@
 #import "UIDevice+KS.h"
 #import "QRCodeMaskView.h"
 #import "UIView+Frame.h"
+#import <AVFoundation/AVFoundation.h>
 
 #define kViewfinderWH SCREEN_WIDTH * 0.8
 #define kPadding 10
@@ -65,7 +66,7 @@
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position";
-    animation.duration = 2.0;
+    animation.duration = 3.0;
     animation.repeatCount = MAXFLOAT;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
@@ -83,6 +84,20 @@
 
 - (void)QRCodeView:(QRCodeView *)view scanedResultString:(NSString *)result
 {
+    NSLog(@"%s", __func__);
+    [_qrCodeView stopReading];
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate); // 震动
+    AudioServicesPlaySystemSound (1052);// 声音
     
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"扫描结果"
+                                                                             message:result
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            [_qrCodeView startReading];
+        }];
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 @end

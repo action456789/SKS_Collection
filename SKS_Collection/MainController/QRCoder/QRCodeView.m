@@ -23,6 +23,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         _torchMode = AVCaptureTorchModeOff;
+        [self startReading];
     }
     return self;
 }
@@ -44,11 +45,11 @@
         NSLog(@"%@", [error localizedDescription]);
         return;
     }
-    
+
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
     _session = session;
     
-    [_session addInput:inputDevice];
+    [_session addInput:_inputDevice];
     
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     [_session addOutput:output];
@@ -69,6 +70,9 @@
 - (void)stopReading
 {
     [_session stopRunning];
+    [_previewLayer removeFromSuperlayer];
+    _inputDevice = nil;
+    _previewLayer = nil;
     _session = nil;
 }
 
