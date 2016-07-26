@@ -29,7 +29,7 @@
         controller.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255.0f)/255.0f green:arc4random_uniform(255.0f)/255.0f blue:arc4random_uniform(255.0f)/255.0f alpha:1];
         [controllers addObject:controller];
     }
-    _tabBarVc = [[KKSlideTabBarViewController alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) itemTitles:titles controllers:controllers];
+    _tabBarVc = [[KKSlideTabBarViewController alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) itemTitles:titles controllers:controllers];
     
     [self.view addSubview:_tabBarVc.view];
 }

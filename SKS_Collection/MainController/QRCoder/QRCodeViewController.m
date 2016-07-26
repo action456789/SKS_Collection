@@ -13,7 +13,7 @@
 #import "UIView+Frame.h"
 #import <AVFoundation/AVFoundation.h>
 
-#define kViewfinderWH SCREEN_WIDTH * 0.8
+#define kViewfinderWH ScreenWidth * 0.8
 #define kPadding 10
 
 @interface QRCodeViewController()<QRCodeViewDelegate>
@@ -44,7 +44,7 @@
     _qrCodeView = qrCodeView;
     
     UIImageView *viewfinder = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Image-1"]];
-    viewfinder.bounds = CGRectMake(0, 0, kViewfinderWH, SCREEN_WIDTH * 0.8);
+    viewfinder.bounds = CGRectMake(0, 0, kViewfinderWH, ScreenWidth * 0.8);
     viewfinder.center = self.view.center;
     _viewfinder = viewfinder;
     [self.view addSubview:viewfinder];

@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Shimmer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +57,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0857BE22BD7B30C0D6FF48D319D2352B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>499E3056E7CCC6FD364CBE0191194243</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
@@ -67,12 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B265A022A1579B666CC2DEEE3E710F32</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BF81218B597206AB1ADF176AA6C6BCC0</key>
+		<key>B8503919F9300B504F622A5494D08D3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E92EF539533EABEDAF8EF862666A6411</key>
+		<key>E940C0ABC5EC1E8298E6E0507BBAE5DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

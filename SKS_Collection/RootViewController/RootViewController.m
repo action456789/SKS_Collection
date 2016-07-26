@@ -18,6 +18,8 @@
 #import "GradientLayerDemoController.h"
 #import "GradientLayerDemo2Controller.h"
 #import "QRCodeViewController.h"
+#import "ShimmerDemeController.h"
+#import "WKWebViewDemoController.h"
 
 static NSString *kCellIdentifier = @"kCellIdentifier";
 
@@ -58,6 +60,8 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
                            ,[ListCellItem itemWithName:@"GradientLayer(渐变梯度图层)" objectClass:[GradientLayerDemoController class]]
                            ,[ListCellItem itemWithName:@"GradientLayer动画" objectClass:[GradientLayerDemo2Controller class]]
                            ,[ListCellItem itemWithName:@"扫描二维码" objectClass:[QRCodeViewController class]]
+                           ,[ListCellItem itemWithName:@"辉光动画" objectClass:[ShimmerDemeController class]]
+                           ,[ListCellItem itemWithName:@"WKWebView的加载过程" objectClass:[WKWebViewDemoController class]]
                            ];
 }
 

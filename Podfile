@@ -13,5 +13,6 @@ pod 'AFNetworking', '~> 3.0'
 pod 'Aspects'
 pod 'Masonry', '~> 0.6.3'
 pod 'pop', '~> 1.0'
+pod 'Shimmer'
 end
 

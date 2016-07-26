@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '18F564EBDA15556ACA6376AA'
-               BlueprintName = 'pop'
+               BlueprintIdentifier = 'A3531C086546871650294BEC'
+               BlueprintName = 'Shimmer'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libpop.a'>
+               BuildableName = 'libShimmer.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

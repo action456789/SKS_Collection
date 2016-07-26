@@ -28,15 +28,15 @@
 
 
 // 宽度
-#define  Width    (Landscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+#define  ScreenWidth    (Landscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 // 高度
-#define  Height   (Landscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
+#define  ScreenHeight   (Landscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
 
 
-#define  Device_iPhone4_4s   (Width == 320.f && Height == 480.f ? YES : NO)
-#define  Device_iPhone5_5s   (Width == 320.f && Height == 568.f ? YES : NO)
-#define  Device_iPhone6      (Width == 375.f && Height == 667.f ? YES : NO)
-#define  Device_iPhone6_plus (Width == 414.f && Height == 736.f ? YES : NO)
+#define  Device_iPhone4_4s   (ScreenWidth == 320.f && ScreenHeight == 480.f ? YES : NO)
+#define  Device_iPhone5_5s   (ScreenWidth == 320.f && ScreenHeight == 568.f ? YES : NO)
+#define  Device_iPhone6      (ScreenWidth == 375.f && ScreenHeight == 667.f ? YES : NO)
+#define  Device_iPhone6_plus (ScreenWidth == 414.f && ScreenHeight == 736.f ? YES : NO)
 
 
 //判断是否为iPhone
