@@ -70,9 +70,9 @@ static NSString *kItemButtonColor = @"#808080";
         _controllers = [NSMutableArray array];
         _currentPage = -1;
         _realtimePage = controllers == nil;
-        [self p_createTopSubViews];
-        [self p_createBottomSubViewsWithControllers:controllers];
-        [self p_autoLayoutSubviews];
+        [self _createTopSubViews];
+        [self _createBottomSubViewsWithControllers:controllers];
+        [self _autoLayoutSubviews];
     }
     return self;
 }
@@ -83,7 +83,7 @@ static NSString *kItemButtonColor = @"#808080";
     return self;
 }
 
-- (void)p_createTopSubViews
+- (void)_createTopSubViews
 {
     _topContainerView = [[UIView alloc] init];
     _topContainerView.backgroundColor = [UIColor colorWithHexString:kBarBgColor];
@@ -97,7 +97,7 @@ static NSString *kItemButtonColor = @"#808080";
     _itemsScrollView.delegate = self;
     [_topContainerView addSubview:_itemsScrollView];
     
-    [self p_createItems];
+    [self _createItems];
     
     _itemMore = [UIButton buttonWithType:UIButtonTypeCustom];
     [_itemMore setTitle:@"更多" forState:UIControlStateNormal];
@@ -119,7 +119,7 @@ static NSString *kItemButtonColor = @"#808080";
     [_itemsScrollView addSubview:_itemLine];
 }
 
-- (void)p_createBottomSubViewsWithControllers:(NSMutableArray *)controllers
+- (void)_createBottomSubViewsWithControllers:(NSMutableArray *)controllers
 {
     _bottomContainerView = [UIView new];
     _bottomContainerView.backgroundColor = [UIColor colorWithHexString:kBottomBgColor];
@@ -133,10 +133,10 @@ static NSString *kItemButtonColor = @"#808080";
     _bottomScrollView.delegate = self;
     [_bottomContainerView addSubview:_bottomScrollView];
     
-    [self p_addControllerViewsWithController:controllers];
+    [self _addControllerViewsWithController:controllers];
 }
 
-- (void)p_autoLayoutSubviews
+- (void)_autoLayoutSubviews
 {
     [_topContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self);
@@ -168,7 +168,7 @@ static NSString *kItemButtonColor = @"#808080";
     }];
 }
 
-- (void)p_createItems
+- (void)_createItems
 {
     __block CGFloat itemX = kFirstItemLeftPadding;
     
@@ -197,15 +197,15 @@ static NSString *kItemButtonColor = @"#808080";
     }];
 }
 
-- (void)p_addControllerViewsWithController:(NSMutableArray *)controllers
+- (void)_addControllerViewsWithController:(NSMutableArray *)controllers
 {
     for (int i=0; i<controllers.count; i++) {
         UIViewController *vc = controllers[i];
-        [self p_addControllerAtIndex:i withController:vc];
+        [self _addControllerAtIndex:i withController:vc];
     }
 }
 
-- (void)p_addControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller
+- (void)_addControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller
 {
     [_controllers insertObject:controller atIndex:index];
     [_bottomScrollView addSubview:controller.view];
@@ -215,7 +215,7 @@ static NSString *kItemButtonColor = @"#808080";
     }];
 }
 
-- (void)p_replaceControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller
+- (void)_replaceControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller
 {
     UIViewController *vc = _controllers[index];
     [_controllers replaceObjectAtIndex:index withObject:controller];
@@ -232,14 +232,14 @@ static NSString *kItemButtonColor = @"#808080";
     self.currentPage = sender.tag;
 }
 
-- (void)p_updateItemButtonWithButton:(UIButton *)button
+- (void)_updateItemButtonWithButton:(UIButton *)button
 {
     _selectedItem.selected = NO;
     button.selected = YES;
     _selectedItem = button;
 }
 
-- (void)p_updateItemLineWithButton:(UIButton *)button animate:(BOOL)animate
+- (void)_updateItemLineWithButton:(UIButton *)button animate:(BOOL)animate
 {
     
     CGFloat lineX = _itemLinePreFrame.origin.x;
@@ -269,14 +269,14 @@ static NSString *kItemButtonColor = @"#808080";
     _itemLinePreFrame = _itemLine.frame;
 }
 
-- (void)p_autoScrollBottomScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate
+- (void)_autoScrollBottomScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate
 {
     CGFloat x = to * SCREEN_WIDTH;
     CGFloat y = _bottomScrollView.frame.origin.y;
     [_bottomScrollView setContentOffset:CGPointMake(x, y) animated:animate];
 }
 
-- (void)p_autoScrollItemsScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate
+- (void)_autoScrollItemsScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate
 {
     
     // 不滚动
@@ -286,8 +286,8 @@ static NSString *kItemButtonColor = @"#808080";
     }
     
     UIButton *btnTo = _itemButtons[to];
-    [self p_updateItemLineWithButton:btnTo animate:YES];
-    [self p_updateItemButtonWithButton:btnTo];
+    [self _updateItemLineWithButton:btnTo animate:YES];
+    [self _updateItemButtonWithButton:btnTo];
     
     CGFloat screenCenterX = SCREEN_WIDTH * 0.5;
     CGFloat contentOffsetY = _itemsScrollView.contentOffset.y;
@@ -366,12 +366,12 @@ static NSString *kItemButtonColor = @"#808080";
 - (void)setCurrentPage:(NSUInteger)currentPage withAnimate:(BOOL)animate
 {
     UIButton *sender = _itemButtons[currentPage];
-    [self p_updateItemButtonWithButton:sender];
-    [self p_updateItemLineWithButton:sender animate:animate];
+    [self _updateItemButtonWithButton:sender];
+    [self _updateItemLineWithButton:sender animate:animate];
     
     if (_currentPage != currentPage) {
-        [self p_autoScrollBottomScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
-        [self p_autoScrollItemsScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
+        [self _autoScrollBottomScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
+        [self _autoScrollItemsScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
         
         if (_delegateFlags.didPageChangedHandle) {
             [self.delegate slideTabBarView:self pageChangedFromIndex:_currentPage toIndex:currentPage];
@@ -385,10 +385,10 @@ static NSString *kItemButtonColor = @"#808080";
 {
     _itemsScrollView.contentSize = CGSizeMake(self.itemScrollViewContentW + SCREEN_WIDTH * 0.1, 0);
     _bottomScrollView.contentSize = CGSizeMake(_itemButtons.count * _bottomScrollView.frame.size.width, 0);
-    [self p_createNotNeedToSrollToCenterBtns];
+    [self _createNotNeedToSrollToCenterBtns];
 }
 
-- (void)p_createNotNeedToSrollToCenterBtns
+- (void)_createNotNeedToSrollToCenterBtns
 {
     if (_itemButtons.count == 0) {
         return;
@@ -413,24 +413,20 @@ static NSString *kItemButtonColor = @"#808080";
 }
 
 - (void)updateControllerFromIndex:(NSUInteger)from toIndex:(NSUInteger)to withController:(UIViewController *)controller
-{
-    if (!self.realtimePage) {
-        return;
-    }
-    
+{    
     NSInteger count = _controllers.count;
     if (to == count) { // first
-        [self p_addControllerAtIndex:to withController:controller];
+        [self _addControllerAtIndex:to withController:controller];
         
     } else if (to < count) {
         BOOL sameKindOfObject = [_controllers[to] isKindOfClass:[FsPlaceholdViewController class]];
-        if (sameKindOfObject) {
-            [self p_replaceControllerAtIndex:to withController:controller];
+        if (self.realtimePage || sameKindOfObject) {
+            [self _replaceControllerAtIndex:to withController:controller];
         }
     } else {// jump
         for (NSUInteger i=from+1; i<to; i++) {
             FsPlaceholdViewController *placeholdController = [[FsPlaceholdViewController alloc] init];
-            [self p_addControllerAtIndex:i withController:placeholdController];
+            [self _addControllerAtIndex:i withController:placeholdController];
         }
         [self updateControllerFromIndex:from toIndex:to withController:controller];
     }

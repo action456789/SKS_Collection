@@ -6,10 +6,8 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface KKSlideTabBarViewController : UIViewController
-
-- (instancetype)initWithFrame:(CGRect)frame itemTitles:(NSMutableArray *)itemTitles controllers:(NSMutableArray *)controllers;
+@interface KKSlideTabBarViewController : BaseViewController
 
 @end

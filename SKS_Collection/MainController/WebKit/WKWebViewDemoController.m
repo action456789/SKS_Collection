@@ -9,7 +9,7 @@
 #import "WKWebViewDemoController.h"
 #import <WebKit/WebKit.h>
 
-@interface WKWebViewDemoController () <WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
+@interface WKWebViewDemoController () <WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler/*JS 与 OC 交互，需实现 WKScriptMessageHandler 协议*/>
 {
     WKWebView *_webView;
     UIProgressView *_progressView;
@@ -30,34 +30,31 @@
 
 - (void)_createWebView
 {
-    // JS 与 OC 交互，需实现 WKScriptMessageHandler 协议
-    // JS 与 OC 交互参见：https://lvwenhan.com/ios/460.html，https://lvwenhan.com/ios/461.html
-    
     WKWebViewConfiguration *conf = [[WKWebViewConfiguration alloc] init];
+    conf.allowsInlineMediaPlayback = YES;
+    conf.requiresUserActionForMediaPlayback = NO;
+    //处理 JS 消息
     [conf.userContentController addScriptMessageHandler:self name:@"OOXX"];
     
-    _webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:conf];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight) configuration:conf];
+    [self.view addSubview:_webView];
     _webView.navigationDelegate = self;
     _webView.UIDelegate = self;
-    _webView.backgroundColor = [UIColor colorWithRed:1.000 green:0.502 blue:0.000 alpha:1.000];
-    // 打开左划回退功能：
     _webView.allowsBackForwardNavigationGestures =YES;
-    
-    [self.view addSubview:_webView];
+    _webView.allowsLinkPreview = YES;
     
     NSString *urlString = @"http://www.baidu.com";
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
     [_webView loadRequest:request];
 }
 
 - (void)_createProgressView
 {
-    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    progressView.frame = CGRectMake(0, StatusBarAndNavigationBarHeight, ScreenWidth, 10);
+    UIProgressView *progressView = [[UIProgressView alloc] init];
+    progressView.frame = CGRectMake(0, StatusBarAndNavigationBarHeight, ScreenWidth, 20);
     _progressView.progress = 0.0f;
-    _progressView.progressTintColor = [UIColor clearColor];
-    _progressView.trackTintColor = [UIColor clearColor];
     _progressView = progressView;
     [self.view addSubview:progressView];
 }
@@ -144,6 +141,11 @@
     return _webView;
 }
 
+- (void)webViewDidClose:(WKWebView *)webView
+{
+    NSLog(@"%s", __func__);
+}
+
 // 剩下三个代理方法全都是与界面弹出提示框相关的，针对于web界面的三种提示框（警告框、确认框、输入框）分别对应三种代理方法。下面只举了警告框的例子。
 // 可以把javascript的一些alert捕捉到，然后显示自定义的UI
 /*
@@ -177,7 +179,7 @@
 {
     NSLog(@"%s", __func__);
     
-    // 接收到 Web 页面JS 代码时执行
+    // 接收到 Web 页面 JS 代码时执行
     NSLog(@"message.name: %@, description: %@", message.name, [message.body description]);
     
     // 传递 JS 对象到

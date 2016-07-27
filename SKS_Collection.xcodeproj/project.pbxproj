@@ -18,7 +18,7 @@
 		103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */; };
 		103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */; };
 		103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */; };
-		103A55531D3CCCF200366D8F /* SlideTabBarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */; };
+		103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
@@ -99,8 +99,8 @@
 		103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarView.m; sourceTree = "<group>"; };
 		103A554B1D3CCCF200366D8F /* KKSlideTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarViewController.h; sourceTree = "<group>"; };
 		103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarViewController.m; sourceTree = "<group>"; };
-		103A554D1D3CCCF200366D8F /* SlideTabBarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarDemoController.h; sourceTree = "<group>"; };
-		103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarDemoController.m; sourceTree = "<group>"; };
+		103A554D1D3CCCF200366D8F /* SlideTabBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarItemController.h; sourceTree = "<group>"; };
+		103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarItemController.m; sourceTree = "<group>"; };
 		103A55551D3CCD1900366D8F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -314,8 +314,8 @@
 				103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */,
 				103A554B1D3CCCF200366D8F /* KKSlideTabBarViewController.h */,
 				103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */,
-				103A554D1D3CCCF200366D8F /* SlideTabBarDemoController.h */,
-				103A554E1D3CCCF200366D8F /* SlideTabBarDemoController.m */,
+				103A554D1D3CCCF200366D8F /* SlideTabBarItemController.h */,
+				103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */,
 			);
 			path = SlideTabBar;
 			sourceTree = "<group>";
@@ -871,7 +871,7 @@
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
-				103A55531D3CCCF200366D8F /* SlideTabBarDemoController.m in Sources */,
+				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				10DD98E51D226B7D00193A69 /* KSSaveTool.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				10DD98E41D226B7D00193A69 /* KSSerialization.m in Sources */,
