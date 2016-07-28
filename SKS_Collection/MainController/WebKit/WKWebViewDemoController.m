@@ -188,9 +188,10 @@
             NSDictionary *dict = (NSDictionary *)message.body;
             
             NSString *className = dict[@"className"];
-            NSString *functionName = dict[@"functionName"];
+            NSString *functionName = [NSString stringWithFormat:@"%@:", dict[@"functionName"]];
+            NSString *data = dict[@"data"];
             
-            NSLog(@"%@, %@", className, functionName);
+            NSLog(@"\n className:%@, \n functionName:%@, \n data:%@", className, functionName, data);
             
             Class cls = NSClassFromString(className);
             if (cls) {
@@ -198,7 +199,7 @@
                 
                 SEL selector = NSSelectorFromString(functionName);
                 if ([obj respondsToSelector:selector]) {
-                    [obj performSelector:selector];
+                    [obj performSelector:selector withObject:data];
                 } else {
                     NSLog(@"方法未找到");
                 }

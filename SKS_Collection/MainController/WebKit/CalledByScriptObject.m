@@ -10,9 +10,9 @@
 
 @implementation CalledByScriptObject
 
-- (void)callMe
+- (void)log:(NSString *)string
 {
-    NSLog(@"%s","反射成功");
+    NSLog(@"%@",string);
 }
 
 @end

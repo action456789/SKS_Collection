@@ -21,7 +21,7 @@
         
         <script>
             window.webkit.messageHandlers.scriptMessage.postMessage("Hello WebKit!")
-            window.webkit.messageHandlers.scriptMessage.postMessage({className: "CalledByScriptObject", functionName: "callMe"})
+            window.webkit.messageHandlers.scriptMessage.postMessage({className: "CalledByScriptObject", functionName: "log", data: "I Love You Baby!"})
         </script>
         
     </head>

@@ -10,6 +10,6 @@
 
 @interface CalledByScriptObject : NSObject
 
-- (void)callMe;
+- (void)log:(NSString *)string;
 
 @end
