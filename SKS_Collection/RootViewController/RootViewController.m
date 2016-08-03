@@ -20,6 +20,7 @@
 #import "QRCodeViewController.h"
 #import "ShimmerDemeController.h"
 #import "WKWebViewDemoController.h"
+#import "StaticCellBaseViewController.h"
 
 static NSString *kCellIdentifier = @"kCellIdentifier";
 
@@ -40,13 +41,18 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 
 - (void)addTableView
 {
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.rowHeight = 50.f;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_tableView registerClass:[ListCell class] forCellReuseIdentifier:kCellIdentifier];
-    [self.view addSubview:_tableView];
+    _tableView = ({
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)
+                                                  style:UITableViewStylePlain];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.rowHeight = 50.f;
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [tableView registerClass:[ListCell class] forCellReuseIdentifier:kCellIdentifier];
+        [self.view addSubview:tableView];
+        
+        tableView;
+    });
 }
 
 - (void)initData
@@ -62,10 +68,11 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
                            ,[ListCellItem itemWithName:@"扫描二维码" objectClass:[QRCodeViewController class]]
                            ,[ListCellItem itemWithName:@"辉光动画" objectClass:[ShimmerDemeController class]]
                            ,[ListCellItem itemWithName:@"WKWebView的加载过程" objectClass:[WKWebViewDemoController class]]
+                           ,[ListCellItem itemWithName:@"静态单元格" objectClass:[StaticCellBaseViewController class]]
                            ];
 }
 
-#pragma mark - tableView Delegate
+#pragma mark - tableView DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -77,7 +84,7 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     return _dataSourceArray.count;
 }
 
-#pragma mark - tableView DataSource
+#pragma mark - tableView delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

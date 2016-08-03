@@ -20,6 +20,10 @@
 		103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */; };
 		103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
+		103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */; };
+		103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCD1D51E66100401306 /* StaticCellItem.m */; };
+		103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */; };
+		103C3CD51D51E68500401306 /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD41D51E68500401306 /* StaticCell.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
@@ -105,6 +109,14 @@
 		103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarItemController.m; sourceTree = "<group>"; };
 		103A55551D3CCD1900366D8F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		103C3CB71D5195B700401306 /* StaticCellBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellBaseViewController.h; sourceTree = "<group>"; };
+		103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellBaseViewController.m; sourceTree = "<group>"; };
+		103C3CCC1D51E66100401306 /* StaticCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellItem.h; sourceTree = "<group>"; };
+		103C3CCD1D51E66100401306 /* StaticCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItem.m; sourceTree = "<group>"; };
+		103C3CCE1D51E66100401306 /* StaticCellItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellItemGroup.h; sourceTree = "<group>"; };
+		103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItemGroup.m; sourceTree = "<group>"; };
+		103C3CD31D51E68500401306 /* StaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCell.h; sourceTree = "<group>"; };
+		103C3CD41D51E68500401306 /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		10694E4A1D41F35500D9F486 /* NSString+Code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Code.h"; sourceTree = "<group>"; };
@@ -282,6 +294,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				103C3CB61D5195AD00401306 /* StaticTableView */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
 				1032C2DA1D47425600D55DE0 /* Shimmer */,
 				1032C2D01D45EF3F00D55DE0 /* QRCoder */,
@@ -337,6 +350,37 @@
 				10F4DFF41D41C2B600E0D223 /* BaseNavigationController.m */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		103C3CB61D5195AD00401306 /* StaticTableView */ = {
+			isa = PBXGroup;
+			children = (
+				103C3CCB1D51E66100401306 /* Modal */,
+				103C3CD21D51E68500401306 /* View */,
+				103C3CB71D5195B700401306 /* StaticCellBaseViewController.h */,
+				103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */,
+			);
+			path = StaticTableView;
+			sourceTree = "<group>";
+		};
+		103C3CCB1D51E66100401306 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				103C3CCC1D51E66100401306 /* StaticCellItem.h */,
+				103C3CCD1D51E66100401306 /* StaticCellItem.m */,
+				103C3CCE1D51E66100401306 /* StaticCellItemGroup.h */,
+				103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		103C3CD21D51E68500401306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				103C3CD31D51E68500401306 /* StaticCell.h */,
+				103C3CD41D51E68500401306 /* StaticCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		10642B961D34D7D6001217CF /* RootViewController */ = {
@@ -868,9 +912,11 @@
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
+				103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
+				103C3CD51D51E68500401306 /* StaticCell.m in Sources */,
 				1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
@@ -887,6 +933,7 @@
 				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
 				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
+				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				10F4DFD51D40748900E0D223 /* ListCellItem.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
@@ -895,6 +942,7 @@
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
 				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
+				103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
