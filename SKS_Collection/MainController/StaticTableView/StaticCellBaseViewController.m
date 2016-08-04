@@ -8,22 +8,22 @@
 
 #import "StaticCellBaseViewController.h"
 #import "StaticCell.h"
-#import "StaticCellItem.h"
-#import "StaticCellItemGroup.h"
-
-#import "BlurEffectDemoController.h"
 
 #define kCellIdentifie @"StaticCell"
 
-@implementation StaticCellBaseViewController
+@interface StaticCellBaseViewController() <UITableViewDelegate, UITableViewDataSource>
 
-- (instancetype)init
+@end
+
+@implementation StaticCellBaseViewController
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
-    if (self) {
-        self.tableView.rowHeight = 50.f;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        [self.tableView registerClass:[StaticCell class] forCellReuseIdentifier:kCellIdentifie];
+    UITableViewStyle _style;
+}
+
+- (instancetype)initWithStyle:(UITableViewStyle)style
+{
+    if (self = [super init]) {
+        _style = style;
     }
     return self;
 }
@@ -32,51 +32,72 @@
 {
     [super viewDidLoad];
     
-    NSArray *array = @[[StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
-                       ,[StaticCellItem itemWithTitle:@"儿童锁" type:StaticCellTypeSwitch]
-                       ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-                       ,[StaticCellItem itemWithTitle:@"测试4" handle:^{ NSLog(@"点我啊"); }]
-                       ,[StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
-                       ];
+    [self.view addSubview:self.tableView];
     
-    NSArray *array2 = @[[StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
-                       ,[StaticCellItem itemWithTitle:@"儿童锁" type:StaticCellTypeSwitch]
-                       ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-                       ,[StaticCellItem itemWithTitle:@"测试4" handle:^{ NSLog(@"点我啊"); }]
-                       ,[StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
-                       ];
-    
-    StaticCellItemGroup *group1 = [StaticCellItemGroup itemGroupWithHeaderTitle:@"第一组" footerTitle:nil items:array];
-    StaticCellItemGroup *group2 = [StaticCellItemGroup itemGroupWithHeaderTitle:@"第二组" footerTitle:nil items:array2];
-    
-    self.dataSource = @[group1, group2];
+    if (self.automaticallyAdjustsScrollViewInsets == NO && self.navigationController) {
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+    }
 }
 
-- (void)buttonClick
+# pragma mark abstract mathod
+
+- (UIView *)viewForHeaderInSection:(NSInteger)section
 {
-    NSLog(@"%s", __func__);
+    return nil;
+}
+
+- (UIView *)viewForFooterInSection:(NSInteger)section
+{
+    return nil;
+}
+
+- (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma setter, getter
+
+- (UITableView *)tableView
+{
+    if (_tableView == nil) {
+        CGRect frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
+        UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:_style];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.rowHeight = 50.f;
+        tableView.alwaysBounceVertical = YES;
+        tableView.showsVerticalScrollIndicator = NO;
+        tableView.showsHorizontalScrollIndicator = NO;
+        tableView.backgroundColor = [UIColor clearColor];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+        [tableView registerClass:[StaticCell class] forCellReuseIdentifier:kCellIdentifie];
+        _tableView = tableView;
+    }
+    return _tableView;
 }
 
 #pragma mark - tableView DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.dataSource.count;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSource[section].items.count;
+    return self.dataArray[section].items.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return self.dataSource[section].headerTitle;
+    return self.dataArray[section].headerTitle;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
-    return self.dataSource[section].footerTitle;
+    return self.dataArray[section].footerTitle;
 }
 
 #pragma mark - tableView delegate
@@ -88,12 +109,10 @@
         cell = [[StaticCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifie];
     }
     
-    cell.item = self.dataSource[indexPath.section].items[indexPath.row];
+    cell.item = self.dataArray[indexPath.section].items[indexPath.row];
     
     if (cell.item.cellType == StaticCellTypeButton) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(configureCellButton:atIndexPath:)]) {
-            [self.delegate configureCellButton:cell.button atIndexPath:indexPath];;
-        }
+        [self configureCellButton:cell.button atIndexPath:indexPath];
     }
     
     return cell;
@@ -103,7 +122,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    StaticCellItem *item = self.dataSource[indexPath.section].items[indexPath.row];
+    StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     
     if (item.objectClass) {
         UIViewController *controller = [item.objectClass new];
@@ -113,4 +132,23 @@
     }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [self viewForHeaderInSection:section];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [self viewForFooterInSection:section];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return self.dataArray[section].headerHeight;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return self.dataArray[section].footerHeight;
+}
 @end

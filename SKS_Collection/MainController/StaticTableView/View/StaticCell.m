@@ -146,9 +146,6 @@
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
         _button.titleLabel.textAlignment = NSTextAlignmentLeft;
         _button.bounds = CGRectMake(0, 0, 100, 30);
-        
-        [_button setTitle:@"sdfsdfsd" forState:UIControlStateNormal];
-        _button.backgroundColor = [UIColor redColor];
     }
     return _button;
 }

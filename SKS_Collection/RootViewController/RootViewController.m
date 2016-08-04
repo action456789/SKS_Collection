@@ -7,10 +7,8 @@
 //
 
 #import "RootViewController.h"
-#import "ListCellItem.h"
 #import "CountDownButtonDemoVC.h"
 #import "RotateAnimateViewController.h"
-#import "ListCell.h"
 #import "KKSlideTabBarViewController.h"
 #import "BlurEffectDemoController.h"
 #import "FileCacheDemoController.h"
@@ -20,95 +18,44 @@
 #import "QRCodeViewController.h"
 #import "ShimmerDemeController.h"
 #import "WKWebViewDemoController.h"
-#import "StaticCellBaseViewController.h"
+#import "StaticCellDemoViewController.h"
 
-static NSString *kCellIdentifier = @"kCellIdentifier";
+@interface RootViewController()
 
-@interface RootViewController()<UITableViewDelegate, UITableViewDataSource> {
-    UITableView *_tableView;
-    NSArray<ListCellItem *> *_dataSourceArray;
-}
 @end
 
 @implementation RootViewController
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self addTableView];
+    [super viewDidLoad];
+    
     [self initData];
-}
-
-- (void)addTableView
-{
-    _tableView = ({
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)
-                                                  style:UITableViewStylePlain];
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        tableView.rowHeight = 50.f;
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [tableView registerClass:[ListCell class] forCellReuseIdentifier:kCellIdentifier];
-        [self.view addSubview:tableView];
-        
-        tableView;
-    });
 }
 
 - (void)initData
 {
-    _dataSourceArray = @[  [ListCellItem itemWithName:@"倒计时按钮" objectClass:[CountDownButtonDemoVC class]]
-                           ,[ListCellItem itemWithName:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
-                           ,[ListCellItem itemWithName:@"Slide Tab Bar" objectClass:[KKSlideTabBarViewController class]]
-                           ,[ListCellItem itemWithName:@"模糊效果" objectClass:[BlurEffectDemoController class]]
-                           ,[ListCellItem itemWithName:@"文件缓存" objectClass:[FileCacheDemoController class]]
-                           ,[ListCellItem itemWithName:@"sqlite缓存" objectClass:[DiskCacheSqlLiteDemoController class]]
-                           ,[ListCellItem itemWithName:@"GradientLayer(渐变梯度图层)" objectClass:[GradientLayerDemoController class]]
-                           ,[ListCellItem itemWithName:@"GradientLayer动画" objectClass:[GradientLayerDemo2Controller class]]
-                           ,[ListCellItem itemWithName:@"扫描二维码" objectClass:[QRCodeViewController class]]
-                           ,[ListCellItem itemWithName:@"辉光动画" objectClass:[ShimmerDemeController class]]
-                           ,[ListCellItem itemWithName:@"WKWebView的加载过程" objectClass:[WKWebViewDemoController class]]
-                           ,[ListCellItem itemWithName:@"静态单元格" objectClass:[StaticCellBaseViewController class]]
-                           ];
-}
-
-#pragma mark - tableView DataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return _dataSourceArray.count;
-}
-
-#pragma mark - tableView delegate
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ListCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
-    if (!cell) {
-        cell = [[ListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
-    }
+    NSArray *items = @[ [StaticCellItem itemWithTitle:@"倒计时按钮" objectClass:[CountDownButtonDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"转动动画的暂停与恢复" objectClass:[RotateAnimateViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"Slide Tab Bar" objectClass:[KKSlideTabBarViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"文件缓存" objectClass:[FileCacheDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"sqlite缓存" objectClass:[DiskCacheSqlLiteDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"GradientLayer(渐变梯度图层)" objectClass:[GradientLayerDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"GradientLayer动画" objectClass:[GradientLayerDemo2Controller class]]
+                        ,[StaticCellItem itemWithTitle:@"扫描二维码" objectClass:[QRCodeViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"辉光动画" objectClass:[ShimmerDemeController class]]
+                        ,[StaticCellItem itemWithTitle:@"WKWebView的加载过程" objectClass:[WKWebViewDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"静态单元格" objectClass:[StaticCellDemoViewController class]]
+                        ];
     
-    cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+    StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil
+                                                                  headerHeight:0
+                                                                   footerTitle:nil
+                                                                  footerHeight:0
+                                                                         items:items];
     
-    if (indexPath.row % 2 == 0) {
-        cell.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.05f];
-    } else {
-        cell.backgroundColor = [UIColor whiteColor];
-    }
-    
-    cell.textLabel.text = _dataSourceArray[indexPath.row].name;
-
-    return cell;
+    self.dataArray = @[group];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UIViewController *controller = [_dataSourceArray[indexPath.row].objectClass new];
-    [self.navigationController pushViewController:controller animated:YES];
-}
 @end

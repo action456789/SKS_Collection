@@ -7,17 +7,18 @@
 //
 
 #import "BaseViewController.h"
-@class StaticCellItemGroup;
+#import "StaticCellItem.h"
+#import "StaticCellItemGroup.h"
 
-@protocol StaticCellBaseViewControllerDelegate <NSObject>
-@optional
+@interface StaticCellBaseViewController : BaseViewController
+
+@property (nonatomic, strong) NSArray<StaticCellItemGroup *> *dataArray;
+@property (nonatomic, strong) UITableView *tableView;
+
+- (instancetype)initWithStyle:(UITableViewStyle)style;
+
 - (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath;
-@end
-
-@interface StaticCellBaseViewController : UITableViewController
-
-@property (nonatomic, strong) NSArray<StaticCellItemGroup *> *dataSource;
-
-@property (nonatomic,weak) id <StaticCellBaseViewControllerDelegate> delegate;
+- (UIView *)viewForHeaderInSection:(NSInteger)section;
+- (UIView *)viewForFooterInSection:(NSInteger)section;
 
 @end

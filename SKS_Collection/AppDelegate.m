@@ -20,7 +20,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    RootViewController *rootVc = [RootViewController new];
+    RootViewController *rootVc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:rootVc];
     
     self.window.rootViewController = nav;

@@ -24,6 +24,7 @@
 		103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCD1D51E66100401306 /* StaticCellItem.m */; };
 		103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */; };
 		103C3CD51D51E68500401306 /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD41D51E68500401306 /* StaticCell.m */; };
+		103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
@@ -72,8 +73,6 @@
 		10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD996A1D24F48600193A69 /* UIDevice+KS.m */; };
 		10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */; };
 		10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */; };
-		10F4DFD41D40748900E0D223 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFD11D40748900E0D223 /* ListCell.m */; };
-		10F4DFD51D40748900E0D223 /* ListCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFD31D40748900E0D223 /* ListCellItem.m */; };
 		10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFDE1D40981500E0D223 /* DiskCacheSqlLite.m */; };
 		10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFE41D40983F00E0D223 /* DiskCacheFile.m */; };
 		10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFE71D40A01400E0D223 /* NSFileManager+File.m */; };
@@ -117,6 +116,8 @@
 		103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItemGroup.m; sourceTree = "<group>"; };
 		103C3CD31D51E68500401306 /* StaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCell.h; sourceTree = "<group>"; };
 		103C3CD41D51E68500401306 /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
+		103C3CD61D52D89200401306 /* StaticCellDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellDemoViewController.h; sourceTree = "<group>"; };
+		103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellDemoViewController.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		10694E4A1D41F35500D9F486 /* NSString+Code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Code.h"; sourceTree = "<group>"; };
@@ -205,10 +206,6 @@
 		10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		10F4DFCD1D3F861900E0D223 /* BlurEffectDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurEffectDemoController.h; sourceTree = "<group>"; };
 		10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurEffectDemoController.m; sourceTree = "<group>"; };
-		10F4DFD01D40748900E0D223 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
-		10F4DFD11D40748900E0D223 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
-		10F4DFD21D40748900E0D223 /* ListCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCellItem.h; sourceTree = "<group>"; };
-		10F4DFD31D40748900E0D223 /* ListCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCellItem.m; sourceTree = "<group>"; };
 		10F4DFDD1D40981500E0D223 /* DiskCacheSqlLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLite.h; sourceTree = "<group>"; };
 		10F4DFDE1D40981500E0D223 /* DiskCacheSqlLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLite.m; sourceTree = "<group>"; };
 		10F4DFE31D40983F00E0D223 /* DiskCacheFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheFile.h; sourceTree = "<group>"; };
@@ -359,6 +356,8 @@
 				103C3CD21D51E68500401306 /* View */,
 				103C3CB71D5195B700401306 /* StaticCellBaseViewController.h */,
 				103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */,
+				103C3CD61D52D89200401306 /* StaticCellDemoViewController.h */,
+				103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */,
 			);
 			path = StaticTableView;
 			sourceTree = "<group>";
@@ -386,10 +385,6 @@
 		10642B961D34D7D6001217CF /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				10F4DFD01D40748900E0D223 /* ListCell.h */,
-				10F4DFD11D40748900E0D223 /* ListCell.m */,
-				10F4DFD21D40748900E0D223 /* ListCellItem.h */,
-				10F4DFD31D40748900E0D223 /* ListCellItem.m */,
 				10642B971D34D80F001217CF /* RootViewController.h */,
 				10642B981D34D80F001217CF /* RootViewController.m */,
 			);
@@ -902,7 +897,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
-				10F4DFD41D40748900E0D223 /* ListCell.m in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
@@ -924,6 +918,7 @@
 				10DD98D51D226B7D00193A69 /* NSString+Font.m in Sources */,
 				10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
+				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
@@ -935,7 +930,6 @@
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
-				10F4DFD51D40748900E0D223 /* ListCellItem.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
 				10DD98E01D226B7D00193A69 /* UIView+Tool.m in Sources */,

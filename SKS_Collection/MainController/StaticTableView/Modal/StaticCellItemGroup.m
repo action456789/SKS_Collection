@@ -10,11 +10,17 @@
 
 @implementation StaticCellItemGroup
 
-+ (instancetype)itemGroupWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle items:(NSArray *)items
++ (instancetype)itemGroupWithHeaderTitle:(NSString *)headerTitle
+                            headerHeight:(CGFloat)headerHeight
+                             footerTitle:(NSString *)footerTitle
+                            footerHeight:(CGFloat)footerHeight
+                                   items:(NSArray *)items
 {
     StaticCellItemGroup *group = [[StaticCellItemGroup alloc] init];
     group.headerTitle = headerTitle;
     group.footerTitle = footerTitle;
+    group.headerHeight = headerHeight;
+    group.footerHeight = footerHeight;
     group.items = items;
     
     return group;
