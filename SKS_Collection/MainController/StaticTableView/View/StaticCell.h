@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 @class StaticCellItem;
 
+#define kStaticCellHeight 50.f
+
 @interface StaticCell : UITableViewCell
 
 @property (nonatomic, strong) UIButton *button;

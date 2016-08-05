@@ -33,10 +33,6 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-    
-    if (self.automaticallyAdjustsScrollViewInsets == NO && self.navigationController) {
-        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
-    }
 }
 
 # pragma mark abstract mathod
@@ -61,17 +57,17 @@
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
-        CGRect frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
+        CGRect frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight - 64);
         UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:_style];
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.rowHeight = 50.f;
+        tableView.rowHeight = kStaticCellHeight;
         tableView.alwaysBounceVertical = YES;
         tableView.showsVerticalScrollIndicator = NO;
         tableView.showsHorizontalScrollIndicator = NO;
+        tableView.backgroundView = nil;
         tableView.backgroundColor = [UIColor clearColor];
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+        tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [tableView registerClass:[StaticCell class] forCellReuseIdentifier:kCellIdentifie];
         _tableView = tableView;
     }
@@ -101,6 +97,11 @@
 }
 
 #pragma mark - tableView delegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = [UIColor lightGrayColor];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -20,6 +20,14 @@
 
 @implementation StaticCell
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.contentView.backgroundColor = [UIColor grayColor];
+    }
+    return self;
+}
+
 - (void)setItem:(StaticCellItem *)item
 {
     _item = item;
@@ -40,6 +48,8 @@
         self.detailTextLabel.text = self.item.subTitle;
     }
 }
+
+
 
 - (void)setupRightContent
 {
@@ -76,9 +86,6 @@
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
     
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    UIView* myBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
-    myBackgroundView.backgroundColor = [UIColor whiteColor];
-    self.backgroundView = myBackgroundView;
 }
 
 - (void)createCellButton
@@ -114,7 +121,7 @@
 
 - (UISwitch *)switchView
 {
-    if (_switchView == nil) {
+    if (!_switchView) {
         _switchView = [[UISwitch alloc] init];
         [_switchView addTarget:self action:@selector(switchStateChange) forControlEvents:UIControlEventValueChanged];
     }
@@ -130,24 +137,26 @@
 
 - (UILabel *)labelView
 {
-    if (_labelView == nil) {
+    if (!_labelView) {
         _labelView = [[UILabel alloc] init];
         _labelView.bounds = CGRectMake(0, 0, 100, 30);
         _labelView.backgroundColor = [UIColor clearColor];
-        _labelView.textAlignment = NSTextAlignmentRight;
-        _labelView.text = @"我是测试";
+        _labelView.textAlignment = NSTextAlignmentCenter;
+        _labelView.text = self.item.subTitle;
+        _labelView.font = [UIFont systemFontOfSize:14];
     }
     return _labelView;
 }
 
 - (UIButton *)button
 {
-    if (_button == nil) {
+    if (!_button) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
-        _button.titleLabel.textAlignment = NSTextAlignmentLeft;
         _button.bounds = CGRectMake(0, 0, 100, 30);
     }
     return _button;
 }
+
+
 
 @end
