@@ -68,6 +68,7 @@
         tableView.backgroundView = nil;
         tableView.backgroundColor = [UIColor clearColor];
         tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        [tableView setSeparatorColor:[UIColor greenColor]];
         [tableView registerClass:[StaticCell class] forCellReuseIdentifier:kCellIdentifie];
         _tableView = tableView;
     }

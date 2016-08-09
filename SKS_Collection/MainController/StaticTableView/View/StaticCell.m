@@ -15,17 +15,34 @@
 @property (nonatomic, strong) UISwitch *switchView;
 @property (nonatomic, strong) UILabel *labelView;
 @property (nonatomic, copy) StaticCellHandle handle;
-
 @end
 
 @implementation StaticCell
-
-- (instancetype)init
 {
-    if (self = [super init]) {
-        self.contentView.backgroundColor = [UIColor grayColor];
+    UIView *_selectedBgView;
+}
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
     }
     return self;
+}
+
+- (void)setSelectedBgColor:(UIColor *)color
+{
+    if (!_selectedBgView) {
+        _selectedBgView = [[UIView alloc] initWithFrame:self.selectedBackgroundView.bounds];
+        _selectedBgView.backgroundColor = color;
+    }
+    [self.selectedBackgroundView addSubview:_selectedBgView];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self setSelectedBgColor:[UIColor redColor]];
 }
 
 - (void)setItem:(StaticCellItem *)item
@@ -84,7 +101,7 @@
 - (void)createCellDisclosure
 {
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
-    
+
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
@@ -156,7 +173,5 @@
     }
     return _button;
 }
-
-
 
 @end
