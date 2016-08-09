@@ -24,7 +24,7 @@ typedef void (^StaticCellHandle)(void);
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subTitle;
 
-@property (nonatomic, copy) StaticCellHandle handle;
+@property (nonatomic, copy) StaticCellHandle clickedHandle;
 
 @property (nonatomic, strong) Class objectClass;
 
@@ -32,6 +32,6 @@ typedef void (^StaticCellHandle)(void);
 
 + (instancetype)itemWithTitle:(NSString *)title type:(StaticCellType)type;
 + (instancetype)itemWithTitle:(NSString *)title objectClass:(Class)objectClass;
-+ (instancetype)itemWithTitle:(NSString *)title handle:(StaticCellHandle)handle;
++ (instancetype)itemWithTitle:(NSString *)title clickedHandle:(StaticCellHandle)handle;
 + (instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle;
 @end

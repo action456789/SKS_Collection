@@ -20,5 +20,6 @@
 - (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath;
 - (UIView *)viewForHeaderInSection:(NSInteger)section;
 - (UIView *)viewForFooterInSection:(NSInteger)section;
+- (BOOL)shouldNavigationWhenClickedCellAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

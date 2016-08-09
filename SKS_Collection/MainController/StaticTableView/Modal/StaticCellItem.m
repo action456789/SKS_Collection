@@ -27,10 +27,10 @@
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title handle:(StaticCellHandle)handle
++ (instancetype)itemWithTitle:(NSString *)title clickedHandle:(StaticCellHandle)handle
 {
     StaticCellItem *item = [[self class] itemWithTitle:title type:StaticCellTypeHandle];
-    item.handle = handle;
+    item.clickedHandle = handle;
     
     return item;
 }

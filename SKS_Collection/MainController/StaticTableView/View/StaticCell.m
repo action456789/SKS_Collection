@@ -29,7 +29,7 @@
     return self;
 }
 
-- (void)setSelectedBgColor:(UIColor *)color
+- (void)_setSelectedBgColor:(UIColor *)color
 {
     if (!_selectedBgView) {
         _selectedBgView = [[UIView alloc] initWithFrame:self.selectedBackgroundView.bounds];
@@ -42,18 +42,18 @@
 {
     [super layoutSubviews];
     
-    [self setSelectedBgColor:[UIColor redColor]];
+    [self _setSelectedBgColor:[UIColor redColor]];
 }
 
 - (void)setItem:(StaticCellItem *)item
 {
     _item = item;
     
-    [self setupData];
-    [self setupRightContent];
+    [self _setupData];
+    [self _setupRightContent];
 }
 
-- (void)setupData
+- (void)_setupData
 {
     if (self.item.icon) {
         self.imageView.image = [UIImage imageNamed:self.item.icon];
@@ -66,29 +66,27 @@
     }
 }
 
-
-
-- (void)setupRightContent
+- (void)_setupRightContent
 {
     switch (self.item.cellType) {
         case StaticCellTypeDisclosureIndicator:
-            [self createCellDisclosure];
+            [self _createCellDisclosure];
             break;
             
         case StaticCellTypeButton:
-            [self createCellButton];
+            [self _createCellButton];
             break;
             
         case StaticCellTypeSwitch:
-            [self createCellSwitch];
+            [self _createCellSwitch];
             break;
             
         case StaticCellTypeLabel:
-            [self createCellLabel];
+            [self _createCellLabel];
             break;
             
         case StaticCellTypeHandle:
-            [self createCellHandle];
+            [self _createCellHandle];
             break;
             
         default:
@@ -98,28 +96,28 @@
 
 }
 
-- (void)createCellDisclosure
+- (void)_createCellDisclosure
 {
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
 
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
-- (void)createCellButton
+- (void)_createCellButton
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 
     self.accessoryView = self.button;
 }
 
-- (void)createCellLabel
+- (void)_createCellLabel
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.accessoryView = self.labelView;
 }
 
-- (void)createCellSwitch
+- (void)_createCellSwitch
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -129,7 +127,7 @@
     self.switchView.on = [defaults boolForKey:self.item.title];
 }
 
-- (void)createCellHandle
+- (void)_createCellHandle
 {
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
 }

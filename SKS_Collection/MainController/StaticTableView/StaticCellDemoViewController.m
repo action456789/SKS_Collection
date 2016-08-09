@@ -18,17 +18,19 @@
 {
     [super viewDidLoad];
     
-    NSArray *array = @[[StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
-                       ,[StaticCellItem itemWithTitle:@"家长控制" type:StaticCellTypeButton]
-                       ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-                       ,[StaticCellItem itemWithTitle:@"卡券兑换" type:StaticCellTypeButton]
+    NSArray *array = @[
+        [StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
+       ,[StaticCellItem itemWithTitle:@"家长控制" type:StaticCellTypeButton]
+       ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
+       ,[StaticCellItem itemWithTitle:@"卡券兑换" type:StaticCellTypeButton]
                        ];
     
-    NSArray *array2 = @[[StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
-                        ,[StaticCellItem itemWithTitle:@"儿童锁" type:StaticCellTypeSwitch]
-                        ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-                        ,[StaticCellItem itemWithTitle:@"测试4" handle:^{ NSLog(@"点我啊"); }]
-                        ,[StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
+    NSArray *array2 = @[
+         [StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
+        ,[StaticCellItem itemWithTitle:@"儿童锁" type:StaticCellTypeSwitch]
+        ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
+        ,[StaticCellItem itemWithTitle:@"测试4" clickedHandle:^{ NSLog(@"点我啊"); }]
+        ,[StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
                         ];
     
     StaticCellItemGroup *group1 = [StaticCellItemGroup itemGroupWithHeaderTitle:@"第一组"
@@ -103,6 +105,17 @@
     view.bounds = CGRectMake(0, 0, ScreenWidth, 200);
     view.backgroundColor = [UIColor blueColor];
     return view;
+}
+
+- (BOOL)shouldNavigationWhenClickedCellAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            NSLog(@"无法进入模糊效果");
+            return NO;
+        }
+    }
+    return YES;
 }
 
 @end

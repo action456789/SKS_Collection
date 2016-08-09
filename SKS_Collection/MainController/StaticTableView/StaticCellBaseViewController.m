@@ -52,6 +52,11 @@
     
 }
 
+- (BOOL)shouldNavigationWhenClickedCellAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
 #pragma setter, getter
 
 - (UITableView *)tableView
@@ -126,11 +131,9 @@
     
     StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     
-    if (item.objectClass) {
+    if (item.objectClass && [self shouldNavigationWhenClickedCellAtIndexPath:indexPath]) {
         UIViewController *controller = [item.objectClass new];
         [self.navigationController pushViewController:controller animated:YES];
-    } else if(item.handle) {
-        item.handle();
     }
 }
 
