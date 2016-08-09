@@ -134,6 +134,8 @@
     if (item.objectClass && [self shouldNavigationWhenClickedCellAtIndexPath:indexPath]) {
         UIViewController *controller = [item.objectClass new];
         [self.navigationController pushViewController:controller animated:YES];
+    } else if(item.clickedHandle) {
+        item.clickedHandle();
     }
 }
 
