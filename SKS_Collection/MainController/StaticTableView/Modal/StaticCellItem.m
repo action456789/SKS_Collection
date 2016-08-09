@@ -27,9 +27,9 @@
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title clickedHandle:(StaticCellHandle)handle
++ (instancetype)itemWithTitle:(NSString *)title type:(StaticCellType)type handle:(StaticCellHandle)handle;
 {
-    StaticCellItem *item = [[self class] itemWithTitle:title type:StaticCellTypeHandle];
+    StaticCellItem *item = [[self class] itemWithTitle:title type:type];
     item.clickedHandle = handle;
     
     return item;
