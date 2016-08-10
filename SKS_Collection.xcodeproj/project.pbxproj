@@ -33,6 +33,7 @@
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
+		10A7DE101D5B12380001A5BE /* CheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A7DE0F1D5B12380001A5BE /* CheckMark.png */; };
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
@@ -138,6 +139,8 @@
 		10694E4B1D41F35500D9F486 /* NSString+Code.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Code.m"; sourceTree = "<group>"; };
 		10694E4D1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLiteDemoController.h; sourceTree = "<group>"; };
 		10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLiteDemoController.m; sourceTree = "<group>"; };
+		10A7DE0E1D5B12300001A5BE /* CheckMark.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheckMark.sketch; sourceTree = "<group>"; };
+		10A7DE0F1D5B12380001A5BE /* CheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckMark.png; sourceTree = "<group>"; };
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 		102185E81D5B0E0C00C5AD64 /* CheckMarkAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				10A7DE0F1D5B12380001A5BE /* CheckMark.png */,
+				10A7DE0E1D5B12300001A5BE /* CheckMark.sketch */,
 				102185E91D5B0EE600C5AD64 /* KSLayAnimationView.h */,
 				102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */,
 				102185EC1D5B0F0800C5AD64 /* CheckMarkAnimVc.h */,
@@ -866,6 +871,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */,
+				10A7DE101D5B12380001A5BE /* CheckMark.png in Resources */,
 				10DD98491D226B1F00193A69 /* LaunchScreen.storyboard in Resources */,
 				10DD99241D22802A00193A69 /* start.png in Resources */,
 				10DD99201D22802A00193A69 /* background.jpg in Resources */,
