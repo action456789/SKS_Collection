@@ -19,6 +19,8 @@
 #import "ShimmerDemeController.h"
 #import "WKWebViewDemoController.h"
 #import "StaticCellDemoViewController.h"
+#import "NumberIncresingVc.h"
+#import "CheckMarkAnimVc.h"
 
 @interface RootViewController()
 
@@ -47,6 +49,8 @@
                         ,[StaticCellItem itemWithTitle:@"辉光动画" objectClass:[ShimmerDemeController class]]
                         ,[StaticCellItem itemWithTitle:@"WKWebView的加载过程" objectClass:[WKWebViewDemoController class]]
                         ,[StaticCellItem itemWithTitle:@"静态单元格" objectClass:[StaticCellDemoViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"数字增长动画" objectClass:[NumberIncresingVc class]]
+                        ,[StaticCellItem itemWithTitle:@"√ × 动画" objectClass:[CheckMarkAnimVc class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

@@ -8,7 +8,7 @@
 
 #import "KKSlideTabBarView.h"
 #import <Masonry.h>
-#import "UIColor+Hex.h"
+#import "UIColor+SKS.h"
 
 static const CGFloat kTopViewHeight          = 40;
 static const CGFloat kFirstItemLeftPadding   = 10;

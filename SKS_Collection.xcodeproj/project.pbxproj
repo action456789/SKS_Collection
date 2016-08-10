@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102185DF1D5ADB5300C5AD64 /* UIColor+SKS.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185DE1D5ADB5300C5AD64 /* UIColor+SKS.m */; };
+		102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185E31D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m */; };
+		102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */; };
+		102185EB1D5B0EE600C5AD64 /* KSLayAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */; };
+		102185EE1D5B0F0800C5AD64 /* CheckMarkAnimVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185ED1D5B0F0800C5AD64 /* CheckMarkAnimVc.m */; };
 		1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */; };
 		1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2CE1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m */; };
 		1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D21D45F34F00D55DE0 /* QRCodeViewController.m */; };
@@ -47,7 +52,6 @@
 		10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD987F1D226B7D00193A69 /* NSTimer+BlockSupurt.m */; };
 		10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98851D226B7D00193A69 /* UITraitCollection+SizeClass.m */; };
 		10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98881D226B7D00193A69 /* UIAlertController+KS.m */; };
-		10DD98DC1D226B7D00193A69 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD988B1D226B7D00193A69 /* UIColor+Hex.m */; };
 		10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD988E1D226B7D00193A69 /* UIImage+ImageEffects.m */; };
 		10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98901D226B7D00193A69 /* UIImage+KS.m */; };
 		10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98931D226B7D00193A69 /* UIView+Frame.m */; };
@@ -82,6 +86,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102185DD1D5ADB5300C5AD64 /* UIColor+SKS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SKS.h"; sourceTree = "<group>"; };
+		102185DE1D5ADB5300C5AD64 /* UIColor+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SKS.m"; sourceTree = "<group>"; };
+		102185E21D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNumberIncreaseAnimationView.h; sourceTree = "<group>"; };
+		102185E31D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNumberIncreaseAnimationView.m; sourceTree = "<group>"; };
+		102185E51D5B0B2D00C5AD64 /* NumberIncresingVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberIncresingVc.h; sourceTree = "<group>"; };
+		102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberIncresingVc.m; sourceTree = "<group>"; };
+		102185E91D5B0EE600C5AD64 /* KSLayAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLayAnimationView.h; sourceTree = "<group>"; };
+		102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLayAnimationView.m; sourceTree = "<group>"; };
+		102185EC1D5B0F0800C5AD64 /* CheckMarkAnimVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMarkAnimVc.h; sourceTree = "<group>"; };
+		102185ED1D5B0F0800C5AD64 /* CheckMarkAnimVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimVc.m; sourceTree = "<group>"; };
 		1032C2CA1D45DF2E00D55DE0 /* GradientLayerDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerDemoController.h; sourceTree = "<group>"; };
 		1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerDemoController.m; sourceTree = "<group>"; };
 		1032C2CD1D45E22E00D55DE0 /* GradientLayerDemo2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerDemo2Controller.h; sourceTree = "<group>"; };
@@ -158,8 +172,6 @@
 		10DD98851D226B7D00193A69 /* UITraitCollection+SizeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITraitCollection+SizeClass.m"; sourceTree = "<group>"; };
 		10DD98871D226B7D00193A69 /* UIAlertController+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+KS.h"; sourceTree = "<group>"; };
 		10DD98881D226B7D00193A69 /* UIAlertController+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KS.m"; sourceTree = "<group>"; };
-		10DD988A1D226B7D00193A69 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		10DD988B1D226B7D00193A69 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		10DD988D1D226B7D00193A69 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		10DD988E1D226B7D00193A69 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		10DD988F1D226B7D00193A69 /* UIImage+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KS.h"; sourceTree = "<group>"; };
@@ -243,6 +255,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				102185E21D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.h */,
+				102185E31D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m */,
+				102185E51D5B0B2D00C5AD64 /* NumberIncresingVc.h */,
+				102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */,
+			);
+			path = NumberIncressingAnimation;
+			sourceTree = "<group>";
+		};
+		102185E81D5B0E0C00C5AD64 /* CheckMarkAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				102185E91D5B0EE600C5AD64 /* KSLayAnimationView.h */,
+				102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */,
+				102185EC1D5B0F0800C5AD64 /* CheckMarkAnimVc.h */,
+				102185ED1D5B0F0800C5AD64 /* CheckMarkAnimVc.m */,
+			);
+			path = CheckMarkAnimation;
+			sourceTree = "<group>";
+		};
 		1032C2C91D45DF0800D55DE0 /* CAGradienLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +325,8 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				102185E81D5B0E0C00C5AD64 /* CheckMarkAnimation */,
+				102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
 				1032C2DA1D47425600D55DE0 /* Shimmer */,
@@ -551,8 +587,8 @@
 		10DD98891D226B7D00193A69 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				10DD988A1D226B7D00193A69 /* UIColor+Hex.h */,
-				10DD988B1D226B7D00193A69 /* UIColor+Hex.m */,
+				102185DD1D5ADB5300C5AD64 /* UIColor+SKS.h */,
+				102185DE1D5ADB5300C5AD64 /* UIColor+SKS.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -910,6 +946,7 @@
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
+				102185DF1D5ADB5300C5AD64 /* UIColor+SKS.m in Sources */,
 				103C3CD51D51E68500401306 /* StaticCell.m in Sources */,
 				1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
@@ -925,8 +962,10 @@
 				10DD98E51D226B7D00193A69 /* KSSaveTool.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				10DD98E41D226B7D00193A69 /* KSSerialization.m in Sources */,
+				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,
 				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
 				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
+				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
@@ -938,13 +977,14 @@
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
+				102185EE1D5B0F0800C5AD64 /* CheckMarkAnimVc.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
+				102185EB1D5B0EE600C5AD64 /* KSLayAnimationView.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
-				10DD98DC1D226B7D00193A69 /* UIColor+Hex.m in Sources */,
 				10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,

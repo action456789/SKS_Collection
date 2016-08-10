@@ -6,16 +6,16 @@
 //  Copyright © 2015年 funshon. All rights reserved.
 //
 
-#import "UIColor+Hex.h"
+#import "UIColor+SKS.h"
 
-@implementation UIColor (Hex)
+@implementation UIColor (SKS)
 
-+ (UIColor *)colorWithHexString:(NSString *)color
++ (instancetype)colorWithHexString:(NSString *)color
 {
     return [UIColor colorWithHexString:color alpha:1.0f];
 }
 
-+ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
++ (instancetype)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
 {
     //remove whitespace and \n convert to uppercase;
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
@@ -42,6 +42,14 @@
     {
         return [UIColor clearColor];
     }
+}
+
++ (instancetype)randomColor
+{
+    return [UIColor colorWithRed:arc4random_uniform(255.0f)/255.0f
+                           green:arc4random_uniform(255.0f)/255.0f
+                            blue:arc4random_uniform(255.0f)/255.0f
+                           alpha:1];
 }
 
 @end
