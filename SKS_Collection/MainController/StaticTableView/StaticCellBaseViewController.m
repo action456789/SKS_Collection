@@ -68,7 +68,7 @@
         tableView.backgroundView = nil;
         tableView.backgroundColor = [UIColor clearColor];
         tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        [tableView setSeparatorColor:[UIColor greenColor]];
+        [tableView setSeparatorColor:[UIColor cyanColor]];
         [tableView registerClass:[StaticCell class] forCellReuseIdentifier:kCellIdentifie];
         _tableView = tableView;
     }
@@ -101,7 +101,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.backgroundColor = [UIColor whiteColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

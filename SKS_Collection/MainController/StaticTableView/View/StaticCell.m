@@ -15,7 +15,10 @@
 @property (nonatomic, strong) UISwitch *switchView;
 @property (nonatomic, strong) UILabel *labelView;
 @property (nonatomic, copy) StaticCellHandle handle;
+
 @end
+
+// 这里最好用懒加载，因为所有控件只在特定的 cell 类型下才会使用
 
 @implementation StaticCell
 {
@@ -25,6 +28,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+
     }
     return self;
 }
@@ -69,67 +73,45 @@
 - (void)_setupRightContent
 {
     switch (self.item.cellType) {
-        case StaticCellTypeDisclosureIndicator:
-            [self _createCellDisclosure];
+        case StaticCellTypeDisclosureIndicator: {
+            self.selectionStyle = UITableViewCellSelectionStyleDefault;
+            self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
+        }
             
-        case StaticCellTypeButton:
-            [self _createCellButton];
+        case StaticCellTypeButton: {
+            self.selectionStyle = UITableViewCellSelectionStyleNone;
+            self.accessoryView = self.button;
             break;
+        }
             
-        case StaticCellTypeSwitch:
-            [self _createCellSwitch];
+        case StaticCellTypeSwitch: {
+            self.selectionStyle = UITableViewCellSelectionStyleNone;
+            self.accessoryView = self.switchView;
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            self.switchView.on = [defaults boolForKey:self.item.title];
+            
             break;
+        }
             
-        case StaticCellTypeLabel:
-            [self _createCellLabel];
+        case StaticCellTypeLabel: {
+            self.selectionStyle = UITableViewCellSelectionStyleNone;
+            self.accessoryView = self.labelView;
             break;
+        }
             
-        case StaticCellTypeHandle:
-            [self _createCellHandle];
+        case StaticCellTypeHandle: {
+            self.selectionStyle = UITableViewCellSelectionStyleDefault;
             break;
+        }
             
-        default:
+        default: {
             self.accessoryView = nil;
             self.selectionStyle = UITableViewCellSelectionStyleDefault;
+        }
     }
 
-}
-
-- (void)_createCellDisclosure
-{
-    self.selectionStyle = UITableViewCellSelectionStyleDefault;
-
-    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-}
-
-- (void)_createCellButton
-{
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-
-    self.accessoryView = self.button;
-}
-
-- (void)_createCellLabel
-{
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    self.accessoryView = self.labelView;
-}
-
-- (void)_createCellSwitch
-{
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    self.accessoryView = self.switchView;
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.switchView.on = [defaults boolForKey:self.item.title];
-}
-
-- (void)_createCellHandle
-{
-    self.selectionStyle = UITableViewCellSelectionStyleDefault;
 }
 
 #pragma mark - getter

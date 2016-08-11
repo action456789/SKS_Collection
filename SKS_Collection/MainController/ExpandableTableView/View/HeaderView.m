@@ -30,7 +30,7 @@
 {
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         
-        [self buildSubviews];
+        [self _buildSubviews];
         
         self.backgroundView = ({ // 设置背景色, iOS8,9...
             UIView * view = [[UIView alloc] initWithFrame:self.bounds];
@@ -43,7 +43,7 @@
     return self;
 }
 
-- (void)buildSubviews
+- (void)_buildSubviews
 {
     // 白色背景
     UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, kHeadViewW)];
