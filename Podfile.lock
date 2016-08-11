@@ -19,6 +19,7 @@ PODS:
     - SQLCipher
   - Masonry (0.6.4)
   - MBProgressHUD (0.9.2)
+  - MJExtension (2.5.16)
   - pop (1.0.9)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - FMDB/SQLCipher
   - Masonry (~> 0.6.3)
   - MBProgressHUD (~> 0.9.1)
+  - MJExtension (~> 2.5.14)
   - pop (~> 1.0)
   - SDWebImage (~> 3.7)
   - Shimmer
@@ -46,6 +48,7 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86

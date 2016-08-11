@@ -18,7 +18,9 @@
 - (instancetype)initWithStyle:(UITableViewStyle)style;
 
 - (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath;
-- (UIView *)viewForHeaderInSection:(NSInteger)section;
-- (UIView *)viewForFooterInSection:(NSInteger)section;
+
+- (UIView *)tableView:(UITableView *)tableView headerCellInSection:(NSInteger)section;
+
+- (UIView *)tableView:(UITableView *)tableView footerCellInSection:(NSInteger)section;
 
 @end

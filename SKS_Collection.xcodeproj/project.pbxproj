@@ -83,6 +83,9 @@
 		10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFE71D40A01400E0D223 /* NSFileManager+File.m */; };
 		10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFF11D40D5DC00E0D223 /* FileCacheDemoController.m */; };
 		10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFF41D41C2B600E0D223 /* BaseNavigationController.m */; };
+		10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEF61D5C0EC200801FD6 /* ExpandableViewController.m */; };
+		10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFA1D5C0EC200801FD6 /* HeaderView.m */; };
+		10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFE1D5C128C00801FD6 /* ClassModal.m */; };
 		85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +234,12 @@
 		10F4DFF11D40D5DC00E0D223 /* FileCacheDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCacheDemoController.m; sourceTree = "<group>"; };
 		10F4DFF31D41C2B600E0D223 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		10F4DFF41D41C2B600E0D223 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		10F7EEF51D5C0EC200801FD6 /* ExpandableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableViewController.h; sourceTree = "<group>"; };
+		10F7EEF61D5C0EC200801FD6 /* ExpandableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandableViewController.m; sourceTree = "<group>"; };
+		10F7EEF91D5C0EC200801FD6 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		10F7EEFA1D5C0EC200801FD6 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		10F7EEFD1D5C128C00801FD6 /* ClassModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassModal.h; sourceTree = "<group>"; };
+		10F7EEFE1D5C128C00801FD6 /* ClassModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassModal.m; sourceTree = "<group>"; };
 		20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 		6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,6 +339,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */,
 				102185E81D5B0E0C00C5AD64 /* CheckMarkAnimation */,
 				102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
@@ -801,6 +811,27 @@
 			path = NSFileManager;
 			sourceTree = "<group>";
 		};
+		10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				10F7EEF81D5C0EC200801FD6 /* View */,
+				10F7EEF51D5C0EC200801FD6 /* ExpandableViewController.h */,
+				10F7EEF61D5C0EC200801FD6 /* ExpandableViewController.m */,
+			);
+			path = ExpandableTableView;
+			sourceTree = "<group>";
+		};
+		10F7EEF81D5C0EC200801FD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10F7EEF91D5C0EC200801FD6 /* HeaderView.h */,
+				10F7EEFA1D5C0EC200801FD6 /* HeaderView.m */,
+				10F7EEFD1D5C128C00801FD6 /* ClassModal.h */,
+				10F7EEFE1D5C128C00801FD6 /* ClassModal.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DA4A57A0974FF2C2D6DBB9D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -940,6 +971,7 @@
 			files = (
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
+				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
@@ -962,6 +994,7 @@
 				10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
+				10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
@@ -994,6 +1027,7 @@
 				10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
+				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,

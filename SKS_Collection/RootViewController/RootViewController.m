@@ -21,6 +21,7 @@
 #import "StaticCellDemoViewController.h"
 #import "NumberIncresingVc.h"
 #import "CheckMarkAnimVc.h"
+#import "ExpandableViewController.h"
 
 @interface RootViewController()
 
@@ -51,6 +52,7 @@
                         ,[StaticCellItem itemWithTitle:@"静态单元格" objectClass:[StaticCellDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"数字增长动画" objectClass:[NumberIncresingVc class]]
                         ,[StaticCellItem itemWithTitle:@"√ × 动画" objectClass:[CheckMarkAnimVc class]]
+                        ,[StaticCellItem itemWithTitle:@"可展开的班级学生列表" objectClass:[ExpandableViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

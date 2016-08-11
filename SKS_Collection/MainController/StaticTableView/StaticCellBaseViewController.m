@@ -37,12 +37,12 @@
 
 # pragma mark abstract mathod
 
-- (UIView *)viewForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView headerViewInSection:(NSInteger)section
 {
     return nil;
 }
 
-- (UIView *)viewForFooterInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView footerViewInSection:(NSInteger)section
 {
     return nil;
 }
@@ -134,14 +134,14 @@
     }
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView headerCellInSection:(NSInteger)section
 {
-    return [self viewForHeaderInSection:section];
+    return [self tableView:tableView viewForHeaderInSection:section];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView footerCellInSection:(NSInteger)section
 {
-    return [self viewForFooterInSection:section];
+    return [self tableView:tableView viewForFooterInSection:section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -153,4 +153,5 @@
 {
     return self.dataArray[section].footerHeight;
 }
+
 @end

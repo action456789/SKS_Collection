@@ -93,19 +93,17 @@
     NSLog(@"%s", __func__);
 }
 
-- (UIView *)viewForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView headerCellInSection:(NSInteger)section
 {
-    UIView *view = [[UIView alloc] init];
+    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerCell"];
     view.bounds = CGRectMake(0, 0, ScreenWidth, 200);
-    view.backgroundColor = [UIColor orangeColor];
     return view;
 }
-
-- (UIView *)viewForFooterInSection:(NSInteger)section
+                                      
+- (UIView *)tableView:(UITableView *)tableView footerCellInSection:(NSInteger)section
 {
-    UIView *view = [[UIView alloc] init];
+    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerCell"];
     view.bounds = CGRectMake(0, 0, ScreenWidth, 200);
-    view.backgroundColor = [UIColor blueColor];
     return view;
 }
 
