@@ -16,6 +16,8 @@
 @end
 
 
+#define kHeadViewW 50
+
 @interface HeaderView : UITableViewHeaderFooterView
 
 + (instancetype)headerViewWithTableView:(UITableView *)tableView;
@@ -25,5 +27,8 @@
 @property (nonatomic, strong) ClassModal *classModal;
 
 @property (nonatomic, assign) NSInteger section;
+
+- (void)startAnimationNormal;
+- (void)startAnimationExtend;
 
 @end

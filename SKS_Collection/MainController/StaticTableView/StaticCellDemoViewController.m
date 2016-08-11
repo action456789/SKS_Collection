@@ -18,12 +18,14 @@
 {
     [super viewDidLoad];
     
+    __weak __typeof(self) weakSelf = self;
+    
     NSArray *array = @[
-        [StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
-       ,[StaticCellItem itemWithTitle:@"家长控制" type:StaticCellTypeButton]
+       [StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeDisclosureIndicator handle:^{[weakSelf gotoRemoteOpimize];}]
+       ,[StaticCellItem itemWithTitle:@"家长控制" type:StaticCellTypeDisclosureIndicator handle:^{[weakSelf gotoParentalControls];}]
        ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-       ,[StaticCellItem itemWithTitle:@"卡券兑换" type:StaticCellTypeButton]
-                       ];
+       ,[StaticCellItem itemWithTitle:@"卡券兑换" type:StaticCellTypeHandle handle:^{[weakSelf cardVouchersExchange];}]
+    ];
     
     NSArray *array2 = @[
          [StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
@@ -60,20 +62,10 @@
         cellButton.titleLabel.font = [UIFont systemFontOfSize:14];
     }
     
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) { // 一键优化
+    if (indexPath.section == 1) {
+        if (indexPath.row == 4) { // 一键优化
             [cellButton setTitle:@"开始" forState:UIControlStateNormal];
             [cellButton addTarget:self action:@selector(gotoRemoteOpimize) forControlEvents:UIControlEventTouchUpInside];
-        }
-        
-        if (indexPath.row == 1) { // 家长控制
-            [cellButton setTitle:@"家长控制" forState:UIControlStateNormal];
-            [cellButton addTarget:self action:@selector(gotoParentalControls) forControlEvents:UIControlEventTouchUpInside];
-        }
-        
-        if (indexPath.row == 3) { // 卡券兑换
-            [cellButton setTitle:@"卡券兑换" forState:UIControlStateNormal];
-            [cellButton addTarget:self action:@selector(cardVouchersExchange) forControlEvents:UIControlEventTouchUpInside];
         }
     }
 }
