@@ -16,17 +16,6 @@
 @end
 
 @implementation StaticCellBaseViewController
-{
-    UITableViewStyle _style;
-}
-
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    if (self = [super init]) {
-        _style = style;
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -58,7 +47,7 @@
 {
     if (_tableView == nil) {
         CGRect frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight - 64);
-        UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:_style];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:self.tableViewStyle];
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.rowHeight = kStaticCellH;

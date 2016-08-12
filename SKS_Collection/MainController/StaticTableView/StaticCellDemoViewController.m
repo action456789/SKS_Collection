@@ -8,7 +8,6 @@
 
 #import "StaticCellDemoViewController.h"
 
-#import "StaticCellBaseViewController.h"
 #import "BlurEffectDemoController.h"
 #import "UIDevice+KS.h"
 

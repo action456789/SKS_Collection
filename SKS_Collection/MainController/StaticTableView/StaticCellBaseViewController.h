@@ -14,8 +14,7 @@
 
 @property (nonatomic, strong) NSArray<StaticCellItemGroup *> *dataArray;
 @property (nonatomic, strong) UITableView *tableView;
-
-- (instancetype)initWithStyle:(UITableViewStyle)style;
+@property (nonatomic, assign) UITableViewStyle tableViewStyle;
 
 - (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath;
 

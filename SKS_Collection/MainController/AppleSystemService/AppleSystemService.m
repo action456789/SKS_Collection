@@ -12,7 +12,6 @@
 
 + (UIImage *)launchImage
 {
-    
     UIImage *launchImage = nil;
     
     NSString *viewOrientation = nil;

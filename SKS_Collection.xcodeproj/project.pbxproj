@@ -87,6 +87,7 @@
 		10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFA1D5C0EC200801FD6 /* HeaderView.m */; };
 		10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFE1D5C128C00801FD6 /* ClassModal.m */; };
 		10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF021D5D664700801FD6 /* AppleSystemService.m */; };
+		10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */; };
 		85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
@@ -243,6 +244,8 @@
 		10F7EEFE1D5C128C00801FD6 /* ClassModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassModal.m; sourceTree = "<group>"; };
 		10F7EF011D5D664700801FD6 /* AppleSystemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSystemService.h; sourceTree = "<group>"; };
 		10F7EF021D5D664700801FD6 /* AppleSystemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemService.m; sourceTree = "<group>"; };
+		10F7EF041D5D6EDC00801FD6 /* AppleSystemServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSystemServiceViewController.h; sourceTree = "<group>"; };
+		10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemServiceViewController.m; sourceTree = "<group>"; };
 		20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 		6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -841,6 +844,8 @@
 			children = (
 				10F7EF011D5D664700801FD6 /* AppleSystemService.h */,
 				10F7EF021D5D664700801FD6 /* AppleSystemService.m */,
+				10F7EF041D5D6EDC00801FD6 /* AppleSystemServiceViewController.h */,
+				10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */,
 			);
 			path = AppleSystemService;
 			sourceTree = "<group>";
@@ -994,6 +999,7 @@
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */,
+				10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
