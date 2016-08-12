@@ -61,7 +61,7 @@
         UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:_style];
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.rowHeight = kStaticCellHeight;
+        tableView.rowHeight = kStaticCellH;
         tableView.alwaysBounceVertical = YES;
         tableView.showsVerticalScrollIndicator = NO;
         tableView.showsHorizontalScrollIndicator = NO;
@@ -114,7 +114,7 @@
     cell.item = self.dataArray[indexPath.section].items[indexPath.row];
     
     if (cell.item.cellType == StaticCellTypeButton) {
-        [self configureCellButton:cell.button atIndexPath:indexPath];
+        [self configureCellButton:cell.rightContentButton atIndexPath:indexPath];
     }
     
     return cell;

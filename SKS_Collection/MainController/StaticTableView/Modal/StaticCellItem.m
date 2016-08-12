@@ -10,34 +10,34 @@
 
 @implementation StaticCellItem
 
-+ (instancetype)itemWithTitle:(NSString *)title type:(StaticCellType)type
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type
 {
     StaticCellItem *item  = [[[self class] alloc] init];
     item.title = title;
     item.cellType = type;
+    item.icon = icon;
     
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title objectClass:(Class)objectClass
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon objectClass:(Class)objectClass
 {
-    StaticCellItem *item = [[self class] itemWithTitle:title type:StaticCellTypeDisclosureIndicator];
+    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeDisclosureIndicator];
     item.objectClass = objectClass;
     
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title type:(StaticCellType)type handle:(StaticCellHandle)handle;
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type handle:(StaticCellHandle)handle;
 {
-    StaticCellItem *item = [[self class] itemWithTitle:title type:type];
+    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:type];
     item.clickedHandle = handle;
-    
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon subTitle:(NSString *)subTitle
 {
-    StaticCellItem *item = [[self class] itemWithTitle:title type:StaticCellTypeLabel];
+    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeLabel];
     item.subTitle = subTitle;
     
     return item;

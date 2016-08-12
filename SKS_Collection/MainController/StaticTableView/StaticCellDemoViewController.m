@@ -20,23 +20,22 @@
     
     __weak __typeof(self) weakSelf = self;
     
-    NSArray *array = @[
-       [StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeDisclosureIndicator handle:^{[weakSelf gotoRemoteOpimize];}]
-       ,[StaticCellItem itemWithTitle:@"家长控制" type:StaticCellTypeDisclosureIndicator handle:^{[weakSelf gotoParentalControls];}]
-       ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-       ,[StaticCellItem itemWithTitle:@"卡券兑换" type:StaticCellTypeHandle handle:^{[weakSelf cardVouchersExchange];}]
-    ];
+    StaticCellItem *item1 = [StaticCellItem itemWithTitle:@"一键优化" icon:nil type:StaticCellTypeDisclosureIndicator handle:^{[weakSelf gotoRemoteOpimize];}];
+    StaticCellItem *item2 = [StaticCellItem itemWithTitle:@"家长控制" icon:nil type:StaticCellTypeDisclosureIndicator handle:^{[weakSelf gotoParentalControls];}];
+    StaticCellItem *item3 = [StaticCellItem itemWithTitle:@"会员有效期" icon:nil subTitle:@"2016-12-30"];
+    StaticCellItem *item4 = [StaticCellItem itemWithTitle:@"卡券兑换" icon:nil type:StaticCellTypeHandle handle:^{[weakSelf cardVouchersExchange];}];
     
-    NSArray *array2 = @[
-         [StaticCellItem itemWithTitle:@"模糊效果" objectClass:[BlurEffectDemoController class]]
-        ,[StaticCellItem itemWithTitle:@"儿童锁" type:StaticCellTypeSwitch]
-        ,[StaticCellItem itemWithTitle:@"会员有效期" subTitle:@"2016-12-30"]
-        ,[StaticCellItem itemWithTitle:@"sdfad" type:StaticCellTypeDisclosureIndicator handle:^{
-            NSLog(@"sdfsd");
-        }]
-        ,[StaticCellItem itemWithTitle:@"一键优化" type:StaticCellTypeButton]
-                        ];
+    StaticCellItem *item5 = [StaticCellItem itemWithTitle:@"模糊效果" icon:nil objectClass:[BlurEffectDemoController class]];
+    StaticCellItem *item6 = [StaticCellItem itemWithTitle:@"儿童锁" icon:nil type:StaticCellTypeSwitch];
+    StaticCellItem *item7 = [StaticCellItem itemWithTitle:@"会员有效期" icon:nil subTitle:@"2016-12-30"];
+    StaticCellItem *item8 = [StaticCellItem itemWithTitle:@"sdfad" icon:nil type:StaticCellTypeDisclosureIndicator handle:^{
+        NSLog(@"sdfsd");
+    }];
+    StaticCellItem *item9 = [StaticCellItem itemWithTitle:@"一键优化" icon:nil type:StaticCellTypeButton];
     
+    NSArray *array = @[item1, item2, item3, item4];
+    NSArray *array2 = @[item5, item6, item7, item8, item9];
+         
     StaticCellItemGroup *group1 = [StaticCellItemGroup itemGroupWithHeaderTitle:@"第一组"
                                                                    headerHeight:100
                                                                     footerTitle:nil

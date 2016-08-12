@@ -30,8 +30,9 @@ typedef void (^StaticCellHandle)(void);
 
 @property (nonatomic, assign) StaticCellType cellType;
 
-+ (instancetype)itemWithTitle:(NSString *)title type:(StaticCellType)type;
-+ (instancetype)itemWithTitle:(NSString *)title type:(StaticCellType)type handle:(StaticCellHandle)handle;
-+ (instancetype)itemWithTitle:(NSString *)title objectClass:(Class)objectClass;
-+ (instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle;
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type;
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon objectClass:(Class)objectClass;
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type handle:(StaticCellHandle)handle;
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon subTitle:(NSString *)subTitle;
+
 @end
