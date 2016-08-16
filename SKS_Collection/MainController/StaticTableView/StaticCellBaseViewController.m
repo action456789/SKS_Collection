@@ -17,6 +17,15 @@
 
 @implementation StaticCellBaseViewController
 
+- (instancetype)initWithStyle:(UITableViewStyle)style
+{
+    if (self = [super init]) {
+        self.tableViewStyle = style;
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -22,6 +22,7 @@
 #import "NumberIncresingVc.h"
 #import "CheckMarkAnimVc.h"
 #import "ExpandableViewController.h"
+#import "TipsView.h"
 
 @interface RootViewController()
 
@@ -38,6 +39,8 @@
 
 - (void)initData
 {
+    __weak __typeof(self) weakSelf = self;
+    
     NSArray *items = @[ [StaticCellItem itemWithTitle:@"倒计时按钮" icon:nil objectClass:[CountDownButtonDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
                         ,[StaticCellItem itemWithTitle:@"Slide Tab Bar" icon:nil objectClass:[KKSlideTabBarViewController class]]
@@ -53,6 +56,7 @@
                         ,[StaticCellItem itemWithTitle:@"数字增长动画" icon:nil objectClass:[NumberIncresingVc class]]
                         ,[StaticCellItem itemWithTitle:@"√ × 动画" icon:nil objectClass:[CheckMarkAnimVc class]]
                         ,[StaticCellItem itemWithTitle:@"可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"弹出 tips view" icon:nil type:StaticCellTypeHandle handle:^{[weakSelf showTipsView];}]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil
@@ -62,6 +66,13 @@
                                                                          items:items];
     
     self.dataArray = @[group];
+}
+
+- (void)showTipsView
+{
+    TipsView *tipsView = [TipsView new];
+    tipsView.showType = TipsViewShowTypeFromBottom;
+    [tipsView showWithView:self.view];
 }
 
 @end
