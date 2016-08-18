@@ -43,4 +43,30 @@
     return item;
 }
 
+#pragma mark - getter, setter
+
+- (void)setSubTitle:(NSString *)subTitle
+{
+    if (_subTitle) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kStaticCellUpdataNofication object:nil];
+    }
+    _subTitle = subTitle;
+}
+
+- (void)setTitle:(NSString *)title
+{
+    if (_title) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kStaticCellUpdataNofication object:nil];
+    }
+    _title = title;
+}
+
+- (void)setIcon:(NSString *)icon
+{
+    if (_title) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kStaticCellUpdataNofication object:nil];
+    }
+    _icon = icon;
+}
+
 @end

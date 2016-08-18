@@ -54,10 +54,6 @@
     if (self.item.title) {
         self.textLabel.text = self.item.title;
     }
-    
-    if (self.item.subTitle) {
-        self.detailTextLabel.text = self.item.subTitle;
-    }
 }
 
 - (void)_setupRightContent
@@ -88,6 +84,8 @@
         case StaticCellTypeLabel: {
             self.selectionStyle = UITableViewCellSelectionStyleNone;
             self.accessoryView = self.rightContentLabel;
+            self.rightContentLabel.text = self.item.subTitle;
+            
             break;
         }
             
@@ -101,7 +99,6 @@
             self.selectionStyle = UITableViewCellSelectionStyleDefault;
         }
     }
-
 }
 
 #pragma mark - getter

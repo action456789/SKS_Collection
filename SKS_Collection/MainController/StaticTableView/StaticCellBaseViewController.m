@@ -31,6 +31,26 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
+    
+    [self addNotification];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)addNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshData:)
+                                                 name:kStaticCellUpdataNofication
+                                               object:nil ];
+}
+
+- (void)refreshData:(NSNotification *)notification
+{
+    [self.tableView reloadData];
 }
 
 # pragma mark abstract mathod

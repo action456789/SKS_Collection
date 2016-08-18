@@ -16,13 +16,15 @@ typedef NS_ENUM(NSUInteger, StaticCellType) {
     StaticCellTypeHandle,
 };
 
+#define kStaticCellUpdataNofication @"kStaticCellUpdataNofication"
+
 @interface StaticCellItem : NSObject
 
 typedef void (^StaticCellHandle)(void);
 
-@property (nonatomic, copy) NSString *icon;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *subTitle;
+@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *subTitle;
 
 @property (nonatomic, copy) StaticCellHandle clickedHandle;
 
