@@ -12,6 +12,9 @@
 #import "UIDevice+KS.h"
 
 @implementation StaticCellDemoViewController
+{
+    StaticCellItem *_tempItem;
+}
 
 - (void)viewDidLoad
 {
@@ -27,8 +30,10 @@
     StaticCellItem *item5 = [StaticCellItem itemWithTitle:@"模糊效果" icon:nil objectClass:[BlurEffectDemoController class]];
     StaticCellItem *item6 = [StaticCellItem itemWithTitle:@"儿童锁" icon:nil type:StaticCellTypeSwitch];
     StaticCellItem *item7 = [StaticCellItem itemWithTitle:@"会员有效期" icon:nil subTitle:@"2016-12-30"];
-    StaticCellItem *item8 = [StaticCellItem itemWithTitle:@"sdfad" icon:nil type:StaticCellTypeDisclosureIndicator handle:^{
-        NSLog(@"sdfsd");
+    _tempItem = item7;
+    
+    StaticCellItem *item8 = [StaticCellItem itemWithTitle:@"点击修改cell子标题" icon:nil type:StaticCellTypeDisclosureIndicator handle:^{
+        _tempItem.subTitle = @"abdkdkd";
     }];
     StaticCellItem *item9 = [StaticCellItem itemWithTitle:@"一键优化" icon:nil type:StaticCellTypeButton];
     

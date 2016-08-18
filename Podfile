@@ -15,5 +15,6 @@ pod 'Masonry', '~> 0.6.3'
 pod 'pop', '~> 1.0'
 pod 'Shimmer'
 pod 'MJExtension', '~> 2.5.14'
+pod 'FLAnimatedImage', '~> 1.0'
 end
 

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4B0B69A900ADFA8E6AB108BFF8E412E8</key>
+		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,17 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71A58C781AEBDA017D30078E30309146</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4014DF6989291F241F0078AB7424CBB</key>
+		<key>A488ECAD842238C5D40A831DDE489F0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D1C7B106CA110C819121A4FF571373FF</key>
+		<key>BE3AD433F312CB74F2113F479B58D1B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF387AA00501A974B6CDE51F5B233F15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -108,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>DBC9A0AF6D4571D059D2AF2422F2BD6E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E39CBBE154422757DB35BECC0EAE0875</key>
 		<dict>
 			<key>primary</key>
 			<true/>

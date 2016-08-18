@@ -13,12 +13,14 @@
 @implementation TipsView
 {
     UIView *_shadowView;
+    BOOL _isShowing;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
         self.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+        _isShowing = NO;
         [self _createContentView];
     }
     return self;
@@ -91,10 +93,16 @@
 
 - (void)showWithView:(UIView *)superView
 {
+    if (_isShowing) {
+        [self hide];
+    }
+    
+    _isShowing = YES;
+    
     if (self.showType == TipsViewShowTypeFromBottom) {
         [superView addSubview:self];
         
-        [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:0.99f initialSpringVelocity:45.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:0.95f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
             _contentView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
         } completion:nil];
@@ -108,8 +116,10 @@
 
 - (void)hide
 {
+    _isShowing = NO;
+    
     if (self.showType == TipsViewShowTypeFromBottom) {
-        [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:0.8f initialSpringVelocity:25.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
             _contentView.transform = CGAffineTransformIdentity;
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
         } completion:^(BOOL finished) {
@@ -118,7 +128,6 @@
     } else {
         [UIView transitionWithView:self.superview duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
             [self removeFromSuperview];
-            self.hidden = YES;
         } completion:nil];
     }
 }

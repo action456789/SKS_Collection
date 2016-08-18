@@ -75,14 +75,17 @@
 {
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd";
+    
     // 2013-11-17
     NSDate *dealline = [fmt dateFromString:@"2013-11-17"];
-    // 2013-11-18 00:00:00
-    dealline = [dealline dateByAddingTimeInterval:24 * 3600];
+
     // 2013-11-17 10:50
     NSDate *now = [NSDate date];
+    
     NSDateComponents *cmps = [now compareDate:dealline];
+    
     NSString *timeStr = [NSString stringWithFormat:@"%ld 天 %ld 小时 %ld 分钟", (long)cmps.day, (long)cmps.hour, (long)cmps.minute];
+   
     NSLog(@"%@", timeStr);
 }
 

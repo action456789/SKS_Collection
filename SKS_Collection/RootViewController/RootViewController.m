@@ -23,6 +23,7 @@
 #import "CheckMarkAnimVc.h"
 #import "ExpandableViewController.h"
 #import "TipsView.h"
+#import "GifDemoViewController.h"
 
 @interface RootViewController()
 
@@ -41,22 +42,23 @@
 {
     __weak __typeof(self) weakSelf = self;
     
-    NSArray *items = @[ [StaticCellItem itemWithTitle:@"倒计时按钮" icon:nil objectClass:[CountDownButtonDemoVC class]]
-                        ,[StaticCellItem itemWithTitle:@"转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"Slide Tab Bar" icon:nil objectClass:[KKSlideTabBarViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"模糊效果" icon:nil objectClass:[BlurEffectDemoController class]]
-                        ,[StaticCellItem itemWithTitle:@"文件缓存" icon:nil objectClass:[FileCacheDemoController class]]
-                        ,[StaticCellItem itemWithTitle:@"sqlite缓存" icon:nil objectClass:[DiskCacheSqlLiteDemoController class]]
-                        ,[StaticCellItem itemWithTitle:@"GradientLayer(渐变梯度图层)" icon:nil objectClass:[GradientLayerDemoController class]]
-                        ,[StaticCellItem itemWithTitle:@"GradientLayer动画" icon:nil objectClass:[GradientLayerDemo2Controller class]]
-                        ,[StaticCellItem itemWithTitle:@"扫描二维码" icon:nil objectClass:[QRCodeViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"辉光动画" icon:nil objectClass:[ShimmerDemeController class]]
-                        ,[StaticCellItem itemWithTitle:@"WKWebView的加载过程" icon:nil objectClass:[WKWebViewDemoController class]]
-                        ,[StaticCellItem itemWithTitle:@"静态单元格" icon:nil objectClass:[StaticCellDemoViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"数字增长动画" icon:nil objectClass:[NumberIncresingVc class]]
-                        ,[StaticCellItem itemWithTitle:@"√ × 动画" icon:nil objectClass:[CheckMarkAnimVc class]]
-                        ,[StaticCellItem itemWithTitle:@"可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"弹出 tips view" icon:nil type:StaticCellTypeHandle handle:^{[weakSelf showTipsView];}]
+    NSArray *items = @[ [StaticCellItem itemWithTitle:@"1. 倒计时按钮" icon:nil objectClass:[CountDownButtonDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"2. 转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSlideTabBarViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"4. 模糊效果" icon:nil objectClass:[BlurEffectDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"5. 文件缓存" icon:nil objectClass:[FileCacheDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"6. sqlite缓存" icon:nil objectClass:[DiskCacheSqlLiteDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"7. GradientLayer(渐变梯度图层)" icon:nil objectClass:[GradientLayerDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"8. GradientLayer动画" icon:nil objectClass:[GradientLayerDemo2Controller class]]
+                        ,[StaticCellItem itemWithTitle:@"9. 扫描二维码" icon:nil objectClass:[QRCodeViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"10. 辉光动画" icon:nil objectClass:[ShimmerDemeController class]]
+                        ,[StaticCellItem itemWithTitle:@"11. WKWebView的加载过程" icon:nil objectClass:[WKWebViewDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"12. 静态单元格" icon:nil objectClass:[StaticCellDemoViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"13. 数字增长动画" icon:nil objectClass:[NumberIncresingVc class]]
+                        ,[StaticCellItem itemWithTitle:@"14. √ × 动画" icon:nil objectClass:[CheckMarkAnimVc class]]
+                        ,[StaticCellItem itemWithTitle:@"15. 可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"16. 弹出 tips view" icon:nil type:StaticCellTypeHandle handle:^{[weakSelf showTipsView];}]
+                        ,[StaticCellItem itemWithTitle:@"17. 加载 gif 图片" icon:nil objectClass:[GifDemoViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil
