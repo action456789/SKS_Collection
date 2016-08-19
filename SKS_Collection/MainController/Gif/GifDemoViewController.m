@@ -8,34 +8,33 @@
 
 #import "GifDemoViewController.h"
 #import <SDWebImage/SDWebImageManager.h>
+#import "CicleProgressView.h"
 
 #import <FLAnimatedImage.h>
 
 @implementation GifDemoViewController
 {
     NSURL *_url;
-    FLAnimatedImage *_gifImage;
+    
     NSData *_gifData;
+    
+    FLAnimatedImage *_gifImage;
+    
+    UIView *_progressView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // https://github.com/Flipboard/FLAnimatedImage
+//     https://github.com/Flipboard/FLAnimatedImage
     
-    _gifImage = ({
-        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:_gifData];
-        FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
-        imageView.animatedImage = image;
-        imageView.frame = CGRectMake(0.0, 64.0, 100.0, 100.0);
-        [self.view addSubview:imageView];
-        
-        image;
-    });
+    [self createAnimateProgressView];
     
     [[SDWebImageManager sharedManager].imageCache clearDiskOnCompletion:^{
-        NSLog(@"清理图片缓存成功");
+        
+        NSLog(@"清理图片缓存成功"); // 测试需求
+        
         [self downloadGifAndShow];
     }];
 }
@@ -50,7 +49,7 @@
     
     if (_gifData) {
         
-        [self addGifImage];
+        [self createGifImage];
         
         NSLog(@"设置图片");
         
@@ -60,10 +59,11 @@
         
         SDWebImageDownloader *downloader = [SDWebImageDownloader sharedDownloader];
         [downloader downloadImageWithURL:_url
-                                 options:SDWebImageDownloaderContinueInBackground
+                                 options:SDWebImageDownloaderLowPriority
                                 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                                     
-                                    NSLog(@"%.f%%", (CGFloat)receivedSize/(CGFloat)expectedSize * 100);
+                                    CGFloat precent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize * 100);
+                                    NSLog(@"%.0f%%", precent);
                                     
                                 } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
                                     
@@ -71,7 +71,8 @@
                                     
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         _gifData = data;
-                                        [self addGifImage];
+                                        _progressView.hidden = YES;
+                                        [self createGifImage];
                                     });
                                     
                                     // 缓存数据
@@ -86,17 +87,27 @@
     }
 }
 
-- (void)addGifImage
+- (void)createGifImage
 {
     _gifImage = ({
         FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:_gifData];
         FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
         imageView.animatedImage = image;
-        imageView.frame = CGRectMake(0.0, 64.0, 100.0, 100.0);
+        imageView.frame = CGRectMake(0, 64, 100, 100);
         [self.view addSubview:imageView];
         
         image;
     });
+}
+
+- (void)createAnimateProgressView
+{
+    CicleProgressView *prgressView = [[CicleProgressView alloc] initWithFrame:CGRectMake(100, 64, 100, 100)];
+    prgressView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:prgressView];
+    
+    prgressView.progress = 1.f;
+    
 }
 
 @end

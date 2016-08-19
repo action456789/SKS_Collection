@@ -16,26 +16,20 @@
 
 @interface KSLayAnimationView()
 
-@property (nonatomic, strong) CAShapeLayer *shapeLayer;
-
 @property (nonatomic, strong) UIBezierPath *checkMarkPath;
-
-@property (nonatomic, strong) UIColor *strockColor;
-
-@property (nonatomic, assign) CGFloat lineWidth;
-
-@property (nonatomic, assign) NSTimeInterval delay;
-
-@property (nonatomic, assign) NSTimeInterval duration;
-
 @property (nonatomic, strong) UIBezierPath *crossPath;
-
-// default is checkmark animation
-@property (nonatomic, assign) KSLayAnimationType animationType;
 
 @end
 
 @implementation KSLayAnimationView
+{
+    CAShapeLayer *_shapeLayer;
+    UIColor *_strockColor;
+    CGFloat _lineWidth;
+    NSTimeInterval _delay;
+    NSTimeInterval _duration;
+    KSLayAnimationType _animationType;
+}
 
 #pragma mark - life cycle
 
@@ -45,24 +39,54 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    return [[self class]layAnimationViewWithFrame:frame];
+    return [[self class] layAnimationViewWithFrame:frame];
 }
 
 + (instancetype)layAnimationViewWithFrame:(CGRect)frame {
-    KSLayAnimationView *animationView = [[KSLayAnimationView alloc] initLayAnimationViewWithFrame:frame strockColor:kDefaultColor duration:kDefaultDuration lineWidth:kDefaultWidth];
-    return animationView;
+    return [[KSLayAnimationView alloc] initLayAnimationViewWithFrame:frame
+                                                         strockColor:nil
+                                                            duration:0
+                                                           lineWidth:0];
 }
 
-- (instancetype)initLayAnimationViewWithFrame:(CGRect)frame strockColor:(UIColor *)color duration:(NSTimeInterval)duration lineWidth:(CGFloat)lineWidth {
+- (instancetype)initLayAnimationViewWithFrame:(CGRect)frame
+                                  strockColor:(UIColor *)color
+                                     duration:(NSTimeInterval)duration
+                                    lineWidth:(CGFloat)lineWidth {
+    
     if (self = [super initWithFrame:frame]) {
+        
         self.clipsToBounds = YES;
-        self.shapeLayer.strokeColor = color.CGColor;
-        self.lineWidth = lineWidth;
-        self.shapeLayer.lineWidth = self.lineWidth;
-        self.animationType = KSLayAnimationTypeCheckMark;
+        
+        _lineWidth = lineWidth > kDefaultWidth ? lineWidth : kDefaultWidth;
+        _duration = duration > kDefaultDuration ? duration : kDefaultDuration;
+        _strockColor = color ? color : kDefaultColor;
+        _animationType = KSLayAnimationTypeCheckMark;
+        
+        [self createSharpLayer];
     }
     
     return self;
+}
+
+- (void)createSharpLayer
+{
+    _shapeLayer = ({
+        CAShapeLayer *layer = [CAShapeLayer layer];
+        layer.frame = self.bounds;
+        
+        layer.fillColor   = [UIColor clearColor].CGColor;
+        layer.strokeColor = _strockColor.CGColor;
+        layer.lineWidth   = _lineWidth;
+        layer.strokeStart = 0.f;
+        layer.strokeEnd   = 0.f;
+        layer.lineCap = @"round";
+        layer.lineJoin = @"round";
+        layer.path = self.checkMarkPath.CGPath;
+        [self.layer addSublayer:layer];
+        
+        layer;
+    });
 }
 
 #pragma mark - private method
@@ -71,46 +95,42 @@
     
     switch (type) {
         case KSLayAnimationTypeCheckMark: {
-            self.shapeLayer.path = self.checkMarkPath.CGPath;
+            _shapeLayer.path = self.checkMarkPath.CGPath;
             break;
         }
             
         case KSLayAnimationTypeCross: {
-            self.shapeLayer.path = self.crossPath.CGPath;
+            _shapeLayer.path = self.crossPath.CGPath;
             break;
         }
     }
     
-    // 添加 layer 和动画
-    [self.layer addSublayer:self.shapeLayer];
-    
-    self.duration = duration;
-    
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation.duration = self.duration;
+    animation.duration = _duration;
     animation.delegate = self;
     animation.fromValue = [NSNumber numberWithInteger:0];
     animation.toValue = [NSNumber numberWithInteger:1];
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     
-    [self.shapeLayer addAnimation:animation forKey:@"key"];
-
+    [_shapeLayer addAnimation:animation forKey:@"key"];
+    
 }
 
 - (void)hide {
-    self.shapeLayer.strokeEnd = 0.f;
+    _shapeLayer.strokeEnd = 0.f;
 }
 
 #pragma mark - public method
 
 - (void)showWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay type:(KSLayAnimationType)type {
     
-    self.duration = duration;
+    _duration = duration > kDefaultDuration ? duration : kDefaultDuration;
+    _delay = delay > kDefaultDelay ? delay : kDefaultDelay;
     
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay);
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        [self showWithDuration:self.duration type:type];
+        [self showWithDuration:duration type:type];
     });
 }
 
@@ -123,38 +143,19 @@
 
 #pragma mark - getter
 
-- (CAShapeLayer *)shapeLayer {
-    if (!_shapeLayer) {
-        _shapeLayer = [CAShapeLayer layer];
-        _shapeLayer.frame = self.bounds;
-        
-        _shapeLayer.fillColor   = [UIColor clearColor].CGColor;
-        _shapeLayer.strokeColor = kOrangeColor.CGColor;
-        _shapeLayer.lineWidth   = self.lineWidth;
-        _shapeLayer.strokeStart = 0.f;
-        _shapeLayer.strokeEnd   = 0.f;
-        _shapeLayer.lineCap = @"round";
-        _shapeLayer.lineJoin = @"round";
-        
-        
-        _shapeLayer.path = self.checkMarkPath.CGPath;
-    }
-    return _shapeLayer;
-}
-
 - (UIBezierPath *)checkMarkPath {
     if (!_checkMarkPath) {
         UIBezierPath *line = [UIBezierPath bezierPath];
-        CGFloat fromX = 0 + self.lineWidth;
+        CGFloat fromX = 0 + _lineWidth;
         CGFloat fromY = 270.f / 400.f * (self.bounds.size.height);
         [line moveToPoint:CGPointMake(fromX, fromY)];
         
         CGFloat toX1  = 167.f / 400.f * (self.bounds.size.width);
-        CGFloat toY1  = self.bounds.size.height - self.lineWidth;
+        CGFloat toY1  = self.bounds.size.height - _lineWidth;
         [line addLineToPoint:CGPointMake(toX1, toY1)];
         
-        CGFloat toX2  = self.bounds.size.width - self.lineWidth;
-        CGFloat toY2  = 0 + self.lineWidth;
+        CGFloat toX2  = self.bounds.size.width - _lineWidth;
+        CGFloat toY2  = 0 + _lineWidth;
         [line addLineToPoint:CGPointMake(toX2, toY2)];
         
         _checkMarkPath = line;
@@ -170,7 +171,7 @@
         CGFloat deltaY = h / 8;
         
         UIBezierPath *path = [UIBezierPath bezierPath];
-
+        
         CGFloat fromX1 = 0.0 + deltaX;
         CGFloat fromY1 = 0.0 + deltaY;
         [path moveToPoint:CGPointMake(fromX1, fromY1)];
@@ -178,7 +179,7 @@
         CGFloat toX1 = h - deltaX;
         CGFloat toY1 = w - deltaY;
         [path addLineToPoint:CGPointMake(toX1, toY1)];
-
+        
         CGFloat fromX2 = w - deltaX;
         CGFloat fromY2 = 0.0 + deltaY;
         [path moveToPoint:CGPointMake(fromX2, fromY2)];
@@ -193,26 +194,10 @@
     return _crossPath;
 }
 
-@synthesize lineWidth = _lineWidth;
-- (CGFloat)lineWidth {
-    _lineWidth = _lineWidth > kDefaultWidth ? _lineWidth : kDefaultWidth;
-    return _lineWidth;
-}
-
-- (NSTimeInterval)delay {
-    _delay = _delay > kDefaultDelay ? _delay : kDefaultDelay;
-    return _delay;
-}
-
-- (NSTimeInterval)duration {
-    _duration = _duration > kDefaultDuration ? _duration : kDefaultDuration;
-    return _duration;
-}
-
 #pragma mark - setter
 - (void)setLineWidth:(CGFloat)lineWidth {
     _lineWidth = lineWidth;
-    self.shapeLayer.lineWidth = lineWidth;
+    _shapeLayer.lineWidth = lineWidth;
 }
 
 @end

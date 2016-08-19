@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger, KSLayAnimationType) {
 
-    KSLayAnimationTypeCheckMark,
+    KSLayAnimationTypeCheckMark, // default
     KSLayAnimationTypeCross
     
 };

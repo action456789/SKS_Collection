@@ -7,14 +7,19 @@ target 'SKS_Collection' do
 platform :ios, '8.0'
 pod 'SDWebImage', '~>3.7'
 pod 'MBProgressHUD', '~> 0.9.1'
+
 #pod 'FMDB'
 pod 'FMDB/SQLCipher'  #if use SQLCipher
 pod 'AFNetworking', '~> 3.0'
-pod 'Aspects'
+pod 'Aspects', '~> 1.4.1'
 pod 'Masonry', '~> 0.6.3'
 pod 'pop', '~> 1.0'
-pod 'Shimmer'
+
+# 文字辉光效果
+pod 'Shimmer', '~> 1.0.2'
+
 pod 'MJExtension', '~> 2.5.14'
-pod 'FLAnimatedImage', '~> 1.0'
+pod 'FLAnimatedImage', '~> 1.0.12'
+
 end
 
