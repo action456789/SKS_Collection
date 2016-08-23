@@ -20,7 +20,7 @@
     
     FLAnimatedImage *_gifImage;
     
-    UIView *_progressView;
+    CicleProgressView *_progressView;
 }
 
 - (void)viewDidLoad
@@ -102,11 +102,11 @@
 
 - (void)createAnimateProgressView
 {
-    CicleProgressView *prgressView = [[CicleProgressView alloc] initWithFrame:CGRectMake(100, 64, 100, 100)];
-    prgressView.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:prgressView];
+    CicleProgressView *progressView = [[CicleProgressView alloc] initWithFrame:CGRectMake(100, 164, 100, 100)];
+    progressView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:progressView];
     
-    prgressView.progress = 1.f;
+    [progressView showWithProgress:1.0f];
     
 }
 

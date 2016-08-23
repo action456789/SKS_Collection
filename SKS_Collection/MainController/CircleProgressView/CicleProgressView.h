@@ -10,6 +10,6 @@
 
 @interface CicleProgressView : UIView
 
-@property (nonatomic, assign) CGFloat progress;
+- (void)showWithProgress:(CGFloat)progress;
 
 @end

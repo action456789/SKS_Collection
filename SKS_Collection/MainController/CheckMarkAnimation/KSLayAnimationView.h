@@ -8,20 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, KSLayAnimationType) {
-
+typedef NS_ENUM(NSInteger, KSLayAnimationType)
+{
     KSLayAnimationTypeCheckMark, // default
-    KSLayAnimationTypeCross
-    
+    KSLayAnimationTypeCross,
 };
 
 @interface KSLayAnimationView : UIView
 
+@property (nonatomic, assign) CGFloat progress;
+
 + (instancetype)layAnimationView;
-
-+ (instancetype)layAnimationViewWithFrame:(CGRect)frame;
-
-- (instancetype)initLayAnimationViewWithFrame:(CGRect)frame strockColor:(UIColor *)color duration:(NSTimeInterval)duration lineWidth:(CGFloat)lineWidth;
 
 - (void)showWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay type:(KSLayAnimationType)type;
 

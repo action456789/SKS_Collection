@@ -33,16 +33,19 @@
 
 #pragma mark - life cycle
 
-+ (instancetype)layAnimationView {
++ (instancetype)layAnimationView
+{
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     return [[self class] layAnimationViewWithFrame:indicator.bounds];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     return [[self class] layAnimationViewWithFrame:frame];
 }
 
-+ (instancetype)layAnimationViewWithFrame:(CGRect)frame {
++ (instancetype)layAnimationViewWithFrame:(CGRect)frame
+{
     return [[KSLayAnimationView alloc] initLayAnimationViewWithFrame:frame
                                                          strockColor:nil
                                                             duration:0
@@ -52,7 +55,8 @@
 - (instancetype)initLayAnimationViewWithFrame:(CGRect)frame
                                   strockColor:(UIColor *)color
                                      duration:(NSTimeInterval)duration
-                                    lineWidth:(CGFloat)lineWidth {
+                                    lineWidth:(CGFloat)lineWidth
+{
     
     if (self = [super initWithFrame:frame]) {
         
@@ -91,7 +95,8 @@
 
 #pragma mark - private method
 
-- (void)showWithDuration:(NSTimeInterval)duration type:(KSLayAnimationType)type {
+- (void)showWithDuration:(NSTimeInterval)duration type:(KSLayAnimationType)type
+{
     
     switch (type) {
         case KSLayAnimationTypeCheckMark: {
@@ -108,8 +113,8 @@
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.duration = _duration;
     animation.delegate = self;
-    animation.fromValue = [NSNumber numberWithInteger:0];
-    animation.toValue = [NSNumber numberWithInteger:1];
+    animation.fromValue = @(0);
+    animation.toValue = @(1);
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     
@@ -117,13 +122,15 @@
     
 }
 
-- (void)hide {
+- (void)hide
+{
     _shapeLayer.strokeEnd = 0.f;
 }
 
 #pragma mark - public method
 
-- (void)showWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay type:(KSLayAnimationType)type {
+- (void)showWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay type:(KSLayAnimationType)type
+{
     
     _duration = duration > kDefaultDuration ? duration : kDefaultDuration;
     _delay = delay > kDefaultDelay ? delay : kDefaultDelay;
@@ -134,7 +141,8 @@
     });
 }
 
-- (void)hideWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay {
+- (void)hideWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay
+{
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay);
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
         [self hide];
@@ -143,7 +151,8 @@
 
 #pragma mark - getter
 
-- (UIBezierPath *)checkMarkPath {
+- (UIBezierPath *)checkMarkPath
+{
     if (!_checkMarkPath) {
         UIBezierPath *line = [UIBezierPath bezierPath];
         CGFloat fromX = 0 + _lineWidth;
@@ -163,7 +172,8 @@
     return _checkMarkPath;
 }
 
-- (UIBezierPath *)crossPath {
+- (UIBezierPath *)crossPath
+{
     if (!_crossPath) {
         CGFloat h = self.bounds.size.height;
         CGFloat w = self.bounds.size.width;
@@ -195,7 +205,8 @@
 }
 
 #pragma mark - setter
-- (void)setLineWidth:(CGFloat)lineWidth {
+- (void)setLineWidth:(CGFloat)lineWidth
+{
     _lineWidth = lineWidth;
     _shapeLayer.lineWidth = lineWidth;
 }

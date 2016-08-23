@@ -38,6 +38,8 @@
 		10A7DE101D5B12380001A5BE /* CheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A7DE0F1D5B12380001A5BE /* CheckMark.png */; };
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
+		10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */; };
+		10DD4E321D6C364600F7BA25 /* CicleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E311D6C364600F7BA25 /* CicleProgressView.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -76,7 +78,6 @@
 		10DD99231D22802A00193A69 /* play_bg_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991E1D22802A00193A69 /* play_bg_p.png */; };
 		10DD99241D22802A00193A69 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991F1D22802A00193A69 /* start.png */; };
 		10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD996A1D24F48600193A69 /* UIDevice+KS.m */; };
-		10F4456F1D66D358005C31E3 /* CicleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4456E1D66D358005C31E3 /* CicleProgressView.m */; };
 		10F445761D66E327005C31E3 /* NSDictionary+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F445751D66E327005C31E3 /* NSDictionary+KS.m */; };
 		10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */; };
 		10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */; };
@@ -155,6 +156,10 @@
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
+		10DD4E281D6BFAD400F7BA25 /* NSObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utils.h"; sourceTree = "<group>"; };
+		10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utils.m"; sourceTree = "<group>"; };
+		10DD4E301D6C364600F7BA25 /* CicleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleProgressView.h; sourceTree = "<group>"; };
+		10DD4E311D6C364600F7BA25 /* CicleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleProgressView.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,8 +229,6 @@
 		10DD991F1D22802A00193A69 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		10DD99691D24F48600193A69 /* UIDevice+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+KS.h"; sourceTree = "<group>"; };
 		10DD996A1D24F48600193A69 /* UIDevice+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+KS.m"; sourceTree = "<group>"; };
-		10F4456D1D66D358005C31E3 /* CicleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleProgressView.h; sourceTree = "<group>"; };
-		10F4456E1D66D358005C31E3 /* CicleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleProgressView.m; sourceTree = "<group>"; };
 		10F445741D66E327005C31E3 /* NSDictionary+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KS.h"; sourceTree = "<group>"; };
 		10F445751D66E327005C31E3 /* NSDictionary+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KS.m"; sourceTree = "<group>"; };
 		10F4DFC91D3E26C600E0D223 /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
@@ -351,7 +354,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
-				10F4456C1D66D27B005C31E3 /* ProgressView */,
+				10DD4E2F1D6C363200F7BA25 /* CircleProgressView */,
 				1046D6931D64592700E6D7EF /* Gif */,
 				1046D6811D62E1BD00E6D7EF /* TipsView */,
 				10F7EF001D5D65FB00801FD6 /* AppleSystemService */,
@@ -476,6 +479,24 @@
 			path = RootViewController;
 			sourceTree = "<group>";
 		};
+		10DD4E241D6BF98B00F7BA25 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				10DD4E281D6BFAD400F7BA25 /* NSObject+Utils.h */,
+				10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		10DD4E2F1D6C363200F7BA25 /* CircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				10DD4E301D6C364600F7BA25 /* CicleProgressView.h */,
+				10DD4E311D6C364600F7BA25 /* CicleProgressView.m */,
+			);
+			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
 		10DD982D1D226B1F00193A69 = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +568,7 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				10DD4E241D6BF98B00F7BA25 /* NSObject */,
 				10F445731D66E327005C31E3 /* NSDictionary */,
 				10F4DFE91D40A02200E0D223 /* NSFileManager */,
 				10DD99681D24F48600193A69 /* UIDevice */,
@@ -801,15 +823,6 @@
 			path = UIDevice;
 			sourceTree = "<group>";
 		};
-		10F4456C1D66D27B005C31E3 /* ProgressView */ = {
-			isa = PBXGroup;
-			children = (
-				10F4456D1D66D358005C31E3 /* CicleProgressView.h */,
-				10F4456E1D66D358005C31E3 /* CicleProgressView.m */,
-			);
-			path = ProgressView;
-			sourceTree = "<group>";
-		};
 		10F445731D66E327005C31E3 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,8 +1074,8 @@
 				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
-				10F4456F1D66D358005C31E3 /* CicleProgressView.m in Sources */,
 				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
+				10DD4E321D6C364600F7BA25 /* CicleProgressView.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
@@ -1085,6 +1098,7 @@
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
+				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
