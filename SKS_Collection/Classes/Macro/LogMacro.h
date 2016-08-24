@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 KeSen. All rights reserved.
 //
 
-#ifndef KSCollects_KSHead_h
-#define KSCollects_KSHead_h
+#ifndef LogMacro
+#define LogMacro
 
 // 获得RGB颜色
 #define KSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

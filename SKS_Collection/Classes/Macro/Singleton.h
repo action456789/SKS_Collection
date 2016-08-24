@@ -1,13 +1,13 @@
 //
-//  KSingleton.h
+//  Singleton.h
 //  iFanPhoto
 //
 //  Created by kesen on 14/12/3.
 //  Copyright (c) 2014年 柯森. All rights reserved.
 //
 
-#ifndef iFanPhoto_KSingleton_h
-#define iFanPhoto_KSingleton_h
+#ifndef Singleton
+#define Singleton
 
 /*
  专门用来保存单例代码
@@ -16,7 +16,7 @@
 
 // @interface
 #define singleton_interface(className) \
-+ (className *)shared##className;
++ (className *)sharedInstance;
 
 // @implementation
 #define singleton_implementation(className) \
@@ -29,7 +29,13 @@ static className *_instance; \
     }); \
     return _instance; \
 } \
-+ (className *)shared##className \
+\
+- (id)copyWithZone:(NSZone *)zone\
+{ \
+    return _instance;\
+} \
+\
++ (className *)sharedInstance \
 { \
     static dispatch_once_t onceToken; \
     dispatch_once(&onceToken, ^{ \

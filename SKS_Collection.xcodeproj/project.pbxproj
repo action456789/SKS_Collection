@@ -40,6 +40,7 @@
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
 		10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */; };
 		10DD4E321D6C364600F7BA25 /* CicleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E311D6C364600F7BA25 /* CicleProgressView.m */; };
+		10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -160,6 +161,8 @@
 		10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utils.m"; sourceTree = "<group>"; };
 		10DD4E301D6C364600F7BA25 /* CicleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleProgressView.h; sourceTree = "<group>"; };
 		10DD4E311D6C364600F7BA25 /* CicleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleProgressView.m; sourceTree = "<group>"; };
+		10DD4E341D6D8DEF00F7BA25 /* AppSharedDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSharedDataManager.h; sourceTree = "<group>"; };
+		10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSharedDataManager.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -197,8 +200,8 @@
 		10DD98931D226B7D00193A69 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		10DD98941D226B7D00193A69 /* UIView+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Tool.h"; sourceTree = "<group>"; };
 		10DD98951D226B7D00193A69 /* UIView+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Tool.m"; sourceTree = "<group>"; };
-		10DD98971D226B7D00193A69 /* KSHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSHead.h; sourceTree = "<group>"; };
-		10DD98981D226B7D00193A69 /* KSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSingleton.h; sourceTree = "<group>"; };
+		10DD98971D226B7D00193A69 /* LogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogMacro.h; sourceTree = "<group>"; };
+		10DD98981D226B7D00193A69 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		10DD989C1D226B7D00193A69 /* KK_FileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_FileTool.h; sourceTree = "<group>"; };
 		10DD989D1D226B7D00193A69 /* KK_FileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KK_FileTool.m; sourceTree = "<group>"; };
 		10DD98A01D226B7D00193A69 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
@@ -497,6 +500,15 @@
 			path = CircleProgressView;
 			sourceTree = "<group>";
 		};
+		10DD4E331D6D8DD600F7BA25 /* SharedData */ = {
+			isa = PBXGroup;
+			children = (
+				10DD4E341D6D8DEF00F7BA25 /* AppSharedDataManager.h */,
+				10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */,
+			);
+			path = SharedData;
+			sourceTree = "<group>";
+		};
 		10DD982D1D226B1F00193A69 = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +532,7 @@
 			children = (
 				10DD983C1D226B1F00193A69 /* AppDelegate.h */,
 				10DD983D1D226B1F00193A69 /* AppDelegate.m */,
+				10DD4E331D6D8DD600F7BA25 /* SharedData */,
 				103A55541D3CCCFA00366D8F /* BaseClasses */,
 				10642B961D34D7D6001217CF /* RootViewController */,
 				103A55411D3CCCF200366D8F /* MainController */,
@@ -688,8 +701,8 @@
 		10DD98961D226B7D00193A69 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98971D226B7D00193A69 /* KSHead.h */,
-				10DD98981D226B7D00193A69 /* KSingleton.h */,
+				10DD98971D226B7D00193A69 /* LogMacro.h */,
+				10DD98981D226B7D00193A69 /* Singleton.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1098,6 +1111,7 @@
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
+				10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
