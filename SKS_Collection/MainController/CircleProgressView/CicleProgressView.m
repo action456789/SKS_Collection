@@ -25,57 +25,9 @@
     CGFloat _progress;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    
-    if (self = [super initWithFrame:frame]) {
-    }
-    
-    return self;
-}
-
-- (void)layoutSubviews
-{
-    if (_circleProgressPath || _shapeLayer) {
-        return;
-    }
-    
-    _shapeLayer = ({
-        CAShapeLayer *layer = [CAShapeLayer layer];
-        layer.frame = self.bounds;
-        
-        layer.fillColor   = [UIColor clearColor].CGColor;
-        layer.strokeColor = [UIColor redColor].CGColor;//[self lineColor].CGColor;
-        layer.lineWidth   = 2.0;//[self lineWidth];
-        layer.strokeStart = 0.f;
-        layer.strokeEnd   = 0.f;
-        layer.lineCap = @"round";
-        layer.lineJoin = @"round";
-        
-        [self.layer addSublayer:layer];
-        
-        layer;
-    });
-    
-    _circleProgressPath = ({
-        CGPoint center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
-        CGFloat radius = self.bounds.size.width * 0.5 - [self lineWidth] * 0.5;
-        CGFloat startA = 0;
-        CGFloat endA = 0 + M_PI * 2;
-        
-        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center
-                                                            radius:radius
-                                                        startAngle:startA
-                                                          endAngle:endA
-                                                         clockwise:YES];
-        
-        path;
-    });
-    
-    _shapeLayer.path = _circleProgressPath.CGPath;
-}
 
 - (UIColor *)lineColor {
-    return _lineColor == nil ? [UIColor blackColor] : _lineColor;
+    return _lineColor == nil ? [UIColor orangeColor] : _lineColor;
 }
 
 - (CGFloat)lineWidth {
@@ -87,35 +39,51 @@
     return _duration <=0 ? 0.2 : _duration;
 }
 
-- (CABasicAnimation *)basicAnimation
+- (void)layoutSubviews
 {
-    if (!_basicAnimation) {
-        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        animation.duration = [self duration];
-        animation.delegate = self;
-        animation.fromValue = @(0);
-        animation.toValue = @(1);
-        animation.removedOnCompletion = NO;
-        animation.fillMode = kCAFillModeForwards;
-        
-        _basicAnimation = animation;
+    if (_circleProgressPath || _shapeLayer) {
+        return;
     }
-    return _basicAnimation;
+    
+    _circleProgressPath = ({
+        CGPoint center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
+        CGFloat radius = self.bounds.size.width * 0.5 - [self lineWidth] * 0.5;
+        CGFloat startA = 0;
+        CGFloat endA = M_PI * 2;
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES]; // clockwise:YES 即顺时针
+        
+        path;
+    });
+    
+    _shapeLayer = ({
+        CAShapeLayer *layer = [CAShapeLayer layer];
+        layer.frame = self.bounds;
+        
+        layer.fillColor   = [UIColor clearColor].CGColor;
+        layer.strokeColor = [self lineColor].CGColor;
+        layer.lineWidth   = [self lineWidth];
+        layer.strokeStart = 0.f;
+        layer.strokeEnd   = 0.f;
+        layer.lineCap = @"round";
+        layer.lineJoin = @"round";
+        layer.path = _circleProgressPath.CGPath;
+        
+        [self.layer addSublayer:layer];
+        
+        layer;
+    });
 }
 
 - (void)showWithProgress:(CGFloat)progress
 {
     _progress = progress;
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation.duration = 2;
-    animation.delegate = self;
-    animation.fromValue = @(0);
-    animation.toValue = @(progress);
-    animation.removedOnCompletion = NO;
-    animation.fillMode = kCAFillModeForwards;
-    
-    [_shapeLayer addAnimation:animation forKey:@"key"];
+    // 如果另起一个dispatch，在 viewDidLoad 方法中创建并显示progress将没有效果
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 隐式动画
+        _shapeLayer.strokeEnd = progress;
+    });
 }
 
 @end

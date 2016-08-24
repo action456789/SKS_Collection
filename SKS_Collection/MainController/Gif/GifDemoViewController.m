@@ -62,8 +62,11 @@
                                  options:SDWebImageDownloaderLowPriority
                                 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                                     
-                                    CGFloat precent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize * 100);
-                                    NSLog(@"%.0f%%", precent);
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        CGFloat precent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize);
+                                        NSLog(@"%.2f", precent);
+                                        [_progressView showWithProgress:precent];
+                                    });
                                     
                                 } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
                                     
@@ -71,7 +74,6 @@
                                     
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         _gifData = data;
-                                        _progressView.hidden = YES;
                                         [self createGifImage];
                                     });
                                     
@@ -105,9 +107,9 @@
     CicleProgressView *progressView = [[CicleProgressView alloc] initWithFrame:CGRectMake(100, 164, 100, 100)];
     progressView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:progressView];
+    _progressView = progressView;
     
-    [progressView showWithProgress:1.0f];
-    
+//    [_progressView showWithProgress:1];
 }
 
 @end
