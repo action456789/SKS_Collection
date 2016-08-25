@@ -93,40 +93,6 @@
     });
 }
 
-#pragma mark - private method
-
-- (void)showWithDuration:(NSTimeInterval)duration type:(KSLayAnimationType)type
-{
-    
-    switch (type) {
-        case KSLayAnimationTypeCheckMark: {
-            _shapeLayer.path = self.checkMarkPath.CGPath;
-            break;
-        }
-            
-        case KSLayAnimationTypeCross: {
-            _shapeLayer.path = self.crossPath.CGPath;
-            break;
-        }
-    }
-    
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation.duration = _duration;
-    animation.delegate = self;
-    animation.fromValue = @(0);
-    animation.toValue = @(1);
-    animation.removedOnCompletion = NO;
-    animation.fillMode = kCAFillModeForwards;
-    
-    [_shapeLayer addAnimation:animation forKey:@"key"];
-    
-}
-
-- (void)hide
-{
-    _shapeLayer.strokeEnd = 0.f;
-}
-
 #pragma mark - public method
 
 - (void)showWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay type:(KSLayAnimationType)type
@@ -135,9 +101,28 @@
     _duration = duration > kDefaultDuration ? duration : kDefaultDuration;
     _delay = delay > kDefaultDelay ? delay : kDefaultDelay;
     
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay);
-    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        [self showWithDuration:duration type:type];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay), dispatch_get_main_queue(), ^{
+        switch (type) {
+            case KSLayAnimationTypeCheckMark: {
+                _shapeLayer.path = self.checkMarkPath.CGPath;
+                break;
+            }
+                
+            case KSLayAnimationTypeCross: {
+                _shapeLayer.path = self.crossPath.CGPath;
+                break;
+            }
+        }
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        animation.duration = _duration;
+        animation.delegate = self;
+        animation.fromValue = @(0);
+        animation.toValue = @(1);
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
+        
+        [_shapeLayer addAnimation:animation forKey:@"key"];
     });
 }
 
@@ -145,7 +130,7 @@
 {
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay);
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        [self hide];
+        _shapeLayer.strokeEnd = 0.f;
     });
 }
 

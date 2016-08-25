@@ -10,8 +10,6 @@
 		102185DF1D5ADB5300C5AD64 /* UIColor+SKS.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185DE1D5ADB5300C5AD64 /* UIColor+SKS.m */; };
 		102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185E31D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m */; };
 		102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */; };
-		102185EB1D5B0EE600C5AD64 /* KSLayAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */; };
-		102185EE1D5B0F0800C5AD64 /* CheckMarkAnimVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185ED1D5B0F0800C5AD64 /* CheckMarkAnimVc.m */; };
 		1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */; };
 		1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2CE1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m */; };
 		1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D21D45F34F00D55DE0 /* QRCodeViewController.m */; };
@@ -35,12 +33,17 @@
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
-		10A7DE101D5B12380001A5BE /* CheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A7DE0F1D5B12380001A5BE /* CheckMark.png */; };
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
 		10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */; };
 		10DD4E321D6C364600F7BA25 /* CicleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E311D6C364600F7BA25 /* CicleProgressView.m */; };
 		10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */; };
+		10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E3B1D6EF41400F7BA25 /* CheckMarkAnimVc.m */; };
+		10DD4E4B1D6EF6D100F7BA25 /* CheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD4E451D6EF6D100F7BA25 /* CheckMark.png */; };
+		10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 10DD4E461D6EF6D100F7BA25 /* CheckMark.sketch */; };
+		10DD4E4D1D6EF6D100F7BA25 /* KSLayAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E491D6EF6D100F7BA25 /* KSLayAnimationView.m */; };
+		10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */; };
+		10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -102,10 +105,6 @@
 		102185E31D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNumberIncreaseAnimationView.m; sourceTree = "<group>"; };
 		102185E51D5B0B2D00C5AD64 /* NumberIncresingVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberIncresingVc.h; sourceTree = "<group>"; };
 		102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberIncresingVc.m; sourceTree = "<group>"; };
-		102185E91D5B0EE600C5AD64 /* KSLayAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLayAnimationView.h; sourceTree = "<group>"; };
-		102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLayAnimationView.m; sourceTree = "<group>"; };
-		102185EC1D5B0F0800C5AD64 /* CheckMarkAnimVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMarkAnimVc.h; sourceTree = "<group>"; };
-		102185ED1D5B0F0800C5AD64 /* CheckMarkAnimVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimVc.m; sourceTree = "<group>"; };
 		1032C2CA1D45DF2E00D55DE0 /* GradientLayerDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerDemoController.h; sourceTree = "<group>"; };
 		1032C2CB1D45DF2E00D55DE0 /* GradientLayerDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerDemoController.m; sourceTree = "<group>"; };
 		1032C2CD1D45E22E00D55DE0 /* GradientLayerDemo2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerDemo2Controller.h; sourceTree = "<group>"; };
@@ -152,8 +151,6 @@
 		10694E4B1D41F35500D9F486 /* NSString+Code.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Code.m"; sourceTree = "<group>"; };
 		10694E4D1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLiteDemoController.h; sourceTree = "<group>"; };
 		10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLiteDemoController.m; sourceTree = "<group>"; };
-		10A7DE0E1D5B12300001A5BE /* CheckMark.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheckMark.sketch; sourceTree = "<group>"; };
-		10A7DE0F1D5B12380001A5BE /* CheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckMark.png; sourceTree = "<group>"; };
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
@@ -163,6 +160,16 @@
 		10DD4E311D6C364600F7BA25 /* CicleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleProgressView.m; sourceTree = "<group>"; };
 		10DD4E341D6D8DEF00F7BA25 /* AppSharedDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSharedDataManager.h; sourceTree = "<group>"; };
 		10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSharedDataManager.m; sourceTree = "<group>"; };
+		10DD4E3A1D6EF41400F7BA25 /* CheckMarkAnimVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMarkAnimVc.h; sourceTree = "<group>"; };
+		10DD4E3B1D6EF41400F7BA25 /* CheckMarkAnimVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimVc.m; sourceTree = "<group>"; };
+		10DD4E451D6EF6D100F7BA25 /* CheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckMark.png; sourceTree = "<group>"; };
+		10DD4E461D6EF6D100F7BA25 /* CheckMark.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheckMark.sketch; sourceTree = "<group>"; };
+		10DD4E481D6EF6D100F7BA25 /* KSLayAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLayAnimationView.h; sourceTree = "<group>"; };
+		10DD4E491D6EF6D100F7BA25 /* KSLayAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLayAnimationView.m; sourceTree = "<group>"; };
+		10DD4E4E1D6EF7EE00F7BA25 /* BaseLayerAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLayerAnimationView.h; sourceTree = "<group>"; };
+		10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLayerAnimationView.m; sourceTree = "<group>"; };
+		10DD4E511D6EFF0800F7BA25 /* CheckMarkAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMarkAnimationView.h; sourceTree = "<group>"; };
+		10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimationView.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -296,19 +303,6 @@
 			path = NumberIncressingAnimation;
 			sourceTree = "<group>";
 		};
-		102185E81D5B0E0C00C5AD64 /* CheckMarkAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				10A7DE0F1D5B12380001A5BE /* CheckMark.png */,
-				10A7DE0E1D5B12300001A5BE /* CheckMark.sketch */,
-				102185E91D5B0EE600C5AD64 /* KSLayAnimationView.h */,
-				102185EA1D5B0EE600C5AD64 /* KSLayAnimationView.m */,
-				102185EC1D5B0F0800C5AD64 /* CheckMarkAnimVc.h */,
-				102185ED1D5B0F0800C5AD64 /* CheckMarkAnimVc.m */,
-			);
-			path = CheckMarkAnimation;
-			sourceTree = "<group>";
-		};
 		1032C2C91D45DF0800D55DE0 /* CAGradienLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,12 +351,12 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				10DD4E371D6EF41400F7BA25 /* LayerAnimation */,
 				10DD4E2F1D6C363200F7BA25 /* CircleProgressView */,
 				1046D6931D64592700E6D7EF /* Gif */,
 				1046D6811D62E1BD00E6D7EF /* TipsView */,
 				10F7EF001D5D65FB00801FD6 /* AppleSystemService */,
 				10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */,
-				102185E81D5B0E0C00C5AD64 /* CheckMarkAnimation */,
 				102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
@@ -507,6 +501,39 @@
 				10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */,
 			);
 			path = SharedData;
+			sourceTree = "<group>";
+		};
+		10DD4E371D6EF41400F7BA25 /* LayerAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				10DD4E441D6EF6D100F7BA25 /* Resources */,
+				10DD4E471D6EF6D100F7BA25 /* View */,
+				10DD4E3A1D6EF41400F7BA25 /* CheckMarkAnimVc.h */,
+				10DD4E3B1D6EF41400F7BA25 /* CheckMarkAnimVc.m */,
+			);
+			path = LayerAnimation;
+			sourceTree = "<group>";
+		};
+		10DD4E441D6EF6D100F7BA25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10DD4E451D6EF6D100F7BA25 /* CheckMark.png */,
+				10DD4E461D6EF6D100F7BA25 /* CheckMark.sketch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10DD4E471D6EF6D100F7BA25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10DD4E4E1D6EF7EE00F7BA25 /* BaseLayerAnimationView.h */,
+				10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */,
+				10DD4E511D6EFF0800F7BA25 /* CheckMarkAnimationView.h */,
+				10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */,
+				10DD4E481D6EF6D100F7BA25 /* KSLayAnimationView.h */,
+				10DD4E491D6EF6D100F7BA25 /* KSLayAnimationView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		10DD982D1D226B1F00193A69 = {
@@ -980,7 +1007,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */,
-				10A7DE101D5B12380001A5BE /* CheckMark.png in Resources */,
+				10DD4E4B1D6EF6D100F7BA25 /* CheckMark.png in Resources */,
 				10DD98491D226B1F00193A69 /* LaunchScreen.storyboard in Resources */,
 				10DD99241D22802A00193A69 /* start.png in Resources */,
 				10DD99201D22802A00193A69 /* background.jpg in Resources */,
@@ -989,6 +1016,7 @@
 				10DD99231D22802A00193A69 /* play_bg_p.png in Resources */,
 				10DD98441D226B1F00193A69 /* Main.storyboard in Resources */,
 				10DD99211D22802A00193A69 /* girl.png in Resources */,
+				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1075,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DD4E4D1D6EF6D100F7BA25 /* KSLayAnimationView.m in Sources */,
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
@@ -1056,6 +1085,7 @@
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
+				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
@@ -1096,16 +1126,16 @@
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
 				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
+				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
-				102185EE1D5B0F0800C5AD64 /* CheckMarkAnimVc.m in Sources */,
 				10F445761D66E327005C31E3 /* NSDictionary+KS.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
-				102185EB1D5B0EE600C5AD64 /* KSLayAnimationView.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
+				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
