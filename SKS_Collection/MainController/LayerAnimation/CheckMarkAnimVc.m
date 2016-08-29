@@ -7,33 +7,33 @@
 //
 
 #import "CheckMarkAnimVc.h"
-#import "KSLayAnimationView.h"
+#import "CrossAnimationView.h"
+#import "CheckMarkAnimationView.h"
 #import "UIView+Frame.h"
+#import "CicleAnimationView.h"
 
 @implementation CheckMarkAnimVc
-{
-    KSLayAnimationView *_checkView;
-    KSLayAnimationView *_crossView;
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    KSLayAnimationView *checkView = [KSLayAnimationView layAnimationView];
-    [checkView setCenter:self.view.center];
-    checkView.backgroundColor = [UIColor blackColor];
-    _checkView = checkView;
-    [self.view addSubview:checkView];
     
-    KSLayAnimationView *crossView = [KSLayAnimationView layAnimationView];
-    crossView.x = checkView.x;
-    crossView.y = checkView.y + 50;
-    crossView.backgroundColor = [UIColor blackColor];
-    _crossView = crossView;
-    [self.view addSubview:crossView];
+    CheckMarkAnimationView *checkMark = [[CheckMarkAnimationView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
+    checkMark.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:checkMark];
+    
+    CrossAnimationView *cross = [[CrossAnimationView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
+    cross.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:cross];
+    
+    CicleAnimationView *progressView = [[CicleAnimationView alloc] initWithFrame:CGRectMake(0, 300, 100, 100)];
+    progressView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:progressView];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_checkView showWithDuration:1 afterDelay:0 type:KSLayAnimationTypeCheckMark];
-        [_crossView showWithDuration:1 afterDelay:0 type:KSLayAnimationTypeCross];
+        [checkMark showWithDuration:2.0 afterDelay:0];
+        [cross showWithDuration:2.0 afterDelay:0];
+        [progressView showWithProgress:1.0];
     });
 }
 

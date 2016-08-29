@@ -12,45 +12,24 @@
 #define kOrangeColor  [UIColor colorWithRed:1 green:102.f/255.f blue:0 alpha:1]
 #define kDefaultWidth 3.f
 #define kDefaultDuration 0.3f
-#define kDefaultDelay 0.2f
-
-@interface BaseLayerAnimationView()
-
-@property (nonatomic, strong) CAShapeLayer *shapeLayer;
-
-@end
+#define kDefaultDelay 0.1f
 
 @implementation BaseLayerAnimationView
 
-- (instancetype)init
+- (void)layoutSubviews
 {
-    if (self = [super init]) {
-        [self createSharpLayer];
-    }
-    return self;
-}
-
-- (void)createPath
-{
-}
-
-- (void)createSharpLayer
-{
-    if (!self.path) {
-        return;
-    }
-    
-    _shapeLayer = ({
+    self.sharpLayer = ({
         CAShapeLayer *layer = [CAShapeLayer layer];
         layer.frame = self.bounds;
         
         layer.fillColor   = [UIColor clearColor].CGColor;
         layer.strokeColor = [self lineColor].CGColor;
-        layer.lineWidth   = _lineWidth;
+        layer.lineWidth   = [self lineWidth];
         layer.strokeStart = 0.f;
         layer.strokeEnd   = 0.f;
         layer.lineCap = @"round";
         layer.lineJoin = @"round";
+        
         [self.layer addSublayer:layer];
         
         layer;
@@ -62,8 +41,16 @@
     self.duration = duration;
     self.delay = delay;
     
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.duration = self.duration;
+    animation.delegate = self;
+    animation.fromValue = @(0);
+    animation.toValue = @(1);
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay), dispatch_get_main_queue(), ^{
-        self.shapeLayer.strokeEnd = 1;
+        [self.sharpLayer addAnimation:animation forKey:nil];
     });
 }
 
@@ -71,26 +58,26 @@
 {
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay);
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        self.shapeLayer.strokeEnd = 0.f;
+        self.sharpLayer.strokeEnd = 0.f;
     });
 }
 
-#pragma mark - setter
-
-- (void)setDuration:(CGFloat)duration {
-    duration > kDefaultDuration ? (_duration = duration) : (_duration = kDefaultDuration);
+#pragma mark - setter, getter
+- (CGFloat)delay {
+    return _delay > kDefaultDelay ? _delay : kDefaultDelay;
 }
 
-- (void)setDelay:(CGFloat)delay {
-    delay > kDefaultDelay ? (_delay = delay) : (_delay = kDefaultDelay);
+- (CGFloat)lineWidth {
+    return _lineWidth > kDefaultWidth ? _lineWidth : kDefaultWidth;
 }
 
-- (void)setLineWidth:(CGFloat)lineWidth {
-    lineWidth > kDefaultWidth ? (_lineWidth = lineWidth) : (_lineWidth = kDefaultWidth);
+- (UIColor *)lineColor {
+    return _lineColor ? _lineColor : kDefaultColor;
 }
 
-- (void)setLineColor:(UIColor *)lineColor {
-    lineColor ? (_lineColor = lineColor) : (_lineColor = kDefaultColor);
+
+- (CGFloat)duration {
+    return _duration > kDefaultDuration ? _duration : kDefaultDuration;
 }
 
 @end

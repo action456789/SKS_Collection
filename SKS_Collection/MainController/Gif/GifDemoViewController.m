@@ -8,7 +8,7 @@
 
 #import "GifDemoViewController.h"
 #import <SDWebImage/SDWebImageManager.h>
-#import "CicleProgressView.h"
+#import "CicleAnimationView.h"
 
 #import <FLAnimatedImage.h>
 
@@ -20,7 +20,7 @@
     
     FLAnimatedImage *_gifImage;
     
-    CicleProgressView *_progressView;
+    CicleAnimationView *_progressView;
 }
 
 - (void)viewDidLoad
@@ -104,12 +104,10 @@
 
 - (void)createAnimateProgressView
 {
-    CicleProgressView *progressView = [[CicleProgressView alloc] initWithFrame:CGRectMake(100, 164, 100, 100)];
+    CicleAnimationView *progressView = [[CicleAnimationView alloc] initWithFrame:CGRectMake(100, 164, 100, 100)];
     progressView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:progressView];
     _progressView = progressView;
-    
-//    [_progressView showWithProgress:1];
 }
 
 @end

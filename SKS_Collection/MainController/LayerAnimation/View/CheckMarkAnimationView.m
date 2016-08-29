@@ -10,22 +10,33 @@
 
 @implementation CheckMarkAnimationView
 
-- (void)createPath
+- (void)layoutSubviews
 {
-    UIBezierPath *line = [UIBezierPath bezierPath];
-    CGFloat fromX = 0 + self.lineWidth;
-    CGFloat fromY = 270.f / 400.f * (self.bounds.size.height);
-    [line moveToPoint:CGPointMake(fromX, fromY)];
+    [super layoutSubviews];
     
-    CGFloat toX1  = 167.f / 400.f * (self.bounds.size.width);
-    CGFloat toY1  = self.bounds.size.height - self.lineWidth;
-    [line addLineToPoint:CGPointMake(toX1, toY1)];
+    self.bezierPath = ({
+        CGRect frame = self.bounds;
+        
+        CGFloat h = frame.size.height;
+        CGFloat w = frame.size.width;
+        
+        UIBezierPath *line = [UIBezierPath bezierPath];
+        CGFloat fromX = 0 + self.lineWidth;
+        CGFloat fromY = 270.f / 400.f * h;
+        [line moveToPoint:CGPointMake(fromX, fromY)];
+        
+        CGFloat toX1  = 167.f / 400.f * w;
+        CGFloat toY1  = h - self.lineWidth;
+        [line addLineToPoint:CGPointMake(toX1, toY1)];
+        
+        CGFloat toX2  = w - self.lineWidth;
+        CGFloat toY2  = 0 + self.lineWidth;
+        [line addLineToPoint:CGPointMake(toX2, toY2)];
+        
+        line;
+    });
     
-    CGFloat toX2  = self.bounds.size.width - self.lineWidth;
-    CGFloat toY2  = 0 + self.lineWidth;
-    [line addLineToPoint:CGPointMake(toX2, toY2)];
-    
-    self.path = line;
+    self.sharpLayer.path = self.bezierPath.CGPath;
 }
 
 @end

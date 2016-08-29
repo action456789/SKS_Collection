@@ -36,14 +36,14 @@
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
 		10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */; };
-		10DD4E321D6C364600F7BA25 /* CicleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E311D6C364600F7BA25 /* CicleProgressView.m */; };
 		10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */; };
 		10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E3B1D6EF41400F7BA25 /* CheckMarkAnimVc.m */; };
 		10DD4E4B1D6EF6D100F7BA25 /* CheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD4E451D6EF6D100F7BA25 /* CheckMark.png */; };
 		10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 10DD4E461D6EF6D100F7BA25 /* CheckMark.sketch */; };
-		10DD4E4D1D6EF6D100F7BA25 /* KSLayAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E491D6EF6D100F7BA25 /* KSLayAnimationView.m */; };
 		10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */; };
 		10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */; };
+		10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E551D6FD54800F7BA25 /* CrossAnimationView.m */; };
+		10DD4E591D7421FC00F7BA25 /* CicleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E581D7421FC00F7BA25 /* CicleAnimationView.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -156,20 +156,20 @@
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
 		10DD4E281D6BFAD400F7BA25 /* NSObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utils.h"; sourceTree = "<group>"; };
 		10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utils.m"; sourceTree = "<group>"; };
-		10DD4E301D6C364600F7BA25 /* CicleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleProgressView.h; sourceTree = "<group>"; };
-		10DD4E311D6C364600F7BA25 /* CicleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleProgressView.m; sourceTree = "<group>"; };
 		10DD4E341D6D8DEF00F7BA25 /* AppSharedDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSharedDataManager.h; sourceTree = "<group>"; };
 		10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSharedDataManager.m; sourceTree = "<group>"; };
 		10DD4E3A1D6EF41400F7BA25 /* CheckMarkAnimVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMarkAnimVc.h; sourceTree = "<group>"; };
 		10DD4E3B1D6EF41400F7BA25 /* CheckMarkAnimVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimVc.m; sourceTree = "<group>"; };
 		10DD4E451D6EF6D100F7BA25 /* CheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckMark.png; sourceTree = "<group>"; };
 		10DD4E461D6EF6D100F7BA25 /* CheckMark.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheckMark.sketch; sourceTree = "<group>"; };
-		10DD4E481D6EF6D100F7BA25 /* KSLayAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLayAnimationView.h; sourceTree = "<group>"; };
-		10DD4E491D6EF6D100F7BA25 /* KSLayAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLayAnimationView.m; sourceTree = "<group>"; };
 		10DD4E4E1D6EF7EE00F7BA25 /* BaseLayerAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLayerAnimationView.h; sourceTree = "<group>"; };
 		10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLayerAnimationView.m; sourceTree = "<group>"; };
 		10DD4E511D6EFF0800F7BA25 /* CheckMarkAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMarkAnimationView.h; sourceTree = "<group>"; };
 		10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimationView.m; sourceTree = "<group>"; };
+		10DD4E541D6FD54800F7BA25 /* CrossAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossAnimationView.h; sourceTree = "<group>"; };
+		10DD4E551D6FD54800F7BA25 /* CrossAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossAnimationView.m; sourceTree = "<group>"; };
+		10DD4E571D7421FC00F7BA25 /* CicleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleAnimationView.h; sourceTree = "<group>"; };
+		10DD4E581D7421FC00F7BA25 /* CicleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleAnimationView.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -352,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				10DD4E371D6EF41400F7BA25 /* LayerAnimation */,
-				10DD4E2F1D6C363200F7BA25 /* CircleProgressView */,
 				1046D6931D64592700E6D7EF /* Gif */,
 				1046D6811D62E1BD00E6D7EF /* TipsView */,
 				10F7EF001D5D65FB00801FD6 /* AppleSystemService */,
@@ -485,15 +484,6 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
-		10DD4E2F1D6C363200F7BA25 /* CircleProgressView */ = {
-			isa = PBXGroup;
-			children = (
-				10DD4E301D6C364600F7BA25 /* CicleProgressView.h */,
-				10DD4E311D6C364600F7BA25 /* CicleProgressView.m */,
-			);
-			path = CircleProgressView;
-			sourceTree = "<group>";
-		};
 		10DD4E331D6D8DD600F7BA25 /* SharedData */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,8 +520,10 @@
 				10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */,
 				10DD4E511D6EFF0800F7BA25 /* CheckMarkAnimationView.h */,
 				10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */,
-				10DD4E481D6EF6D100F7BA25 /* KSLayAnimationView.h */,
-				10DD4E491D6EF6D100F7BA25 /* KSLayAnimationView.m */,
+				10DD4E541D6FD54800F7BA25 /* CrossAnimationView.h */,
+				10DD4E551D6FD54800F7BA25 /* CrossAnimationView.m */,
+				10DD4E571D7421FC00F7BA25 /* CicleAnimationView.h */,
+				10DD4E581D7421FC00F7BA25 /* CicleAnimationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1075,11 +1067,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10DD4E4D1D6EF6D100F7BA25 /* KSLayAnimationView.m in Sources */,
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
 				10DD98DD1D226B7D00193A69 /* UIImage+ImageEffects.m in Sources */,
+				10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */,
 				1046D6841D62E20000E6D7EF /* TipsView.m in Sources */,
 				10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */,
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
@@ -1118,7 +1110,6 @@
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
-				10DD4E321D6C364600F7BA25 /* CicleProgressView.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
@@ -1146,6 +1137,7 @@
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
+				10DD4E591D7421FC00F7BA25 /* CicleAnimationView.m in Sources */,
 				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
