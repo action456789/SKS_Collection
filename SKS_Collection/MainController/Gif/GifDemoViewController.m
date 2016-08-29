@@ -8,7 +8,7 @@
 
 #import "GifDemoViewController.h"
 #import <SDWebImage/SDWebImageManager.h>
-#import "CicleAnimationView.h"
+#import "CicleProgressAnimationView.h"
 
 #import <FLAnimatedImage.h>
 
@@ -20,7 +20,7 @@
     
     FLAnimatedImage *_gifImage;
     
-    CicleAnimationView *_progressView;
+    CicleProgressAnimationView *_progressView;
 }
 
 - (void)viewDidLoad
@@ -63,9 +63,9 @@
                                 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                                     
                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                        CGFloat precent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize);
-                                        NSLog(@"%.2f", precent);
-                                        [_progressView showWithProgress:precent];
+                                        CGFloat pecent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize);
+                                        NSLog(@"%.2f", pecent);
+                                        [_progressView showWithProgress:pecent];
                                     });
                                     
                                 } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
@@ -104,8 +104,7 @@
 
 - (void)createAnimateProgressView
 {
-    CicleAnimationView *progressView = [[CicleAnimationView alloc] initWithFrame:CGRectMake(100, 164, 100, 100)];
-    progressView.backgroundColor = [UIColor blackColor];
+    CicleProgressAnimationView *progressView = [[CicleProgressAnimationView alloc] initWithFrame:CGRectMake(100, 164, 100, 100)];
     [self.view addSubview:progressView];
     _progressView = progressView;
 }

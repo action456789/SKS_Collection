@@ -43,7 +43,7 @@
 		10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E4F1D6EF7EE00F7BA25 /* BaseLayerAnimationView.m */; };
 		10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */; };
 		10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E551D6FD54800F7BA25 /* CrossAnimationView.m */; };
-		10DD4E591D7421FC00F7BA25 /* CicleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E581D7421FC00F7BA25 /* CicleAnimationView.m */; };
+		10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E581D7421FC00F7BA25 /* CicleProgressAnimationView.m */; };
 		10DD983B1D226B1F00193A69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983A1D226B1F00193A69 /* main.m */; };
 		10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD983D1D226B1F00193A69 /* AppDelegate.m */; };
 		10DD98441D226B1F00193A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DD98421D226B1F00193A69 /* Main.storyboard */; };
@@ -168,8 +168,8 @@
 		10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMarkAnimationView.m; sourceTree = "<group>"; };
 		10DD4E541D6FD54800F7BA25 /* CrossAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossAnimationView.h; sourceTree = "<group>"; };
 		10DD4E551D6FD54800F7BA25 /* CrossAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossAnimationView.m; sourceTree = "<group>"; };
-		10DD4E571D7421FC00F7BA25 /* CicleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleAnimationView.h; sourceTree = "<group>"; };
-		10DD4E581D7421FC00F7BA25 /* CicleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleAnimationView.m; sourceTree = "<group>"; };
+		10DD4E571D7421FC00F7BA25 /* CicleProgressAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicleProgressAnimationView.h; sourceTree = "<group>"; };
+		10DD4E581D7421FC00F7BA25 /* CicleProgressAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicleProgressAnimationView.m; sourceTree = "<group>"; };
 		10DD98361D226B1F00193A69 /* SKS_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKS_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DD983A1D226B1F00193A69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10DD983C1D226B1F00193A69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -522,8 +522,8 @@
 				10DD4E521D6EFF0800F7BA25 /* CheckMarkAnimationView.m */,
 				10DD4E541D6FD54800F7BA25 /* CrossAnimationView.h */,
 				10DD4E551D6FD54800F7BA25 /* CrossAnimationView.m */,
-				10DD4E571D7421FC00F7BA25 /* CicleAnimationView.h */,
-				10DD4E581D7421FC00F7BA25 /* CicleAnimationView.m */,
+				10DD4E571D7421FC00F7BA25 /* CicleProgressAnimationView.h */,
+				10DD4E581D7421FC00F7BA25 /* CicleProgressAnimationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1137,7 +1137,7 @@
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
-				10DD4E591D7421FC00F7BA25 /* CicleAnimationView.m in Sources */,
+				10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */,
 				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,

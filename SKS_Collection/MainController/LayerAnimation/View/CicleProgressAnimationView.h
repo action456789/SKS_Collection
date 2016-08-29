@@ -8,7 +8,7 @@
 
 #import "BaseLayerAnimationView.h"
 
-@interface CicleAnimationView : BaseLayerAnimationView
+@interface CicleProgressAnimationView : BaseLayerAnimationView
 
 - (void)showWithProgress:(CGFloat)progress;
 

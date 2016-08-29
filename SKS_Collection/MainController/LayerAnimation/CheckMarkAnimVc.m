@@ -10,7 +10,7 @@
 #import "CrossAnimationView.h"
 #import "CheckMarkAnimationView.h"
 #import "UIView+Frame.h"
-#import "CicleAnimationView.h"
+#import "CicleProgressAnimationView.h"
 
 @implementation CheckMarkAnimVc
 
@@ -19,15 +19,12 @@
     [super viewDidLoad];
     
     CheckMarkAnimationView *checkMark = [[CheckMarkAnimationView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    checkMark.backgroundColor = [UIColor blackColor];
     [self.view addSubview:checkMark];
     
     CrossAnimationView *cross = [[CrossAnimationView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
-    cross.backgroundColor = [UIColor blackColor];
     [self.view addSubview:cross];
     
-    CicleAnimationView *progressView = [[CicleAnimationView alloc] initWithFrame:CGRectMake(0, 300, 100, 100)];
-    progressView.backgroundColor = [UIColor blackColor];
+    CicleProgressAnimationView *progressView = [[CicleProgressAnimationView alloc] initWithFrame:CGRectMake(0, 300, 100, 100)];
     [self.view addSubview:progressView];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

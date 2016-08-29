@@ -8,11 +8,11 @@
 
 #import "BaseLayerAnimationView.h"
 
-#define kDefaultColor [UIColor whiteColor]
+#define kDefaultColor [[UIColor blackColor] colorWithAlphaComponent:0.7];
 #define kOrangeColor  [UIColor colorWithRed:1 green:102.f/255.f blue:0 alpha:1]
-#define kDefaultWidth 3.f
+#define kDefaultWidth 1.f
 #define kDefaultDuration 0.3f
-#define kDefaultDelay 0.1f
+#define kDefaultDelay 0.f
 
 @implementation BaseLayerAnimationView
 
@@ -66,16 +66,12 @@
 - (CGFloat)delay {
     return _delay > kDefaultDelay ? _delay : kDefaultDelay;
 }
-
 - (CGFloat)lineWidth {
     return _lineWidth > kDefaultWidth ? _lineWidth : kDefaultWidth;
 }
-
 - (UIColor *)lineColor {
     return _lineColor ? _lineColor : kDefaultColor;
 }
-
-
 - (CGFloat)duration {
     return _duration > kDefaultDuration ? _duration : kDefaultDuration;
 }

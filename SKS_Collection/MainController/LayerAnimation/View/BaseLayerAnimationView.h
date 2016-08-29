@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, KSKLayerAnimationType) {
+    KSKLayerAnimationTypeDefault, // default
+    KSKLayerAnimationTypeBasic,
+};
 
 @interface BaseLayerAnimationView : UIView
 
@@ -19,6 +23,8 @@
 
 @property (nonatomic, assign) CGFloat duration;
 @property (nonatomic, assign) CGFloat delay;
+
+@property (nonatomic, assign) KSKLayerAnimationType animationType;
 
 - (void)showWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay;
 - (void)hideWithDuration:(NSTimeInterval)duration afterDelay:(NSTimeInterval)delay;
