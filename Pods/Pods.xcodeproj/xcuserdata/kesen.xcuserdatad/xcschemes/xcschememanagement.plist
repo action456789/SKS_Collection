@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XHLaunchAd.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -68,6 +73,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4ED627657CA491E95D89EC6E1CD1EE0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,27 +92,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>61326743272B80E33817276E14C10D91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A488ECAD842238C5D40A831DDE489F0D</key>
+		<key>99B89EB820C4433839AC3E2B24752F2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1D6B8CF8C6CCC563EADB21477D6DC48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE3AD433F312CB74F2113F479B58D1B5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CF387AA00501A974B6CDE51F5B233F15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E39CBBE154422757DB35BECC0EAE0875</key>
+		<key>F7C4C68A22222CDC33FF9BD8FA276E0A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
