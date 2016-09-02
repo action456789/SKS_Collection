@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 101859611D797D19006929D1 /* NSDictionary+KS.m */; };
 		102185DF1D5ADB5300C5AD64 /* UIColor+SKS.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185DE1D5ADB5300C5AD64 /* UIColor+SKS.m */; };
 		102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185E31D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m */; };
 		102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */; };
@@ -82,7 +83,6 @@
 		10DD99231D22802A00193A69 /* play_bg_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991E1D22802A00193A69 /* play_bg_p.png */; };
 		10DD99241D22802A00193A69 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 10DD991F1D22802A00193A69 /* start.png */; };
 		10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD996A1D24F48600193A69 /* UIDevice+KS.m */; };
-		10F445761D66E327005C31E3 /* NSDictionary+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F445751D66E327005C31E3 /* NSDictionary+KS.m */; };
 		10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */; };
 		10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFCE1D3F861900E0D223 /* BlurEffectDemoController.m */; };
 		10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFDE1D40981500E0D223 /* DiskCacheSqlLite.m */; };
@@ -99,6 +99,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101859601D797D19006929D1 /* NSDictionary+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KS.h"; sourceTree = "<group>"; };
+		101859611D797D19006929D1 /* NSDictionary+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KS.m"; sourceTree = "<group>"; };
 		102185DD1D5ADB5300C5AD64 /* UIColor+SKS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SKS.h"; sourceTree = "<group>"; };
 		102185DE1D5ADB5300C5AD64 /* UIColor+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SKS.m"; sourceTree = "<group>"; };
 		102185E21D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNumberIncreaseAnimationView.h; sourceTree = "<group>"; };
@@ -239,8 +241,6 @@
 		10DD991F1D22802A00193A69 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		10DD99691D24F48600193A69 /* UIDevice+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+KS.h"; sourceTree = "<group>"; };
 		10DD996A1D24F48600193A69 /* UIDevice+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+KS.m"; sourceTree = "<group>"; };
-		10F445741D66E327005C31E3 /* NSDictionary+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KS.h"; sourceTree = "<group>"; };
-		10F445751D66E327005C31E3 /* NSDictionary+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KS.m"; sourceTree = "<group>"; };
 		10F4DFC91D3E26C600E0D223 /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
 		10F4DFCA1D3E26C600E0D223 /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		10F4DFCD1D3F861900E0D223 /* BlurEffectDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurEffectDemoController.h; sourceTree = "<group>"; };
@@ -858,8 +858,8 @@
 		10F445731D66E327005C31E3 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				10F445741D66E327005C31E3 /* NSDictionary+KS.h */,
-				10F445751D66E327005C31E3 /* NSDictionary+KS.m */,
+				101859601D797D19006929D1 /* NSDictionary+KS.h */,
+				101859611D797D19006929D1 /* NSDictionary+KS.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -1095,6 +1095,7 @@
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
 				10DD98D51D226B7D00193A69 /* NSString+Font.m in Sources */,
 				10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */,
+				101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
 				10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */,
@@ -1120,7 +1121,6 @@
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
-				10F445761D66E327005C31E3 /* NSDictionary+KS.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
@@ -1255,6 +1255,10 @@
 			baseConfigurationReference = 40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SKS_Collection/MainController/LivePlayer",
+				);
 				INFOPLIST_FILE = SKS_Collection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1268,6 +1272,10 @@
 			baseConfigurationReference = 20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SKS_Collection/MainController/LivePlayer",
+				);
 				INFOPLIST_FILE = SKS_Collection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

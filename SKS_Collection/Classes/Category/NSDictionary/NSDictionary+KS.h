@@ -13,11 +13,16 @@
 /**
  *  返回 url 中的参数列表
  */
-+ (instancetype)dictionaryInURL:(NSString *)url;
++ (instancetype)ks_dictionaryInURL:(NSString *)url;
 
 /**
  *  JSON 字符串返回字典
  */
-+ (instancetype)dictionaryFromString:(NSString *)JSONString;
++ (instancetype)ks_dictionaryFromString:(NSString *)jsonString;
+
+/**
+ *  字典返回json字符串
+ */
+- (NSString *)ks_jsonString;
 
 @end

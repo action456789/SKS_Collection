@@ -13,7 +13,7 @@
 /**
  *  返回 url 中的参数列表
  */
-+ (instancetype)dictionaryInURL:(NSString *)url
++ (instancetype)ks_dictionaryInURL:(NSString *)url
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
@@ -31,9 +31,9 @@
 /**
  *  JSON 字符串返回字典
  */
-+ (instancetype)dictionaryFromString:(NSString *)JSONString
++ (instancetype)ks_dictionaryFromString:(NSString *)jsonString
 {
-    NSData *data = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     
     NSError *error;
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
@@ -42,6 +42,17 @@
     }
     
     return jsonDict;
+}
+
+/**
+ *  字典返回json字符串
+ */
+- (NSString *)ks_jsonString
+{
+    NSError *parseError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
 @end

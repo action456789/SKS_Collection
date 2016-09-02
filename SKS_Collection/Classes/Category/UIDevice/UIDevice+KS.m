@@ -11,6 +11,11 @@
 
 @implementation UIDevice (KS)
 
++ (NSString *)deviceId
+{
+    return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+}
+
 // 需要#import <sys/utsname.h>
 + (NSString*)deviceModelName
 {
