@@ -24,6 +24,7 @@
 #import "ExpandableViewController.h"
 #import "TipsView.h"
 #import "GifDemoViewController.h"
+#import "CaculaterViewController.h"
 
 @interface RootViewController()
 
@@ -59,6 +60,7 @@
                         ,[StaticCellItem itemWithTitle:@"15. 可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
                         ,[StaticCellItem itemWithTitle:@"16. 弹出 tips view" icon:nil type:StaticCellTypeHandle handle:^{[weakSelf showTipsView];}]
                         ,[StaticCellItem itemWithTitle:@"17. 加载 gif 图片" icon:nil objectClass:[GifDemoViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"18. 链式编程-计算器" icon:nil objectClass:[CaculaterViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

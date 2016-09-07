@@ -36,6 +36,8 @@
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
+		10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D7F5E31D800F38004D7DC7 /* CaculaterViewController.m */; };
+		10D7F5E71D801050004D7DC7 /* Cachulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D7F5E61D801050004D7DC7 /* Cachulator.m */; };
 		10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */; };
 		10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E351D6D8DEF00F7BA25 /* AppSharedDataManager.m */; };
 		10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD4E3B1D6EF41400F7BA25 /* CheckMarkAnimVc.m */; };
@@ -156,6 +158,10 @@
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
+		10D7F5E21D800F38004D7DC7 /* CaculaterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculaterViewController.h; sourceTree = "<group>"; };
+		10D7F5E31D800F38004D7DC7 /* CaculaterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculaterViewController.m; sourceTree = "<group>"; };
+		10D7F5E51D801050004D7DC7 /* Cachulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cachulator.h; sourceTree = "<group>"; };
+		10D7F5E61D801050004D7DC7 /* Cachulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cachulator.m; sourceTree = "<group>"; };
 		10DD4E281D6BFAD400F7BA25 /* NSObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utils.h"; sourceTree = "<group>"; };
 		10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utils.m"; sourceTree = "<group>"; };
 		10DD4E341D6D8DEF00F7BA25 /* AppSharedDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSharedDataManager.h; sourceTree = "<group>"; };
@@ -351,6 +357,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				10D7F5E11D800F0A004D7DC7 /* 链式编程 */,
 				10DD4E371D6EF41400F7BA25 /* LayerAnimation */,
 				1046D6931D64592700E6D7EF /* Gif */,
 				1046D6811D62E1BD00E6D7EF /* TipsView */,
@@ -473,6 +480,17 @@
 				10642B981D34D80F001217CF /* RootViewController.m */,
 			);
 			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		10D7F5E11D800F0A004D7DC7 /* 链式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				10D7F5E21D800F38004D7DC7 /* CaculaterViewController.h */,
+				10D7F5E31D800F38004D7DC7 /* CaculaterViewController.m */,
+				10D7F5E51D801050004D7DC7 /* Cachulator.h */,
+				10D7F5E61D801050004D7DC7 /* Cachulator.m */,
+			);
+			path = "链式编程";
 			sourceTree = "<group>";
 		};
 		10DD4E241D6BF98B00F7BA25 /* NSObject */ = {
@@ -1080,6 +1098,7 @@
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
+				10D7F5E71D801050004D7DC7 /* Cachulator.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */,
 				103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */,
@@ -1099,6 +1118,7 @@
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
 				10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */,
+				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
