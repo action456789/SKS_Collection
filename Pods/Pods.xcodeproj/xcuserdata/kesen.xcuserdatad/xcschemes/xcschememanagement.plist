@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FLAnimatedImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,12 +77,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4ED627657CA491E95D89EC6E1CD1EE0D</key>
+		<key>4045C151FEC6FB8748C6077D09826D96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61326743272B80E33817276E14C10D91</key>
+		<key>6D4ACA5CAA53AA4AF58487CC0B3618E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92601BCF6342B8718721171D990F711F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99B89EB820C4433839AC3E2B24752F2C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1D6B8CF8C6CCC563EADB21477D6DC48</key>
+		<key>B02E2DF5B60073A3C1F6275A7B880912</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0061320CB1B149C8D362743EB5CCD05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -123,11 +138,6 @@
 			<true/>
 		</dict>
 		<key>DBC9A0AF6D4571D059D2AF2422F2BD6E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F7C4C68A22222CDC33FF9BD8FA276E0A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

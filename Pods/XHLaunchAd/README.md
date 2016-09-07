@@ -1,4 +1,5 @@
-﻿# XHLaunchAd
+﻿![](Logo/header.png)
+
 * 几行代码接入启动页广告.
 * 1.支持全屏/半屏广告.
 * 2.支持静态/动态广告.
@@ -11,6 +12,8 @@
 ###技术交流群(群号:537476189).
 
 ### 更新记录:
+
+*    2016.09.01 -- v2.1.4   -->广告url传nil或不合法时,按无数据处理<br>
 *    2016.08.25 -- v2.1.3   -->增加半屏广告对LaunchScreen.storyboard的支持<br>
 *    2016.08.22 -- v2.1.2   -->增加未检测到广告数据,设置启动页停留时间属性<br>
 *    2016.08.19 -- v2.1.1   -->跳过按钮bug修复<br>
@@ -124,11 +127,8 @@
 *   3.导入 XHLaunchAd.h
 
 ### 3.Tips
-*   1.如果发现pod search XHLaunchAd 搜索出来的不是最新版本，需要在终端执行cd desktop退回到desktop，然后执行pod setup命令更新本地spec缓存（需要几分钟），然后再搜索就可以了
+*   1.如果发现pod search XHLaunchAd 搜索出来的不是最新版本，需要在终端执行cd ~/desktop退回到desktop，然后执行pod setup命令更新本地spec缓存（需要几分钟），然后再搜索就可以了
 *   2.如果你发现你执行pod install后,导入的不是最新版本,请删除Podfile.lock文件,在执行一次 pod install
-
-### 注意:
-*   1.如果你发现你的启动页不能正常显示,请clean并删除APP,运行再试!
 
 ##  系统要求
 *   该项目最低支持 iOS 7.0 和 Xcode 7.0

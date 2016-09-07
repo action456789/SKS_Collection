@@ -22,5 +22,7 @@ pod 'MJExtension', '~> 2.5.14'
 pod 'FLAnimatedImage', '~> 1.0.12'
 pod 'XHLaunchAd' # 启动页广告（闪屏）
 
+pod 'CocoaLumberjack', '~> 2.3.0'
+
 end
 

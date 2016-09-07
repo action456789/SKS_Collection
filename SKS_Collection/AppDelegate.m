@@ -11,7 +11,10 @@
 #import "BaseNavigationController.h"
 #import "NSTimer+BlockSupurt.h"
 #import <AFNetworking.h>
-#import "XHLaunchAd.h"
+#import <XHLaunchAd.h>
+
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
 
 @interface AppDelegate ()
 @end
@@ -30,7 +33,27 @@
     
     [self startLanuchAd];
     
+    [self setDDLog];
+    
     return YES;
+}
+
+- (void)setDDLog
+{
+    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    
+#ifdef DEBUG
+    static const int ddLogLevel = DDLogLevelVerbose;
+#else
+    static const int ddLogLevel = DDLogLevelOff;
+#endif
+    
+    DDLogVerbose(@"Verbose");
+    DDLogDebug(@"Debug");
+    DDLogInfo(@"Info");
+    DDLogWarn(@"Warn");
+    DDLogError(@"Error");
 }
 
 - (void)startMonitoringNetworkReachability
