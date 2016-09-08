@@ -92,6 +92,10 @@
 		10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFE71D40A01400E0D223 /* NSFileManager+File.m */; };
 		10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFF11D40D5DC00E0D223 /* FileCacheDemoController.m */; };
 		10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F4DFF41D41C2B600E0D223 /* BaseNavigationController.m */; };
+		10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F5B05B1D813B8800382E50 /* SearchDemoController.m */; };
+		10F5B0601D8151D100382E50 /* Cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10F5B05F1D8151D100382E50 /* Cities.plist */; };
+		10F5B0661D81539E00382E50 /* CityCounty.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F5B0651D81539E00382E50 /* CityCounty.m */; };
+		10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F5B0681D815C3700382E50 /* MetaDataManager.m */; };
 		10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEF61D5C0EC200801FD6 /* ExpandableViewController.m */; };
 		10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFA1D5C0EC200801FD6 /* HeaderView.m */; };
 		10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFE1D5C128C00801FD6 /* ClassModal.m */; };
@@ -261,6 +265,13 @@
 		10F4DFF11D40D5DC00E0D223 /* FileCacheDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCacheDemoController.m; sourceTree = "<group>"; };
 		10F4DFF31D41C2B600E0D223 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		10F4DFF41D41C2B600E0D223 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		10F5B05A1D813B8800382E50 /* SearchDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDemoController.h; sourceTree = "<group>"; };
+		10F5B05B1D813B8800382E50 /* SearchDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDemoController.m; sourceTree = "<group>"; };
+		10F5B05F1D8151D100382E50 /* Cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cities.plist; sourceTree = "<group>"; };
+		10F5B0641D81539E00382E50 /* CityCounty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityCounty.h; path = ../CityCounty.h; sourceTree = "<group>"; };
+		10F5B0651D81539E00382E50 /* CityCounty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityCounty.m; path = ../CityCounty.m; sourceTree = "<group>"; };
+		10F5B0671D815C3700382E50 /* MetaDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetaDataManager.h; path = ../MetaDataManager.h; sourceTree = "<group>"; };
+		10F5B0681D815C3700382E50 /* MetaDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetaDataManager.m; path = ../MetaDataManager.m; sourceTree = "<group>"; };
 		10F7EEF51D5C0EC200801FD6 /* ExpandableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableViewController.h; sourceTree = "<group>"; };
 		10F7EEF61D5C0EC200801FD6 /* ExpandableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandableViewController.m; sourceTree = "<group>"; };
 		10F7EEF91D5C0EC200801FD6 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
@@ -357,6 +368,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				10F5B0591D813B1300382E50 /* UISearchController */,
 				10D7F5E11D800F0A004D7DC7 /* 链式编程 */,
 				10DD4E371D6EF41400F7BA25 /* LayerAnimation */,
 				1046D6931D64592700E6D7EF /* Gif */,
@@ -915,6 +927,28 @@
 			path = NSFileManager;
 			sourceTree = "<group>";
 		};
+		10F5B0591D813B1300382E50 /* UISearchController */ = {
+			isa = PBXGroup;
+			children = (
+				10F5B06A1D81667700382E50 /* DataManager */,
+				10F5B05F1D8151D100382E50 /* Cities.plist */,
+				10F5B05A1D813B8800382E50 /* SearchDemoController.h */,
+				10F5B05B1D813B8800382E50 /* SearchDemoController.m */,
+			);
+			path = UISearchController;
+			sourceTree = "<group>";
+		};
+		10F5B06A1D81667700382E50 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				10F5B0641D81539E00382E50 /* CityCounty.h */,
+				10F5B0651D81539E00382E50 /* CityCounty.m */,
+				10F5B0671D815C3700382E50 /* MetaDataManager.h */,
+				10F5B0681D815C3700382E50 /* MetaDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1061,7 @@
 				10DD98441D226B1F00193A69 /* Main.storyboard in Resources */,
 				10DD99211D22802A00193A69 /* girl.png in Resources */,
 				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
+				10F5B0601D8151D100382E50 /* Cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,6 +1130,7 @@
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
+				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
@@ -1130,6 +1166,7 @@
 				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
+				10F5B0661D81539E00382E50 /* CityCounty.m in Sources */,
 				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
@@ -1157,6 +1194,7 @@
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
+				10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */,
 				10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */,
 				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
