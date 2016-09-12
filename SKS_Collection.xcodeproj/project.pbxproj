@@ -31,6 +31,7 @@
 		103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */; };
 		1046D6841D62E20000E6D7EF /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6831D62E20000E6D7EF /* TipsView.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
+		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
@@ -153,6 +154,8 @@
 		1046D6831D62E20000E6D7EF /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		1046D6941D64596E00E6D7EF /* GifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoViewController.h; sourceTree = "<group>"; };
 		1046D6951D64596E00E6D7EF /* GifDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDemoViewController.m; sourceTree = "<group>"; };
+		106362F41D869D0700FD47B0 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		106362F51D869D0700FD47B0 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		10694E4A1D41F35500D9F486 /* NSString+Code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Code.h"; sourceTree = "<group>"; };
@@ -860,6 +863,8 @@
 				10DD98CB1D226B7D00193A69 /* KK_ObserveredMutableArray.m */,
 				10DD98CC1D226B7D00193A69 /* KK_ThreadSafeArray.h */,
 				10DD98CD1D226B7D00193A69 /* KK_ThreadSafeArray.m */,
+				106362F41D869D0700FD47B0 /* GCDTimer.h */,
+				106362F51D869D0700FD47B0 /* GCDTimer.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1130,6 +1135,7 @@
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
+				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
