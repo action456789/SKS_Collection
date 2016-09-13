@@ -32,6 +32,7 @@
 		1046D6841D62E20000E6D7EF /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6831D62E20000E6D7EF /* TipsView.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
+		106362FA1D86C2AC00FD47B0 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F91D86C2AC00FD47B0 /* BaseRequest.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
@@ -68,9 +69,7 @@
 		10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98901D226B7D00193A69 /* UIImage+KS.m */; };
 		10DD98DF1D226B7D00193A69 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98931D226B7D00193A69 /* UIView+Frame.m */; };
 		10DD98E01D226B7D00193A69 /* UIView+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98951D226B7D00193A69 /* UIView+Tool.m */; };
-		10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD989D1D226B7D00193A69 /* KK_FileTool.m */; };
 		10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98A11D226B7D00193A69 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		10DD98E51D226B7D00193A69 /* KSSaveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98A71D226B7D00193A69 /* KSSaveTool.m */; };
 		10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98AA1D226B7D00193A69 /* KK_Downloader.m */; };
 		10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98AC1D226B7D00193A69 /* KK_DownloaderModal.m */; };
 		10DD98E81D226B7D00193A69 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B01D226B7D00193A69 /* Reachability.m */; };
@@ -156,6 +155,8 @@
 		1046D6951D64596E00E6D7EF /* GifDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDemoViewController.m; sourceTree = "<group>"; };
 		106362F41D869D0700FD47B0 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		106362F51D869D0700FD47B0 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		106362F81D86C2AC00FD47B0 /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		106362F91D86C2AC00FD47B0 /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		10694E4A1D41F35500D9F486 /* NSString+Code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Code.h"; sourceTree = "<group>"; };
@@ -224,12 +225,8 @@
 		10DD98951D226B7D00193A69 /* UIView+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Tool.m"; sourceTree = "<group>"; };
 		10DD98971D226B7D00193A69 /* LogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogMacro.h; sourceTree = "<group>"; };
 		10DD98981D226B7D00193A69 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		10DD989C1D226B7D00193A69 /* KK_FileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_FileTool.h; sourceTree = "<group>"; };
-		10DD989D1D226B7D00193A69 /* KK_FileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KK_FileTool.m; sourceTree = "<group>"; };
 		10DD98A01D226B7D00193A69 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		10DD98A11D226B7D00193A69 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
-		10DD98A61D226B7D00193A69 /* KSSaveTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSaveTool.h; sourceTree = "<group>"; };
-		10DD98A71D226B7D00193A69 /* KSSaveTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSaveTool.m; sourceTree = "<group>"; };
 		10DD98A91D226B7D00193A69 /* KK_Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_Downloader.h; sourceTree = "<group>"; };
 		10DD98AA1D226B7D00193A69 /* KK_Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KK_Downloader.m; sourceTree = "<group>"; };
 		10DD98AB1D226B7D00193A69 /* KK_DownloaderModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_DownloaderModal.h; sourceTree = "<group>"; };
@@ -371,6 +368,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				106362F71D86C1FD00FD47B0 /* NetworkTool */,
 				10F5B0591D813B1300382E50 /* UISearchController */,
 				10D7F5E11D800F0A004D7DC7 /* 链式编程 */,
 				10DD4E371D6EF41400F7BA25 /* LayerAnimation */,
@@ -486,6 +484,15 @@
 				1046D6951D64596E00E6D7EF /* GifDemoViewController.m */,
 			);
 			path = Gif;
+			sourceTree = "<group>";
+		};
+		106362F71D86C1FD00FD47B0 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				106362F81D86C2AC00FD47B0 /* BaseRequest.h */,
+				106362F91D86C2AC00FD47B0 /* BaseRequest.m */,
+			);
+			path = NetworkTool;
 			sourceTree = "<group>";
 		};
 		10642B961D34D7D6001217CF /* RootViewController */ = {
@@ -762,10 +769,7 @@
 		10DD989B1D226B7D00193A69 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				10DD989C1D226B7D00193A69 /* KK_FileTool.h */,
-				10DD989D1D226B7D00193A69 /* KK_FileTool.m */,
 				10DD989E1D226B7D00193A69 /* Regular Expressions Tool */,
-				10DD98A51D226B7D00193A69 /* UserDefault */,
 				10DD98A81D226B7D00193A69 /* 文件下载 */,
 				10DD98AD1D226B7D00193A69 /* 网络状态 */,
 			);
@@ -787,15 +791,6 @@
 				10DD98A11D226B7D00193A69 /* RegexKitLite.m */,
 			);
 			path = RegexKitLite;
-			sourceTree = "<group>";
-		};
-		10DD98A51D226B7D00193A69 /* UserDefault */ = {
-			isa = PBXGroup;
-			children = (
-				10DD98A61D226B7D00193A69 /* KSSaveTool.h */,
-				10DD98A71D226B7D00193A69 /* KSSaveTool.m */,
-			);
-			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		10DD98A81D226B7D00193A69 /* 文件下载 */ = {
@@ -1164,7 +1159,6 @@
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
-				10DD98E51D226B7D00193A69 /* KSSaveTool.m in Sources */,
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,
@@ -1191,7 +1185,6 @@
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
-				10DD98E21D226B7D00193A69 /* KK_FileTool.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
@@ -1203,6 +1196,7 @@
 				10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */,
 				10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */,
 				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
+				106362FA1D86C2AC00FD47B0 /* BaseRequest.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
 				10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */,

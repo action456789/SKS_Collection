@@ -1,5 +1,5 @@
 //
-//  KK_GCDTimer.h
+//  GCDTimer.h
 //  SKS_Collection
 //
 //  Created by KeSen on 9/12/16.
