@@ -7,8 +7,8 @@
 //
 
 #import "TipsView.h"
-#import "UIDevice+KS.h"
 #import <Masonry.h>
+#import "CommonMacro.h"
 
 @implementation TipsView
 {
@@ -19,7 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         _isShowing = NO;
         [self _createContentView];
     }
@@ -70,7 +70,7 @@
 {
     CGSize size = CGSizeZero;
     if (_contentViewSize.height <= 0 || _contentViewSize.width <= 0) {
-        size = CGSizeMake(ScreenWidth * 0.8, ScreenWidth * 0.8 * 0.7);
+        size = CGSizeMake(kScreenWidth * 0.8, kScreenWidth * 0.8 * 0.7);
     } else {
         size = self.contentViewSize;
     }

@@ -8,6 +8,7 @@
 
 #import "StaticCellBaseViewController.h"
 #import "StaticCell.h"
+#import "CommonMacro.h"
 
 #define kCellIdentifie @"StaticCell"
 
@@ -75,7 +76,7 @@
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
-        CGRect frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight - 64);
+        CGRect frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64);
         UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:self.tableViewStyle];
         tableView.delegate = self;
         tableView.dataSource = self;

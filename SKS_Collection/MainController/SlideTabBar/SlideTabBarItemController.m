@@ -7,6 +7,7 @@
 //
 
 #import "SlideTabBarItemController.h"
+#import "CommonMacro.h"
 
 @interface SlideTabBarItemController()<UIScrollViewDelegate>
 
@@ -22,7 +23,7 @@
     
     _scrollView = ({
         UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-        scrollView.contentSize = CGSizeMake(ScreenWidth, ScreenHeight * 4);
+        scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight * 4);
         scrollView.alwaysBounceVertical = YES;
         scrollView.delegate = self;
         [self.view addSubview:scrollView];

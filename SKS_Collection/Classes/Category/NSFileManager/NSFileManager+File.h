@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@interface NSFileManager (SKS)
+
 #define kHomeDirectory NSHomeDirectory()
 #define kDocumentDirectory NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
 #define kLibraryDirectory NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject
 #define kCacheDirectory NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject
 #define kTempDirectory NSTemporaryDirectory()
-
-@interface NSFileManager (SKS)
 
 + (void)createFileWithDirectory:(NSString *)directery
                        withName:(NSString *)fileName

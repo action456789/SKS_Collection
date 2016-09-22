@@ -163,6 +163,7 @@
 		10694E4B1D41F35500D9F486 /* NSString+Code.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Code.m"; sourceTree = "<group>"; };
 		10694E4D1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLiteDemoController.h; sourceTree = "<group>"; };
 		10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLiteDemoController.m; sourceTree = "<group>"; };
+		1097CDE21D93C21C006E6A3A /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
@@ -762,6 +763,7 @@
 			children = (
 				10DD98971D226B7D00193A69 /* LogMacro.h */,
 				10DD98981D226B7D00193A69 /* Singleton.h */,
+				1097CDE21D93C21C006E6A3A /* CommonMacro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1024,6 +1026,7 @@
 				TargetAttributes = {
 					10DD98351D226B1F00193A69 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 33UJTTK2KL;
 					};
 				};
 			};
@@ -1313,6 +1316,7 @@
 			baseConfigurationReference = 40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 33UJTTK2KL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SKS_Collection/MainController/LivePlayer",
@@ -1332,6 +1336,7 @@
 			baseConfigurationReference = 20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 33UJTTK2KL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SKS_Collection/MainController/LivePlayer",

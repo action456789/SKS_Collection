@@ -26,6 +26,7 @@
 #import "GifDemoViewController.h"
 #import "CaculaterViewController.h"
 #import "SearchDemoController.h"
+#import "AppleSystemServiceViewController.h"
 
 @interface RootViewController()
 
@@ -63,6 +64,7 @@
                         ,[StaticCellItem itemWithTitle:@"17. 加载 gif 图片" icon:nil objectClass:[GifDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"18. 链式编程-计算器" icon:nil objectClass:[CaculaterViewController class]]
                         ,[StaticCellItem itemWithTitle:@"19. UISearchController" icon:nil objectClass:[SearchDemoController class]]
+                        ,[StaticCellItem itemWithTitle:@"20. 苹果系统服务" icon:nil objectClass:[AppleSystemServiceViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

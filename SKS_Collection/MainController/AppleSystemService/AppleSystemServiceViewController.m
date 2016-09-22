@@ -7,6 +7,7 @@
 //
 
 #import "AppleSystemServiceViewController.h"
+#import "UIDevice+KS.h"
 
 @implementation AppleSystemServiceViewController
 
@@ -14,7 +15,8 @@
 {
     [super viewDidLoad];
 
-    
+    BOOL b = [UIDevice isOperatingSystemAtLeastVersion:9 minorVersion:3 patchVersion:6];
+    NSLog(@"%d", b);
 }
 
 @end

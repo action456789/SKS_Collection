@@ -8,7 +8,7 @@
 
 #import "HeaderView.h"
 #import <Masonry.h>
-#import "UIDevice+KS.h"
+#import "CommonMacro.h"
 #import "UIView+Frame.h"
 
 @implementation HeaderView
@@ -46,20 +46,20 @@
 - (void)_buildSubviews
 {
     // 白色背景
-    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, kHeadViewW)];
+    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kHeadViewW)];
     backgroundView.backgroundColor = [UIColor whiteColor];
     [self addSubview:backgroundView];
     
     // 灰色背景
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 2, ScreenWidth, kHeadViewW - 4)];
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 2, kScreenWidth, kHeadViewW - 4)];
     contentView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.05f];
     [self addSubview:contentView];
     
-    UIView *line1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.5)];
+    UIView *line1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5)];
     line1.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [contentView addSubview:line1];
     
-    UIView *line2         = [[UIView alloc] initWithFrame:CGRectMake(0, kHeadViewW - 8 + 0.5, ScreenWidth, 0.5)];
+    UIView *line2         = [[UIView alloc] initWithFrame:CGRectMake(0, kHeadViewW - 8 + 0.5, kScreenWidth, 0.5)];
     line2.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [contentView addSubview:line2];
     

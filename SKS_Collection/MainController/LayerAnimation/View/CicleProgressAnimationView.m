@@ -10,9 +10,18 @@
 
 @implementation CicleProgressAnimationView
 {
-    CGFloat _progress;
+    NSProgress *_progress;
     CABasicAnimation *_animation;
     UILabel *_progressLabel;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _progress = [NSProgress progressWithTotalUnitCount:1.0];
+    }
+    return self;
 }
 
 - (void)layoutSubviews
@@ -41,7 +50,7 @@
         label.bounds = CGRectMake(0, 0, frame.size.width * 0.8, frame.size.height * 0.7);
         label.center = center;
         label.textAlignment = NSTextAlignmentCenter;
-        label.text = [NSString stringWithFormat:@"%.0f%%", _progress * 100];
+        label.text = @"0%";
         label.font = [UIFont fontWithName:@"Heiti SC" size:ceil(frame.size.width/4.0f)];
         [self addSubview:label];
         
@@ -51,12 +60,12 @@
 
 - (void)showWithProgress:(CGFloat)progress
 {
-    _progress = progress;
+    _progress.completedUnitCount = progress;
     
     if (self.animationType == KSKLayerAnimationTypeDefault) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.sharpLayer.strokeEnd = progress;
-            _progressLabel.text = [NSString stringWithFormat:@"%.0f%%", _progress * 100];
+            _progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
         });
     }
 }

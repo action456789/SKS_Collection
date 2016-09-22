@@ -9,7 +9,7 @@
 #import "StaticCellDemoViewController.h"
 
 #import "BlurEffectDemoController.h"
-#import "UIDevice+KS.h"
+#import "CommonMacro.h"
 
 @implementation StaticCellDemoViewController
 {
@@ -91,14 +91,14 @@
 - (UIView *)tableView:(UITableView *)tableView headerCellInSection:(NSInteger)section
 {
     UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerCell"];
-    view.bounds = CGRectMake(0, 0, ScreenWidth, 200);
+    view.bounds = CGRectMake(0, 0, kScreenWidth, 200);
     return view;
 }
                                       
 - (UIView *)tableView:(UITableView *)tableView footerCellInSection:(NSInteger)section
 {
     UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerCell"];
-    view.bounds = CGRectMake(0, 0, ScreenWidth, 200);
+    view.bounds = CGRectMake(0, 0, kScreenWidth, 200);
     return view;
 }
 

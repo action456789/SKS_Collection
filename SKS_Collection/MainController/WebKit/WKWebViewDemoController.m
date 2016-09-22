@@ -9,6 +9,7 @@
 #import "WKWebViewDemoController.h"
 #import <WebKit/WebKit.h>
 #import "CalledByScriptObject.h"
+#import "CommonMacro.h"
 
 #define kScriptMessage @"scriptMessage"
 
@@ -38,7 +39,7 @@
     [conf.userContentController addScriptMessageHandler:self name:kScriptMessage];
     
     _webView = ({
-        WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight) configuration:conf];
+        WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight) configuration:conf];
         [self.view addSubview:webView];
         webView.navigationDelegate = self;
         webView.UIDelegate = self;
@@ -63,7 +64,7 @@
     
     _progressView = ({
         UIProgressView *progressView = [[UIProgressView alloc] init];
-        progressView.frame = CGRectMake(0, StatusBarAndNavigationBarHeight, ScreenWidth, 20);
+        progressView.frame = CGRectMake(0, 64, kScreenWidth, 20);
         progressView.progress = 0.0f;
         [self.view addSubview:progressView];
         

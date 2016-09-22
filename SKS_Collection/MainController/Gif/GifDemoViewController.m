@@ -58,34 +58,32 @@
         NSLog(@"正在下载");
         
         SDWebImageDownloader *downloader = [SDWebImageDownloader sharedDownloader];
-        [downloader downloadImageWithURL:_url
-                                 options:SDWebImageDownloaderLowPriority
-                                progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        [downloader downloadImageWithURL:_url options:SDWebImageDownloaderLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                                     
-                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                        CGFloat pecent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize);
-                                        NSLog(@"%.2f", pecent);
-                                        [_progressView showWithProgress:pecent];
-                                    });
+            dispatch_async(dispatch_get_main_queue(), ^{
+                CGFloat pecent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize);
+                NSLog(@"%.2f", pecent);
+                [_progressView showWithProgress:pecent];
+            });
+            
+        } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
                                     
-                                } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
-                                    
-                                    NSLog(@"下载完成");
-                                    
-                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                        _gifData = data;
-                                        [self createGifImage];
-                                    });
-                                    
-                                    // 缓存数据
-                                    [[SDImageCache sharedImageCache] storeImage:image
-                                                           recalculateFromImage:NO
-                                                                      imageData:data
-                                                                         forKey:_url.absoluteString
-                                                                         toDisk:YES];
-                                    
-                                   
-                                }];
+            NSLog(@"下载完成");
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _gifData = data;
+                [self createGifImage];
+            });
+            
+            // 缓存数据
+            [[SDImageCache sharedImageCache] storeImage:image
+                                   recalculateFromImage:NO
+                                              imageData:data
+                                                 forKey:_url.absoluteString
+                                                 toDisk:YES];
+            
+           
+        }];
     }
 }
 

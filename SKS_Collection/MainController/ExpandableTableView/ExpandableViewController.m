@@ -9,6 +9,7 @@
 #import "ExpandableViewController.h"
 #import "HeaderView.h"
 #import "ClassModal.h"
+#import "CommonMacro.h"
 
 @interface ExpandableViewController()<UITableViewDelegate, UITableViewDataSource, HeaderViewDelegate>
 
@@ -38,7 +39,7 @@
 - (void)initSubvies
 {
     _tableView = ({
-        CGRect frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight - 64);
+        CGRect frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64);
         UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
         tableView.delegate = self;
         tableView.dataSource = self;

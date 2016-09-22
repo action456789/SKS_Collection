@@ -16,6 +16,16 @@
     return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 }
 
++ (BOOL)isOperatingSystemAtLeastVersion:(NSInteger)majorVersion minorVersion:(NSInteger)minorVersion patchVersion:(NSInteger)patchVersion
+{
+    NSOperatingSystemVersion version;
+    version.majorVersion = majorVersion;
+    version.minorVersion = minorVersion;
+    version.patchVersion = patchVersion;
+    
+    return [NSProcessInfo.processInfo isOperatingSystemAtLeastVersion:version];
+}
+
 // 需要#import <sys/utsname.h>
 + (NSString*)deviceModelName
 {
