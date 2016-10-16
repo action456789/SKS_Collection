@@ -18,6 +18,8 @@
 		1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D81D46131000D55DE0 /* QRCodeMaskView.m */; };
 		1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2DC1D47427100D55DE0 /* ShimmerDemeController.m */; };
 		1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2E01D47508100D55DE0 /* WKWebViewDemoController.m */; };
+		103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */; };
+		103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */; };
 		103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */; };
 		103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */; };
 		103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554A1D3CCCF200366D8F /* KKSlideTabBarView.m */; };
@@ -29,6 +31,7 @@
 		103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */; };
 		103C3CD51D51E68500401306 /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD41D51E68500401306 /* StaticCell.m */; };
 		103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */; };
+		103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */; };
 		1046D6841D62E20000E6D7EF /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6831D62E20000E6D7EF /* TipsView.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
@@ -74,7 +77,6 @@
 		10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98AC1D226B7D00193A69 /* KK_DownloaderModal.m */; };
 		10DD98E81D226B7D00193A69 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B01D226B7D00193A69 /* Reachability.m */; };
 		10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98B21D226B7D00193A69 /* Reachability+KS.m */; };
-		10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C01D226B7D00193A69 /* KSPhotoTool.m */; };
 		10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98C41D226B7D00193A69 /* JingRoundView.m */; };
 		10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98CB1D226B7D00193A69 /* KK_ObserveredMutableArray.m */; };
 		10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98CD1D226B7D00193A69 /* KK_ThreadSafeArray.m */; };
@@ -127,6 +129,10 @@
 		1032C2DC1D47427100D55DE0 /* ShimmerDemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerDemeController.m; sourceTree = "<group>"; };
 		1032C2DF1D47508100D55DE0 /* WKWebViewDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoController.h; sourceTree = "<group>"; };
 		1032C2E01D47508100D55DE0 /* WKWebViewDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoController.m; sourceTree = "<group>"; };
+		103A03921D98C7A100A8F8A1 /* KSPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPhotoTool.h; sourceTree = "<group>"; };
+		103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPhotoTool.m; sourceTree = "<group>"; };
+		103A03951D98C7F700A8F8A1 /* PhotoToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoToolViewController.h; sourceTree = "<group>"; };
+		103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoToolViewController.m; sourceTree = "<group>"; };
 		103A55431D3CCCF200366D8F /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
 		103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
 		103A55461D3CCCF200366D8F /* CountDownButtonDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonDemoVC.h; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 		103C3CD41D51E68500401306 /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
 		103C3CD61D52D89200401306 /* StaticCellDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellDemoViewController.h; sourceTree = "<group>"; };
 		103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellDemoViewController.m; sourceTree = "<group>"; };
+		103DBDB91DB3519000BEFBBE /* KSBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBlockButton.h; sourceTree = "<group>"; };
+		103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBlockButton.m; sourceTree = "<group>"; };
 		1046D6821D62E20000E6D7EF /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
 		1046D6831D62E20000E6D7EF /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		1046D6941D64596E00E6D7EF /* GifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoViewController.h; sourceTree = "<group>"; };
@@ -236,8 +244,6 @@
 		10DD98B01D226B7D00193A69 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		10DD98B11D226B7D00193A69 /* Reachability+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reachability+KS.h"; sourceTree = "<group>"; };
 		10DD98B21D226B7D00193A69 /* Reachability+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reachability+KS.m"; sourceTree = "<group>"; };
-		10DD98BF1D226B7D00193A69 /* KSPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPhotoTool.h; sourceTree = "<group>"; };
-		10DD98C01D226B7D00193A69 /* KSPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPhotoTool.m; sourceTree = "<group>"; };
 		10DD98C31D226B7D00193A69 /* JingRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JingRoundView.h; sourceTree = "<group>"; };
 		10DD98C41D226B7D00193A69 /* JingRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JingRoundView.m; sourceTree = "<group>"; };
 		10DD98CA1D226B7D00193A69 /* KK_ObserveredMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KK_ObserveredMutableArray.h; sourceTree = "<group>"; };
@@ -366,9 +372,22 @@
 			path = WebKit;
 			sourceTree = "<group>";
 		};
+		103A03911D98C7A100A8F8A1 /* PhotoKit */ = {
+			isa = PBXGroup;
+			children = (
+				103A03921D98C7A100A8F8A1 /* KSPhotoTool.h */,
+				103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */,
+				103A03951D98C7F700A8F8A1 /* PhotoToolViewController.h */,
+				103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */,
+			);
+			path = PhotoKit;
+			sourceTree = "<group>";
+		};
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				103DBDB81DB3519000BEFBBE /* BlockButton */,
+				103A03911D98C7A100A8F8A1 /* PhotoKit */,
 				106362F71D86C1FD00FD47B0 /* NetworkTool */,
 				10F5B0591D813B1300382E50 /* UISearchController */,
 				10D7F5E11D800F0A004D7DC7 /* 链式编程 */,
@@ -467,6 +486,15 @@
 				103C3CD41D51E68500401306 /* StaticCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		103DBDB81DB3519000BEFBBE /* BlockButton */ = {
+			isa = PBXGroup;
+			children = (
+				103DBDB91DB3519000BEFBBE /* KSBlockButton.h */,
+				103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */,
+			);
+			path = BlockButton;
 			sourceTree = "<group>";
 		};
 		1046D6811D62E1BD00E6D7EF /* TipsView */ = {
@@ -828,19 +856,9 @@
 		10DD98B31D226B7D00193A69 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98BE1D226B7D00193A69 /* PhotoKit */,
 				10DD98C11D226B7D00193A69 /* RoundView */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		10DD98BE1D226B7D00193A69 /* PhotoKit */ = {
-			isa = PBXGroup;
-			children = (
-				10DD98BF1D226B7D00193A69 /* KSPhotoTool.h */,
-				10DD98C01D226B7D00193A69 /* KSPhotoTool.m */,
-			);
-			path = PhotoKit;
 			sourceTree = "<group>";
 		};
 		10DD98C11D226B7D00193A69 /* RoundView */ = {
@@ -1021,7 +1039,7 @@
 		10DD982E1D226B1F00193A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = SenKe;
 				TargetAttributes = {
 					10DD98351D226B1F00193A69 = {
@@ -1164,6 +1182,7 @@
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
+				103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */,
 				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,
 				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
 				103A55511D3CCCF200366D8F /* KKSlideTabBarView.m in Sources */,
@@ -1183,6 +1202,7 @@
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
+				103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
@@ -1192,6 +1212,7 @@
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
 				10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */,
+				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
@@ -1202,7 +1223,6 @@
 				106362FA1D86C2AC00FD47B0 /* BaseRequest.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
-				10DD98EE1D226B7D00193A69 /* KSPhotoTool.m in Sources */,
 				10DD98D71D226B7D00193A69 /* NSString+Regular.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1243,8 +1263,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1287,8 +1309,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

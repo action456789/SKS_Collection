@@ -27,6 +27,7 @@
 #import "CaculaterViewController.h"
 #import "SearchDemoController.h"
 #import "AppleSystemServiceViewController.h"
+#import "PhotoToolViewController.h"
 
 @interface RootViewController()
 
@@ -65,6 +66,7 @@
                         ,[StaticCellItem itemWithTitle:@"18. 链式编程-计算器" icon:nil objectClass:[CaculaterViewController class]]
                         ,[StaticCellItem itemWithTitle:@"19. UISearchController" icon:nil objectClass:[SearchDemoController class]]
                         ,[StaticCellItem itemWithTitle:@"20. 苹果系统服务" icon:nil objectClass:[AppleSystemServiceViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"20. 苹果系统服务" icon:nil objectClass:[PhotoToolViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

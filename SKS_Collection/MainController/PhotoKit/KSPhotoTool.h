@@ -20,7 +20,10 @@ typedef void (^failure)(NSError *error);
 - (PHAssetCollection *)collectionWithName:(NSString *)name;
 
 // 保存一张照片到某个相册中
-- (void)saveImage:(UIImage *)image inAsesetCollection:(PHAssetCollection *)collection success:(success)saveSuccess failure:(failure)saveFailure;
+-  (void)saveImage:(UIImage *)image
+inAsesetCollection:(PHAssetCollection *)collection
+          success:(success)saveSuccess
+          failure:(failure)saveFailure;
 
 // 获取某个相册里的所有照片
 - (NSArray *)imagesInAssetCollection:(PHAssetCollection *)collection;
