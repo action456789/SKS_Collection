@@ -18,6 +18,8 @@
 		1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2D81D46131000D55DE0 /* QRCodeMaskView.m */; };
 		1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2DC1D47427100D55DE0 /* ShimmerDemeController.m */; };
 		1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032C2E01D47508100D55DE0 /* WKWebViewDemoController.m */; };
+		103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103954A31DCAFAF000DADA5E /* SAMKeychainDemoViewController.m */; };
+		103954A81DCB073C00DADA5E /* LocksDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103954A71DCB073C00DADA5E /* LocksDemoViewController.m */; };
 		103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */; };
 		103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */; };
 		103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */; };
@@ -129,6 +131,10 @@
 		1032C2DC1D47427100D55DE0 /* ShimmerDemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerDemeController.m; sourceTree = "<group>"; };
 		1032C2DF1D47508100D55DE0 /* WKWebViewDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoController.h; sourceTree = "<group>"; };
 		1032C2E01D47508100D55DE0 /* WKWebViewDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoController.m; sourceTree = "<group>"; };
+		103954A21DCAFAF000DADA5E /* SAMKeychainDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychainDemoViewController.h; sourceTree = "<group>"; };
+		103954A31DCAFAF000DADA5E /* SAMKeychainDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainDemoViewController.m; sourceTree = "<group>"; };
+		103954A61DCB073C00DADA5E /* LocksDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocksDemoViewController.h; sourceTree = "<group>"; };
+		103954A71DCB073C00DADA5E /* LocksDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocksDemoViewController.m; sourceTree = "<group>"; };
 		103A03921D98C7A100A8F8A1 /* KSPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPhotoTool.h; sourceTree = "<group>"; };
 		103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPhotoTool.m; sourceTree = "<group>"; };
 		103A03951D98C7F700A8F8A1 /* PhotoToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoToolViewController.h; sourceTree = "<group>"; };
@@ -372,6 +378,24 @@
 			path = WebKit;
 			sourceTree = "<group>";
 		};
+		103954A11DCAFAA600DADA5E /* SAMKeychainDemo */ = {
+			isa = PBXGroup;
+			children = (
+				103954A21DCAFAF000DADA5E /* SAMKeychainDemoViewController.h */,
+				103954A31DCAFAF000DADA5E /* SAMKeychainDemoViewController.m */,
+			);
+			path = SAMKeychainDemo;
+			sourceTree = "<group>";
+		};
+		103954A51DCB071E00DADA5E /* Locks */ = {
+			isa = PBXGroup;
+			children = (
+				103954A61DCB073C00DADA5E /* LocksDemoViewController.h */,
+				103954A71DCB073C00DADA5E /* LocksDemoViewController.m */,
+			);
+			path = Locks;
+			sourceTree = "<group>";
+		};
 		103A03911D98C7A100A8F8A1 /* PhotoKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +410,8 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				103954A51DCB071E00DADA5E /* Locks */,
+				103954A11DCAFAA600DADA5E /* SAMKeychainDemo */,
 				103DBDB81DB3519000BEFBBE /* BlockButton */,
 				103A03911D98C7A100A8F8A1 /* PhotoKit */,
 				106362F71D86C1FD00FD47B0 /* NetworkTool */,
@@ -1044,7 +1070,6 @@
 				TargetAttributes = {
 					10DD98351D226B1F00193A69 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 33UJTTK2KL;
 					};
 				};
 			};
@@ -1176,10 +1201,12 @@
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
 				10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */,
+				103954A81DCB073C00DADA5E /* LocksDemoViewController.m in Sources */,
 				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
+				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */,
@@ -1340,7 +1367,7 @@
 			baseConfigurationReference = 40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 33UJTTK2KL;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SKS_Collection/MainController/LivePlayer",
@@ -1360,7 +1387,7 @@
 			baseConfigurationReference = 20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 33UJTTK2KL;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SKS_Collection/MainController/LivePlayer",

@@ -23,6 +23,7 @@ pod 'FLAnimatedImage', '~> 1.0.12'
 pod 'XHLaunchAd' # 启动页广告（闪屏）
 
 pod 'CocoaLumberjack', '~> 2.3.0'
+pod 'SAMKeychain'
 
 end
 
