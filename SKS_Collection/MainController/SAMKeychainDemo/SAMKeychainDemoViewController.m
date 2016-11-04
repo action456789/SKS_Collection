@@ -11,7 +11,12 @@
 #import <SAMKeychain.h>
 #import <SAMKeychainQuery.h>
 
+#import <FMDB/FMDB.h>
+
 @interface SAMKeychainDemoViewController ()
+
+@property (nonatomic, strong) FMDatabaseQueue * database;
+@property (atomic, strong) NSMutableDictionary * addressList;
 
 @end
 
@@ -47,5 +52,6 @@
         NSLog(@"%@", query.password);
     }
 }
+
 
 @end

@@ -34,7 +34,7 @@
     // [self test_pthread_mutex_t];
     
     // 4. 使用信号量
-    [self test_dispatch_semaphore_t];
+    [self test_dispatch_semaphore_t_0];
 }
 
 //TODO
@@ -49,7 +49,7 @@
     
 }
 
-- (void)test_dispatch_semaphore_t
+- (void)test_dispatch_semaphore_t_1
 {
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
     
@@ -68,6 +68,21 @@
         [self method2];
         dispatch_semaphore_signal(semaphore);
     });
+}
+
+// 信号量的来控制多线程中代码执行顺序
+- (void)test_dispatch_semaphore_t_0
+{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self method1];
+        sleep(10);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    [self method2];
 }
 
 - (void)test_pthread_mutex_t
