@@ -30,6 +30,8 @@
 #import "PhotoToolViewController.h"
 #import "SAMKeychainDemoViewController.h"
 #import "LocksDemoViewController.h"
+#import "ExampleView.h"
+#import "CommonMacro.h"
 
 @interface RootViewController()
 
@@ -84,8 +86,13 @@
 
 - (void)showTipsView
 {
+    ExampleView *exampleView = [[NSBundle mainBundle] loadNibNamed:@"ExampleView" owner:self options:nil].firstObject;
+    
     TipsView *tipsView = [TipsView new];
     tipsView.showType = TipsViewShowTypeFromBottom;
+    tipsView.contentView = exampleView;
+    tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
+    
     [tipsView showWithView:self.view];
 }
 

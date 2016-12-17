@@ -15,9 +15,11 @@ typedef NS_ENUM(NSUInteger, TipsViewShowType) {
 
 @interface TipsView : UIView
 
-@property (nonatomic, strong, readonly) UIView *contentView;
-@property (nonatomic, assign) CGSize contentViewSize;
 @property (nonatomic, assign) TipsViewShowType showType;
+
+@property (nonatomic, strong) UIView *contentView;
+
+@property (nonatomic, assign) CGSize contentViewSize;
 
 - (void)showWithView:(UIView *)superView;
 - (void)hide;
