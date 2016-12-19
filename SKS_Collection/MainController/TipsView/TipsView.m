@@ -126,44 +126,62 @@
 
 # pragma - mark public methods
 
-- (void)showWithView:(UIView *)superView
-{
+- (void)showInView:(UIView *)superView animatable:(BOOL)animatable {
     if (_isShowing) {
-        [self hide];
+        [self hideWithAnimatable:NO];
     }
     
-    _isShowing = YES;
-    
-    if (self.showType == TipsViewShowTypeFromBottom) {
-        [superView addSubview:self];
+    if (animatable) {
+        _isShowing = YES;
         
-        [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        if (self.showType == TipsViewShowTypeFromBottom) {
+            [superView addSubview:self];
+            
+            [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
+                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+            } completion:nil];
+            
+        } else {
+            [UIView transitionWithView:superView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                [superView addSubview:self];
+            } completion:nil];
+        }
+    } else {
+        if (self.showType == TipsViewShowTypeFromBottom) {
+            [superView addSubview:self];
             _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
-        } completion:nil];
-        
-    } else {
-        [UIView transitionWithView:superView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        } else {
             [superView addSubview:self];
-        } completion:nil];
+        }
     }
 }
 
-- (void)hide
-{
-    _isShowing = NO;
-    
-    if (self.showType == TipsViewShowTypeFromBottom) {
-        [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+- (void)hideWithAnimatable:(BOOL)animatable {
+    if (animatable) {
+        _isShowing = NO;
+        
+        if (self.showType == TipsViewShowTypeFromBottom) {
+            [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                _containertView.transform = CGAffineTransformIdentity;
+                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+            } completion:^(BOOL finished) {
+                [self removeFromSuperview];
+            }];
+        } else {
+            [UIView transitionWithView:self.superview duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                [self removeFromSuperview];
+            } completion:nil];
+        }
+    } else {
+        if (self.showType == TipsViewShowTypeFromBottom) {
             _containertView.transform = CGAffineTransformIdentity;
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
-        } completion:^(BOOL finished) {
             [self removeFromSuperview];
-        }];
-    } else {
-        [UIView transitionWithView:self.superview duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        } else {
             [self removeFromSuperview];
-        } completion:nil];
+        }
     }
 }
 

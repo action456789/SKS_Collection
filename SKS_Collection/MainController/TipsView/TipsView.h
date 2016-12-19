@@ -21,7 +21,8 @@ typedef NS_ENUM(NSUInteger, TipsViewShowType) {
 
 @property (nonatomic, assign) CGSize contentViewSize;
 
-- (void)showWithView:(UIView *)superView;
-- (void)hide;
+- (void)showInView:(UIView *)superView animatable:(BOOL)animatable;
+- (void)hideWithAnimatable:(BOOL)animatable;
+
 
 @end

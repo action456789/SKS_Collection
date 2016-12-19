@@ -93,7 +93,7 @@
     tipsView.contentView = exampleView;
     tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
     
-    [tipsView showWithView:self.view];
+    [tipsView showInView:self.view animatable:YES];
 }
 
 @end
