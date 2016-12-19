@@ -8,7 +8,6 @@
 
 #import "TipsView.h"
 #import <Masonry.h>
-#import "ExampleView.h"
 
 #define kLandscape UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
 #define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
