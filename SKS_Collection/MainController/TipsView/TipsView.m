@@ -69,7 +69,7 @@
 
 - (void)_tapGestureHandle:(UIGestureRecognizer *)tap
 {
-    [self hide];
+    [self hideWithAnimatable:YES];
 }
 
 #pragma mark - getter, setter
