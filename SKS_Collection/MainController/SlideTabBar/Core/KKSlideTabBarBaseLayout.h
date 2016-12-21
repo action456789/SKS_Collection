@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
 
-static const CGFloat kSTBTopViewHeight          = 40;
-static const CGFloat kSTBFirstItemLeftPadding   = 10;
-static const CGFloat kSTBLastItemRightPadding   = 10;
+static const CGFloat kSTBTopViewHeight          = 45;
+static const CGFloat kSTBFirstItemLeftPadding   = 5;
+static const CGFloat kSTBLastItemRightPadding   = 5;
 static const CGFloat kSTBItemHorizontalSpace    = 15;
 static const CGFloat kSTBItemMoreWidth          = 0;
 static const CGFloat kSTBItemLineLeftOverWidtht = 5;
 static const CGFloat kSTBItemHeightRatio        = 0.9f;
 
 static const CGFloat kSTBItemFontSize           = 14;
+
+static const CGFloat kSTBSperaterWidth          = 1;
+static const CGFloat kSTBSperaterHeight          = 18;
 
 #define STB_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define STB_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
@@ -31,12 +34,14 @@ static const CGFloat kSTBItemFontSize           = 14;
 #define kSTBBottomBgColor 0x1f232a
 #define kSTBItemLineBgColor 0xff7608
 #define kSTBItemButtonColor 0x808080
+#define kSTBSeperaterColor 0xF0F0F0
 
 @interface KKSlideTabBarBaseLayout : NSObject
 
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *itemStringWidths;
 @property (nonatomic, strong) NSArray<NSString *> *itemTitles;
 @property (nonatomic, assign) BOOL itemScrollViewScrollEnable;
+@property (nonatomic, assign) BOOL showSeperater;
 
 - (instancetype)initWithItemTitles:(NSArray<NSString *> *)itemTitles;
 

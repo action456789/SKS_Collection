@@ -11,11 +11,6 @@
 @implementation KKSlideTabBarLayoutBisect
 
 - (void)layoutItemsViews:(NSArray *)views {
-//    NSNumber *sum = [self.itemStringWidths valueForKeyPath: @"@sum.self"];
-//    CGFloat totalWidth = sum.floatValue + kSTBItemHorizontalSpace * (self.itemStringWidths.count - 1) + kSTBFirstItemLeftPadding + kSTBLastItemRightPadding;
-//    if (totalWidth > STB_SCREEN_WIDTH) {
-//
-//    }
     
     __block CGFloat itemX = kSTBFirstItemLeftPadding;
     
@@ -34,17 +29,33 @@
         [itemButton setTitleColor:kSTBColorWithHex(kSTBItemButtonColor) forState:UIControlStateNormal];
         [itemButton setTitleColor:kSTBColorWithHex(kSTBItemLineBgColor) forState:UIControlStateSelected];
         
-        CGFloat w = (STB_SCREEN_WIDTH - kSTBFirstItemLeftPadding - kSTBLastItemRightPadding) / views.count;
-        CGFloat offsetX = w * idx;
+        CGFloat seperaterWidthsSum = (self.itemTitles.count - 1) * kSTBSperaterWidth;
+        CGFloat w = (STB_SCREEN_WIDTH - kSTBFirstItemLeftPadding - kSTBLastItemRightPadding - seperaterWidthsSum) / views.count;
+        CGFloat offsetX = (w + kSTBSperaterWidth) * idx ;
+        
+        UIView *superView = itemButton.superview;
         
         [itemButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(itemButton.superview.mas_top);
+            make.top.mas_equalTo(superView.mas_top);
             make.height.mas_equalTo(@(kSTBTopViewHeight * kSTBItemHeightRatio));
-            make.left.mas_equalTo(itemButton.superview.mas_left).offset(offsetX);
+            make.left.mas_equalTo(superView.mas_left).offset(offsetX);
             make.width.mas_equalTo(@(w));
         }];
         
         itemX += w;
+        
+        if (self.showSeperater && idx != self.itemTitles.count - 1) {
+            UIView *seperaterView = [UIView new];
+            seperaterView.backgroundColor = kSTBColorWithHex(kSTBSeperaterColor);
+            [superView addSubview:seperaterView];
+            
+            [seperaterView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(itemButton.mas_right);
+                make.width.mas_equalTo(kSTBSperaterWidth);
+                make.height.mas_equalTo(kSTBSperaterHeight);
+                make.centerY.mas_equalTo(itemButton);
+            }];
+        }
     }];
 }
 
@@ -54,6 +65,10 @@
 
 - (BOOL)itemScrollViewScrollEnable {
     return NO;
+}
+
+- (BOOL)showSeperater {
+    return YES;
 }
 
 @end

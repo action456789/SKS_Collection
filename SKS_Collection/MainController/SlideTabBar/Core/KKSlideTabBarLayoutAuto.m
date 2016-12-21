@@ -30,10 +30,12 @@
         CGFloat titleStringW = [self.itemStringWidths[idx] floatValue];
         CGFloat x = itemX + idx * kSTBItemHorizontalSpace;
         
+        UIView *superView = itemButton.superview;
+        
         [itemButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(itemButton.superview.mas_top);
+            make.top.mas_equalTo(superView.mas_top);
             make.height.mas_equalTo(@(kSTBTopViewHeight * kSTBItemHeightRatio));
-            make.left.mas_equalTo(itemButton.superview.mas_left).offset(x);
+            make.left.mas_equalTo(superView.mas_left).offset(x);
             make.width.mas_equalTo(@(titleStringW));
         }];
         
@@ -47,6 +49,10 @@
 
 - (BOOL)itemScrollViewScrollEnable {
     return YES;
+}
+
+- (BOOL)showSeperater {
+    return NO;
 }
 
 @end
