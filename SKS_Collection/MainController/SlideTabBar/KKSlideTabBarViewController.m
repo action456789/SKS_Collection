@@ -11,6 +11,8 @@
 #import "SlideTabBarItemController.h"
 #import <Masonry.h>
 #import "UIColor+SKS.h"
+#import "KKSlideTabBarLayoutAuto.h"
+#import "KKSlideTabBarLayoutBisect.h"
 
 @interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate>
 {
@@ -56,6 +58,7 @@
 - (void)_initTitlesDate
 {
     _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点今日热", @"今日热点今日热点  ", @"电影", @"电影asdfas", nil];
+//    _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点今日热", nil];
 }
 
 - (void)_initControllersDate
@@ -71,7 +74,9 @@
 
 - (void)_createTabBarView
 {
-    _tabBar = [[KKSlideTabBarView alloc] initWithFrame:CGRectZero itemTitles:_titles];
+    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutBisect alloc] initWithItemTitles:_titles];
+//    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
+    _tabBar = [[KKSlideTabBarView alloc] initWithFrame:CGRectZero itemTitles:_titles layout:layout];
     _tabBar.delegate = self;
     [_tabBar setCurrentPage:0 withAnimate:NO];
     _tabBar.navigationController = self.navigationController;
