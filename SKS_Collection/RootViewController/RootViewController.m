@@ -84,9 +84,7 @@
 
 - (void)showTipsView
 {
-    TipsView *tipsView = [TipsView new];
-    tipsView.showType = TipsViewShowTypeFromBottom;
-    [tipsView showWithView:self.view];
+
 }
 
 @end
