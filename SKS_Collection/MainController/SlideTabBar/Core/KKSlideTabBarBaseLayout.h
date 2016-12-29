@@ -19,7 +19,7 @@ static const CGFloat kSTBItemHeightRatio        = 0.9f;
 
 static const CGFloat kSTBItemFontSize           = 14;
 
-static const CGFloat kSTBSperaterWidth          = 1;
+static const CGFloat kSTBSperaterWidth          = 0.5;
 static const CGFloat kSTBSperaterHeight          = 18;
 
 #define STB_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
@@ -33,8 +33,8 @@ static const CGFloat kSTBSperaterHeight          = 18;
 #define kSTBBarBgColor 0x292e37
 #define kSTBBottomBgColor 0x1f232a
 #define kSTBItemLineBgColor 0xff7608
-#define kSTBItemButtonColor 0x808080
-#define kSTBSeperaterColor 0xF0F0F0
+#define kSTBItemFontColor 0x808080
+#define kSTBSeperaterColor 0x808080
 
 @interface KKSlideTabBarBaseLayout : NSObject
 

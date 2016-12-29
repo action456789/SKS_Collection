@@ -26,7 +26,7 @@
         itemButton.titleLabel.textAlignment = NSTextAlignmentCenter;
         itemButton.titleLabel.font = [UIFont systemFontOfSize:kSTBItemFontSize];
         
-        [itemButton setTitleColor:kSTBColorWithHex(kSTBItemButtonColor) forState:UIControlStateNormal];
+        [itemButton setTitleColor:kSTBColorWithHex(kSTBItemFontColor) forState:UIControlStateNormal];
         [itemButton setTitleColor:kSTBColorWithHex(kSTBItemLineBgColor) forState:UIControlStateSelected];
         
         CGFloat seperaterWidthsSum = (self.itemTitles.count - 1) * kSTBSperaterWidth;

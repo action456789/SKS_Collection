@@ -93,7 +93,7 @@
     [_itemMore setTitle:@"更多" forState:UIControlStateNormal];
     _itemMore.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_itemMore.titleLabel setFont:[UIFont systemFontOfSize:kSTBItemFontSize]];
-    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemButtonColor) forState:UIControlStateNormal];
+    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontColor) forState:UIControlStateNormal];
     [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemLineBgColor) forState:UIControlStateSelected];
     [_itemMore addTarget:self action:@selector(itemMoreClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_topContainerView addSubview:_itemMore];
@@ -163,10 +163,14 @@
     [_itemTitles enumerateObjectsUsingBlock:^(NSString *titleString, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton *itemButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [itemButton addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [_itemsScrollView addSubview:itemButton];
+        [itemButton setTitle:_itemTitles[idx] forState:UIControlStateNormal];
         itemButton.tag = idx;
+        
+        [_itemsScrollView addSubview:itemButton];
+        
         [_itemButtons addObject:itemButton];
     }];
+    
     [self.layout layoutItemsViews:_itemButtons];
 }
 
