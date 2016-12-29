@@ -33,6 +33,7 @@
 		103C3CD51D51E68500401306 /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD41D51E68500401306 /* StaticCell.m */; };
 		103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */; };
 		103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */; };
+		1040A3531E13737B00FFAF8B /* NewSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1040A3521E13737B00FFAF8B /* NewSetting.storyboard */; };
 		1046D6841D62E20000E6D7EF /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6831D62E20000E6D7EF /* TipsView.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
@@ -165,6 +166,7 @@
 		103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellDemoViewController.m; sourceTree = "<group>"; };
 		103DBDB91DB3519000BEFBBE /* KSBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBlockButton.h; sourceTree = "<group>"; };
 		103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBlockButton.m; sourceTree = "<group>"; };
+		1040A3521E13737B00FFAF8B /* NewSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSetting.storyboard; sourceTree = "<group>"; };
 		1046D6821D62E20000E6D7EF /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
 		1046D6831D62E20000E6D7EF /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		1046D6941D64596E00E6D7EF /* GifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoViewController.h; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 				10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */,
 				102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
+				1040A3511E13737300FFAF8B /* StaticTableViewUsingStoryboard */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
 				1032C2DA1D47425600D55DE0 /* Shimmer */,
 				1032C2D01D45EF3F00D55DE0 /* QRCoder */,
@@ -532,6 +535,14 @@
 				103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */,
 			);
 			path = BlockButton;
+			sourceTree = "<group>";
+		};
+		1040A3511E13737300FFAF8B /* StaticTableViewUsingStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				1040A3521E13737B00FFAF8B /* NewSetting.storyboard */,
+			);
+			path = StaticTableViewUsingStoryboard;
 			sourceTree = "<group>";
 		};
 		1046D6811D62E1BD00E6D7EF /* TipsView */ = {
@@ -1077,6 +1088,7 @@
 				10DD98341D226B1F00193A69 /* Resources */,
 				52D12901B49DEABE9D5F75BA /* Embed Pods Frameworks */,
 				D94E375809FEE874797B9108 /* Copy Pods Resources */,
+				1079811D1E1533CA008050FA /* Integrate Reveal Server */,
 			);
 			buildRules = (
 			);
@@ -1137,12 +1149,27 @@
 				10DD99211D22802A00193A69 /* girl.png in Resources */,
 				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
 				10F5B0601D8151D100382E50 /* Cities.plist in Resources */,
+				1040A3531E13737B00FFAF8B /* NewSetting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1079811D1E1533CA008050FA /* Integrate Reveal Server */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Integrate Reveal Server";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "REVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi";
+		};
 		52D12901B49DEABE9D5F75BA /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
