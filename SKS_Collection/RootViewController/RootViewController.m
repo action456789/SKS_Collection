@@ -30,6 +30,7 @@
 #import "PhotoToolViewController.h"
 #import "SAMKeychainDemoViewController.h"
 #import "LocksDemoViewController.h"
+#import "CommonMacro.h"
 
 @interface RootViewController()
 
@@ -84,7 +85,15 @@
 
 - (void)showTipsView
 {
-
+    TipsView *tipsView = [TipsView new];
+    tipsView.showType = TipsViewShowTypeFromBottom;
+    tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
+    
+    if (tipsView.isAnimating) {
+        return;
+    }
+    
+    [tipsView showInView:nil animatable:YES];
 }
 
 @end

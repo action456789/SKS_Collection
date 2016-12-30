@@ -24,7 +24,9 @@ typedef NS_ENUM(NSUInteger, TipsViewShowType) {
 @property (nonatomic, assign, readonly) BOOL isAnimating;
 @property (nonatomic, assign, readonly) BOOL isShowing;
 
+- (void)showAnimatable:(BOOL)animatable;
 - (void)showInView:(UIView *)superView animatable:(BOOL)animatable;
-- (void)hideWithAnimatable:(BOOL)animatable;
+
+- (void)hideAnimatable:(BOOL)animatable;
 
 @end

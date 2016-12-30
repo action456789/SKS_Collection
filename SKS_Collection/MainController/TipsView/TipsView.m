@@ -13,6 +13,12 @@
 #define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
 
+@interface TipsView()
+
+@property (nonatomic, strong) UIWindow *window;
+
+@end
+
 @implementation TipsView
 {
     UIView *_shadowView;
@@ -65,7 +71,7 @@
 
 - (void)_tapGestureHandle:(UIGestureRecognizer *)tap
 {
-    [self hideWithAnimatable:YES];
+    [self hideAnimatable:YES];
 }
 
 #pragma mark - getter, setter
@@ -124,23 +130,23 @@
 
 - (void)showInView:(UIView *)superView animatable:(BOOL)animatable {
     if (_isShowing) {
-        [self hideWithAnimatable:NO];
+        [self hideAnimatable:NO];
     }
     
     _isShowing = YES;
     
-    UIView *superViewOrKeyWindows = nil;
+    UIView *superViewOrWindow = nil;
     if (superView == nil) {
-        superViewOrKeyWindows = self.containerView;
+        superViewOrWindow = self.window;
     } else {
-        superViewOrKeyWindows = superView;
+        superViewOrWindow = superView;
     }
     
     if (animatable) {
         _isAnimating = YES;
         
         if (self.showType == TipsViewShowTypeFromBottom) {
-            [superViewOrKeyWindows addSubview:self];
+            [superViewOrWindow addSubview:self];
             
             [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
                 _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
@@ -151,21 +157,25 @@
             
         } else {
             [UIView transitionWithView:superView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                [superViewOrKeyWindows addSubview:self];
+                [superViewOrWindow addSubview:self];
             } completion:nil];
         }
     } else {
         if (self.showType == TipsViewShowTypeFromBottom) {
-            [superViewOrKeyWindows addSubview:self];
+            [superViewOrWindow addSubview:self];
             _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         } else {
-            [superViewOrKeyWindows addSubview:self];
+            [superViewOrWindow addSubview:self];
         }
     }
 }
 
-- (void)hideWithAnimatable:(BOOL)animatable {
+- (void)showAnimatable:(BOOL)animatable {
+    [self showInView:nil animatable:animatable];
+}
+
+- (void)hideAnimatable:(BOOL)animatable {
     _isShowing = NO;
     
     if (animatable) {
@@ -176,7 +186,8 @@
                 _containertView.transform = CGAffineTransformIdentity;
                 _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
             } completion:^(BOOL finished) {
-                [self removeFromSuperview];
+                [self clear];
+                
                 _isAnimating = NO;
             }];
         } else {
@@ -188,14 +199,36 @@
         if (self.showType == TipsViewShowTypeFromBottom) {
             _containertView.transform = CGAffineTransformIdentity;
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
-            [self removeFromSuperview];
+            
+            [self clear];
+        
         } else {
             [self removeFromSuperview];
         }
     }
 }
 
-- (UIView *)containerView {
-    return [UIApplication sharedApplication].keyWindow;
+- (void)clear {
+    [self removeFromSuperview];
+    [self.window removeFromSuperview];
+    self.window = nil;
 }
+
+- (UIWindow *)window {
+    if (_window == nil) {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.windowLevel = UIWindowLevelAlert;
+        _window.backgroundColor = [UIColor clearColor];
+        
+        [_window makeKeyAndVisible];
+        
+//        self.touchLayer = [[UIControl alloc] initWithFrame:self.window.bounds];
+//        self.touchLayer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+//        [self.window addSubview:self.touchLayer];
+//        [self.touchLayer addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchDown];
+    }
+    
+    return _window;
+}
+
 @end
