@@ -51,4 +51,10 @@
     return [self match:@"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"];
 }
 
+// 判断字符串是几位数字，如5位数字 12345, 3为数字012
+- (BOOL)isDigitsOfCount:(NSInteger)count {
+    NSString *regex = [NSString stringWithFormat:@"^\\d{%ld}$", (long)count];
+    return [self match:regex];
+}
+
 @end

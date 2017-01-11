@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Regular)
-/*-------------------------------正则表达式------------------------*/
+
 - (BOOL)isQQ;
 - (BOOL)isPhoneNumber;
 - (BOOL)isIPAddress;
-/*---------------------------------------------------------------*/
+- (BOOL)isDigitsOfCount:(NSInteger)count;
+
 @end

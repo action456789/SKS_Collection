@@ -33,7 +33,10 @@
     
     [self startMonitoringNetworkReachability];
     
-    [self startLanuchAd];
+//    [self startLanuchAd];
+    RootViewController *rootVc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:rootVc];
+    self.window.rootViewController = nav;
     
     [self setDDLog];
     
