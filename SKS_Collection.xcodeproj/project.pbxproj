@@ -109,6 +109,9 @@
 		10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFE1D5C128C00801FD6 /* ClassModal.m */; };
 		10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF021D5D664700801FD6 /* AppleSystemService.m */; };
 		10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */; };
+		2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */; };
+		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
+		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
 		85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
@@ -307,6 +310,11 @@
 		10F7EF041D5D6EDC00801FD6 /* AppleSystemServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSystemServiceViewController.h; sourceTree = "<group>"; };
 		10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemServiceViewController.m; sourceTree = "<group>"; };
 		20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
+		2E3C87F01E25FD29000A267D /* AddClickAreaButtonDemeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClickAreaButtonDemeVC.h; sourceTree = "<group>"; };
+		2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClickAreaButtonDemeVC.m; sourceTree = "<group>"; };
+		2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClickAreaButtonDemeVC.xib; sourceTree = "<group>"; };
+		2E3C87F51E25FD3C000A267D /* HitTestEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestEdgeInsetsButton.h; sourceTree = "<group>"; };
+		2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestEdgeInsetsButton.m; sourceTree = "<group>"; };
 		40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 		6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -421,6 +429,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */,
 				103954A51DCB071E00DADA5E /* Locks */,
 				103954A11DCAFAA600DADA5E /* SAMKeychainDemo */,
 				103DBDB81DB3519000BEFBBE /* BlockButton */,
@@ -1061,6 +1070,18 @@
 			path = AppleSystemService;
 			sourceTree = "<group>";
 		};
+		2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */ = {
+			isa = PBXGroup;
+			children = (
+				2E3C87F51E25FD3C000A267D /* HitTestEdgeInsetsButton.h */,
+				2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */,
+				2E3C87F01E25FD29000A267D /* AddClickAreaButtonDemeVC.h */,
+				2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */,
+				2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */,
+			);
+			path = "增加按钮点击区域";
+			sourceTree = "<group>";
+		};
 		DA4A57A0974FF2C2D6DBB9D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,6 +1156,7 @@
 				10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */,
 				10DD4E4B1D6EF6D100F7BA25 /* CheckMark.png in Resources */,
 				10DD98491D226B1F00193A69 /* LaunchScreen.storyboard in Resources */,
+				2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */,
 				10DD99241D22802A00193A69 /* start.png in Resources */,
 				10DD99201D22802A00193A69 /* background.jpg in Resources */,
 				10DD99221D22802A00193A69 /* pause.png in Resources */,
@@ -1246,6 +1268,7 @@
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
+				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
 				10DD98D51D226B7D00193A69 /* NSString+Font.m in Sources */,
 				10DD98DE1D226B7D00193A69 /* UIImage+KS.m in Sources */,
 				101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */,
@@ -1278,6 +1301,7 @@
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */,
+				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,

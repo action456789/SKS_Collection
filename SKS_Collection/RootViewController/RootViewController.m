@@ -31,6 +31,7 @@
 #import "SAMKeychainDemoViewController.h"
 #import "LocksDemoViewController.h"
 #import "CommonMacro.h"
+#import "AddClickAreaButtonDemeVC.h"
 
 @interface RootViewController()
 
@@ -69,9 +70,10 @@
                         ,[StaticCellItem itemWithTitle:@"18. 链式编程-计算器" icon:nil objectClass:[CaculaterViewController class]]
                         ,[StaticCellItem itemWithTitle:@"19. UISearchController" icon:nil objectClass:[SearchDemoController class]]
                         ,[StaticCellItem itemWithTitle:@"20. 苹果系统服务" icon:nil objectClass:[AppleSystemServiceViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"20. 照片工具类" icon:nil objectClass:[PhotoToolViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"20. SAMKeychain" icon:nil objectClass:[SAMKeychainDemoViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"20. Locks" icon:nil objectClass:[LocksDemoViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"21. 照片工具类" icon:nil objectClass:[PhotoToolViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"22. SAMKeychain" icon:nil objectClass:[SAMKeychainDemoViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"23. Locks" icon:nil objectClass:[LocksDemoViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"24. 增加按钮点击区域" icon:nil objectClass:[AddClickAreaButtonDemeVC class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil
