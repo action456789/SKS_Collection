@@ -109,10 +109,11 @@
 		10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EEFE1D5C128C00801FD6 /* ClassModal.m */; };
 		10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF021D5D664700801FD6 /* AppleSystemService.m */; };
 		10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */; };
+		2E38E9321E27BF7E0086B870 /* CycleScrollViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9311E27BF7E0086B870 /* CycleScrollViewDemoVC.m */; };
 		2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */; };
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
-		85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */; };
+		44AA16738C6F07E806587AE3 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6555D7613727BF84C08388 /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -309,14 +310,16 @@
 		10F7EF021D5D664700801FD6 /* AppleSystemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemService.m; sourceTree = "<group>"; };
 		10F7EF041D5D6EDC00801FD6 /* AppleSystemServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSystemServiceViewController.h; sourceTree = "<group>"; };
 		10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemServiceViewController.m; sourceTree = "<group>"; };
-		20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
+		2E38E9301E27BF7E0086B870 /* CycleScrollViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollViewDemoVC.h; sourceTree = "<group>"; };
+		2E38E9311E27BF7E0086B870 /* CycleScrollViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollViewDemoVC.m; sourceTree = "<group>"; };
 		2E3C87F01E25FD29000A267D /* AddClickAreaButtonDemeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClickAreaButtonDemeVC.h; sourceTree = "<group>"; };
 		2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClickAreaButtonDemeVC.m; sourceTree = "<group>"; };
 		2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClickAreaButtonDemeVC.xib; sourceTree = "<group>"; };
 		2E3C87F51E25FD3C000A267D /* HitTestEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestEdgeInsetsButton.h; sourceTree = "<group>"; };
 		2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestEdgeInsetsButton.m; sourceTree = "<group>"; };
-		40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
-		6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6555D7613727BF84C08388 /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
+		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10DD98F51D2278E300193A69 /* libicucore.tbd in Frameworks */,
-				85630342DE26CA0B370DA061 /* libPods-SKS_Collection.a in Frameworks */,
+				44AA16738C6F07E806587AE3 /* libPods-SKS_Collection.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				10DD98F41D2278E300193A69 /* libicucore.tbd */,
-				6BC251C4AE5D12F9EA1D29D3 /* libPods-SKS_Collection.a */,
+				6B6555D7613727BF84C08388 /* libPods-SKS_Collection.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2E38E92F1E27BF7E0086B870 /* Banner */,
 				2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */,
 				103954A51DCB071E00DADA5E /* Locks */,
 				103954A11DCAFAA600DADA5E /* SAMKeychainDemo */,
@@ -671,8 +675,8 @@
 			children = (
 				10DD98381D226B1F00193A69 /* SKS_Collection */,
 				10DD98371D226B1F00193A69 /* Products */,
-				DA4A57A0974FF2C2D6DBB9D4 /* Pods */,
 				0D46C869FCB0F933AFA5086C /* Frameworks */,
+				E523159E204DDECA056A572D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -689,6 +693,7 @@
 			children = (
 				10DD983C1D226B1F00193A69 /* AppDelegate.h */,
 				10DD983D1D226B1F00193A69 /* AppDelegate.m */,
+				2E38E9151E27B09F0086B870 /* Libs */,
 				10DD4E331D6D8DD600F7BA25 /* SharedData */,
 				103A55541D3CCCFA00366D8F /* BaseClasses */,
 				10642B961D34D7D6001217CF /* RootViewController */,
@@ -1070,6 +1075,22 @@
 			path = AppleSystemService;
 			sourceTree = "<group>";
 		};
+		2E38E9151E27B09F0086B870 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		2E38E92F1E27BF7E0086B870 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E9301E27BF7E0086B870 /* CycleScrollViewDemoVC.h */,
+				2E38E9311E27BF7E0086B870 /* CycleScrollViewDemoVC.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
 		2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1082,11 +1103,11 @@
 			path = "增加按钮点击区域";
 			sourceTree = "<group>";
 		};
-		DA4A57A0974FF2C2D6DBB9D4 /* Pods */ = {
+		E523159E204DDECA056A572D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */,
-				20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */,
+				F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */,
+				C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1098,13 +1119,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10DD984D1D226B1F00193A69 /* Build configuration list for PBXNativeTarget "SKS_Collection" */;
 			buildPhases = (
-				C8EFA6BAE3222747246301CD /* Check Pods Manifest.lock */,
+				6E351ABE7795F1B3BC47C36E /* [CP] Check Pods Manifest.lock */,
 				10DD98321D226B1F00193A69 /* Sources */,
 				10DD98331D226B1F00193A69 /* Frameworks */,
 				10DD98341D226B1F00193A69 /* Resources */,
-				52D12901B49DEABE9D5F75BA /* Embed Pods Frameworks */,
-				D94E375809FEE874797B9108 /* Copy Pods Resources */,
 				1079811D1E1533CA008050FA /* Integrate Reveal Server */,
+				334224110903CD3985F79772 /* [CP] Embed Pods Frameworks */,
+				F2F6906A560A47B0BBBA04A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1187,14 +1208,14 @@
 			shellPath = /bin/sh;
 			shellScript = "REVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi";
 		};
-		52D12901B49DEABE9D5F75BA /* Embed Pods Frameworks */ = {
+		334224110903CD3985F79772 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1202,29 +1223,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C8EFA6BAE3222747246301CD /* Check Pods Manifest.lock */ = {
+		6E351ABE7795F1B3BC47C36E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D94E375809FEE874797B9108 /* Copy Pods Resources */ = {
+		F2F6906A560A47B0BBBA04A0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1325,6 +1346,7 @@
 				10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */,
 				10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */,
 				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
+				2E38E9321E27BF7E0086B870 /* CycleScrollViewDemoVC.m in Sources */,
 				106362FA1D86C2AC00FD47B0 /* BaseRequest.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
@@ -1442,7 +1464,7 @@
 		};
 		10DD984E1D226B1F00193A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40F2DFE9617A78C45AC568CE /* Pods-SKS_Collection.debug.xcconfig */;
+			baseConfigurationReference = F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33UJTTK2KL;
@@ -1462,7 +1484,7 @@
 		};
 		10DD984F1D226B1F00193A69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20C68D24D9FB4E71202F6D7B /* Pods-SKS_Collection.release.xcconfig */;
+			baseConfigurationReference = C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33UJTTK2KL;

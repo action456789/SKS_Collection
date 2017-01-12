@@ -11,7 +11,7 @@
 #import "BaseNavigationController.h"
 #import "NSTimer+BlockSupurt.h"
 #import <AFNetworking.h>
-#import <XHLaunchAd.h>
+//#import <XHLaunchAd.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 
@@ -91,6 +91,8 @@ void UncaughtExceptionHandler(NSException *exception) {
     [NSURLCache setSharedURLCache:URLCache];
 }
 
+
+/*
 - (void)startLanuchAd
 {
     [XHLaunchAd showWithAdFrame:self.window.bounds setAdImage:^(XHLaunchAd *launchAd) {
@@ -120,5 +122,6 @@ void UncaughtExceptionHandler(NSException *exception) {
         self.window.rootViewController = nav;
     }];
 }
-
+*/
+ 
 @end
