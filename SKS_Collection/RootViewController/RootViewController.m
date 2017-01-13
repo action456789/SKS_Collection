@@ -33,6 +33,7 @@
 #import "CommonMacro.h"
 #import "AddClickAreaButtonDemeVC.h"
 #import "CycleScrollViewDemoVC.h"
+#import "EmptyContentTableViewController.h"
 
 @interface RootViewController()
 
@@ -75,7 +76,8 @@
                         ,[StaticCellItem itemWithTitle:@"22. SAMKeychain" icon:nil objectClass:[SAMKeychainDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"23. Locks" icon:nil objectClass:[LocksDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"24. 增加按钮点击区域" icon:nil objectClass:[AddClickAreaButtonDemeVC class]]
-                        ,[StaticCellItem itemWithTitle:@"24. 增加按钮点击区域" icon:nil objectClass:[CycleScrollViewDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"25. 无限滚动" icon:nil objectClass:[CycleScrollViewDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"24. 无数据视图" icon:nil objectClass:[EmptyContentTableViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

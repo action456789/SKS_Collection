@@ -43,6 +43,7 @@ PODS:
   - SQLCipher/common (3.4.0)
   - SQLCipher/standard (3.4.0):
     - SQLCipher/common
+  - XHLaunchAd (3.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - SDCycleScrollView (~> 1.64)
   - SDWebImage (~> 3.7)
   - Shimmer (~> 1.0.2)
+  - XHLaunchAd
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -76,7 +78,8 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
+  XHLaunchAd: 6e30e509f09a6a16222a4615afa03c7409e2db59
 
-PODFILE CHECKSUM: 4bee966770f7596183836dfa6097c8a0c0967877
+PODFILE CHECKSUM: 45a4b02426a29a07a8b97407cb26e4f2b15df15d
 
 COCOAPODS: 1.1.1

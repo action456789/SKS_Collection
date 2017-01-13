@@ -34,6 +34,7 @@
     [self startMonitoringNetworkReachability];
     
 //    [self startLanuchAd];
+    
     RootViewController *rootVc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:rootVc];
     self.window.rootViewController = nav;
@@ -95,33 +96,33 @@ void UncaughtExceptionHandler(NSException *exception) {
 /*
 - (void)startLanuchAd
 {
-    [XHLaunchAd showWithAdFrame:self.window.bounds setAdImage:^(XHLaunchAd *launchAd) {
-        
-        //未检测到广告数据,启动页停留时间,默认3,(设置4即表示:启动页显示了4s,还未检测到广告数据,就自动进入window根控制器)
-        launchAd.noDataDuration = 1;
-        
-        //图片地址
-        NSString *imgUrl2 = @"http://c.hiphotos.baidu.com/image/pic/item/d62a6059252dd42a6a943c180b3b5bb5c8eab8e7.jpg";
-        //广告停留时间
-        NSInteger duration = 6;
-        //广告点击跳转链接
-        NSString *openUrl = @"http://www.baidu.com";
-        
-        //2.设置广告数据
-        [launchAd setImageUrl:imgUrl2 duration:duration skipType:SkipTypeTimeText options:XHWebImageDefault completed:^(UIImage *image, NSURL *url) {
-            //异步加载图片完成回调,若需根据图片尺寸,刷新广告frame,可在这里操作
-            //launchAd.adFrame = ...;
-        } click:^{
-            //广告点击事件
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:openUrl]];
-        }];
-    } showFinish:^{
-        //广告展示完成回调,设置window根控制器
-        RootViewController *rootVc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
-        BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:rootVc];
-        self.window.rootViewController = nav;
-    }];
+    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration new];
+    //广告停留时间
+    imageAdconfiguration.duration = 2;
+    //广告frame
+    imageAdconfiguration.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
+    imageAdconfiguration.imageNameOrURLString = @"image0.jpg";
+    //网络图片缓存机制(只对网络图片有效)
+    imageAdconfiguration.imageOption = XHLaunchAdImageRefreshCached;
+    //图片填充模式
+    imageAdconfiguration.contentMode = UIViewContentModeScaleToFill;
+    //广告点击打开链接
+    imageAdconfiguration.openURLString = @"http://www.returnoc.com";
+    //广告显示完成动画
+    imageAdconfiguration.showFinishAnimate =ShowFinishAnimateFadein;
+    //跳过按钮类型
+    imageAdconfiguration.skipButtonType = SkipTypeTimeText;
+    //后台返回时,是否显示广告
+    imageAdconfiguration.showEnterForeground = NO;
+    
+    //设置要添加的子视图(可选)
+    //imageAdconfiguration.subViews = ...
+    
+    //显示图片开屏广告
+    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
 }
-*/
+ */
+
  
 @end

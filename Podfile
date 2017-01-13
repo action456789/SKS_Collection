@@ -29,7 +29,7 @@ pod 'MJExtension', '~> 2.5.14'
 pod 'FLAnimatedImage', '~> 1.0.12'
 
 # 启动页广告（闪屏）
-# pod 'XHLaunchAd'
+pod 'XHLaunchAd'
 
 # 控制台 Log 工具
 pod 'CocoaLumberjack', '~> 2.3.0'

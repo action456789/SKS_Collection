@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "fb_wave.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "fb_wave.png",
       "scale" : "2x"
     },
     {

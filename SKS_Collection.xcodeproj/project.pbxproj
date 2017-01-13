@@ -110,6 +110,8 @@
 		10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF021D5D664700801FD6 /* AppleSystemService.m */; };
 		10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */; };
 		2E38E9321E27BF7E0086B870 /* CycleScrollViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9311E27BF7E0086B870 /* CycleScrollViewDemoVC.m */; };
+		2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E93E1E2875E90086B870 /* EmptyContentTableViewController.m */; };
+		2E38E9411E2875E90086B870 /* EmptyContentTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E38E93F1E2875E90086B870 /* EmptyContentTableViewController.xib */; };
 		2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */; };
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
@@ -312,6 +314,9 @@
 		10F7EF051D5D6EDC00801FD6 /* AppleSystemServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemServiceViewController.m; sourceTree = "<group>"; };
 		2E38E9301E27BF7E0086B870 /* CycleScrollViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollViewDemoVC.h; sourceTree = "<group>"; };
 		2E38E9311E27BF7E0086B870 /* CycleScrollViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollViewDemoVC.m; sourceTree = "<group>"; };
+		2E38E93D1E2875E90086B870 /* EmptyContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyContentTableViewController.h; sourceTree = "<group>"; };
+		2E38E93E1E2875E90086B870 /* EmptyContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyContentTableViewController.m; sourceTree = "<group>"; };
+		2E38E93F1E2875E90086B870 /* EmptyContentTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyContentTableViewController.xib; sourceTree = "<group>"; };
 		2E3C87F01E25FD29000A267D /* AddClickAreaButtonDemeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClickAreaButtonDemeVC.h; sourceTree = "<group>"; };
 		2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClickAreaButtonDemeVC.m; sourceTree = "<group>"; };
 		2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClickAreaButtonDemeVC.xib; sourceTree = "<group>"; };
@@ -432,6 +437,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2E38E9341E28746E0086B870 /* EmptyComtentView */,
 				2E38E92F1E27BF7E0086B870 /* Banner */,
 				2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */,
 				103954A51DCB071E00DADA5E /* Locks */,
@@ -1091,6 +1097,16 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		2E38E9341E28746E0086B870 /* EmptyComtentView */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E93D1E2875E90086B870 /* EmptyContentTableViewController.h */,
+				2E38E93E1E2875E90086B870 /* EmptyContentTableViewController.m */,
+				2E38E93F1E2875E90086B870 /* EmptyContentTableViewController.xib */,
+			);
+			path = EmptyComtentView;
+			sourceTree = "<group>";
+		};
 		2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1187,6 +1203,7 @@
 				10DD99211D22802A00193A69 /* girl.png in Resources */,
 				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
 				10F5B0601D8151D100382E50 /* Cities.plist in Resources */,
+				2E38E9411E2875E90086B870 /* EmptyContentTableViewController.xib in Resources */,
 				1040A3531E13737B00FFAF8B /* NewSetting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1339,6 +1356,7 @@
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
+				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
@@ -1479,6 +1497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SenKe.SKS-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1499,6 +1518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SenKe.SKS-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
