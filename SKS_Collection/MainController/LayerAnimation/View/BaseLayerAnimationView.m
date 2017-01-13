@@ -43,7 +43,6 @@
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.duration = self.duration;
-    animation.delegate = self;
     animation.fromValue = @(0);
     animation.toValue = @(1);
     animation.removedOnCompletion = NO;

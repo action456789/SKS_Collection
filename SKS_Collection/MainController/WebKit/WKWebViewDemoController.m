@@ -47,7 +47,7 @@
         
         NSString *urlString = @"http://www.baidu.com";
         NSURL *url = [NSURL URLWithString:urlString];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//        NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
         NSMutableURLRequest *request2 = [[NSMutableURLRequest alloc] initWithURL:url2];

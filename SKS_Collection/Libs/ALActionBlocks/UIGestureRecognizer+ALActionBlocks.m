@@ -12,6 +12,8 @@
 
 @implementation UIGestureRecognizer (ALActionBlocks)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 
 - (instancetype)initWithBlock:(ALActionBlock)actionBlock {
     UIGestureRecognizer *gestureRecognizer = [[[self class] alloc] init];
@@ -19,6 +21,7 @@
     return gestureRecognizer;
 }
 
+#pragma clang diagnostic pop
 
 - (void)setBlock:(ALActionBlock)actionBlock {
     NSMutableArray *actionBlocksArray = [self actionBlocksArray];
