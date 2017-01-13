@@ -27,13 +27,8 @@
 		103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */; };
 		103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
-		103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */; };
-		103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCD1D51E66100401306 /* StaticCellItem.m */; };
-		103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */; };
-		103C3CD51D51E68500401306 /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD41D51E68500401306 /* StaticCell.m */; };
 		103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */; };
 		103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */; };
-		1040A3531E13737B00FFAF8B /* NewSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1040A3521E13737B00FFAF8B /* NewSetting.storyboard */; };
 		1046D6841D62E20000E6D7EF /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6831D62E20000E6D7EF /* TipsView.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
@@ -116,6 +111,14 @@
 		2E38E94E1E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9481E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m */; };
 		2E38E94F1E2899610086B870 /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E94A1E2899610086B870 /* UIControl+ALActionBlocks.m */; };
 		2E38E9501E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E94C1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m */; };
+		2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E97F1E28D5BB0086B870 /* StaticCollectionView.m */; };
+		2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9811E28D5BB0086B870 /* StaticCollectionViewCell.m */; };
+		2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9831E28D5BB0086B870 /* StaticCollectionViewCellItem.m */; };
+		2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E98A1E28D6110086B870 /* StaticCellItem.m */; };
+		2E38E9931E28D6110086B870 /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E98C1E28D6110086B870 /* StaticCellItemGroup.m */; };
+		2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E98E1E28D6110086B870 /* StaticCellBaseViewController.m */; };
+		2E38E9951E28D6110086B870 /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9911E28D6110086B870 /* StaticCell.m */; };
+		2E38E9981E28D6830086B870 /* StaticCollectionViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9971E28D6830086B870 /* StaticCollectionViewDemoVC.m */; };
 		2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */; };
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
@@ -163,19 +166,10 @@
 		103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarItemController.m; sourceTree = "<group>"; };
 		103A55551D3CCD1900366D8F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		103C3CB71D5195B700401306 /* StaticCellBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellBaseViewController.h; sourceTree = "<group>"; };
-		103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellBaseViewController.m; sourceTree = "<group>"; };
-		103C3CCC1D51E66100401306 /* StaticCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellItem.h; sourceTree = "<group>"; };
-		103C3CCD1D51E66100401306 /* StaticCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItem.m; sourceTree = "<group>"; };
-		103C3CCE1D51E66100401306 /* StaticCellItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellItemGroup.h; sourceTree = "<group>"; };
-		103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItemGroup.m; sourceTree = "<group>"; };
-		103C3CD31D51E68500401306 /* StaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCell.h; sourceTree = "<group>"; };
-		103C3CD41D51E68500401306 /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
 		103C3CD61D52D89200401306 /* StaticCellDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellDemoViewController.h; sourceTree = "<group>"; };
 		103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellDemoViewController.m; sourceTree = "<group>"; };
 		103DBDB91DB3519000BEFBBE /* KSBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBlockButton.h; sourceTree = "<group>"; };
 		103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBlockButton.m; sourceTree = "<group>"; };
-		1040A3521E13737B00FFAF8B /* NewSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSetting.storyboard; sourceTree = "<group>"; };
 		1046D6821D62E20000E6D7EF /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
 		1046D6831D62E20000E6D7EF /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		1046D6941D64596E00E6D7EF /* GifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoViewController.h; sourceTree = "<group>"; };
@@ -331,6 +325,22 @@
 		2E38E94A1E2899610086B870 /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
 		2E38E94B1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
 		2E38E94C1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
+		2E38E97E1E28D5BB0086B870 /* StaticCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCollectionView.h; sourceTree = "<group>"; };
+		2E38E97F1E28D5BB0086B870 /* StaticCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCollectionView.m; sourceTree = "<group>"; };
+		2E38E9801E28D5BB0086B870 /* StaticCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCollectionViewCell.h; sourceTree = "<group>"; };
+		2E38E9811E28D5BB0086B870 /* StaticCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCollectionViewCell.m; sourceTree = "<group>"; };
+		2E38E9821E28D5BB0086B870 /* StaticCollectionViewCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCollectionViewCellItem.h; sourceTree = "<group>"; };
+		2E38E9831E28D5BB0086B870 /* StaticCollectionViewCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCollectionViewCellItem.m; sourceTree = "<group>"; };
+		2E38E9891E28D6110086B870 /* StaticCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellItem.h; sourceTree = "<group>"; };
+		2E38E98A1E28D6110086B870 /* StaticCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItem.m; sourceTree = "<group>"; };
+		2E38E98B1E28D6110086B870 /* StaticCellItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellItemGroup.h; sourceTree = "<group>"; };
+		2E38E98C1E28D6110086B870 /* StaticCellItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellItemGroup.m; sourceTree = "<group>"; };
+		2E38E98D1E28D6110086B870 /* StaticCellBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCellBaseViewController.h; sourceTree = "<group>"; };
+		2E38E98E1E28D6110086B870 /* StaticCellBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellBaseViewController.m; sourceTree = "<group>"; };
+		2E38E9901E28D6110086B870 /* StaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCell.h; sourceTree = "<group>"; };
+		2E38E9911E28D6110086B870 /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
+		2E38E9961E28D6830086B870 /* StaticCollectionViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCollectionViewDemoVC.h; sourceTree = "<group>"; };
+		2E38E9971E28D6830086B870 /* StaticCollectionViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCollectionViewDemoVC.m; sourceTree = "<group>"; };
 		2E3C87F01E25FD29000A267D /* AddClickAreaButtonDemeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClickAreaButtonDemeVC.h; sourceTree = "<group>"; };
 		2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClickAreaButtonDemeVC.m; sourceTree = "<group>"; };
 		2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClickAreaButtonDemeVC.xib; sourceTree = "<group>"; };
@@ -468,7 +478,7 @@
 				10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */,
 				102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
-				1040A3511E13737300FFAF8B /* StaticTableViewUsingStoryboard */,
+				2E38E9511E28A38B0086B870 /* StaticCollectionView */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
 				1032C2DA1D47425600D55DE0 /* Shimmer */,
 				1032C2D01D45EF3F00D55DE0 /* QRCoder */,
@@ -528,34 +538,11 @@
 		103C3CB61D5195AD00401306 /* StaticTableView */ = {
 			isa = PBXGroup;
 			children = (
-				103C3CCB1D51E66100401306 /* Modal */,
-				103C3CD21D51E68500401306 /* View */,
-				103C3CB71D5195B700401306 /* StaticCellBaseViewController.h */,
-				103C3CB81D5195B700401306 /* StaticCellBaseViewController.m */,
+				2E38E9871E28D6110086B870 /* Core */,
 				103C3CD61D52D89200401306 /* StaticCellDemoViewController.h */,
 				103C3CD71D52D89200401306 /* StaticCellDemoViewController.m */,
 			);
 			path = StaticTableView;
-			sourceTree = "<group>";
-		};
-		103C3CCB1D51E66100401306 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				103C3CCC1D51E66100401306 /* StaticCellItem.h */,
-				103C3CCD1D51E66100401306 /* StaticCellItem.m */,
-				103C3CCE1D51E66100401306 /* StaticCellItemGroup.h */,
-				103C3CCF1D51E66100401306 /* StaticCellItemGroup.m */,
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
-		103C3CD21D51E68500401306 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				103C3CD31D51E68500401306 /* StaticCell.h */,
-				103C3CD41D51E68500401306 /* StaticCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		103DBDB81DB3519000BEFBBE /* BlockButton */ = {
@@ -565,14 +552,6 @@
 				103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */,
 			);
 			path = BlockButton;
-			sourceTree = "<group>";
-		};
-		1040A3511E13737300FFAF8B /* StaticTableViewUsingStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				1040A3521E13737B00FFAF8B /* NewSetting.storyboard */,
-			);
-			path = StaticTableViewUsingStoryboard;
 			sourceTree = "<group>";
 		};
 		1046D6811D62E1BD00E6D7EF /* TipsView */ = {
@@ -1139,6 +1118,60 @@
 			path = ALActionBlocks;
 			sourceTree = "<group>";
 		};
+		2E38E9511E28A38B0086B870 /* StaticCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E97D1E28D5BB0086B870 /* Core */,
+				2E38E9961E28D6830086B870 /* StaticCollectionViewDemoVC.h */,
+				2E38E9971E28D6830086B870 /* StaticCollectionViewDemoVC.m */,
+			);
+			path = StaticCollectionView;
+			sourceTree = "<group>";
+		};
+		2E38E97D1E28D5BB0086B870 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E97E1E28D5BB0086B870 /* StaticCollectionView.h */,
+				2E38E97F1E28D5BB0086B870 /* StaticCollectionView.m */,
+				2E38E9801E28D5BB0086B870 /* StaticCollectionViewCell.h */,
+				2E38E9811E28D5BB0086B870 /* StaticCollectionViewCell.m */,
+				2E38E9821E28D5BB0086B870 /* StaticCollectionViewCellItem.h */,
+				2E38E9831E28D5BB0086B870 /* StaticCollectionViewCellItem.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2E38E9871E28D6110086B870 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E9881E28D6110086B870 /* Modal */,
+				2E38E98F1E28D6110086B870 /* View */,
+				2E38E98D1E28D6110086B870 /* StaticCellBaseViewController.h */,
+				2E38E98E1E28D6110086B870 /* StaticCellBaseViewController.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2E38E9881E28D6110086B870 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E9891E28D6110086B870 /* StaticCellItem.h */,
+				2E38E98A1E28D6110086B870 /* StaticCellItem.m */,
+				2E38E98B1E28D6110086B870 /* StaticCellItemGroup.h */,
+				2E38E98C1E28D6110086B870 /* StaticCellItemGroup.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		2E38E98F1E28D6110086B870 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E38E9901E28D6110086B870 /* StaticCell.h */,
+				2E38E9911E28D6110086B870 /* StaticCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2E3C87EF1E25FD1F000A267D /* 增加按钮点击区域 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1236,7 +1269,6 @@
 				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
 				10F5B0601D8151D100382E50 /* Cities.plist in Resources */,
 				2E38E9411E2875E90086B870 /* EmptyContentTableViewController.xib in Resources */,
-				1040A3531E13737B00FFAF8B /* NewSetting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1319,6 +1351,8 @@
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				10F4DFCB1D3E26C600E0D223 /* SKSCountDownButton.m in Sources */,
+				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
+				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
@@ -1327,13 +1361,11 @@
 				10D7F5E71D801050004D7DC7 /* Cachulator.m in Sources */,
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */,
-				103C3CD01D51E66100401306 /* StaticCellItem.m in Sources */,
 				10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				10DD996B1D24F48600193A69 /* UIDevice+KS.m in Sources */,
 				102185DF1D5ADB5300C5AD64 /* UIColor+SKS.m in Sources */,
-				103C3CD51D51E68500401306 /* StaticCell.m in Sources */,
 				1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
@@ -1361,10 +1393,11 @@
 				10C00EE91E0A63D5003D51AD /* KKSlideTabBarBaseLayout.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				10F5B0661D81539E00382E50 /* CityCounty.m in Sources */,
-				103C3CD11D51E66100401306 /* StaticCellItemGroup.m in Sources */,
+				2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */,
 				10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
+				2E38E9981E28D6830086B870 /* StaticCollectionViewDemoVC.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
 				10DD98E01D226B7D00193A69 /* UIView+Tool.m in Sources */,
 				2E38E94F1E2899610086B870 /* UIControl+ALActionBlocks.m in Sources */,
@@ -1372,7 +1405,6 @@
 				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
-				103C3CB91D5195B700401306 /* StaticCellBaseViewController.m in Sources */,
 				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
@@ -1382,10 +1414,14 @@
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
+				2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
+				2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
+				2E38E9951E28D6110086B870 /* StaticCell.m in Sources */,
+				2E38E9931E28D6110086B870 /* StaticCellItemGroup.m in Sources */,
 				10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */,
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
