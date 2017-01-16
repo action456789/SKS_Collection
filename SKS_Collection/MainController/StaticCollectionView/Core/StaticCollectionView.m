@@ -15,18 +15,19 @@
 @end
 
 @implementation StaticCollectionView {
-    CGRect _frame;
+    
     NSArray<StaticCollectionViewCellItem *> *_dataArray;
     UICollectionView *_collectionView;
+    UICollectionViewLayout *_layout;
 }
 
 static NSString * const reuseIdentifier = @"StaticCell";
 
-- (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray {
-    if (self = [super init]) {
-        _dataArray = dataArray;
+- (instancetype)initWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layOut dataArray:(NSArray *)dataArray {
+    if (self = [super initWithFrame:frame]) {
         
-        _frame = frame;
+        _dataArray = dataArray;
+        _layout = layOut;
         
         [self createSubViews];
     }
@@ -35,17 +36,8 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 - (void)createSubViews {
     
-    UICollectionViewFlowLayout *flowLayout = ({
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemSize = self.cellSize;
-        layout.minimumLineSpacing = 0;
-        layout.minimumInteritemSpacing = 0;
-        layout;
-    });
-    
     _collectionView = ({
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:_frame collectionViewLayout:flowLayout];
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_layout];
         collectionView.delegate = self;
         collectionView.dataSource = self;
         collectionView.backgroundColor = [UIColor clearColor];
@@ -60,14 +52,15 @@ static NSString * const reuseIdentifier = @"StaticCell";
         
         collectionView;
     });
+    
+    [_collectionView reloadData];
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 0;
+    return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _dataArray.count;

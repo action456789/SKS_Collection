@@ -34,6 +34,7 @@
 #import "AddClickAreaButtonDemeVC.h"
 #import "CycleScrollViewDemoVC.h"
 #import "EmptyContentTableViewController.h"
+#import "StaticCollectionViewDemoVC.h"
 
 @interface RootViewController()
 
@@ -78,6 +79,7 @@
                         ,[StaticCellItem itemWithTitle:@"24. 增加按钮点击区域" icon:nil objectClass:[AddClickAreaButtonDemeVC class]]
                         ,[StaticCellItem itemWithTitle:@"25. 无限滚动" icon:nil objectClass:[CycleScrollViewDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"24. 无数据视图" icon:nil objectClass:[EmptyContentTableViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"25. 静态CollectionViewCell" icon:nil objectClass:[StaticCollectionViewDemoVC class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

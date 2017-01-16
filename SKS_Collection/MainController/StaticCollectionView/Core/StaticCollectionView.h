@@ -10,8 +10,6 @@
 
 @interface StaticCollectionView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray;
-
-@property (nonatomic, assign) CGSize cellSize;
+- (instancetype)initWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layOut dataArray:(NSArray *)dataArray;
 
 @end

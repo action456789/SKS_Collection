@@ -10,6 +10,7 @@
 #import "StaticCollectionViewCellItem.h"
 #import <Masonry.h>
 #import "StaticCollectionViewCellItem.h"
+#import "CommonMacro.h"
 
 // 图片占据整个cell的高度
 #define kImageHeightRatio (40.0/60.0)
@@ -56,7 +57,7 @@
 - (UIImageView *)imageView {
     if (_imageView == nil) {
         _imageView = [[UIImageView alloc] init];
-        _imageView
+        _imageView.contentMode = UIViewContentModeCenter;
     }
     return _imageView;
 }
@@ -64,6 +65,9 @@
 - (UILabel *)titleLabel {
     if (_titleLabel == nil) {
         _titleLabel = [[UILabel alloc] init];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.textColor = kColorWithHex(0x999999);
+        _titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return _titleLabel;
 }
