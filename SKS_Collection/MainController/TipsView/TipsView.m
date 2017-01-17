@@ -14,6 +14,14 @@
 #define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
 
+/* 结构
+TipsView
+  _shadowView
+  _containertView
+ 
+ */
+
+
 @interface TipsView()
 
 @property (nonatomic, strong) UIWindow *window;
@@ -29,7 +37,7 @@
 
 - (instancetype)initWithContentViewSize:(CGSize)size {
     if (self = [super init]) {
-//        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         _isShowing = NO;
         _isAnimating = NO;
         _contentViewSize = size;
@@ -161,7 +169,7 @@
         _isAnimating = YES;
         
         if (self.showType == TipsViewShowTypeFromBottom) {
-            [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
                 _containertView.transform = CGAffineTransformIdentity;
                 _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
             } completion:^(BOOL finished) {
