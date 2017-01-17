@@ -93,9 +93,8 @@
 
 - (void)showTipsView
 {
-    TipsView *tipsView = [TipsView new];
+    TipsView *tipsView = [[TipsView alloc] initWithContentViewSize:CGSizeMake(kScreenWidth, 243)];
     tipsView.showType = TipsViewShowTypeFromBottom;
-    tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
     
     if (tipsView.isAnimating) {
         return;

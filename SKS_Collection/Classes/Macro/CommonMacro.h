@@ -19,10 +19,10 @@
 // 设备唯一标识符
 #define kDeviceUUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 // 设备类型
-#define kDevice_iPhone4_4s   (ScreenWidth == 320.f && ScreenHeight == 480.f ? YES : NO)
-#define kDevice_iPhone5_5s   (ScreenWidth == 320.f && ScreenHeight == 568.f ? YES : NO)
-#define kDevice_iPhone6      (ScreenWidth == 375.f && ScreenHeight == 667.f ? YES : NO)
-#define kDevice_iPhone6_plus (ScreenWidth == 414.f && ScreenHeight == 736.f ? YES : NO)
+#define kDevice_iPhone4_4s   (kScreenWidth == 320.f && kScreenHeight == 480.f ? YES : NO)
+#define kDevice_iPhone5_5s   (kScreenWidth == 320.f && kScreenHeight == 568.f ? YES : NO)
+#define kDevice_iPhone6      (kScreenWidth == 375.f && kScreenHeight == 667.f ? YES : NO)
+#define kDevice_iPhone6_plus (kScreenWidth == 414.f && kScreenHeight == 736.f ? YES : NO)
 // 判断是否为iPhone
 #define kIPhoneDevice [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone
 // 判断是否为iPad

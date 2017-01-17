@@ -9,9 +9,12 @@
 #import "TipsView.h"
 #import <Masonry.h>
 
-#define kLandscape UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+#define kLandscape      UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+
 #define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
+
+#define kDevice_iPhone4_4s   (kScreenWidth == 320.f && kScreenHeight == 480.f ? YES : NO)
 
 @interface TipsView()
 
@@ -23,14 +26,15 @@
 {
     UIView *_shadowView;
     UIView *_containertView;
+    CGSize _contentViewSize;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+- (instancetype)initWithContentViewSize:(CGSize)size {
+    if (self = [super init]) {
+//        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         _isShowing = NO;
         _isAnimating = NO;
+        _contentViewSize = size;
         [self _createSubViews];
     }
     return self;
@@ -62,7 +66,7 @@
         
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(self);
-            make.size.mas_equalTo(self.contentViewSize);
+            make.size.mas_equalTo(_contentViewSize);
         }];
         
         view;
@@ -74,38 +78,21 @@
     [self hideAnimatable:YES];
 }
 
-#pragma mark - getter, setter
-
-- (CGSize)contentViewSize
-{
-    CGSize size = CGSizeZero;
-    if (_contentViewSize.height <= 0 || _contentViewSize.width <= 0) {
-        size = CGSizeMake(kScreenWidth * 0.8, kScreenWidth * 0.8 * 0.7);
-    } else {
-        size = _contentViewSize;
-    }
-    return size;
-}
-
-@synthesize contentViewSize = _contentViewSize;
-- (void)setContentViewSize:(CGSize)contentViewSize {
-    _contentViewSize = contentViewSize;
-    
-    [_containertView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(_contentViewSize);
-    }];
-}
-
 - (void)setShowType:(TipsViewShowType)showType
 {
     _showType = showType;
     
+    // 修复在 iOS7 iPhone4_4s 设备上显示不全的问题
+    CGFloat offset = 0;
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 8.0 && kDevice_iPhone4_4s) {
+        offset = -64 * 2;
+    }
+    
     if (showType == TipsViewShowTypeFromBottom) {
         [_containertView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(self);
-            make.top.mas_equalTo(self.mas_bottom);
-            make.width.mas_equalTo(self);
-            make.height.mas_equalTo(self.contentViewSize.height);
+            make.top.mas_equalTo(self.mas_bottom).offset(offset);
+            make.size.mas_equalTo(_contentViewSize);
         }];
     }
 }
@@ -149,7 +136,7 @@
             [superViewOrWindow addSubview:self];
             
             [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
+                _containertView.transform = CGAffineTransformMakeTranslation(0, -_contentViewSize.height);
                 _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:^(BOOL finished) {
                 _isAnimating = NO;
@@ -163,7 +150,7 @@
     } else {
         if (self.showType == TipsViewShowTypeFromBottom) {
             [superViewOrWindow addSubview:self];
-            _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
+            _containertView.transform = CGAffineTransformMakeTranslation(0, -_contentViewSize.height);
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         } else {
             [superViewOrWindow addSubview:self];
