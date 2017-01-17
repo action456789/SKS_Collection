@@ -6,6 +6,8 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
+// 支持 iOS8 及以上版本
+
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, TipsViewShowType) {

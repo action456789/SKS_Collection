@@ -8,6 +8,7 @@
 
 #import "StaticCollectionView.h"
 #import "StaticCollectionViewCell.h"
+#import "StaticCollectionViewCellItem.h"
 #import <Masonry.h>
 
 @interface StaticCollectionView()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -69,11 +70,18 @@ static NSString * const reuseIdentifier = @"StaticCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     StaticCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    [cell setData:_dataArray[indexPath.row]];
+    cell.dataModal = _dataArray[indexPath.row];
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    StaticCollectionViewCellItem *item = _dataArray[indexPath.row];
+    if (item.clickedHandle) {
+        item.clickedHandle();
+    }
+}
 
 @end

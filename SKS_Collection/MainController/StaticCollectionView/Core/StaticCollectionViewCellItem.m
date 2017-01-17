@@ -18,4 +18,13 @@
     return self;
 }
 
+- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title handle:(StaticCellHandle)handle {
+    if (self = [self init]) {
+        _imageName = imageName;
+        _title = title;
+        _clickedHandle = handle;
+    }
+    return self;
+}
+
 @end

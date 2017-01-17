@@ -14,8 +14,6 @@
 #define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
 
-#define kDevice_iPhone4_4s   (kScreenWidth == 320.f && kScreenHeight == 480.f ? YES : NO)
-
 @interface TipsView()
 
 @property (nonatomic, strong) UIWindow *window;
@@ -82,16 +80,10 @@
 {
     _showType = showType;
     
-    // 修复在 iOS7 iPhone4_4s 设备上显示不全的问题
-    CGFloat offset = 0;
-    if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 8.0 && kDevice_iPhone4_4s) {
-        offset = -64 * 2;
-    }
-    
     if (showType == TipsViewShowTypeFromBottom) {
         [_containertView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(self);
-            make.top.mas_equalTo(self.mas_bottom).offset(offset);
+            make.top.mas_equalTo(self.mas_bottom);
             make.size.mas_equalTo(_contentViewSize);
         }];
     }

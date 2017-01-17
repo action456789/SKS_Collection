@@ -22,9 +22,9 @@ typedef NS_ENUM(NSUInteger, StaticCellType) {
 
 typedef void (^StaticCellHandle)(void);
 
-@property (nonatomic, strong) NSString *icon;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *subTitle;
+@property (nonatomic, copy) NSString *icon;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subTitle;
 
 @property (nonatomic, copy) StaticCellHandle clickedHandle;
 

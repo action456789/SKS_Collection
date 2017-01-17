@@ -11,6 +11,6 @@
 
 @interface StaticCollectionViewCell : UICollectionViewCell
 
-- (void)setData:(StaticCollectionViewCellItem *)item;
+@property (nonatomic, strong) StaticCollectionViewCellItem *dataModal;
 
 @end

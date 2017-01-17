@@ -22,19 +22,35 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray *array = @[  [[StaticCollectionViewCellItem alloc] initWithImageName:@"最优策略" title:@"最优策略"]
-                       , [[StaticCollectionViewCellItem alloc] initWithImageName:@"优品评测" title:@"优品评测"]
-                       , [[StaticCollectionViewCellItem alloc] initWithImageName:@"相似K线" title:@"相似K线"]
-                       , [[StaticCollectionViewCellItem alloc] initWithImageName:@"添加预警" title:@"添加预警"]
-                       , [[StaticCollectionViewCellItem alloc] initWithImageName:@"股价预测" title:@"股价预测"]
-                       , [[StaticCollectionViewCellItem alloc] initWithImageName:@"更多分享" title:@"更多分享"]
-                       ];
+    StaticCollectionViewCellItem *item1 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"optimizest" title:@"最优策略" handle:^{
+        NSLog(@"最优策略");
+    }];
+    
+    StaticCollectionViewCellItem *item2 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"KLine" title:@"相似K线" handle:^{
+        NSLog(@"相似K线");
+    }];
+    StaticCollectionViewCellItem *item3 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"alert" title:@"添加预警" handle:^{
+        NSLog(@"添加预警");
+    }];
+    StaticCollectionViewCellItem *item4 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"forecast" title:@"股价预测" handle:^{
+        NSLog(@"股价预测");
+    }];
+    StaticCollectionViewCellItem *item5 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"share" title:@"更多分享" handle:^{
+        NSLog(@"更多分享");
+    }];
+    StaticCollectionViewCellItem *item6 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"evaluate" title:@"优品评测" handle:^{
+        NSLog(@"优品评测");
+    }];
+    
+    
+    NSArray *array = @[item1, item2, item3, item4, item5, item6];
     
     UICollectionViewFlowLayout *flowLayout = ({
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemSize = CGSizeMake(kScreenWidth / 4, 88);
-        layout.minimumLineSpacing = 0;
+        layout.headerReferenceSize = CGSizeMake(0, 25);
+        layout.itemSize = CGSizeMake(kScreenWidth / 4, 75);
+        layout.minimumLineSpacing = 10;
         layout.minimumInteritemSpacing = 0;
         layout;
     });
@@ -42,8 +58,11 @@
     StaticCollectionView *collectionView = [[StaticCollectionView alloc] initWithFrame:CGRectMake(0, 60, kScreenWidth, kScreenHeight)
                                                                                 layout:flowLayout
                                                                              dataArray:array];
-    
     [self.view addSubview:collectionView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        item1.title = @"你是SB";
+    });
 }
 
 @end
