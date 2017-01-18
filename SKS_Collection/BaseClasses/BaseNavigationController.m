@@ -8,7 +8,7 @@
 
 #import "BaseNavigationController.h"
 
-@interface BaseNavigationController() <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
+@interface BaseNavigationController() <UIGestureRecognizerDelegate>
 
 @end
 
@@ -21,7 +21,6 @@
     __weak BaseNavigationController *weakSelf = self;
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.interactivePopGestureRecognizer.delegate = weakSelf;
-        self.delegate = weakSelf;
         self.interactivePopGestureRecognizer.enabled = YES;
     }
 }
