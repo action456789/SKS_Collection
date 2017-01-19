@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ModalToViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *maskView;
 @end

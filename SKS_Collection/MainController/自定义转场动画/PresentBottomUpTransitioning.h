@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ModalPushTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
+@interface PresentBottomUpTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

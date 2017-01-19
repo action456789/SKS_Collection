@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalToViewController">
             <connections>
+                <outlet property="contentView" destination="hPG-SR-w7X" id="433-gh-TPG"/>
+                <outlet property="maskView" destination="IMh-nv-PPX" id="EG3-LM-5bt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,20 +22,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-SR-w7X">
-                    <rect key="frame" x="0.0" y="456" width="375" height="211"/>
+                    <rect key="frame" x="0.0" y="667" width="375" height="200"/>
                     <color key="backgroundColor" red="0.87831848389893041" green="1" blue="0.12072626904044059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="211" id="YgP-ER-kYH"/>
+                        <constraint firstAttribute="height" constant="200" id="k0F-Jf-CiW"/>
                     </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-nv-PPX" userLabel="MaskView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hPG-SR-w7X" secondAttribute="bottom" id="2Wr-jf-ceM"/>
-                <constraint firstAttribute="trailing" secondItem="hPG-SR-w7X" secondAttribute="trailing" id="EVv-Bn-Eot"/>
-                <constraint firstItem="hPG-SR-w7X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SwT-Y2-VCj"/>
+                <constraint firstAttribute="bottom" secondItem="IMh-nv-PPX" secondAttribute="bottom" id="0C3-qG-6ed"/>
+                <constraint firstItem="hPG-SR-w7X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fqf-Pd-mGv"/>
+                <constraint firstAttribute="trailing" secondItem="hPG-SR-w7X" secondAttribute="trailing" id="Rhl-ul-s2o"/>
+                <constraint firstItem="hPG-SR-w7X" firstAttribute="top" secondItem="IMh-nv-PPX" secondAttribute="bottom" id="THi-ye-mLc"/>
+                <constraint firstItem="IMh-nv-PPX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TJt-aM-NvM"/>
+                <constraint firstItem="IMh-nv-PPX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZAk-fr-k4t"/>
+                <constraint firstAttribute="trailing" secondItem="IMh-nv-PPX" secondAttribute="trailing" id="jao-H5-EHN"/>
             </constraints>
-            <point key="canvasLocation" x="-322.5" y="28.5"/>
+            <point key="canvasLocation" x="-465.5" y="-144.5"/>
         </view>
     </objects>
 </document>

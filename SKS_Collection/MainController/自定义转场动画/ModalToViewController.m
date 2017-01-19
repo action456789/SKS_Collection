@@ -8,8 +8,7 @@
 
 #import "ModalToViewController.h"
 
-#import "ModalPushTransitioning.h"
-#import "ModalPopTransitioning.h"
+#import "PresentBottomUpTransitioning.h"
 
 @interface ModalToViewController () 
 
@@ -17,19 +16,14 @@
 
 @implementation ModalToViewController
 
-//- (instancetype)init {
-//    if (self = [super init]) {
-//        self.transitioningDelegate = self;
-//        self.definesPresentationContext = YES;
-//        self.providesPresentationContextTransitionStyle = NO;
-//        self.modalPresentationStyle = UIModalPresentationCustom;
-//    }
-//    return self;
-//}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"%s", __func__);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
