@@ -5,6 +5,7 @@
 //  Created by ke sen. on 2017/1/17.
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
+// 参考文献：https://coderwall.com/p/njtb0q/custom-transitions-on-ios-7-a-little-bit-about-ux
 
 #import "PresentBottomUpTransitioning.h"
 #import "UIView+Frame.h"
@@ -84,6 +85,7 @@
     } completion:^(BOOL finished) {
         //4
         [transitionContext completeTransition:YES];
+        
     }];
 }
 
