@@ -8,10 +8,10 @@
 
 #import "SAMKeychainDemoViewController.h"
 
-#import <SAMKeychain.h>
-#import <SAMKeychainQuery.h>
+#import "SAMKeychainQuery.h"
 
 #import <FMDB/FMDB.h>
+#import <SAMKeychain/SAMKeychain.h>
 
 @interface SAMKeychainDemoViewController ()
 

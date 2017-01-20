@@ -10,7 +10,7 @@
 #import <SDWebImage/SDWebImageManager.h>
 #import "CicleProgressAnimationView.h"
 
-#import <FLAnimatedImage.h>
+#import "FLAnimatedImage.h"
 
 @implementation GifDemoViewController
 {

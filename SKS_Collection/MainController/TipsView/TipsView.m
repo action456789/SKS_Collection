@@ -7,7 +7,7 @@
 //
 
 #import "TipsView.h"
-#import <Masonry.h>
+#import "Masonry.h"
 
 #define kLandscape      UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
 

@@ -7,7 +7,7 @@
 //
 
 #import "CycleScrollViewDemoVC.h"
-#import <SDCycleScrollView.h>
+#import "SDCycleScrollView.h"
 #import "CommonMacro.h"
 
 @interface CycleScrollViewDemoVC () <SDCycleScrollViewDelegate>

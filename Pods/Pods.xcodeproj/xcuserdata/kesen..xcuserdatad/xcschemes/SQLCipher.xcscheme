@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E717045B5451A9293C1C2D5BA968E481"
-               BuildableName = "libSQLCipher.a"
+               BlueprintIdentifier = "B6D9F00B0D5DB64256098571755CDB62"
+               BuildableName = "SQLCipher.framework"
                BlueprintName = "SQLCipher"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E717045B5451A9293C1C2D5BA968E481"
-            BuildableName = "libSQLCipher.a"
+            BlueprintIdentifier = "B6D9F00B0D5DB64256098571755CDB62"
+            BuildableName = "SQLCipher.framework"
             BlueprintName = "SQLCipher"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E717045B5451A9293C1C2D5BA968E481"
-            BuildableName = "libSQLCipher.a"
+            BlueprintIdentifier = "B6D9F00B0D5DB64256098571755CDB62"
+            BuildableName = "SQLCipher.framework"
             BlueprintName = "SQLCipher"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

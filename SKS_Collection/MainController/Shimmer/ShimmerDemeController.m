@@ -7,7 +7,7 @@
 //
 
 #import "ShimmerDemeController.h"
-#import <FBShimmeringView.h>
+#import "FBShimmeringView.h"
 
 @implementation ShimmerDemeController
 

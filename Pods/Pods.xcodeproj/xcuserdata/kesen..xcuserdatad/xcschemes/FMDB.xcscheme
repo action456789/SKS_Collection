@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "018896F7A09D0A7EA34F3314A3194B4A"
-               BuildableName = "libFMDB.a"
+               BlueprintIdentifier = "5CEFC7F1ADAEA23C8A9613C6D06FE4EA"
+               BuildableName = "FMDB.framework"
                BlueprintName = "FMDB"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "018896F7A09D0A7EA34F3314A3194B4A"
-            BuildableName = "libFMDB.a"
+            BlueprintIdentifier = "5CEFC7F1ADAEA23C8A9613C6D06FE4EA"
+            BuildableName = "FMDB.framework"
             BlueprintName = "FMDB"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "018896F7A09D0A7EA34F3314A3194B4A"
-            BuildableName = "libFMDB.a"
+            BlueprintIdentifier = "5CEFC7F1ADAEA23C8A9613C6D06FE4EA"
+            BuildableName = "FMDB.framework"
             BlueprintName = "FMDB"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
