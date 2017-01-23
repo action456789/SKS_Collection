@@ -122,11 +122,13 @@
 		2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F11E25FD29000A267D /* AddClickAreaButtonDemeVC.m */; };
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
+		2E578ECC1E321F5700CC3A1F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E578ECB1E321F5700CC3A1F /* MainViewController.m */; };
 		2EABE2911E2E3E1300498F7F /* PresentBottomUpTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE2901E2E3E1300498F7F /* PresentBottomUpTransitioning.m */; };
 		2EABE29A1E2E417200498F7F /* ModalToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE2981E2E417200498F7F /* ModalToViewController.m */; };
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
 		2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE29D1E2E418900498F7F /* ModalFromViewController.m */; };
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
+		2EDD99171E35A9C10077AEEF /* MyBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD99161E35A9C10077AEEF /* MyBannerViewController.m */; };
 		C7ED8BFF8B798AC724F5B6F4 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF7BE84C5E50DE60FE883D1 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -351,6 +353,8 @@
 		2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClickAreaButtonDemeVC.xib; sourceTree = "<group>"; };
 		2E3C87F51E25FD3C000A267D /* HitTestEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestEdgeInsetsButton.h; sourceTree = "<group>"; };
 		2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestEdgeInsetsButton.m; sourceTree = "<group>"; };
+		2E578ECA1E321F5700CC3A1F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2E578ECB1E321F5700CC3A1F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2EABE28F1E2E3E1300498F7F /* PresentBottomUpTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentBottomUpTransitioning.h; sourceTree = "<group>"; };
 		2EABE2901E2E3E1300498F7F /* PresentBottomUpTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentBottomUpTransitioning.m; sourceTree = "<group>"; };
 		2EABE2971E2E417200498F7F /* ModalToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalToViewController.h; sourceTree = "<group>"; };
@@ -359,6 +363,8 @@
 		2EABE29C1E2E418900498F7F /* ModalFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalFromViewController.h; sourceTree = "<group>"; };
 		2EABE29D1E2E418900498F7F /* ModalFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalFromViewController.m; sourceTree = "<group>"; };
 		2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalFromViewController.xib; sourceTree = "<group>"; };
+		2EDD99151E35A9C10077AEEF /* MyBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBannerViewController.h; sourceTree = "<group>"; };
+		2EDD99161E35A9C10077AEEF /* MyBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBannerViewController.m; sourceTree = "<group>"; };
 		5FF7BE84C5E50DE60FE883D1 /* Pods_SKS_Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKS_Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -474,6 +480,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2E578EC01E321DC300CC3A1F /* TabbarController */,
 				2EABE28E1E2E3C6900498F7F /* 自定义转场动画 */,
 				2E38E9341E28746E0086B870 /* EmptyComtentView */,
 				2E38E92F1E27BF7E0086B870 /* Banner */,
@@ -1138,6 +1145,8 @@
 				2E38E97D1E28D5BB0086B870 /* Core */,
 				2E38E9961E28D6830086B870 /* StaticCollectionViewDemoVC.h */,
 				2E38E9971E28D6830086B870 /* StaticCollectionViewDemoVC.m */,
+				2EDD99151E35A9C10077AEEF /* MyBannerViewController.h */,
+				2EDD99161E35A9C10077AEEF /* MyBannerViewController.m */,
 			);
 			path = StaticCollectionView;
 			sourceTree = "<group>";
@@ -1196,6 +1205,15 @@
 				2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */,
 			);
 			path = "增加按钮点击区域";
+			sourceTree = "<group>";
+		};
+		2E578EC01E321DC300CC3A1F /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				2E578ECA1E321F5700CC3A1F /* MainViewController.h */,
+				2E578ECB1E321F5700CC3A1F /* MainViewController.m */,
+			);
+			path = TabbarController;
 			sourceTree = "<group>";
 		};
 		2EABE28E1E2E3C6900498F7F /* 自定义转场动画 */ = {
@@ -1415,6 +1433,7 @@
 				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
+				2E578ECC1E321F5700CC3A1F /* MainViewController.m in Sources */,
 				2E38E9501E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,
@@ -1474,6 +1493,7 @@
 				106362FA1D86C2AC00FD47B0 /* BaseRequest.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
+				2EDD99171E35A9C10077AEEF /* MyBannerViewController.m in Sources */,
 				10DD98D71D226B7D00193A69 /* NSString+Regular.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

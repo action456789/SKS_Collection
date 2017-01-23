@@ -8,7 +8,6 @@
 
 #import "StaticCollectionViewDemoVC.h"
 #import "StaticCollectionView.h"
-#import "StaticCollectionViewCellItem.h"
 #import "CommonMacro.h"
 
 @interface StaticCollectionViewDemoVC ()
@@ -55,9 +54,11 @@
         layout;
     });
     
-    StaticCollectionView *collectionView = [[StaticCollectionView alloc] initWithFrame:CGRectMake(0, 60, kScreenWidth, kScreenHeight)
+    StaticCollectionView *collectionView = [[StaticCollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
                                                                                 layout:flowLayout
                                                                              dataArray:array];
+    collectionView.imageViewContentMode = UIViewContentModeCenter;
+    
     [self.view addSubview:collectionView];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

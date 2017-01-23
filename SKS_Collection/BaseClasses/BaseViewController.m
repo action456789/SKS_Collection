@@ -11,7 +11,6 @@
 @implementation BaseViewController
 
 - (void)viewDidLoad {
-    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor grayColor];
 }
 

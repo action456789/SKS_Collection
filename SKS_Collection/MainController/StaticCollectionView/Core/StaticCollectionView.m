@@ -13,12 +13,13 @@
 
 @interface StaticCollectionView()<UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (nonatomic, strong) UICollectionView *collectionView;
+
 @end
 
 @implementation StaticCollectionView {
     
     NSArray<StaticCollectionViewCellItem *> *_dataArray;
-    UICollectionView *_collectionView;
     UICollectionViewLayout *_layout;
 }
 
@@ -36,25 +37,41 @@ static NSString * const reuseIdentifier = @"StaticCell";
 }
 
 - (void)createSubViews {
-    
-    _collectionView = ({
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_layout];
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
-        collectionView.backgroundColor = [UIColor clearColor];
-        collectionView.showsHorizontalScrollIndicator = NO;
-        collectionView.showsVerticalScrollIndicator = NO;
-        [collectionView registerClass:[StaticCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-        [self addSubview:collectionView];
-        
-        [collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self);
-        }];
-        
-        collectionView;
-    });
-    
-    [_collectionView reloadData];
+    [self addSubview:self.collectionView];
+}
+
+- (UICollectionView *)collectionView {
+    if (_collectionView == nil) {
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_layout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        [_collectionView registerClass:[StaticCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    }
+    return _collectionView;
+}
+
+// tell UIKit that you are using AutoLayout
++ (BOOL)requiresConstraintBasedLayout {
+    return YES;
+}
+
+// this is Apple's recommended place for adding/updating constraints
+- (void)updateConstraints {
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+
+    //according to apple super should be called at end of method
+    [super updateConstraints];
+}
+
+# pragma mark - getter, setter 
+
+- (void)setPageEnable:(BOOL)pageEnable {
+    self.collectionView.pagingEnabled = pageEnable;
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -71,6 +88,10 @@ static NSString * const reuseIdentifier = @"StaticCell";
     StaticCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     cell.dataModal = _dataArray[indexPath.row];
+    cell.imageViewContentMode = self.imageViewContentMode;
+    
+    // 测试
+    cell.backgroundColor = [UIColor grayColor];
     
     return cell;
 }

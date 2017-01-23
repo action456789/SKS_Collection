@@ -33,13 +33,16 @@
 // 判断是否为iOS8
 #define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
 
+# pragma mark - 字符串判断
+// 判断一个数组是否合法
+#define IsValidateArr(arr) ((arr && [arr isKindOfClass:[NSArray class]] && arr.count > 0))
+// 判断从后台服务器获取的result是否合法
+#define IsValidateResult(result) ((nil != result && [result isKindOfClass:[NSDictionary class]] && [[result objectForKey:@"result"] isEqualToString:REQUEST_SUCCESSFULLY]))
+// 判断一个字典是否合法
+#define IsValidateDic(dic) (nil != dic && [dic isKindOfClass:[NSDictionary class]] && dic.count > 0)
+// 判断一个NSString是否合法
+#define IsValidateString(str) ((nil != str) && ([str isKindOfClass:[NSString class]]) && (str.length > 0) && (![str isEqualToString:@"(null)"]) && ((NSNull *) str != [NSNull null]))
 
-//字符串是否为空
-#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
-//数组是否为空
-#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
-//字典是否为空
-#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
 //是否是空对象
 #define kObjectIsEmpty(_object) (_object == nil \
 || [_object isKindOfClass:[NSNull class]] \
@@ -76,5 +79,6 @@
 //获取一段时间间隔
 #define kStartTime CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
 #define kEndTime   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
+
 
 #endif /* Common_h */

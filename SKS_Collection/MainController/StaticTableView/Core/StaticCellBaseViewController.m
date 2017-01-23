@@ -76,7 +76,7 @@
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
-        CGRect frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64);
+        CGRect frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:self.tableViewStyle];
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -86,8 +86,8 @@
         tableView.showsHorizontalScrollIndicator = NO;
         tableView.backgroundView = nil;
         tableView.backgroundColor = [UIColor clearColor];
-        tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        [tableView setSeparatorColor:[UIColor cyanColor]];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        [tableView setSeparatorColor:[UIColor cyanColor]];
         [tableView registerClass:[StaticCell class] forCellReuseIdentifier:kCellIdentifie];
         _tableView = tableView;
     }

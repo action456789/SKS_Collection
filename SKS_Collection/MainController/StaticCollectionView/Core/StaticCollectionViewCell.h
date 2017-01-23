@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) StaticCollectionViewCellItem *dataModal;
 
+@property (nonatomic, assign) UIViewContentMode imageViewContentMode;
+
 @end

@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, assign) BOOL isFirstSettingModal;
+@property (nonatomic, assign) BOOL isFirstTimeSettingModal;
 
 @end
 
@@ -30,10 +30,41 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self createSubview];
-        self.isFirstSettingModal = YES;
+        self.isFirstTimeSettingModal = YES;
     }
     
     return self;
+}
+
+// tell UIKit that you are using AutoLayout
++ (BOOL)requiresConstraintBasedLayout {
+    return YES;
+}
+
+// this is Apple's recommended place for adding/updating constraints
+- (void)updateConstraints {
+    
+    // --- remake/update constraints here
+    
+    if (!IsValidateString(self.dataModal.title)) { // 只有图片
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(self);
+        }];
+    } else { // 有图片和标题
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self);
+            make.centerX.mas_equalTo(self);
+            make.height.mas_equalTo(self.frame.size.height * kImageHeightRatio);
+        }];
+        
+        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.mas_equalTo(self);
+            make.top.mas_equalTo(self.imageView.mas_bottom);
+        }];
+    }
+    
+    //according to apple super should be called at end of method
+    [super updateConstraints];
 }
 
 - (void)setDataModal:(StaticCollectionViewCellItem *)dataModal {
@@ -47,15 +78,24 @@
         _dataModal.imageName = @"";
     }
     
-    if (self.isFirstSettingModal) {
+    if (self.isFirstTimeSettingModal) { // 第一次进入时加载 KVO
         [self addKVO];
     }
-    self.isFirstSettingModal = NO;
+    self.isFirstTimeSettingModal = NO;
+}
+
+- (void)setImageViewContentMode:(UIViewContentMode)imageViewContentMode {
+    self.imageView.contentMode = imageViewContentMode;
 }
 
 - (void)addKVO {
-    [self.dataModal addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial  context:nil];
-    [self.dataModal addObserver:self forKeyPath:@"imageName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial  context:nil];
+    if (IsValidateString(self.dataModal.title)) {
+        [self.dataModal addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial  context:nil];
+    }
+    
+    if (IsValidateString(self.dataModal.imageName)) {
+        [self.dataModal addObserver:self forKeyPath:@"imageName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial  context:nil];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -67,24 +107,18 @@
 }
 
 - (void)dealloc {
-    [self.dataModal removeObserver:self forKeyPath:@"title"];
-    [self.dataModal removeObserver:self forKeyPath:@"imageName"];
+    if (IsValidateString(self.dataModal.title)) {
+        [self.dataModal removeObserver:self forKeyPath:@"title"];
+    }
+    
+    if (IsValidateString(self.dataModal.imageName)) {
+        [self.dataModal removeObserver:self forKeyPath:@"imageName"];
+    }
 }
 
 - (void)createSubview {
     [self addSubview:self.imageView];
     [self addSubview:self.titleLabel];
-    
-    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self);
-        make.centerX.mas_equalTo(self);
-        make.height.mas_equalTo(self.frame.size.height * kImageHeightRatio);
-    }];
-    
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(self);
-        make.top.mas_equalTo(self.imageView.mas_bottom);
-    }];
 }
 
 - (UIImageView *)imageView {

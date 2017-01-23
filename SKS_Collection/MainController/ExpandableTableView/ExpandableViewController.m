@@ -39,7 +39,7 @@
 - (void)initSubvies
 {
     _tableView = ({
-        CGRect frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64);
+        CGRect frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
         tableView.delegate = self;
         tableView.dataSource = self;

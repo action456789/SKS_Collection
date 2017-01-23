@@ -88,18 +88,18 @@
     NSLog(@"%s", __func__);
 }
 
-- (UIView *)tableView:(UITableView *)tableView headerCellInSection:(NSInteger)section
-{
-    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerCell"];
-    view.bounds = CGRectMake(0, 0, kScreenWidth, 200);
-    return view;
-}
-                                      
-- (UIView *)tableView:(UITableView *)tableView footerCellInSection:(NSInteger)section
-{
-    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerCell"];
-    view.bounds = CGRectMake(0, 0, kScreenWidth, 200);
-    return view;
-}
+//- (UIView *)tableView:(UITableView *)tableView headerCellInSection:(NSInteger)section
+//{
+//    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerCell"];
+//    view.bounds = CGRectMake(0, 0, kScreenWidth, 200);
+//    return view;
+//}
+//                                      
+//- (UIView *)tableView:(UITableView *)tableView footerCellInSection:(NSInteger)section
+//{
+//    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerCell"];
+//    view.bounds = CGRectMake(0, 0, kScreenWidth, 200);
+//    return view;
+//}
 
 @end

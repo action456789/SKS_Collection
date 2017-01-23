@@ -145,7 +145,7 @@
 {
     if (!_divider) {
         _divider = [[UIView alloc] init];
-        _divider.backgroundColor = [[UIColor magentaColor] colorWithAlphaComponent:0.4];
+        _divider.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.4];
     }
     return _divider;
 }

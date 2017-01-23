@@ -10,7 +10,7 @@
 #import "StaticCellItem.h"
 #import "StaticCellItemGroup.h"
 
-@interface StaticCellBaseViewController : BaseViewController
+@interface StaticCellBaseViewController : UIViewController
 
 - (instancetype)initWithStyle:(UITableViewStyle)style;
 
