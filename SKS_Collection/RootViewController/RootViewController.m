@@ -36,7 +36,7 @@
 #import "EmptyContentTableViewController.h"
 #import "StaticCollectionViewDemoVC.h"
 #import "ModalFromViewController.h"
-#import "MyBannerViewController.h"
+#import "BanberViewController.h"
 
 @interface RootViewController()
 
@@ -83,7 +83,7 @@
                         ,[StaticCellItem itemWithTitle:@"24. 无数据视图" icon:nil objectClass:[EmptyContentTableViewController class]]
                         ,[StaticCellItem itemWithTitle:@"25. 静态CollectionViewCell" icon:nil objectClass:[StaticCollectionViewDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"25. 自定义转场动画" icon:nil objectClass:[ModalFromViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"26. 无限滚动" icon:nil objectClass:[MyBannerViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"26. 启动引导图、无线循环View" icon:nil objectClass:[BanberViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil

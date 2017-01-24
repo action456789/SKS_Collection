@@ -14,6 +14,7 @@
 @interface StaticCollectionView()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, assign) NSInteger totalItemsCount;
 
 @end
 
@@ -31,26 +32,9 @@ static NSString * const reuseIdentifier = @"StaticCell";
         _dataArray = dataArray;
         _layout = layOut;
         
-        [self createSubViews];
+        [self addSubview:self.collectionView];
     }
     return self;
-}
-
-- (void)createSubViews {
-    [self addSubview:self.collectionView];
-}
-
-- (UICollectionView *)collectionView {
-    if (_collectionView == nil) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_layout];
-        _collectionView.delegate = self;
-        _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor clearColor];
-        _collectionView.showsHorizontalScrollIndicator = NO;
-        _collectionView.showsVerticalScrollIndicator = NO;
-        [_collectionView registerClass:[StaticCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    }
-    return _collectionView;
 }
 
 // tell UIKit that you are using AutoLayout
@@ -68,30 +52,47 @@ static NSString * const reuseIdentifier = @"StaticCell";
     [super updateConstraints];
 }
 
+- (void)reloadData {
+    [self.collectionView reloadData];
+}
+
 # pragma mark - getter, setter 
+
+- (UICollectionView *)collectionView {
+    if (_collectionView == nil) {
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_layout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        [_collectionView registerClass:[StaticCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    }
+    return _collectionView;
+}
 
 - (void)setPageEnable:(BOOL)pageEnable {
     self.collectionView.pagingEnabled = pageEnable;
 }
 
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+- (NSInteger)totalItemsCount {
+    if (_dataArray == nil) {
+        return 0;
+    }
+    return _totalItemsCount = self.infiniteLoop ? _dataArray.count * 100 : _dataArray.count;
 }
 
+#pragma mark <UICollectionViewDataSource>
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _dataArray.count;
+    return self.totalItemsCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     StaticCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.dataModal = _dataArray[indexPath.row];
+    cell.dataModal = _dataArray[indexPath.row % _dataArray.count];
     cell.imageViewContentMode = self.imageViewContentMode;
-    
-    // 测试
-    cell.backgroundColor = [UIColor grayColor];
     
     return cell;
 }

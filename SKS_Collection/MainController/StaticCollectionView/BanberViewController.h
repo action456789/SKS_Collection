@@ -6,8 +6,8 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MyBannerViewController : UIViewController
+@interface BanberViewController : BaseViewController
 
 @end

@@ -19,7 +19,6 @@
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, assign) BOOL isFirstTimeSettingModal;
 
 @end
 
@@ -29,8 +28,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self createSubview];
-        self.isFirstTimeSettingModal = YES;
+        [self addSubview:self.imageView];
+        [self addSubview:self.titleLabel];
     }
     
     return self;
@@ -69,56 +68,12 @@
 
 - (void)setDataModal:(StaticCollectionViewCellItem *)dataModal {
     _dataModal = dataModal;
- 
-    if (_dataModal.title == nil) {
-        _dataModal.title = @"";
-    }
-    
-    if (_dataModal.imageName == nil) {
-        _dataModal.imageName = @"";
-    }
-    
-    if (self.isFirstTimeSettingModal) { // 第一次进入时加载 KVO
-        [self addKVO];
-    }
-    self.isFirstTimeSettingModal = NO;
+    self.titleLabel.text = self.dataModal.title;
+    self.imageView.image = [UIImage imageNamed:self.dataModal.imageName];
 }
 
 - (void)setImageViewContentMode:(UIViewContentMode)imageViewContentMode {
     self.imageView.contentMode = imageViewContentMode;
-}
-
-- (void)addKVO {
-    if (IsValidateString(self.dataModal.title)) {
-        [self.dataModal addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial  context:nil];
-    }
-    
-    if (IsValidateString(self.dataModal.imageName)) {
-        [self.dataModal addObserver:self forKeyPath:@"imageName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial  context:nil];
-    }
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"title"]) {
-        self.titleLabel.text = self.dataModal.title;
-    } else if ([keyPath isEqualToString:@"imageName"]) {
-        self.imageView.image = [UIImage imageNamed:self.dataModal.imageName];
-    }
-}
-
-- (void)dealloc {
-    if (IsValidateString(self.dataModal.title)) {
-        [self.dataModal removeObserver:self forKeyPath:@"title"];
-    }
-    
-    if (IsValidateString(self.dataModal.imageName)) {
-        [self.dataModal removeObserver:self forKeyPath:@"imageName"];
-    }
-}
-
-- (void)createSubview {
-    [self addSubview:self.imageView];
-    [self addSubview:self.titleLabel];
 }
 
 - (UIImageView *)imageView {

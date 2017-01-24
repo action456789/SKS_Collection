@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "864BDF69C93530A33D1BC3785A8FCBEF"
-               BuildableName = "libPods-SKS_Collection.a"
+               BlueprintIdentifier = "F0136CB7F358964973418596479A5082"
+               BuildableName = "Pods_SKS_Collection.framework"
                BlueprintName = "Pods-SKS_Collection"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "864BDF69C93530A33D1BC3785A8FCBEF"
-            BuildableName = "libPods-SKS_Collection.a"
+            BlueprintIdentifier = "F0136CB7F358964973418596479A5082"
+            BuildableName = "Pods_SKS_Collection.framework"
             BlueprintName = "Pods-SKS_Collection"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "864BDF69C93530A33D1BC3785A8FCBEF"
-            BuildableName = "libPods-SKS_Collection.a"
+            BlueprintIdentifier = "F0136CB7F358964973418596479A5082"
+            BuildableName = "Pods_SKS_Collection.framework"
             BlueprintName = "Pods-SKS_Collection"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

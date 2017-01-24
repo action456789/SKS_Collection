@@ -128,7 +128,7 @@
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
 		2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE29D1E2E418900498F7F /* ModalFromViewController.m */; };
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
-		2EDD99171E35A9C10077AEEF /* MyBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD99161E35A9C10077AEEF /* MyBannerViewController.m */; };
+		2EDD99171E35A9C10077AEEF /* BanberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD99161E35A9C10077AEEF /* BanberViewController.m */; };
 		C7ED8BFF8B798AC724F5B6F4 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF7BE84C5E50DE60FE883D1 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -363,8 +363,8 @@
 		2EABE29C1E2E418900498F7F /* ModalFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalFromViewController.h; sourceTree = "<group>"; };
 		2EABE29D1E2E418900498F7F /* ModalFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalFromViewController.m; sourceTree = "<group>"; };
 		2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalFromViewController.xib; sourceTree = "<group>"; };
-		2EDD99151E35A9C10077AEEF /* MyBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBannerViewController.h; sourceTree = "<group>"; };
-		2EDD99161E35A9C10077AEEF /* MyBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBannerViewController.m; sourceTree = "<group>"; };
+		2EDD99151E35A9C10077AEEF /* BanberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BanberViewController.h; sourceTree = "<group>"; };
+		2EDD99161E35A9C10077AEEF /* BanberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BanberViewController.m; sourceTree = "<group>"; };
 		5FF7BE84C5E50DE60FE883D1 /* Pods_SKS_Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKS_Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1145,8 +1145,8 @@
 				2E38E97D1E28D5BB0086B870 /* Core */,
 				2E38E9961E28D6830086B870 /* StaticCollectionViewDemoVC.h */,
 				2E38E9971E28D6830086B870 /* StaticCollectionViewDemoVC.m */,
-				2EDD99151E35A9C10077AEEF /* MyBannerViewController.h */,
-				2EDD99161E35A9C10077AEEF /* MyBannerViewController.m */,
+				2EDD99151E35A9C10077AEEF /* BanberViewController.h */,
+				2EDD99161E35A9C10077AEEF /* BanberViewController.m */,
 			);
 			path = StaticCollectionView;
 			sourceTree = "<group>";
@@ -1493,7 +1493,7 @@
 				106362FA1D86C2AC00FD47B0 /* BaseRequest.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
-				2EDD99171E35A9C10077AEEF /* MyBannerViewController.m in Sources */,
+				2EDD99171E35A9C10077AEEF /* BanberViewController.m in Sources */,
 				10DD98D71D226B7D00193A69 /* NSString+Regular.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
