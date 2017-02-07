@@ -14,6 +14,8 @@
 
 @interface BannerView() <UIScrollViewDelegate>
 
+@property (nonatomic, strong) UIPageControl *pageControl;
+
 @end
 
 @implementation BannerView {
@@ -50,9 +52,19 @@ static NSString * const reuseIdentifier = @"StaticCell";
             [self setupTimerWithTimeInterval:_autoScrollTimeInterval];
         }
         _isAutoScroll = autoScroll;
+        
+        [self setupPageControl];
     }
     
     return self;
+}
+
+- (void)setupPageControl {
+    [self addSubview:self.pageControl];
+    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self);
+        make.bottom.mas_equalTo(self.mas_bottom).offset(10);
+    }];
 }
 
 - (void)setupTimerWithTimeInterval:(NSTimeInterval)interval {
@@ -92,6 +104,17 @@ static NSString * const reuseIdentifier = @"StaticCell";
 - (NSInteger)currentIndex {
     NSInteger index = self.collectionView.contentOffset.x / _layout.itemSize.width;
     return index % self.dataArray.count;
+}
+
+- (UIPageControl *)pageControl {
+    if (_pageControl == nil) {
+        UIPageControl *pageControl = [[UIPageControl alloc] init];
+        pageControl.numberOfPages = self.dataArray.count;
+        pageControl.userInteractionEnabled = NO;
+        pageControl.currentPage = 0;
+        _pageControl = pageControl;
+    }
+    return _pageControl;
 }
 
 #pragma mark - life circles
@@ -156,6 +179,8 @@ static NSString * const reuseIdentifier = @"StaticCell";
             [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count * 2 - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
         }
     }
+    
+    self.pageControl.currentPage = self.currentIndex;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
