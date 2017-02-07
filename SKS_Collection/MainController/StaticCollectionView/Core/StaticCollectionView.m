@@ -11,16 +11,12 @@
 #import "StaticCollectionViewCellItem.h"
 #import "Masonry.h"
 
-@interface StaticCollectionView()<UICollectionViewDelegate, UICollectionViewDataSource>
-
-@property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, assign) NSInteger totalItemsCount;
+@interface StaticCollectionView()
 
 @end
 
 @implementation StaticCollectionView {
     
-    NSArray<StaticCollectionViewCellItem *> *_dataArray;
     UICollectionViewLayout *_layout;
 }
 
@@ -71,21 +67,10 @@ static NSString * const reuseIdentifier = @"StaticCell";
     return _collectionView;
 }
 
-- (void)setPageEnable:(BOOL)pageEnable {
-    self.collectionView.pagingEnabled = pageEnable;
-}
-
-- (NSInteger)totalItemsCount {
-    if (_dataArray == nil) {
-        return 0;
-    }
-    return _totalItemsCount = self.infiniteLoop ? _dataArray.count * 100 : _dataArray.count;
-}
-
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.totalItemsCount;
+    return self.dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
