@@ -43,9 +43,11 @@ static NSString * const reuseIdentifier = @"StaticCell";
         _totalItemsCount = dataArray.count * 3;
         _layout = flowLayout;
         _currentIndex = 0;
+        _infiniteLoop = YES;
+        _autoScrollTimeInterval = 2.0;
         
         if (autoScroll) {
-            [self setupTimer];
+            [self setupTimerWithTimeInterval:_autoScrollTimeInterval];
         }
         _isAutoScroll = autoScroll;
     }
@@ -53,8 +55,8 @@ static NSString * const reuseIdentifier = @"StaticCell";
     return self;
 }
 
-- (void)setupTimer {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
+- (void)setupTimerWithTimeInterval:(NSTimeInterval)interval {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
@@ -72,12 +74,19 @@ static NSString * const reuseIdentifier = @"StaticCell";
     [self autoScroll];
 }
 
-- (void)invalidateTimer
-{
+- (void)invalidateTimer {
     if (_timer) {
         [_timer invalidate];
         _timer = nil;
     }
+}
+
+#pragma mark - getter &&& setter
+
+- (void)setAutoScrollTimeInterval:(CGFloat)autoScrollTimeInterval {
+    _autoScrollTimeInterval = autoScrollTimeInterval;
+    [self invalidateTimer];
+    [self setupTimerWithTimeInterval:autoScrollTimeInterval];
 }
 
 - (NSInteger)currentIndex {
@@ -87,7 +96,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 #pragma mark - life circles
 
-- (void)layoutSubviews{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
@@ -135,27 +144,27 @@ static NSString * const reuseIdentifier = @"StaticCell";
 #pragma mark <UIScrollViewDelegate>
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat index = self.collectionView.contentOffset.x / _layout.itemSize.width;
-    if (index == 1.0) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count + 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-    } else if (index == _totalItemsCount - 2) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count * 2 - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-    } else if (index <= 0.0) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-    } else if (index >= _totalItemsCount - 1) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count * 2 - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    if (self.infiniteLoop) {
+        CGFloat index = self.collectionView.contentOffset.x / _layout.itemSize.width;
+        if (index == 1.0) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count + 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        } else if (index == _totalItemsCount - 2) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count * 2 - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        } else if (index <= 0.0) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        } else if (index >= _totalItemsCount - 1) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.dataArray.count * 2 - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        }
     }
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self invalidateTimer];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     if (_isAutoScroll) {
-        [self setupTimer];
+        [self setupTimerWithTimeInterval:self.autoScrollTimeInterval];
     }
 }
 
