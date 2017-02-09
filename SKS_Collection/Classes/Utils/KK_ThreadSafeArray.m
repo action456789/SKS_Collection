@@ -68,6 +68,32 @@ dispatch_semaphore_signal(_lock);
     return object;
 }
 
+- (id)lastObject {
+    LOCK(id object = [_array lastObject]);
+    return object;
+}
+
+- (void)removeLastObject {
+    LOCK([_array removeLastObject]);
+}
+
+// 入队
+- (void)push:(id)object {
+    LOCK([_array insertObject:object atIndex:0]);
+}
+
+// 出队
+- (id)pop {
+    dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
+    
+    id object = [_array lastObject];
+    [_array removeLastObject];
+    
+    dispatch_semaphore_signal(_lock);
+    
+    return object;
+}
+
 #pragma mark - 实现下标操作
 - (id)objectAtIndexedSubscript:(NSUInteger)idx {
     LOCK(id object = _array[idx]);

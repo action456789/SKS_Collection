@@ -24,6 +24,16 @@
 
 - (id)objectAtIndex:(NSUInteger)index;
 
+- (id)lastObject;
+
+- (void)removeLastObject;
+
+// 入队
+- (void)push:(id)object;
+
+// 出队
+- (id)pop;
+
 - (KK_ThreadSafeArray *)sortedArrayUsingSelector:(SEL)comparator;
 
 // implement subscript operation
