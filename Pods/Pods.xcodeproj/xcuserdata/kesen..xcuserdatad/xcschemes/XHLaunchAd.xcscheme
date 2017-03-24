@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD5E0AF255F46D39A7F73F3B5DD96504"
-               BuildableName = "XHLaunchAd.framework"
+               BlueprintIdentifier = "048155EBE883C08F7026D65ADDCDA72E"
+               BuildableName = "libXHLaunchAd.a"
                BlueprintName = "XHLaunchAd"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD5E0AF255F46D39A7F73F3B5DD96504"
-            BuildableName = "XHLaunchAd.framework"
+            BlueprintIdentifier = "048155EBE883C08F7026D65ADDCDA72E"
+            BuildableName = "libXHLaunchAd.a"
             BlueprintName = "XHLaunchAd"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD5E0AF255F46D39A7F73F3B5DD96504"
-            BuildableName = "XHLaunchAd.framework"
+            BlueprintIdentifier = "048155EBE883C08F7026D65ADDCDA72E"
+            BuildableName = "libXHLaunchAd.a"
             BlueprintName = "XHLaunchAd"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
