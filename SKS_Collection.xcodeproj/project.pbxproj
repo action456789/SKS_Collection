@@ -123,13 +123,14 @@
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
 		2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E47B0D61E49EB68003F4B44 /* BannerView.m */; };
-		2E578ECC1E321F5700CC3A1F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E578ECB1E321F5700CC3A1F /* MainViewController.m */; };
 		2EABE2911E2E3E1300498F7F /* PresentBottomUpTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE2901E2E3E1300498F7F /* PresentBottomUpTransitioning.m */; };
 		2EABE29A1E2E417200498F7F /* ModalToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE2981E2E417200498F7F /* ModalToViewController.m */; };
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
 		2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE29D1E2E418900498F7F /* ModalFromViewController.m */; };
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
 		2EDD99171E35A9C10077AEEF /* BanberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD99161E35A9C10077AEEF /* BanberViewController.m */; };
+		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
+		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
 		FA0D3D0C52E6ECC47F556474 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB159EAA704063FF52A71F /* libPods-SKS_Collection.a */; };
 /* End PBXBuildFile section */
 
@@ -356,8 +357,6 @@
 		2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestEdgeInsetsButton.m; sourceTree = "<group>"; };
 		2E47B0D51E49EB68003F4B44 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		2E47B0D61E49EB68003F4B44 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
-		2E578ECA1E321F5700CC3A1F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		2E578ECB1E321F5700CC3A1F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2EABE28F1E2E3E1300498F7F /* PresentBottomUpTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentBottomUpTransitioning.h; sourceTree = "<group>"; };
 		2EABE2901E2E3E1300498F7F /* PresentBottomUpTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentBottomUpTransitioning.m; sourceTree = "<group>"; };
 		2EABE2971E2E417200498F7F /* ModalToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalToViewController.h; sourceTree = "<group>"; };
@@ -369,6 +368,10 @@
 		2EDD99151E35A9C10077AEEF /* BanberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BanberViewController.h; sourceTree = "<group>"; };
 		2EDD99161E35A9C10077AEEF /* BanberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BanberViewController.m; sourceTree = "<group>"; };
 		7FFB159EAA704063FF52A71F /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8118A5EA1EA62B6300E225CD /* UPEjectShrinkBtnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPEjectShrinkBtnsView.h; sourceTree = "<group>"; };
+		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
+		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
+		8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectShrinkBtnsDemoVC.m; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -483,7 +486,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
-				2E578EC01E321DC300CC3A1F /* TabbarController */,
+				8118A5E31EA62B1000E225CD /* EjectShrinkView */,
 				2EABE28E1E2E3C6900498F7F /* 自定义转场动画 */,
 				2E38E9341E28746E0086B870 /* EmptyComtentView */,
 				2E38E92F1E27BF7E0086B870 /* Banner */,
@@ -1212,15 +1215,6 @@
 			path = "增加按钮点击区域";
 			sourceTree = "<group>";
 		};
-		2E578EC01E321DC300CC3A1F /* TabbarController */ = {
-			isa = PBXGroup;
-			children = (
-				2E578ECA1E321F5700CC3A1F /* MainViewController.h */,
-				2E578ECB1E321F5700CC3A1F /* MainViewController.m */,
-			);
-			path = TabbarController;
-			sourceTree = "<group>";
-		};
 		2EABE28E1E2E3C6900498F7F /* 自定义转场动画 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,6 +1228,17 @@
 				2EABE2991E2E417200498F7F /* ModalToViewController.xib */,
 			);
 			path = "自定义转场动画";
+			sourceTree = "<group>";
+		};
+		8118A5E31EA62B1000E225CD /* EjectShrinkView */ = {
+			isa = PBXGroup;
+			children = (
+				8118A5EA1EA62B6300E225CD /* UPEjectShrinkBtnsView.h */,
+				8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */,
+				8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */,
+				8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */,
+			);
+			path = EjectShrinkView;
 			sourceTree = "<group>";
 		};
 		E523159E204DDECA056A572D /* Pods */ = {
@@ -1439,7 +1444,6 @@
 				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
-				2E578ECC1E321F5700CC3A1F /* MainViewController.m in Sources */,
 				2E38E9501E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,
@@ -1455,6 +1459,7 @@
 				2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */,
 				10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
+				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				2E38E9981E28D6830086B870 /* StaticCollectionViewDemoVC.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
@@ -1474,6 +1479,7 @@
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
 				2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */,
+				8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
