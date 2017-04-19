@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, EjectShrikAnimationType) {
+    EjectShrikAnimationTypeSpring,
+    EjectShrikAnimationTypeKeyFrame,
+    EjectShrikAnimationTypeMengToSpring,
+};
+
 @class UPEjectShrinkBtnsView;
 
 @protocol UPEjectShrinkBtnsViewDelegate <NSObject>
@@ -25,6 +31,8 @@
 @property (nonatomic, assign) BOOL shouldBtnsEject;
 
 @property (nonatomic, assign) BOOL isAnimating;
+
+@property (nonatomic, assign) EjectShrikAnimationType animateOption;
 
 @property (nonatomic, weak) id <UPEjectShrinkBtnsViewDelegate> delegate;
 

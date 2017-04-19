@@ -110,29 +110,35 @@
     if (animate) {
         self.isAnimating = YES;
         
-//        [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.9 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-//           
-//            for (NSInteger i=1; i<self.btnArray.count; i++) {
-//                self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
-//            }
-//        } completion:^(BOOL finished) {
-//            
-//            self.width = kBtnW;
-//            self.isAnimating = NO;
-//        }];
-        
-        CGFloat duration = 0.33;
-        CGFloat persent = (self.btnArray.count-1) * 1.0;
-        [UIView animateKeyframesWithDuration:duration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
-            for (int i=1; i<self.btnArray.count; i++) {
-                [UIView addKeyframeWithRelativeStartTime:(i-1)/persent relativeDuration:1/persent animations:^{
+        if (self.animateOption == EjectShrikAnimationTypeSpring) {
+            [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.9 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    
+                for (NSInteger i=1; i<self.btnArray.count; i++) {
                     self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
-                }];
-            }
-        } completion:^(BOOL finished) {
-            self.width = kBtnW;
-            self.isAnimating = NO;
-        }];
+                }
+            } completion:^(BOOL finished) {
+    
+                self.width = kBtnW;
+                self.isAnimating = NO;
+            }];
+        } else if (self.animateOption == EjectShrikAnimationTypeKeyFrame) {
+            CGFloat duration = 0.33;
+            CGFloat persent = (self.btnArray.count-1) * 1.0;
+            [UIView animateKeyframesWithDuration:duration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
+                for (int i=1; i<self.btnArray.count; i++) {
+                    [UIView addKeyframeWithRelativeStartTime:(i-1)/persent relativeDuration:1/persent animations:^{
+                        self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
+                    }];
+                }
+            } completion:^(BOOL finished) {
+                self.width = kBtnW;
+                self.isAnimating = NO;
+            }];
+        } else if (self.animateOption == EjectShrikAnimationTypeMengToSpring) {
+            
+        }
+        
+
         
     } else {
         for (NSInteger i=1; i<self.btnArray.count; i++) {
@@ -151,27 +157,33 @@
         
         self.isAnimating = YES;
         
-//        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-//            
-//            for (NSInteger i=1; i<self.btnArray.count; i++) {
-//                self.btnArray[i].x = i * (kBtnW + kBtnsPadding);
-//            }
-//            
-//        } completion:^(BOOL finished) {
-//            self.isAnimating = NO;
-//        }];
-        
-        CGFloat duration = 0.2;
-        CGFloat persent = (self.btnArray.count-1) * 1.0;
-        [UIView animateKeyframesWithDuration:duration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
-            for (int i=1; i<self.btnArray.count; i++) {
-                [UIView addKeyframeWithRelativeStartTime:(i-1)/persent relativeDuration:1/persent animations:^{
+        if (self.animateOption == EjectShrikAnimationTypeSpring) {
+            [UIView animateWithDuration:0.33 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    
+                for (NSInteger i=1; i<self.btnArray.count; i++) {
                     self.btnArray[i].x = i * (kBtnW + kBtnsPadding);
-                }];
-            }
-        } completion:^(BOOL finished) {
-            self.isAnimating = NO;
-        }];
+                }
+    
+            } completion:^(BOOL finished) {
+                self.isAnimating = NO;
+            }];
+        } else if (self.animateOption == EjectShrikAnimationTypeKeyFrame) {
+            CGFloat duration = 0.2;
+            CGFloat persent = (self.btnArray.count-1) * 1.0;
+            [UIView animateKeyframesWithDuration:duration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
+                for (int i=1; i<self.btnArray.count; i++) {
+                    [UIView addKeyframeWithRelativeStartTime:(i-1)/persent relativeDuration:1/persent animations:^{
+                        self.btnArray[i].x = i * (kBtnW + kBtnsPadding);
+                    }];
+                }
+            } completion:^(BOOL finished) {
+                self.isAnimating = NO;
+            }];
+        } else if (self.animateOption == EjectShrikAnimationTypeMengToSpring) {
+            
+        }
+        
+
     } else {
         for (NSInteger i=1; i<self.btnArray.count; i++) {
             self.btnArray[i].x = i * (kBtnW + kBtnsPadding);

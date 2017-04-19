@@ -25,6 +25,7 @@
     if (_ejectShrinkBtnsView == nil) {
         CGFloat ejectY = self.view.center.y;
         _ejectShrinkBtnsView = [[UPEjectShrinkBtnsView alloc] initWithFrame:CGRectMake(5, ejectY, kScreenWidth, 50)];
+        _ejectShrinkBtnsView.animateOption = EjectShrikAnimationTypeKeyFrame;
         _ejectShrinkBtnsView.delegate = self;
     }
     return _ejectShrinkBtnsView;
