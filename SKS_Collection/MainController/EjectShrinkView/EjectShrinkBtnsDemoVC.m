@@ -34,7 +34,7 @@
 - (void)ejectShrinkBtnsView:(UPEjectShrinkBtnsView *)view didClickedButtonAtIndex:(NSInteger)index {
     
     if (index == 1) { // 股价预测
-        
+
     } else if (index == 2) { // 最优策略
         
     } else if (index == 3) { // 优品评测

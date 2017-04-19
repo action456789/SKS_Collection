@@ -134,12 +134,7 @@
                 self.width = kBtnW;
                 self.isAnimating = NO;
             }];
-        } else if (self.animateOption == EjectShrikAnimationTypeMengToSpring) {
-            
-        }
-        
-
-        
+        } 
     } else {
         for (NSInteger i=1; i<self.btnArray.count; i++) {
             self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
@@ -179,8 +174,6 @@
             } completion:^(BOOL finished) {
                 self.isAnimating = NO;
             }];
-        } else if (self.animateOption == EjectShrikAnimationTypeMengToSpring) {
-            
         }
         
 

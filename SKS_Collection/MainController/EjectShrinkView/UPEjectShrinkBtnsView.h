@@ -11,7 +11,6 @@
 typedef NS_ENUM(NSUInteger, EjectShrikAnimationType) {
     EjectShrikAnimationTypeSpring,
     EjectShrikAnimationTypeKeyFrame,
-    EjectShrikAnimationTypeMengToSpring,
 };
 
 @class UPEjectShrinkBtnsView;
