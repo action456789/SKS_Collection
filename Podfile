@@ -8,8 +8,9 @@ platform :ios, '8.0'
 pod 'SDWebImage', '~>3.7'
 pod 'MBProgressHUD', '~> 0.9.1'
 
-#pod 'FMDB'
-pod 'FMDB/SQLCipher'  #if use SQLCipher
+pod 'FMDB'
+#pod 'FMDB/SQLCipher'  #if use SQLCipher
+
 pod 'AFNetworking', '~> 3.0'
 
 # 切片编程
