@@ -74,7 +74,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 - (void)autoScroll {
     NSInteger index = self.collectionView.contentOffset.x / _layout.itemSize.width;
-    NSLog(@"%ld", index);
+    NSLog(@"%ld", index % self.dataArray.count);
     if (index == self.dataArray.count * 2) {
         index = self.dataArray.count;
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];

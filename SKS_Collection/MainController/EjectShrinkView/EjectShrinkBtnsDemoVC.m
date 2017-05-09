@@ -9,6 +9,7 @@
 #import "EjectShrinkBtnsDemoVC.h"
 #import "UPEjectShrinkBtnsView.h"
 #import "CommonMacro.h"
+#import <AFNetworking.h>
 
 @interface EjectShrinkBtnsDemoVC () <UPEjectShrinkBtnsViewDelegate>
 @property (nonatomic, strong) UPEjectShrinkBtnsView *ejectShrinkBtnsView;
@@ -19,6 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.ejectShrinkBtnsView];
+    
+    [AFHTTPSessionManager.manager GET:@"www.baidu.com" parameters:nil progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             NSLog(@"%@" ,responseObject);
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"%@", error);
+         }];
 }
 
 - (UPEjectShrinkBtnsView *)ejectShrinkBtnsView {

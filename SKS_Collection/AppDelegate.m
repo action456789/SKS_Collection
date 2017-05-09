@@ -13,7 +13,7 @@
 #import "AFNetworking.h"
 //#import <XHLaunchAd.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
-
+#import "KKNotFluentMonitor.h"
 
 @interface AppDelegate ()
 @end
@@ -40,6 +40,9 @@
     self.window.rootViewController = nav;
     
     [self setDDLog];
+    
+    // 检查卡顿
+    [KKNotFluentMonitor.sharedInstance startMonitor];
     
     return YES;
 }
