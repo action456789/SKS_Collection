@@ -37,6 +37,7 @@
     StaticCollectionViewCellItem *item5 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"share" title:@"更多分享" handle:^{
         NSLog(@"更多分享");
     }];
+    
     StaticCollectionViewCellItem *item6 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"evaluate" title:@"优品评测" handle:^{
         NSLog(@"优品评测");
     }];

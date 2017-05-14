@@ -131,6 +131,8 @@
 		6D1A816406B2EA4F1E602295 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */; };
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
+		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
+		814019871EC2BCBE00C5B854 /* UIDevice+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 814019861EC2BCBE00C5B854 /* UIDevice+Identifier.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 /* End PBXBuildFile section */
@@ -370,6 +372,10 @@
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
 		8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectShrinkBtnsDemoVC.m; sourceTree = "<group>"; };
+		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
+		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
+		814019851EC2BCBE00C5B854 /* UIDevice+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
+		814019861EC2BCBE00C5B854 /* UIDevice+Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Identifier.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
 		8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNotFluentMonitor.m; sourceTree = "<group>"; };
 		818131511EBAC96C00CEEA97 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
@@ -818,6 +824,8 @@
 				10694E4B1D41F35500D9F486 /* NSString+Code.m */,
 				10DD987B1D226B7D00193A69 /* NSString+Regular.h */,
 				10DD987C1D226B7D00193A69 /* NSString+Regular.m */,
+				8140197D1EC2B36A00C5B854 /* NSString+random.h */,
+				8140197E1EC2B36A00C5B854 /* NSString+random.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -995,6 +1003,8 @@
 			children = (
 				10DD99691D24F48600193A69 /* UIDevice+KS.h */,
 				10DD996A1D24F48600193A69 /* UIDevice+KS.m */,
+				814019851EC2BCBE00C5B854 /* UIDevice+Identifier.h */,
+				814019861EC2BCBE00C5B854 /* UIDevice+Identifier.m */,
 			);
 			path = UIDevice;
 			sourceTree = "<group>";
@@ -1484,6 +1494,7 @@
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD98DB1D226B7D00193A69 /* UIAlertController+KS.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
+				814019871EC2BCBE00C5B854 /* UIDevice+Identifier.m in Sources */,
 				2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */,
 				8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
@@ -1497,6 +1508,7 @@
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				2E38E94E1E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
+				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
 				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
