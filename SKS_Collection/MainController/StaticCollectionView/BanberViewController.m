@@ -22,15 +22,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    StaticCollectionViewCellItem *item1 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"banner1" title:nil handle:^{
+    StaticCollectionViewCellItem *item1 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"banner1" title:nil handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"banner1");
     }];
     
-    StaticCollectionViewCellItem *item2 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"banner2" title:nil handle:^{
+    StaticCollectionViewCellItem *item2 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"banner2" title:nil handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"banner2");
     }];
     
-    StaticCollectionViewCellItem *item3 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"banner3" title:nil handle:^{
+    StaticCollectionViewCellItem *item3 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"banner3" title:nil handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"banner3");
     }];
     

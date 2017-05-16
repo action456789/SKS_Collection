@@ -10,7 +10,6 @@
 #import "StaticCollectionViewCell.h"
 #import "StaticCollectionViewCellItem.h"
 #import "Masonry.h"
-#import "HomeScensCell.h"
 
 @interface StaticCollectionView()
 

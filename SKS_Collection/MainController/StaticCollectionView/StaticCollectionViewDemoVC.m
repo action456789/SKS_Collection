@@ -21,24 +21,24 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    StaticCollectionViewCellItem *item1 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"optimizest" title:@"最优策略" handle:^{
+    StaticCollectionViewCellItem *item1 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"optimizest" title:@"最优策略" handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"最优策略");
     }];
-    
-    StaticCollectionViewCellItem *item2 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"KLine" title:@"相似K线" handle:^{
+
+    StaticCollectionViewCellItem *item2 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"KLine" title:@"相似K线" handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"相似K线");
     }];
-    StaticCollectionViewCellItem *item3 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"alert" title:@"添加预警" handle:^{
+    StaticCollectionViewCellItem *item3 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"alert" title:@"添加预警" handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"添加预警");
     }];
-    StaticCollectionViewCellItem *item4 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"forecast" title:@"股价预测" handle:^{
+    StaticCollectionViewCellItem *item4 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"forecast" title:@"股价预测" handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"股价预测");
     }];
-    StaticCollectionViewCellItem *item5 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"share" title:@"更多分享" handle:^{
+    StaticCollectionViewCellItem *item5 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"share" title:@"更多分享" handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"更多分享");
     }];
     
-    StaticCollectionViewCellItem *item6 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"evaluate" title:@"优品评测" handle:^{
+    StaticCollectionViewCellItem *item6 = [[StaticCollectionViewCellItem alloc] initWithImageName:@"evaluate" title:@"优品评测" handle:^(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title){
         NSLog(@"优品评测");
     }];
     
