@@ -17,9 +17,6 @@
 
 @interface StaticCollectionViewCell()
 
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *titleLabel;
-
 @end
 
 @implementation StaticCollectionViewCell
@@ -80,6 +77,10 @@
     if (_imageView == nil) {
         _imageView = [[UIImageView alloc] init];
         _imageView.contentMode = UIViewContentModeCenter;
+        _imageView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTap:)];
+        [_imageView addGestureRecognizer:tap];
     }
     return _imageView;
 }
@@ -90,8 +91,23 @@
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = kColorWithHex(0x999999);
         _titleLabel.font = [UIFont systemFontOfSize:12];
+        _titleLabel.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleLabelTap:)];
+        [_titleLabel addGestureRecognizer:tap];
     }
     return _titleLabel;
+}
+
+
+- (void)imageViewTap:(UITapGestureRecognizer *)tap {
+    NSLog(@"imageViewTap");
+    self.dataModal.clickedHandle(nil, _imageView, nil);
+}
+
+- (void)titleLabelTap:(UITapGestureRecognizer *)tap {
+    NSLog(@"titleLabelTap");
+    self.dataModal.clickedHandle(nil, nil, _titleLabel);
 }
 
 @end

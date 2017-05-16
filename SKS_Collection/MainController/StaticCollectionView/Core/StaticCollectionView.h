@@ -11,7 +11,14 @@
 
 @interface StaticCollectionView : UIView <UICollectionViewDelegate, UICollectionViewDataSource>
 
-- (instancetype)initWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layOut dataArray:(NSArray *)dataArray;
+- (instancetype)initWithFrame:(CGRect)frame
+                       layout:(UICollectionViewLayout *)layOut
+                    dataArray:(NSArray *)dataArray;
+
+- (instancetype)initWithFrame:(CGRect)frame
+                       layout:(UICollectionViewLayout *)layOut
+                 registerCell:(Class)cellClass
+                    dataArray:(NSArray *)dataArray;
 
 // 静态单元格
 @property (nonatomic, strong) UICollectionView *collectionView;

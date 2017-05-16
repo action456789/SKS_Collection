@@ -6,9 +6,10 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class StaticCollectionViewCell;
 
-typedef void (^StaticCellHandle)(void);
+typedef void (^StaticCellHandle)(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title);
 
 @interface StaticCollectionViewCellItem : NSObject
 

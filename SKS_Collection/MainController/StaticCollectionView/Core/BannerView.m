@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
     [self addSubview:self.pageControl];
     [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
-        make.bottom.mas_equalTo(self.mas_bottom).offset(10);
+        make.bottom.mas_equalTo(self.mas_bottom).offset(-20);
     }];
 }
 
@@ -74,7 +74,6 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 - (void)autoScroll {
     NSInteger index = self.collectionView.contentOffset.x / _layout.itemSize.width;
-    NSLog(@"%ld", index % self.dataArray.count);
     if (index == self.dataArray.count * 2) {
         index = self.dataArray.count;
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
@@ -160,7 +159,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     StaticCollectionViewCellItem *item = self.dataArray[indexPath.row % self.dataArray.count];
     if (item.clickedHandle) {
-        item.clickedHandle();
+        item.clickedHandle(nil, nil, nil);
     }
 }
 

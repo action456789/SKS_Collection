@@ -10,6 +10,7 @@
 #import "StaticCollectionViewCell.h"
 #import "StaticCollectionViewCellItem.h"
 #import "Masonry.h"
+#import "HomeScensCell.h"
 
 @interface StaticCollectionView()
 
@@ -28,9 +29,28 @@ static NSString * const reuseIdentifier = @"StaticCell";
         _dataArray = dataArray;
         _layout = layOut;
         
+        [self.collectionView registerClass:[StaticCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+        
         [self addSubview:self.collectionView];
     }
     return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layOut registerCell:(Class)cellClass dataArray:(NSArray *)dataArray {
+    if (self = [super initWithFrame:frame]) {
+        
+        _dataArray = dataArray;
+        _layout = layOut;
+        
+        [self addSubview:self.collectionView];
+        
+        [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:reuseIdentifier];
+    }
+    return self;
+}
+
+- (void)setup {
+    
 }
 
 // tell UIKit that you are using AutoLayout
@@ -62,7 +82,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
-        [_collectionView registerClass:[StaticCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+        
     }
     return _collectionView;
 }
@@ -86,8 +106,11 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     StaticCollectionViewCellItem *item = _dataArray[indexPath.row];
+
+    StaticCollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    
     if (item.clickedHandle) {
-        item.clickedHandle();
+        item.clickedHandle(cell, nil, nil);
     }
 }
 
