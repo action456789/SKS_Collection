@@ -103,7 +103,7 @@
     contentView.backgroundColor = [UIColor redColor];
     
     TipsView *tipsView = [[TipsView alloc] init];
-    tipsView.showType = TipsViewShowTypeFromBottom;
+    tipsView.showType = TipsViewShowTypeCenter;
     tipsView.contentView = contentView;
     tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
     

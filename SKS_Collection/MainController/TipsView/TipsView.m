@@ -15,9 +15,9 @@
 #define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
 
 /* 结构
-TipsView
-  _shadowView
-  _containertView
+ TipsView
+ _shadowView
+ _containertView
  
  */
 
@@ -64,7 +64,7 @@ TipsView
     
     _containertView = ({
         UIView *view = [UIView new];
-        view.backgroundColor = [UIColor redColor];
+        view.backgroundColor = [UIColor clearColor];
         view.layer.cornerRadius = 2.0;
         view.layer.masksToBounds = YES;
         [self addSubview:view];
@@ -172,6 +172,7 @@ TipsView
         } else {
             [UIView transitionWithView:superView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 [superViewOrKeyWindows addSubview:self];
+                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:nil];
         }
     } else {
@@ -193,8 +194,6 @@ TipsView
         
         if (self.showType == TipsViewShowTypeFromBottom) {
             if ([[UIDevice currentDevice].systemVersion doubleValue] < 8.0) {
-                //                _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);;
-                //                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
                 [self removeFromSuperview];
                 _isAnimating = NO;
             } else {
