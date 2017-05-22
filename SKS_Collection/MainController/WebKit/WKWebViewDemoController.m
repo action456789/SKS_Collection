@@ -6,6 +6,8 @@
 //  Copyright © 2016年 SenKe. All rights reserved.
 //
 
+// http://www.jianshu.com/p/870dba42ec15
+
 #import "WKWebViewDemoController.h"
 #import <WebKit/WebKit.h>
 #import "CalledByScriptObject.h"
@@ -35,8 +37,26 @@
     WKWebViewConfiguration *conf = [[WKWebViewConfiguration alloc] init];
     conf.allowsInlineMediaPlayback = YES;
     conf.requiresUserActionForMediaPlayback = NO;
+    
     //处理 JS 消息
-    [conf.userContentController addScriptMessageHandler:self name:kScriptMessage];
+    
+    WKUserContentController *controller = [[WKUserContentController alloc] init];
+    conf.userContentController = controller;
+    [controller addScriptMessageHandler:self name:kScriptMessage];
+    
+    //1. 注入一个Cookie
+    WKUserScript *newCookieScript = [[WKUserScript alloc] initWithSource:@"document.cookie = 'DarkAngelCookie=DarkAngel;'"
+                                                           injectionTime:WKUserScriptInjectionTimeAtDocumentStart
+                                                        forMainFrameOnly:NO];
+    [controller addUserScript:newCookieScript];
+    
+    // 2. 然后再注入一个脚本，每当页面加载，就会alert当前页面cookie，在OC中的实现
+    //创建脚本
+    WKUserScript *script = [[WKUserScript alloc] initWithSource:@"alert(document.cookie);"
+                                                        injectionTime:WKUserScriptInjectionTimeAtDocumentEnd
+                                                     forMainFrameOnly:NO];
+    //添加脚本
+    [controller addUserScript:script];
     
     _webView = ({
         WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight) configuration:conf];
@@ -44,6 +64,9 @@
         webView.navigationDelegate = self;
         webView.UIDelegate = self;
         webView.allowsBackForwardNavigationGestures =YES;
+        webView.allowsLinkPreview = YES; //允许链接3D Touch
+        
+//      webView.customUserAgent = @"WebViewDemo/1.0.0"; //自定义UA，UIWebView就没有此功能
         
         NSString *urlString = @"http://www.baidu.com";
         NSURL *url = [NSURL URLWithString:urlString];

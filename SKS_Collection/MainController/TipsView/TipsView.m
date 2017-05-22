@@ -24,7 +24,7 @@ TipsView
 
 @interface TipsView()
 
-@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) UIWindow *containerView;
 
 @end
 
@@ -32,15 +32,14 @@ TipsView
 {
     UIView *_shadowView;
     UIView *_containertView;
-    CGSize _contentViewSize;
 }
 
-- (instancetype)initWithContentViewSize:(CGSize)size {
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
         self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         _isShowing = NO;
         _isAnimating = NO;
-        _contentViewSize = size;
         [self _createSubViews];
     }
     return self;
@@ -72,7 +71,7 @@ TipsView
         
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(self);
-            make.size.mas_equalTo(_contentViewSize);
+            make.size.mas_equalTo(self.contentViewSize);
         }];
         
         view;
@@ -81,7 +80,29 @@ TipsView
 
 - (void)_tapGestureHandle:(UIGestureRecognizer *)tap
 {
-    [self hideAnimatable:YES];
+    [self hideWithAnimatable:YES];
+}
+
+#pragma mark - getter, setter
+
+- (CGSize)contentViewSize
+{
+    CGSize size = CGSizeZero;
+    if (_contentViewSize.height <= 0 || _contentViewSize.width <= 0) {
+        size = CGSizeMake(kScreenWidth * 0.8, kScreenWidth * 0.8 * 0.7);
+    } else {
+        size = _contentViewSize;
+    }
+    return size;
+}
+
+@synthesize contentViewSize = _contentViewSize;
+- (void)setContentViewSize:(CGSize)contentViewSize {
+    _contentViewSize = contentViewSize;
+    
+    [_containertView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(_contentViewSize);
+    }];
 }
 
 - (void)setShowType:(TipsViewShowType)showType
@@ -92,7 +113,8 @@ TipsView
         [_containertView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(self);
             make.top.mas_equalTo(self.mas_bottom);
-            make.size.mas_equalTo(_contentViewSize);
+            make.width.mas_equalTo(self);
+            make.height.mas_equalTo(self.contentViewSize.height);
         }];
     }
 }
@@ -117,26 +139,31 @@ TipsView
 
 - (void)showInView:(UIView *)superView animatable:(BOOL)animatable {
     if (_isShowing) {
-        [self hideAnimatable:NO];
+        [self hideWithAnimatable:NO];
     }
     
     _isShowing = YES;
     
-    UIView *superViewOrWindow = nil;
+    UIView *superViewOrKeyWindows = nil;
     if (superView == nil) {
-        superViewOrWindow = self.window;
+        superViewOrKeyWindows = self.containerView;
     } else {
-        superViewOrWindow = superView;
+        superViewOrKeyWindows = superView;
     }
     
     if (animatable) {
         _isAnimating = YES;
         
         if (self.showType == TipsViewShowTypeFromBottom) {
-            [superViewOrWindow addSubview:self];
+            [superViewOrKeyWindows addSubview:self];
+            
+            CGFloat offset = 0;
+            if ([[UIDevice currentDevice].systemVersion doubleValue] < 8.0) {
+                offset = 64 * 4 - 13;
+            }
             
             [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                _containertView.transform = CGAffineTransformMakeTranslation(0, -_contentViewSize.height);
+                _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height-offset);
                 _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:^(BOOL finished) {
                 _isAnimating = NO;
@@ -144,39 +171,41 @@ TipsView
             
         } else {
             [UIView transitionWithView:superView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                [superViewOrWindow addSubview:self];
+                [superViewOrKeyWindows addSubview:self];
             } completion:nil];
         }
     } else {
         if (self.showType == TipsViewShowTypeFromBottom) {
-            [superViewOrWindow addSubview:self];
-            _containertView.transform = CGAffineTransformMakeTranslation(0, -_contentViewSize.height);
+            [superViewOrKeyWindows addSubview:self];
+            _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         } else {
-            [superViewOrWindow addSubview:self];
+            [superViewOrKeyWindows addSubview:self];
         }
     }
 }
 
-- (void)showAnimatable:(BOOL)animatable {
-    [self showInView:nil animatable:animatable];
-}
-
-- (void)hideAnimatable:(BOOL)animatable {
+- (void)hideWithAnimatable:(BOOL)animatable {
     _isShowing = NO;
     
     if (animatable) {
         _isAnimating = YES;
         
         if (self.showType == TipsViewShowTypeFromBottom) {
-            [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                _containertView.transform = CGAffineTransformIdentity;
-                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
-            } completion:^(BOOL finished) {
-                [self clear];
-                
+            if ([[UIDevice currentDevice].systemVersion doubleValue] < 8.0) {
+                //                _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);;
+                //                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+                [self removeFromSuperview];
                 _isAnimating = NO;
-            }];
+            } else {
+                [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    _containertView.transform = CGAffineTransformIdentity;
+                    _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+                } completion:^(BOOL finished) {
+                    [self removeFromSuperview];
+                    _isAnimating = NO;
+                }];
+            }
         } else {
             [UIView transitionWithView:self.superview duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 [self removeFromSuperview];
@@ -186,36 +215,15 @@ TipsView
         if (self.showType == TipsViewShowTypeFromBottom) {
             _containertView.transform = CGAffineTransformIdentity;
             _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
-            
-            [self clear];
-        
+            [self removeFromSuperview];
         } else {
             [self removeFromSuperview];
         }
     }
 }
 
-- (void)clear {
-    [self removeFromSuperview];
-    [self.window removeFromSuperview];
-    self.window = nil;
-}
-
-- (UIWindow *)window {
-    if (_window == nil) {
-        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        _window.windowLevel = UIWindowLevelAlert;
-        _window.backgroundColor = [UIColor clearColor];
-        
-        [_window makeKeyAndVisible];
-        
-//        self.touchLayer = [[UIControl alloc] initWithFrame:self.window.bounds];
-//        self.touchLayer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
-//        [self.window addSubview:self.touchLayer];
-//        [self.touchLayer addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchDown];
-    }
-    
-    return _window;
+- (UIView *)containerView {
+    return [UIApplication sharedApplication].keyWindow;
 }
 
 @end

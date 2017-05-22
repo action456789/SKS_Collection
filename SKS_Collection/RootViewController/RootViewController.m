@@ -99,8 +99,13 @@
 
 - (void)showTipsView
 {
-    TipsView *tipsView = [[TipsView alloc] initWithContentViewSize:CGSizeMake(kScreenWidth, 243)];
+    UIView *contentView = [UIView new];
+    contentView.backgroundColor = [UIColor redColor];
+    
+    TipsView *tipsView = [[TipsView alloc] init];
     tipsView.showType = TipsViewShowTypeFromBottom;
+    tipsView.contentView = contentView;
+    tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
     
     if (tipsView.isAnimating) {
         return;
