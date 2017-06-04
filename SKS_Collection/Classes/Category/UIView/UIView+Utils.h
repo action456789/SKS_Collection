@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Tool)
+@interface UIView (Utils)
 
 //在view下显示阴影
 - (void)showShadow:(BOOL)val;

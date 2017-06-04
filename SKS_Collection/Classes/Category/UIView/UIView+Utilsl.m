@@ -6,9 +6,9 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import "UIView+Tool.h"
+#import "UIView+Utils.h"
 
-@implementation UIView (Tool)
+@implementation UIView (Utils)
 
 //在view下显示阴影
 -(void)showShadow:(BOOL)val {

@@ -72,7 +72,7 @@
 
         CGFloat x = i * (kBtnW + kBtnsPadding);
         button.frame = CGRectMake(x, 0, kBtnW, kBtnH);
-        button.centerY = _frame.size.height * 0.5;
+        button.kk_centerY = _frame.size.height * 0.5;
         
         [self.btnArray addObject:button];
         
@@ -114,11 +114,11 @@
             [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.9 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
     
                 for (NSInteger i=1; i<self.btnArray.count; i++) {
-                    self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
+                    self.btnArray[i].kk_x = self.btnArray[0].kk_x - kBtnW - 20;
                 }
             } completion:^(BOOL finished) {
     
-                self.width = kBtnW;
+                self.kk_width = kBtnW;
                 self.isAnimating = NO;
             }];
         } else if (self.animateOption == EjectShrikAnimationTypeKeyFrame) {
@@ -127,25 +127,25 @@
             [UIView animateKeyframesWithDuration:duration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
                 for (int i=1; i<self.btnArray.count; i++) {
                     [UIView addKeyframeWithRelativeStartTime:(i-1)/persent relativeDuration:1/persent animations:^{
-                        self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
+                        self.btnArray[i].kk_x = self.btnArray[0].kk_x - kBtnW - 20;
                     }];
                 }
             } completion:^(BOOL finished) {
-                self.width = kBtnW;
+                self.kk_width = kBtnW;
                 self.isAnimating = NO;
             }];
         } 
     } else {
         for (NSInteger i=1; i<self.btnArray.count; i++) {
-            self.btnArray[i].x = self.btnArray[0].x - kBtnW - 20;
+            self.btnArray[i].kk_x = self.btnArray[0].kk_x - kBtnW - 20;
         }
-        self.width = kBtnW;
+        self.kk_width = kBtnW;
     }
 }
 
 - (void)ejectBtnsWithAnimate:(BOOL)animate {
     
-    self.width = _originalW;
+    self.kk_width = _originalW;
     [self.btnArray[0] setBackgroundImage:[UIImage imageNamed:@"Eject展开.png"] forState:UIControlStateNormal];
 
     if (animate) {
@@ -156,7 +156,7 @@
             [UIView animateWithDuration:0.33 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
     
                 for (NSInteger i=1; i<self.btnArray.count; i++) {
-                    self.btnArray[i].x = i * (kBtnW + kBtnsPadding);
+                    self.btnArray[i].kk_x = i * (kBtnW + kBtnsPadding);
                 }
     
             } completion:^(BOOL finished) {
@@ -168,7 +168,7 @@
             [UIView animateKeyframesWithDuration:duration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
                 for (int i=1; i<self.btnArray.count; i++) {
                     [UIView addKeyframeWithRelativeStartTime:(i-1)/persent relativeDuration:1/persent animations:^{
-                        self.btnArray[i].x = i * (kBtnW + kBtnsPadding);
+                        self.btnArray[i].kk_x = i * (kBtnW + kBtnsPadding);
                     }];
                 }
             } completion:^(BOOL finished) {
@@ -179,7 +179,7 @@
 
     } else {
         for (NSInteger i=1; i<self.btnArray.count; i++) {
-            self.btnArray[i].x = i * (kBtnW + kBtnsPadding);
+            self.btnArray[i].kk_x = i * (kBtnW + kBtnsPadding);
         }
     }
 }

@@ -51,8 +51,8 @@
     [self.view addSubview:viewfinder];
     
     UIImageView *scanLine = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"scanLine"]];
-    scanLine.width = kViewfinderWH;
-    scanLine.height = 13;
+    scanLine.kk_width = kViewfinderWH;
+    scanLine.kk_height = 13;
     scanLine.center = viewfinder.center;
     _scannerLineView = scanLine;
     [self.view addSubview:scanLine];

@@ -81,7 +81,7 @@
     
     [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         sourceVC.maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-        sourceVC.contentView.transform = CGAffineTransformMakeTranslation(0, sourceVC.view.size.height);
+        sourceVC.contentView.transform = CGAffineTransformMakeTranslation(0, sourceVC.view.frame.size.height);
     } completion:^(BOOL finished) {
         //4
         [transitionContext completeTransition:YES];

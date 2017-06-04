@@ -66,7 +66,7 @@
     // 标题
     _normalTitleLable = ({
         UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, kHeadViewW * 0.7)];
-        lable.centerY = contentView.centerY;
+        lable.kk_centerY = contentView.kk_centerY;
         [contentView addSubview:lable];
         lable;
     });
@@ -100,9 +100,9 @@
     [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:1.f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         
         _normalTitleLable.alpha = 1.f;
-        _normalTitleLable.x -= 10;
+        _normalTitleLable.kk_x -= 10;
         _highlightTitleLable.alpha = 0.f;
-        _highlightTitleLable.x -= 10;
+        _highlightTitleLable.kk_x -= 10;
         
     } completion:nil];
 }
@@ -113,9 +113,9 @@
     [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:1.f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         
         _normalTitleLable.alpha = 0.f;
-        _normalTitleLable.x += 10;
+        _normalTitleLable.kk_x += 10;
         _highlightTitleLable.alpha   = 1.f;
-        _highlightTitleLable.x += 10;
+        _highlightTitleLable.kk_x += 10;
         
     } completion:nil];
 }

@@ -10,99 +10,99 @@
 
 @implementation UIView (Frame)
 
-- (void)setX:(CGFloat)x
+- (void)setKk_x:(CGFloat)kk_x
 {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = kk_x;
     self.frame = frame;
 }
 
-- (CGFloat)x
+- (CGFloat)kk_x
 {
     return self.frame.origin.x;
 }
 
-- (void)setY:(CGFloat)y
+- (void)setKk_y:(CGFloat)kk_y
 {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = kk_y;
     self.frame = frame;
 }
 
-- (CGFloat)y
+- (CGFloat)kk_y
 {
     return self.frame.origin.y;
 }
 
-- (void)setWidth:(CGFloat)width
+- (void)setKk_width:(CGFloat)kk_width
 {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = kk_width;
     self.frame = frame;
 }
 
-- (CGFloat)width
+- (CGFloat)kk_width
 {
     return self.frame.size.width;
 }
 
-- (void)setHeight:(CGFloat)height
+- (void)setKk_height:(CGFloat)kk_height
 {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = kk_height;
     self.frame = frame;
 }
 
-- (CGFloat)height
+- (CGFloat)kk_height
 {
     return self.frame.size.height;
 }
 
-- (void)setSize:(CGSize)size
+- (void)setKk_size:(CGSize)kk_size
 {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = kk_size;
     self.frame = frame;
 }
 
-- (CGSize)size
+- (CGSize)kk_size
 {
     return self.frame.size;
 }
 
-- (void)setOrigin:(CGPoint)origin
+- (void)setKk_origin:(CGPoint)kk_origin
 {
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.origin = kk_origin;
     self.frame = frame;
 }
 
-- (CGPoint)origin
+- (CGPoint)kk_origin
 {
     return self.frame.origin;
 }
 
-- (CGFloat)centerX
+- (CGFloat)kk_centerX
 {
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX
+- (void)setKk_centerX:(CGFloat)kk_centerX
 {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = kk_centerX;
     self.center = center;
 }
 
-- (CGFloat)centerY
+- (CGFloat)kk_centerY
 {
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY
+- (void)setKk_centerY:(CGFloat)kk_centerY
 {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = kk_centerY;
     self.center = center;
 }
 
