@@ -6,19 +6,18 @@
 //  Copyright (c) 2015年 KeSen. All rights reserved.
 //
 
-#import "UIImage+KS.h"
+#import "UIImage+Utils.h"
 
-@implementation UIImage (KS)
+@implementation UIImage (Utils)
 
 /**
  *  返回一张降低了亮度的图片
  */
-+ (UIImage *)reduceImageBrightnessWithImage:(UIImage *)image {
+- (UIImage *)reduceBrightness {
     
-    CIImage *beginImage = [CIImage imageWithCGImage:image.CGImage];
-    
-    CIFilter *filter    = [CIFilter filterWithName:@"CIColorControls"];
-    
+    CIImage *beginImage = [CIImage imageWithCGImage:self.CGImage];
+
+    CIFilter *filter = [CIFilter filterWithName:@"CIColorControls"];
     [filter setValue:beginImage forKey:kCIInputImageKey];
     
     //  饱和度      0---2
@@ -49,10 +48,18 @@
  *  @param view 需要截屏的视图
  *
  */
-+ (instancetype)imageWithCaptureView:(UIView *)view
++ (instancetype)imageWithCaptureView:(UIView *)view size:(CGSize)size
 {
+    if (view == nil) {
+        view = [[UIApplication sharedApplication].windows lastObject];
+    }
+    
+    if (size.width == 0 && size.height == 0) {
+        size = view.bounds.size;
+    }
+    
     // 开启上下文
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
     
     // 获取上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -129,7 +136,7 @@
 }
 
 // 根据颜色创建图片
-+ (UIImage *)createImageFromColor:(UIColor *)color size:(CGSize)size
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
 {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);

@@ -12,7 +12,6 @@
 
 #import "ModalToViewController.h"
 
-#import "UIImage+KS.h"
 
 @interface PresentBottomUpTransitioning ()
 

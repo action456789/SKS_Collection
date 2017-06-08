@@ -6,8 +6,8 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface QRCodeViewController : BaseViewController
+@interface QRCodeViewController : UIViewController
 
 @end
