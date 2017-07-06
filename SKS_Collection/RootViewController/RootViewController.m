@@ -38,6 +38,7 @@
 #import "ModalFromViewController.h"
 #import "BanberViewController.h"
 #import "EjectShrinkBtnsDemoVC.h"
+#import "ColorSliderViewController.h"
 
 @interface RootViewController()
 
@@ -86,6 +87,7 @@
                         ,[StaticCellItem itemWithTitle:@"25. 自定义转场动画" icon:nil objectClass:[ModalFromViewController class]]
                         ,[StaticCellItem itemWithTitle:@"26. 启动引导图、无线循环View" icon:nil objectClass:[BanberViewController class]]
                         ,[StaticCellItem itemWithTitle:@"27. 弹性按钮" icon:nil objectClass:[EjectShrinkBtnsDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"28. 彩色滑块" icon:nil objectClass:[ColorSliderViewController class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithHeaderTitle:nil
