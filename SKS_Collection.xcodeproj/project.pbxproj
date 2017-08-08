@@ -129,6 +129,7 @@
 		6D1A816406B2EA4F1E602295 /* libPods-SKS_Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */; };
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
+		8118C2801F3333FC00740B8A /* NSArray+Dict.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118C27E1F3333FC00740B8A /* NSArray+Dict.m */; };
 		8130DF8A1EE8E8770034ABB4 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8130DF891EE8E8770034ABB4 /* UIImage+Utils.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
 		814019871EC2BCBE00C5B854 /* UIDevice+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 814019861EC2BCBE00C5B854 /* UIDevice+Identifier.m */; };
@@ -372,6 +373,8 @@
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
 		8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectShrinkBtnsDemoVC.m; sourceTree = "<group>"; };
+		8118C27D1F3333FC00740B8A /* NSArray+Dict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Dict.h"; sourceTree = "<group>"; };
+		8118C27E1F3333FC00740B8A /* NSArray+Dict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Dict.m"; sourceTree = "<group>"; };
 		8130DF881EE8E8770034ABB4 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
 		8130DF891EE8E8770034ABB4 /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
@@ -782,6 +785,8 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8118C27D1F3333FC00740B8A /* NSArray+Dict.h */,
+				8118C27E1F3333FC00740B8A /* NSArray+Dict.m */,
 				10DD4E241D6BF98B00F7BA25 /* NSObject */,
 				10F445731D66E327005C31E3 /* NSDictionary */,
 				10F4DFE91D40A02200E0D223 /* NSFileManager */,
@@ -1473,6 +1478,7 @@
 				102185DF1D5ADB5300C5AD64 /* UIColor+SKS.m in Sources */,
 				1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */,
 				10DD98DA1D226B7D00193A69 /* UITraitCollection+SizeClass.m in Sources */,
+				8118C2801F3333FC00740B8A /* NSArray+Dict.m in Sources */,
 				8130DF8A1EE8E8770034ABB4 /* UIImage+Utils.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,

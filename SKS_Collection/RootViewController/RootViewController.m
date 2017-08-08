@@ -40,6 +40,8 @@
 #import "EjectShrinkBtnsDemoVC.h"
 #import "ColorSliderViewController.h"
 
+#import "NSArray+Dict.h"
+
 @interface RootViewController()
 
 @end
