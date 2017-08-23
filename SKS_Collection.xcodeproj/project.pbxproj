@@ -104,10 +104,6 @@
 		2E38E9321E27BF7E0086B870 /* CycleScrollViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9311E27BF7E0086B870 /* CycleScrollViewDemoVC.m */; };
 		2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E93E1E2875E90086B870 /* EmptyContentTableViewController.m */; };
 		2E38E9411E2875E90086B870 /* EmptyContentTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E38E93F1E2875E90086B870 /* EmptyContentTableViewController.xib */; };
-		2E38E94D1E2899610086B870 /* ALActionBlockWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9461E2899610086B870 /* ALActionBlockWrapper.m */; };
-		2E38E94E1E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9481E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m */; };
-		2E38E94F1E2899610086B870 /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E94A1E2899610086B870 /* UIControl+ALActionBlocks.m */; };
-		2E38E9501E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E94C1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m */; };
 		2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E97F1E28D5BB0086B870 /* StaticCollectionView.m */; };
 		2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9811E28D5BB0086B870 /* StaticCollectionViewCell.m */; };
 		2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E38E9831E28D5BB0086B870 /* StaticCollectionViewCellItem.m */; };
@@ -326,16 +322,6 @@
 		2E38E93D1E2875E90086B870 /* EmptyContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyContentTableViewController.h; sourceTree = "<group>"; };
 		2E38E93E1E2875E90086B870 /* EmptyContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyContentTableViewController.m; sourceTree = "<group>"; };
 		2E38E93F1E2875E90086B870 /* EmptyContentTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyContentTableViewController.xib; sourceTree = "<group>"; };
-		2E38E9431E2899610086B870 /* ALActionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlock.h; sourceTree = "<group>"; };
-		2E38E9441E2899610086B870 /* ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlocks.h; sourceTree = "<group>"; };
-		2E38E9451E2899610086B870 /* ALActionBlockWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlockWrapper.h; sourceTree = "<group>"; };
-		2E38E9461E2899610086B870 /* ALActionBlockWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALActionBlockWrapper.m; sourceTree = "<group>"; };
-		2E38E9471E2899610086B870 /* UIBarButtonItem+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ALActionBlocks.h"; sourceTree = "<group>"; };
-		2E38E9481E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ALActionBlocks.m"; sourceTree = "<group>"; };
-		2E38E9491E2899610086B870 /* UIControl+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ALActionBlocks.h"; sourceTree = "<group>"; };
-		2E38E94A1E2899610086B870 /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
-		2E38E94B1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
-		2E38E94C1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
 		2E38E97E1E28D5BB0086B870 /* StaticCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCollectionView.h; sourceTree = "<group>"; };
 		2E38E97F1E28D5BB0086B870 /* StaticCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCollectionView.m; sourceTree = "<group>"; };
 		2E38E9801E28D5BB0086B870 /* StaticCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCollectionViewCell.h; sourceTree = "<group>"; };
@@ -369,6 +355,20 @@
 		2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalFromViewController.xib; sourceTree = "<group>"; };
 		2EDD99151E35A9C10077AEEF /* BanberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BanberViewController.h; sourceTree = "<group>"; };
 		2EDD99161E35A9C10077AEEF /* BanberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BanberViewController.m; sourceTree = "<group>"; };
+		8107D1AA1F4D2D02000D9C35 /* ALActionBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALActionBlock.h; sourceTree = "<group>"; };
+		8107D1AB1F4D2D02000D9C35 /* ALActionBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALActionBlocks.h; sourceTree = "<group>"; };
+		8107D1AC1F4D2D02000D9C35 /* ALActionBlockWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALActionBlockWrapper.h; sourceTree = "<group>"; };
+		8107D1AD1F4D2D02000D9C35 /* ALActionBlockWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALActionBlockWrapper.m; sourceTree = "<group>"; };
+		8107D1AE1F4D2D02000D9C35 /* UIBarButtonItem+ALActionBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ALActionBlocks.h"; sourceTree = "<group>"; };
+		8107D1AF1F4D2D02000D9C35 /* UIBarButtonItem+ALActionBlocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ALActionBlocks.m"; sourceTree = "<group>"; };
+		8107D1B01F4D2D02000D9C35 /* UIControl+ALActionBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+ALActionBlocks.h"; sourceTree = "<group>"; };
+		8107D1B11F4D2D02000D9C35 /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
+		8107D1B21F4D2D02000D9C35 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
+		8107D1B31F4D2D02000D9C35 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
+		8107D1B41F4D2DB3000D9C35 /* YYWeakify_Strongify_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYWeakify_Strongify_Macro.h; sourceTree = "<group>"; };
+		8107D1B51F4D300E000D9C35 /* YYCategory_Property_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCategory_Property_Macro.h; sourceTree = "<group>"; };
+		8107D1B71F4D318E000D9C35 /* YYBenchmark_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBenchmark_Macro.h; sourceTree = "<group>"; };
+		8107D1B81F4D323E000D9C35 /* YYDispatch_Queue_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDispatch_Queue_Macro.h; sourceTree = "<group>"; };
 		8118A5EA1EA62B6300E225CD /* UPEjectShrinkBtnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPEjectShrinkBtnsView.h; sourceTree = "<group>"; };
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
@@ -735,7 +735,6 @@
 			children = (
 				10DD983C1D226B1F00193A69 /* AppDelegate.h */,
 				10DD983D1D226B1F00193A69 /* AppDelegate.m */,
-				2E38E9151E27B09F0086B870 /* Libs */,
 				10DD4E331D6D8DD600F7BA25 /* SharedData */,
 				103A55541D3CCCFA00366D8F /* BaseClasses */,
 				10642B961D34D7D6001217CF /* RootViewController */,
@@ -761,6 +760,7 @@
 		10DD98631D226B7D00193A69 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8107D1A81F4D2D02000D9C35 /* UIButton等Block支持 */,
 				10DD98641D226B7D00193A69 /* Audio&VidioTool */,
 				10DD98691D226B7D00193A69 /* Category */,
 				10DD98961D226B7D00193A69 /* Macro */,
@@ -916,6 +916,10 @@
 				10DD98971D226B7D00193A69 /* LogMacro.h */,
 				10DD98981D226B7D00193A69 /* Singleton.h */,
 				1097CDE21D93C21C006E6A3A /* CommonMacro.h */,
+				8107D1B41F4D2DB3000D9C35 /* YYWeakify_Strongify_Macro.h */,
+				8107D1B51F4D300E000D9C35 /* YYCategory_Property_Macro.h */,
+				8107D1B71F4D318E000D9C35 /* YYBenchmark_Macro.h */,
+				8107D1B81F4D323E000D9C35 /* YYDispatch_Queue_Macro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1127,14 +1131,6 @@
 			path = AppleSystemService;
 			sourceTree = "<group>";
 		};
-		2E38E9151E27B09F0086B870 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				2E38E9421E2899610086B870 /* ALActionBlocks */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
 		2E38E92F1E27BF7E0086B870 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
@@ -1152,23 +1148,6 @@
 				2E38E93F1E2875E90086B870 /* EmptyContentTableViewController.xib */,
 			);
 			path = EmptyComtentView;
-			sourceTree = "<group>";
-		};
-		2E38E9421E2899610086B870 /* ALActionBlocks */ = {
-			isa = PBXGroup;
-			children = (
-				2E38E9431E2899610086B870 /* ALActionBlock.h */,
-				2E38E9441E2899610086B870 /* ALActionBlocks.h */,
-				2E38E9451E2899610086B870 /* ALActionBlockWrapper.h */,
-				2E38E9461E2899610086B870 /* ALActionBlockWrapper.m */,
-				2E38E9471E2899610086B870 /* UIBarButtonItem+ALActionBlocks.h */,
-				2E38E9481E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m */,
-				2E38E9491E2899610086B870 /* UIControl+ALActionBlocks.h */,
-				2E38E94A1E2899610086B870 /* UIControl+ALActionBlocks.m */,
-				2E38E94B1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.h */,
-				2E38E94C1E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m */,
-			);
-			path = ALActionBlocks;
 			sourceTree = "<group>";
 		};
 		2E38E9511E28A38B0086B870 /* StaticCollectionView */ = {
@@ -1254,6 +1233,31 @@
 				2EABE2991E2E417200498F7F /* ModalToViewController.xib */,
 			);
 			path = "自定义转场动画";
+			sourceTree = "<group>";
+		};
+		8107D1A81F4D2D02000D9C35 /* UIButton等Block支持 */ = {
+			isa = PBXGroup;
+			children = (
+				8107D1A91F4D2D02000D9C35 /* ALActionBlocks */,
+			);
+			path = "UIButton等Block支持";
+			sourceTree = "<group>";
+		};
+		8107D1A91F4D2D02000D9C35 /* ALActionBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				8107D1AA1F4D2D02000D9C35 /* ALActionBlock.h */,
+				8107D1AB1F4D2D02000D9C35 /* ALActionBlocks.h */,
+				8107D1AC1F4D2D02000D9C35 /* ALActionBlockWrapper.h */,
+				8107D1AD1F4D2D02000D9C35 /* ALActionBlockWrapper.m */,
+				8107D1AE1F4D2D02000D9C35 /* UIBarButtonItem+ALActionBlocks.h */,
+				8107D1AF1F4D2D02000D9C35 /* UIBarButtonItem+ALActionBlocks.m */,
+				8107D1B01F4D2D02000D9C35 /* UIControl+ALActionBlocks.h */,
+				8107D1B11F4D2D02000D9C35 /* UIControl+ALActionBlocks.m */,
+				8107D1B21F4D2D02000D9C35 /* UIGestureRecognizer+ALActionBlocks.h */,
+				8107D1B31F4D2D02000D9C35 /* UIGestureRecognizer+ALActionBlocks.m */,
+			);
+			path = ALActionBlocks;
 			sourceTree = "<group>";
 		};
 		8118A5E31EA62B1000E225CD /* EjectShrinkView */ = {
@@ -1494,7 +1498,6 @@
 				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
-				2E38E9501E2899610086B870 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
@@ -1516,7 +1519,6 @@
 				10DD98E01D226B7D00193A69 /* UIView+Utilsl.m in Sources */,
 				818082041EE3A22E00450FB6 /* UIView+Screenshot.m in Sources */,
 				819A27341F0CF20D003ED28E /* ColorSliderViewController.m in Sources */,
-				2E38E94F1E2899610086B870 /* UIControl+ALActionBlocks.m in Sources */,
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
 				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
@@ -1544,12 +1546,10 @@
 				10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */,
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
-				2E38E94E1E2899610086B870 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
 				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
 				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
-				2E38E94D1E2899610086B870 /* ALActionBlockWrapper.m in Sources */,
 				818082071EE3A2A300450FB6 /* UIView+Frame.m in Sources */,
 				10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
