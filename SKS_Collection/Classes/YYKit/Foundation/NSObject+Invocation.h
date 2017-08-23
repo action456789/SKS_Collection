@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSObject (Invocation)
 
 #pragma mark - Sending messages with variable parameters
@@ -50,7 +52,7 @@
  NSValue *frameValue = [view performSelectorWithArgs:@selector(frame)];
  CGRect frame = frameValue.CGRectValue;
  */
-- (nullable id)kk_performSelectorWithArgs:(SEL _Nullable )sel, ...;
+- (id)kk_performSelectorWithArgs:(SEL)sel, ...;
 
 /**
  Invokes a method of the receiver on the current thread using the default mode after a delay.
@@ -77,7 +79,7 @@
  // variable arg is not object
  [view performSelectorWithArgs:@selector(setCenter:), afterDelay:0, CGPointMake(0, 0)];
  */
-- (void)kk_performSelectorWithArgs:(SEL _Nullable )sel afterDelay:(NSTimeInterval)delay, ...;
+- (void)kk_performSelectorWithArgs:(SEL)sel afterDelay:(NSTimeInterval)delay, ...;
 
 /**
  Invokes a method of the receiver on the main thread using the default mode.
@@ -109,7 +111,7 @@
  // variable arg is not object
  [view performSelectorWithArgsOnMainThread:@selector(setCenter:), waitUntilDone:NO, CGPointMake(0, 0)];
  */
-- (nullable id)kk_performSelectorWithArgsOnMainThread:(SEL _Nullable )sel waitUntilDone:(BOOL)wait, ...;
+- (id)kk_performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...;
 
 /**
  Invokes a method of the receiver on the specified thread using the default mode.
@@ -145,7 +147,7 @@
  return [num2 compare:num2];
  }];
  */
-- (nullable id)kk_performSelectorWithArgs:(SEL _Nullable )sel onThread:(NSThread *_Nullable)thread waitUntilDone:(BOOL)wait, ...;
+- (id)kk_performSelectorWithArgs:(SEL)sel onThread:(NSThread *)thread waitUntilDone:(BOOL)wait, ...;
 
 /**
  Invokes a method of the receiver on a new background thread.
@@ -169,6 +171,8 @@
  return [num2 compare:num2];
  }];
  */
-- (void)kk_performSelectorWithArgsInBackground:(SEL _Nullable )sel, ...;
+- (void)kk_performSelectorWithArgsInBackground:(SEL)sel, ...;
 
 @end
+
+NS_ASSUME_NONNULL_END

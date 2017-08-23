@@ -9,7 +9,7 @@
 #import "ColorSliderViewController.h"
 #import "ColorSlider.h"
 #import "CommonMacro.h"
-#import "NSObject+Invocation.h"
+#import "NSObject+KVO.h"
 
 @interface ColorSliderViewController ()
 
@@ -45,7 +45,10 @@
     pathLayer.fillColor = nil; // 默认为blackColor
     pathLayer.path = path.CGPath;
     [self.view.layer addSublayer:pathLayer];
-    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.name = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
 }
 
 - (void)funcA:(NSString *)B {
