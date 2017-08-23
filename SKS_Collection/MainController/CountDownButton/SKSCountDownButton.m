@@ -12,50 +12,17 @@
 @implementation SKSCountDownButton {
     NSTimer           *_timer;
     NSString          *_titleForNormal;
-    NSTimeInterval    _second;
-    SKSCountDownButtonClickedHandle  _clickedHandle;
 }
 
-- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(SKSCountDownButtonClickedHandle)handle
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(TouchUpInsideBlock)handle
 {
     if(self = [super init]) {
-        _second = timeLenth > 0 ? timeLenth : 60;
-        [self addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
-        _clickedHandle = [handle copy];
+        _timeLength = timeLenth > 0 ? timeLenth : 60;
+        [self addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        _clickHandle = [handle copy];
     }
     return self;
 }
-
-- (void)btnClicked
-{
-    self.userInteractionEnabled = NO;
-    _titleForNormal = [self titleForState:UIControlStateNormal];
-    [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)_second] forState:UIControlStateNormal];
-    
-    [self p_startTimer];
-    
-    if (_clickedHandle) {
-        _clickedHandle();
-    }
-}
-
-- (void)p_startTimer
-{
-    __block NSInteger timeLeft = _second;
-
-    _timer = [NSTimer sks_scheduledTimerInCommonModesWithTimeInterval:1.0f repeats:YES block:^{
-        timeLeft--;
-        if (timeLeft < 0) {
-            [self setTitle:_titleForNormal forState:UIControlStateNormal];
-            self.userInteractionEnabled = YES;
-            [_timer invalidate];
-        } else {
-            [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)timeLeft] forState:UIControlStateNormal];
-            self.userInteractionEnabled = NO;
-        }
-    }];
-}
-
 
 - (void)dealloc
 {
@@ -63,6 +30,56 @@
         [_timer invalidate];
         _timer = nil;
     }
+}
+
+#pragma mark - getter, setter
+
+- (void)setTimeLength:(NSTimeInterval)timeLength {
+    _timeLength = timeLength < 0 ? 60 : timeLength;
+}
+
+- (void)setClickHandle:(TouchUpInsideBlock)clickHandle {
+    _clickHandle = [clickHandle copy];
+    
+    [self addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+#pragma mark - private method
+
+- (void)btnClicked:(SKSCountDownButton *)sender
+{
+    if (_clickHandle) {
+        _clickHandle(sender);
+    }
+}
+
+- (void)startCountDown {
+    self.userInteractionEnabled = NO;
+    _titleForNormal = [self titleForState:UIControlStateNormal];
+    
+    [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)self.timeLength] forState:UIControlStateNormal];
+    
+    [self _startTimer];
+}
+
+- (void)_startTimer
+{
+    __block NSInteger timeLeft = self.timeLength;
+    __block NSString *title = @"";
+    
+    _timer = [NSTimer sks_scheduledTimerInCommonModesWithTimeInterval:1.0f repeats:YES block:^{
+        timeLeft--;
+        title = [NSString stringWithFormat:@"%lu", (unsigned long)timeLeft];
+        
+        if (timeLeft < 0) {
+            [self setTitle:_titleForNormal forState:UIControlStateNormal];
+            self.userInteractionEnabled = YES;
+            [_timer invalidate];
+        } else {
+            [self setTitle:title forState:UIControlStateNormal];
+            self.userInteractionEnabled = NO;
+        }
+    }];
 }
 
 @end
