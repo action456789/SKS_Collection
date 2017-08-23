@@ -136,6 +136,7 @@
 		819A27341F0CF20D003ED28E /* ColorSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A27321F0CF20D003ED28E /* ColorSliderViewController.m */; };
 		819A273C1F0DCA0C003ED28E /* ColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A273B1F0DCA0C003ED28E /* ColorSlider.m */; };
 		819A27441F0DF01D003ED28E /* UIView+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A27431F0DF01D003ED28E /* UIView+Color.m */; };
+		81C7AB3B1F4D5F5500DAC8E0 /* NSObject+KKSwizzel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB3A1F4D5F5500DAC8E0 /* NSObject+KKSwizzel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,6 +395,8 @@
 		819A273B1F0DCA0C003ED28E /* ColorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSlider.m; sourceTree = "<group>"; };
 		819A27421F0DF01D003ED28E /* UIView+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Color.h"; sourceTree = "<group>"; };
 		819A27431F0DF01D003ED28E /* UIView+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Color.m"; sourceTree = "<group>"; };
+		81C7AB391F4D5F5500DAC8E0 /* NSObject+KKSwizzel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KKSwizzel.h"; sourceTree = "<group>"; };
+		81C7AB3A1F4D5F5500DAC8E0 /* NSObject+KKSwizzel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KKSwizzel.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -760,6 +763,7 @@
 		10DD98631D226B7D00193A69 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8107D1B91F4D5749000D9C35 /* YYKit */,
 				8107D1A81F4D2D02000D9C35 /* UIButton等Block支持 */,
 				10DD98641D226B7D00193A69 /* Audio&VidioTool */,
 				10DD98691D226B7D00193A69 /* Category */,
@@ -1260,6 +1264,23 @@
 			path = ALActionBlocks;
 			sourceTree = "<group>";
 		};
+		8107D1B91F4D5749000D9C35 /* YYKit */ = {
+			isa = PBXGroup;
+			children = (
+				8107D1BA1F4D5749000D9C35 /* Foundation */,
+			);
+			path = YYKit;
+			sourceTree = "<group>";
+		};
+		8107D1BA1F4D5749000D9C35 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				81C7AB391F4D5F5500DAC8E0 /* NSObject+KKSwizzel.h */,
+				81C7AB3A1F4D5F5500DAC8E0 /* NSObject+KKSwizzel.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		8118A5E31EA62B1000E225CD /* EjectShrinkView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,6 +1531,7 @@
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				10F5B0661D81539E00382E50 /* CityCounty.m in Sources */,
 				2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */,
+				81C7AB3B1F4D5F5500DAC8E0 /* NSObject+KKSwizzel.m in Sources */,
 				10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,

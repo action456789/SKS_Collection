@@ -10,6 +10,8 @@
 #import "ColorSlider.h"
 #import "CommonMacro.h"
 
+#import "NSObject+KKSwizzel.h"
+
 @interface ColorSliderViewController ()
 
 @end
