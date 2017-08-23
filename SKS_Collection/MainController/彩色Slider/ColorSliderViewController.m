@@ -48,7 +48,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.name = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+    
 }
 
 - (void)funcA:(NSString *)B {

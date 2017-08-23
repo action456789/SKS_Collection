@@ -14,7 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SKSCountDownButton *btn = [[SKSCountDownButton alloc] initWithTimeLenth:11 clickdHandle:^{
+    SKSCountDownButton *btn = [[SKSCountDownButton alloc] initWithTimeLenth:11 clickdHandle:^(SKSCountDownButton *sender) {
         NSLog(@"%s, %@", __func__, btn);
     }];
     
