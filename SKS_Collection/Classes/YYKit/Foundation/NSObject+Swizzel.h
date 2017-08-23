@@ -1,5 +1,5 @@
 //
-//  NSObject+KKSwizzel.h
+//  NSObject+Swizzel.h
 //  SKS_Collection
 //
 //  Created by sen.ke on 2017/8/23.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (KKSwizzel)
+@interface NSObject (Swizzel)
 
 #pragma mark - Swap method (Swizzling)
 ///=============================================================================

@@ -1,16 +1,17 @@
 //
-//  NSObject+KKSwizzel.m
+//  NSObject+Swizzel.m
 //  SKS_Collection
 //
 //  Created by sen.ke on 2017/8/23.
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "NSObject+KKSwizzel.h"
+#import "NSObject+Swizzel.h"
+
 #import <objc/objc.h>
 #import <objc/runtime.h>
 
-@implementation NSObject (KKSwizzel)
+@implementation NSObject (Swizzel)
 
 + (BOOL)swizzleInstance:(id)instance method:(SEL)originalSel with:(SEL)newSel {
     Class class = object_getClass(instance);
