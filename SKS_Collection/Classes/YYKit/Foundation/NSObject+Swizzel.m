@@ -13,7 +13,7 @@
 
 @implementation NSObject (Swizzel)
 
-+ (BOOL)swizzleInstance:(id)instance method:(SEL)originalSel with:(SEL)newSel {
++ (BOOL)kk_swizzleInstance:(id)instance method:(SEL)originalSel with:(SEL)newSel {
     Class class = object_getClass(instance);
     Method originalMethod = class_getInstanceMethod(class, originalSel);
     Method newMethod = class_getInstanceMethod(class, newSel);
@@ -36,7 +36,7 @@
     return YES;
 }
 
-+ (BOOL)swizzleClass:(Class)someClass method:(SEL)originalSel with:(SEL)newSel {
++ (BOOL)kk_swizzleClass:(Class)someClass method:(SEL)originalSel with:(SEL)newSel {
     Method originalMethod = class_getInstanceMethod(someClass, originalSel);
     Method newMethod = class_getInstanceMethod(someClass, newSel);
     if (!originalMethod || !newMethod) return NO;

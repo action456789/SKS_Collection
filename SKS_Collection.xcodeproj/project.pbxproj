@@ -137,6 +137,7 @@
 		819A273C1F0DCA0C003ED28E /* ColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A273B1F0DCA0C003ED28E /* ColorSlider.m */; };
 		819A27441F0DF01D003ED28E /* UIView+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A27431F0DF01D003ED28E /* UIView+Color.m */; };
 		81C7AB411F4D68BF00DAC8E0 /* NSObject+Swizzel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB401F4D68BF00DAC8E0 /* NSObject+Swizzel.m */; };
+		81C7AB441F4D693E00DAC8E0 /* NSObject+Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB431F4D693E00DAC8E0 /* NSObject+Invocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -397,6 +398,8 @@
 		819A27431F0DF01D003ED28E /* UIView+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Color.m"; sourceTree = "<group>"; };
 		81C7AB3F1F4D68BF00DAC8E0 /* NSObject+Swizzel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzel.h"; sourceTree = "<group>"; };
 		81C7AB401F4D68BF00DAC8E0 /* NSObject+Swizzel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzel.m"; sourceTree = "<group>"; };
+		81C7AB421F4D693E00DAC8E0 /* NSObject+Invocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Invocation.h"; sourceTree = "<group>"; };
+		81C7AB431F4D693E00DAC8E0 /* NSObject+Invocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Invocation.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1277,6 +1280,8 @@
 			children = (
 				81C7AB3F1F4D68BF00DAC8E0 /* NSObject+Swizzel.h */,
 				81C7AB401F4D68BF00DAC8E0 /* NSObject+Swizzel.m */,
+				81C7AB421F4D693E00DAC8E0 /* NSObject+Invocation.h */,
+				81C7AB431F4D693E00DAC8E0 /* NSObject+Invocation.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1518,6 +1523,7 @@
 				103954A81DCB073C00DADA5E /* LocksDemoViewController.m in Sources */,
 				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
+				81C7AB441F4D693E00DAC8E0 /* NSObject+Invocation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,

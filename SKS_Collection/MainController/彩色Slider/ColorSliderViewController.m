@@ -9,6 +9,7 @@
 #import "ColorSliderViewController.h"
 #import "ColorSlider.h"
 #import "CommonMacro.h"
+#import "NSObject+Invocation.h"
 
 @interface ColorSliderViewController ()
 
@@ -44,6 +45,11 @@
     pathLayer.fillColor = nil; // 默认为blackColor
     pathLayer.path = path.CGPath;
     [self.view.layer addSublayer:pathLayer];
+    
+}
+
+- (void)funcA:(NSString *)B {
+    NSLog(@"funcA, %@", B);
 }
 
 - (void)didReceiveMemoryWarning {
