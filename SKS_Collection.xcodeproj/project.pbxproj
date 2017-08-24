@@ -61,7 +61,6 @@
 		10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD986C1D226B7D00193A69 /* CALayer+Animation.m */; };
 		10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD986E1D226B7D00193A69 /* Foundation+Log.m */; };
 		10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98711D226B7D00193A69 /* NSDate+KS.m */; };
-		10DD98D51D226B7D00193A69 /* NSString+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD98781D226B7D00193A69 /* NSString+Font.m */; };
 		10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD987A1D226B7D00193A69 /* NSString+Hash.m */; };
 		10DD98D71D226B7D00193A69 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD987C1D226B7D00193A69 /* NSString+Regular.m */; };
 		10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DD987F1D226B7D00193A69 /* NSTimer+BlockSupurt.m */; };
@@ -144,6 +143,8 @@
 		81C7AB7F1F4E65EB00DAC8E0 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB7B1F4E65EB00DAC8E0 /* NSObject+KVO.m */; };
 		81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */; };
 		81C7AB881F4E6C6E00DAC8E0 /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */; };
+		81C7AB911F4E74EF00DAC8E0 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */; };
+		81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB931F4E751500DAC8E0 /* NSString+Size.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,8 +251,6 @@
 		10DD986E1D226B7D00193A69 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		10DD98701D226B7D00193A69 /* NSDate+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KS.h"; sourceTree = "<group>"; };
 		10DD98711D226B7D00193A69 /* NSDate+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KS.m"; sourceTree = "<group>"; };
-		10DD98771D226B7D00193A69 /* NSString+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Font.h"; sourceTree = "<group>"; };
-		10DD98781D226B7D00193A69 /* NSString+Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Font.m"; sourceTree = "<group>"; };
 		10DD98791D226B7D00193A69 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		10DD987A1D226B7D00193A69 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		10DD987B1D226B7D00193A69 /* NSString+Regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
@@ -424,6 +423,10 @@
 		81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encode.m"; sourceTree = "<group>"; };
 		81C7AB861F4E6C6E00DAC8E0 /* NSString+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
 		81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
+		81C7AB8F1F4E74EF00DAC8E0 /* NSString+Trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		81C7AB921F4E751500DAC8E0 /* NSString+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		81C7AB931F4E751500DAC8E0 /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -872,8 +875,10 @@
 		10DD98721D226B7D00193A69 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				10DD98771D226B7D00193A69 /* NSString+Font.h */,
-				10DD98781D226B7D00193A69 /* NSString+Font.m */,
+				81C7AB8F1F4E74EF00DAC8E0 /* NSString+Trim.h */,
+				81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */,
+				81C7AB921F4E751500DAC8E0 /* NSString+Size.h */,
+				81C7AB931F4E751500DAC8E0 /* NSString+Size.m */,
 				10DD98791D226B7D00193A69 /* NSString+Hash.h */,
 				10DD987A1D226B7D00193A69 /* NSString+Hash.m */,
 				81C7AB6E1F4E658800DAC8E0 /* NSString+YYHash.h */,
@@ -1559,7 +1564,6 @@
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
 				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
-				10DD98D51D226B7D00193A69 /* NSString+Font.m in Sources */,
 				819A27441F0DF01D003ED28E /* UIView+Color.m in Sources */,
 				101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
@@ -1584,9 +1588,11 @@
 				10F5B0661D81539E00382E50 /* CityCounty.m in Sources */,
 				2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */,
 				10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */,
+				81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
+				81C7AB911F4E74EF00DAC8E0 /* NSString+Trim.m in Sources */,
 				2E38E9981E28D6830086B870 /* StaticCollectionViewDemoVC.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
 				10DD98E01D226B7D00193A69 /* UIView+Utilsl.m in Sources */,
