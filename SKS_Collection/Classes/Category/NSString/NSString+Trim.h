@@ -13,7 +13,7 @@
 /**
  *  去除字符串首尾空格
  */
-- (NSString *)kk_trim;
+- (NSString *)kk_stringByTrim;
 
 /**
  Add scale modifier to the file name (without path extension),

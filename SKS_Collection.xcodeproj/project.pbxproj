@@ -131,6 +131,7 @@
 		81C7AB911F4E74EF00DAC8E0 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */; };
 		81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB931F4E751500DAC8E0 /* NSString+Size.m */; };
 		81C7AB971F4E771D00DAC8E0 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB961F4E771D00DAC8E0 /* NSString+Regular.m */; };
+		81C7ABF31F4EB4E300DAC8E0 /* NSNumber+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABF21F4EB4E300DAC8E0 /* NSNumber+String.m */; };
 		C05CD9A2A44890E92A5A0A07 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -436,6 +437,8 @@
 		81C7ABEA1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InstanceFromClass.h"; sourceTree = "<group>"; };
 		81C7ABEB1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InstanceFromClass.m"; sourceTree = "<group>"; };
 		81C7ABEC1F4EA7A400DAC8E0 /* UIViewController+NVActiveIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NVActiveIndicator.swift"; sourceTree = "<group>"; };
+		81C7ABF11F4EB4E300DAC8E0 /* NSNumber+String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+String.h"; sourceTree = "<group>"; };
+		81C7ABF21F4EB4E300DAC8E0 /* NSNumber+String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+String.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -839,6 +842,7 @@
 				10DD986D1D226B7D00193A69 /* Foundation */,
 				10DD986F1D226B7D00193A69 /* NSDate */,
 				10DD98721D226B7D00193A69 /* NSString */,
+				81C7ABED1F4EB46F00DAC8E0 /* NSNumber */,
 				10DD987D1D226B7D00193A69 /* NSTimer */,
 				10DD98831D226B7D00193A69 /* SizeClass */,
 			);
@@ -1466,6 +1470,15 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		81C7ABED1F4EB46F00DAC8E0 /* NSNumber */ = {
+			isa = PBXGroup;
+			children = (
+				81C7ABF11F4EB4E300DAC8E0 /* NSNumber+String.h */,
+				81C7ABF21F4EB4E300DAC8E0 /* NSNumber+String.m */,
+			);
+			path = NSNumber;
+			sourceTree = "<group>";
+		};
 		E523159E204DDECA056A572D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1674,6 +1687,7 @@
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
+				81C7ABF31F4EB4E300DAC8E0 /* NSNumber+String.m in Sources */,
 				10F4DFE81D40A01400E0D223 /* NSFileManager+File.m in Sources */,
 				2EABE2911E2E3E1300498F7F /* PresentBottomUpTransitioning.m in Sources */,
 				10D7F5E71D801050004D7DC7 /* Cachulator.m in Sources */,

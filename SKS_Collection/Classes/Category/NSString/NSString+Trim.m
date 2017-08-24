@@ -10,7 +10,7 @@
 
 @implementation NSString (Trim)
 
-- (NSString *)kk_trim {
+- (NSString *)kk_stringByTrim {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
