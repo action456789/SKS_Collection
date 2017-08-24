@@ -45,6 +45,6 @@ typedef void (^ __nullable KSAlertBlock)(UIAlertAction * _Nullable action);
     @"confirm" : @"确定"};
  */
 
-+ (instancetype)ks_alertControllerWithMessage:(NSDictionary *_Nonnull)dict cancelBlock:(KSAlertBlock)cancelBlock confirmBlock:(KSAlertBlock)confirmBlock;
++ (instancetype _Nullable )ks_alertControllerWithMessage:(NSDictionary *_Nonnull)dict cancelBlock:(KSAlertBlock)cancelBlock confirmBlock:(KSAlertBlock)confirmBlock;
 
 @end
