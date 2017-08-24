@@ -22,6 +22,6 @@
  
  @return an NSNumber when parse succeed, or nil if an error occurs.
  */
-+ (nullable NSNumber *)kk_numberWithString:(NSString *)string;
++ (nullable NSNumber *)kk_numberWithString:(NSString *_Nonnull)string;
 
 @end

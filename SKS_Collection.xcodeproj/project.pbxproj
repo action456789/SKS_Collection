@@ -128,10 +128,12 @@
 		81C7AB7F1F4E65EB00DAC8E0 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB7B1F4E65EB00DAC8E0 /* NSObject+KVO.m */; };
 		81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */; };
 		81C7AB881F4E6C6E00DAC8E0 /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */; };
-		81C7AB911F4E74EF00DAC8E0 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */; };
 		81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB931F4E751500DAC8E0 /* NSString+Size.m */; };
 		81C7AB971F4E771D00DAC8E0 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB961F4E771D00DAC8E0 /* NSString+Regular.m */; };
 		81C7ABF31F4EB4E300DAC8E0 /* NSNumber+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABF21F4EB4E300DAC8E0 /* NSNumber+String.m */; };
+		81C7ABF61F4EB76900DAC8E0 /* NSArray+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABF51F4EB76900DAC8E0 /* NSArray+Plist.m */; };
+		81C7ABF91F4EB8A700DAC8E0 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABF81F4EB8A700DAC8E0 /* NSData+String.m */; };
+		81C7ABFC1F4EBB1900DAC8E0 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABFB1F4EBB1900DAC8E0 /* NSString+Trim.m */; };
 		C05CD9A2A44890E92A5A0A07 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -382,8 +384,6 @@
 		81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encode.m"; sourceTree = "<group>"; };
 		81C7AB861F4E6C6E00DAC8E0 /* NSString+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
 		81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
-		81C7AB8F1F4E74EF00DAC8E0 /* NSString+Trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
-		81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
 		81C7AB921F4E751500DAC8E0 /* NSString+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		81C7AB931F4E751500DAC8E0 /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		81C7AB951F4E771C00DAC8E0 /* NSString+Regular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
@@ -439,6 +439,12 @@
 		81C7ABEC1F4EA7A400DAC8E0 /* UIViewController+NVActiveIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NVActiveIndicator.swift"; sourceTree = "<group>"; };
 		81C7ABF11F4EB4E300DAC8E0 /* NSNumber+String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+String.h"; sourceTree = "<group>"; };
 		81C7ABF21F4EB4E300DAC8E0 /* NSNumber+String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+String.m"; sourceTree = "<group>"; };
+		81C7ABF41F4EB76900DAC8E0 /* NSArray+Plist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Plist.h"; sourceTree = "<group>"; };
+		81C7ABF51F4EB76900DAC8E0 /* NSArray+Plist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Plist.m"; sourceTree = "<group>"; };
+		81C7ABF71F4EB8A700DAC8E0 /* NSData+String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+String.h"; sourceTree = "<group>"; };
+		81C7ABF81F4EB8A700DAC8E0 /* NSData+String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+String.m"; sourceTree = "<group>"; };
+		81C7ABFA1F4EBB1900DAC8E0 /* NSString+Trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		81C7ABFB1F4EBB1900DAC8E0 /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -830,17 +836,17 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				10DD986A1D226B7D00193A69 /* CALayer */,
+				10DD986D1D226B7D00193A69 /* Foundation */,
 				81C7ABB81F4EA7A400DAC8E0 /* UIKit */,
 				81C7ABB41F4EA6A800DAC8E0 /* MBProgressHUD */,
-				81C7ABAC1F4E791F00DAC8E0 /* NSArray */,
 				81C7ABAB1F4E78F800DAC8E0 /* DispatchQueue */,
-				81C7AB631F4D8C0300DAC8E0 /* NSData */,
+				81C7ABAC1F4E791F00DAC8E0 /* NSArray */,
 				10DD4E241D6BF98B00F7BA25 /* NSObject */,
 				10F445731D66E327005C31E3 /* NSDictionary */,
 				10F4DFE91D40A02200E0D223 /* NSFileManager */,
-				10DD986A1D226B7D00193A69 /* CALayer */,
-				10DD986D1D226B7D00193A69 /* Foundation */,
 				10DD986F1D226B7D00193A69 /* NSDate */,
+				81C7AB631F4D8C0300DAC8E0 /* NSData */,
 				10DD98721D226B7D00193A69 /* NSString */,
 				81C7ABED1F4EB46F00DAC8E0 /* NSNumber */,
 				10DD987D1D226B7D00193A69 /* NSTimer */,
@@ -884,8 +890,6 @@
 		10DD98721D226B7D00193A69 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				81C7AB8F1F4E74EF00DAC8E0 /* NSString+Trim.h */,
-				81C7AB901F4E74EF00DAC8E0 /* NSString+Trim.m */,
 				81C7AB921F4E751500DAC8E0 /* NSString+Size.h */,
 				81C7AB931F4E751500DAC8E0 /* NSString+Size.m */,
 				10DD98791D226B7D00193A69 /* NSString+Hash.h */,
@@ -898,6 +902,8 @@
 				8140197E1EC2B36A00C5B854 /* NSString+random.m */,
 				81C7AB951F4E771C00DAC8E0 /* NSString+Regular.h */,
 				81C7AB961F4E771D00DAC8E0 /* NSString+Regular.m */,
+				81C7ABFA1F4EBB1900DAC8E0 /* NSString+Trim.h */,
+				81C7ABFB1F4EBB1900DAC8E0 /* NSString+Trim.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -1302,6 +1308,8 @@
 				81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */,
 				81C7AB6B1F4E642700DAC8E0 /* NSData+zip.h */,
 				81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */,
+				81C7ABF71F4EB8A700DAC8E0 /* NSData+String.h */,
+				81C7ABF81F4EB8A700DAC8E0 /* NSData+String.m */,
 			);
 			path = NSData;
 			sourceTree = "<group>";
@@ -1321,6 +1329,8 @@
 				81C7ABAE1F4E791F00DAC8E0 /* NSArray+Dict.m */,
 				81C7ABB31F4EA66000DAC8E0 /* NSArray+URL.h */,
 				81C7ABB21F4EA66000DAC8E0 /* NSArray+URL.m */,
+				81C7ABF41F4EB76900DAC8E0 /* NSArray+Plist.h */,
+				81C7ABF51F4EB76900DAC8E0 /* NSArray+Plist.m */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -1698,6 +1708,7 @@
 				2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
+				81C7ABFC1F4EBB1900DAC8E0 /* NSString+Trim.m in Sources */,
 				81C7AB7D1F4E65EB00DAC8E0 /* NSObject+Invocation.m in Sources */,
 				819A273C1F0DCA0C003ED28E /* ColorSlider.m in Sources */,
 				1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */,
@@ -1732,7 +1743,6 @@
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
-				81C7AB911F4E74EF00DAC8E0 /* NSString+Trim.m in Sources */,
 				2E38E9981E28D6830086B870 /* StaticCollectionViewDemoVC.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
 				819A27341F0CF20D003ED28E /* ColorSliderViewController.m in Sources */,
@@ -1743,6 +1753,7 @@
 				81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
+				81C7ABF91F4EB8A700DAC8E0 /* NSData+String.m in Sources */,
 				81C7AB7E1F4E65EB00DAC8E0 /* NSObject+Swizzel.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
@@ -1764,6 +1775,7 @@
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
+				81C7ABF61F4EB76900DAC8E0 /* NSArray+Plist.m in Sources */,
 				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
