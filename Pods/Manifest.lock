@@ -22,6 +22,7 @@ PODS:
   - Masonry (0.6.4)
   - MBProgressHUD (0.9.2)
   - MJExtension (2.5.16)
+  - NVActivityIndicatorView (3.6.1)
   - pop (1.0.9)
   - SAMKeychain (1.5.2)
   - SDCycleScrollView (1.65):
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - Masonry (~> 0.6.3)
   - MBProgressHUD (~> 0.9.1)
   - MJExtension (~> 2.5.14)
+  - NVActivityIndicatorView
   - pop (~> 1.0)
   - SAMKeychain
   - SDCycleScrollView (~> 1.64)
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
@@ -62,6 +65,6 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   XHLaunchAd: e808954f98d5fdf9d336ef1e61c544126ad5c79e
 
-PODFILE CHECKSUM: bc7169f1a5d0f10a13d733b896b96e1cecb3f653
+PODFILE CHECKSUM: 81c11ac0b95eea8b23018b9f2dd142ef67e8942d
 
 COCOAPODS: 1.1.1

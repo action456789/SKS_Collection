@@ -9,7 +9,7 @@
 #import "EjectShrinkBtnsDemoVC.h"
 #import "UPEjectShrinkBtnsView.h"
 #import "CommonMacro.h"
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 @interface EjectShrinkBtnsDemoVC () <UPEjectShrinkBtnsViewDelegate>
 @property (nonatomic, strong) UPEjectShrinkBtnsView *ejectShrinkBtnsView;

@@ -13,6 +13,8 @@
 - (BOOL)isQQ;
 - (BOOL)isPhoneNumber;
 - (BOOL)isIPAddress;
+- (BOOL)isMacAddress;
+- (BOOL)isEmail;
 - (BOOL)isDigitsOfCount:(NSInteger)count;
 
 @end
