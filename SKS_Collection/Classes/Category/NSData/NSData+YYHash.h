@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSData (Hash)
+@interface NSData (YYHash)
 
 #pragma mark - Hash
 ///=============================================================================
@@ -166,5 +166,15 @@
  @param key  The hmac key.
  */
 - (NSData *)kk_hmacSHA512DataWithKey:(NSData *)key;
+
+/**
+ Returns a lowercase NSString for crc32 hash.
+ */
+- (NSString *)kk_crc32String;
+
+/**
+ Returns crc32 hash.
+ */
+- (uint32_t)kk_crc32;
 
 @end

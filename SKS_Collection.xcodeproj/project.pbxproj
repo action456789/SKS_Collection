@@ -138,7 +138,6 @@
 		81C7AB501F4D7DB800DAC8E0 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB4F1F4D7DB800DAC8E0 /* UIImage+Utils.m */; };
 		81C7AB531F4D7DDE00DAC8E0 /* UIView+CornerRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB511F4D7DDE00DAC8E0 /* UIView+CornerRadio.m */; };
 		81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */; };
-		81C7AB6A1F4D8C1400DAC8E0 /* NSData+CRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB691F4D8C1400DAC8E0 /* NSData+CRC.m */; };
 		81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */; };
 		81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6F1F4E658800DAC8E0 /* NSString+YYHash.m */; };
 		81C7AB7D1F4E65EB00DAC8E0 /* NSObject+Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB771F4E65EA00DAC8E0 /* NSObject+Invocation.m */; };
@@ -410,10 +409,8 @@
 		81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt_Decrypt.h"; sourceTree = "<group>"; };
 		81C7AB651F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt_Decrypt.m"; sourceTree = "<group>"; };
-		81C7AB661F4D8C0300DAC8E0 /* NSData+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
-		81C7AB671F4D8C0300DAC8E0 /* NSData+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
-		81C7AB681F4D8C1400DAC8E0 /* NSData+CRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC.h"; sourceTree = "<group>"; };
-		81C7AB691F4D8C1400DAC8E0 /* NSData+CRC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC.m"; sourceTree = "<group>"; };
+		81C7AB661F4D8C0300DAC8E0 /* NSData+YYHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+YYHash.h"; sourceTree = "<group>"; };
+		81C7AB671F4D8C0300DAC8E0 /* NSData+YYHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+YYHash.m"; sourceTree = "<group>"; };
 		81C7AB6B1F4E642700DAC8E0 /* NSData+zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+zip.h"; sourceTree = "<group>"; };
 		81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+zip.m"; sourceTree = "<group>"; };
 		81C7AB6E1F4E658800DAC8E0 /* NSString+YYHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YYHash.h"; sourceTree = "<group>"; };
@@ -1350,10 +1347,8 @@
 			children = (
 				81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */,
 				81C7AB651F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.m */,
-				81C7AB661F4D8C0300DAC8E0 /* NSData+Hash.h */,
-				81C7AB671F4D8C0300DAC8E0 /* NSData+Hash.m */,
-				81C7AB681F4D8C1400DAC8E0 /* NSData+CRC.h */,
-				81C7AB691F4D8C1400DAC8E0 /* NSData+CRC.m */,
+				81C7AB661F4D8C0300DAC8E0 /* NSData+YYHash.h */,
+				81C7AB671F4D8C0300DAC8E0 /* NSData+YYHash.m */,
 				81C7AB6B1F4E642700DAC8E0 /* NSData+zip.h */,
 				81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */,
 			);
@@ -1534,7 +1529,6 @@
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
-				81C7AB6A1F4D8C1400DAC8E0 /* NSData+CRC.m in Sources */,
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,

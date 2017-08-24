@@ -6,11 +6,11 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "NSData+Hash.h"
+#import "NSData+YYHash.h"
 #include <CommonCrypto/CommonCrypto.h>
-//#include <zlib.h>
+#include <zlib.h>
 
-@implementation NSData (Hash)
+@implementation NSData (YYHash)
 
 - (NSString *)kk_md2String {
     unsigned char result[CC_MD2_DIGEST_LENGTH];
@@ -236,6 +236,16 @@
 
 - (NSData *)kk_hmacSHA512DataWithKey:(NSData *)key {
     return [self hmacDataUsingAlg:kCCHmacAlgSHA512 withKey:key];
+}
+
+- (NSString *)kk_crc32String {
+    uLong result = crc32(0, self.bytes, (uInt)self.length);
+    return [NSString stringWithFormat:@"%08x", (uint32_t)result];
+}
+
+- (uint32_t)kk_crc32 {
+    uLong result = crc32(0, self.bytes, (uInt)self.length);
+    return (uint32_t)result;
 }
 
 @end
