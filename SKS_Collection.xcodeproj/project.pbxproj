@@ -117,6 +117,7 @@
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
 		812DE3221F4EBF5F001AAB2A /* NSArray+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */; };
+		812DE3281F4EC350001AAB2A /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3271F4EC350001AAB2A /* NSDictionary+Plist.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
@@ -361,6 +362,8 @@
 		8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectShrinkBtnsDemoVC.m; sourceTree = "<group>"; };
 		812DE3201F4EBF5F001AAB2A /* NSArray+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Encode.h"; sourceTree = "<group>"; };
 		812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Encode.m"; sourceTree = "<group>"; };
+		812DE3261F4EC350001AAB2A /* NSDictionary+Plist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Plist.h"; sourceTree = "<group>"; };
+		812DE3271F4EC350001AAB2A /* NSDictionary+Plist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Plist.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
@@ -720,6 +723,8 @@
 			children = (
 				10DD4E281D6BFAD400F7BA25 /* NSObject+Utils.h */,
 				10DD4E291D6BFAD400F7BA25 /* NSObject+Utils.m */,
+				812DE3261F4EC350001AAB2A /* NSDictionary+Plist.h */,
+				812DE3271F4EC350001AAB2A /* NSDictionary+Plist.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -1704,6 +1709,7 @@
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
+				812DE3281F4EC350001AAB2A /* NSDictionary+Plist.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
