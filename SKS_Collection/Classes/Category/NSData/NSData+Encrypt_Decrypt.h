@@ -25,7 +25,7 @@
  
  @return      An NSData encrypted, or nil if an error occurs.
  */
-- (nullable NSData *)aes256EncryptWithKey:(NSData *_Nullable)key iv:(nullable NSData *)iv;
+- (nullable NSData *)kk_aes256EncryptWithKey:(NSData *_Nullable)key iv:(nullable NSData *)iv;
 
 /**
  Returns an decrypted NSData using AES.
@@ -37,6 +37,6 @@
  
  @return      An NSData decrypted, or nil if an error occurs.
  */
-- (nullable NSData *)aes256DecryptWithkey:(NSData *_Nullable)key iv:(nullable NSData *)iv;
+- (nullable NSData *)kk_aes256DecryptWithkey:(NSData *_Nullable)key iv:(nullable NSData *)iv;
 
 @end

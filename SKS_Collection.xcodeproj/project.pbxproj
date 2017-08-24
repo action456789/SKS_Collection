@@ -141,7 +141,8 @@
 		81C7AB501F4D7DB800DAC8E0 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB4F1F4D7DB800DAC8E0 /* UIImage+Utils.m */; };
 		81C7AB531F4D7DDE00DAC8E0 /* UIView+CornerRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB511F4D7DDE00DAC8E0 /* UIView+CornerRadio.m */; };
 		81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */; };
-		81C7AB5F1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB5E1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.m */; };
+		81C7AB6A1F4D8C1400DAC8E0 /* NSData+CRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB691F4D8C1400DAC8E0 /* NSData+CRC.m */; };
+		81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -412,8 +413,14 @@
 		81C7AB521F4D7DDE00DAC8E0 /* UIView+CornerRadio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CornerRadio.h"; sourceTree = "<group>"; };
 		81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
 		81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
-		81C7AB5D1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt_Decrypt.h"; sourceTree = "<group>"; };
-		81C7AB5E1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt_Decrypt.m"; sourceTree = "<group>"; };
+		81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt_Decrypt.h"; sourceTree = "<group>"; };
+		81C7AB651F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt_Decrypt.m"; sourceTree = "<group>"; };
+		81C7AB661F4D8C0300DAC8E0 /* NSData+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
+		81C7AB671F4D8C0300DAC8E0 /* NSData+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
+		81C7AB681F4D8C1400DAC8E0 /* NSData+CRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC.h"; sourceTree = "<group>"; };
+		81C7AB691F4D8C1400DAC8E0 /* NSData+CRC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC.m"; sourceTree = "<group>"; };
+		81C7AB6B1F4E642700DAC8E0 /* NSData+zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+zip.h"; sourceTree = "<group>"; };
+		81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+zip.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -806,6 +813,7 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				81C7AB631F4D8C0300DAC8E0 /* NSData */,
 				81C7AB4B1F4D7D8800DAC8E0 /* UITextView */,
 				8118C27D1F3333FC00740B8A /* NSArray+Dict.h */,
 				8118C27E1F3333FC00740B8A /* NSArray+Dict.m */,
@@ -860,8 +868,6 @@
 				10DD98781D226B7D00193A69 /* NSString+Font.m */,
 				10DD98791D226B7D00193A69 /* NSString+Hash.h */,
 				10DD987A1D226B7D00193A69 /* NSString+Hash.m */,
-				81C7AB5D1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.h */,
-				81C7AB5E1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.m */,
 				10694E4A1D41F35500D9F486 /* NSString+Code.h */,
 				10694E4B1D41F35500D9F486 /* NSString+Code.m */,
 				10DD987B1D226B7D00193A69 /* NSString+Regular.h */,
@@ -1350,6 +1356,21 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
+		81C7AB631F4D8C0300DAC8E0 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */,
+				81C7AB651F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.m */,
+				81C7AB661F4D8C0300DAC8E0 /* NSData+Hash.h */,
+				81C7AB671F4D8C0300DAC8E0 /* NSData+Hash.m */,
+				81C7AB681F4D8C1400DAC8E0 /* NSData+CRC.h */,
+				81C7AB691F4D8C1400DAC8E0 /* NSData+CRC.m */,
+				81C7AB6B1F4E642700DAC8E0 /* NSData+zip.h */,
+				81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
 		E523159E204DDECA056A572D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1523,6 +1544,7 @@
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
+				81C7AB6A1F4D8C1400DAC8E0 /* NSData+CRC.m in Sources */,
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
@@ -1533,6 +1555,7 @@
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */,
 				10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */,
+				81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */,
 				81C7AB471F4D747500DAC8E0 /* NSObject+KVO.m in Sources */,
 				2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
@@ -1602,7 +1625,6 @@
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
-				81C7AB5F1F4D81EF00DAC8E0 /* NSData+Encrypt_Decrypt.m in Sources */,
 				2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
 				2E38E9951E28D6110086B870 /* StaticCell.m in Sources */,

@@ -16,7 +16,7 @@
 
 #pragma mark - Encrypt and Decrypt
 
-- (NSData *)aes256EncryptWithKey:(NSData *)key iv:(NSData *)iv {
+- (NSData *)kk_aes256EncryptWithKey:(NSData *)key iv:(NSData *)iv {
     if (key.length != 16 && key.length != 24 && key.length != 32) {
         return nil;
     }
@@ -50,7 +50,7 @@
     }
 }
 
-- (NSData *)aes256DecryptWithkey:(NSData *)key iv:(NSData *)iv {
+- (NSData *)kk_aes256DecryptWithkey:(NSData *)key iv:(NSData *)iv {
     if (key.length != 16 && key.length != 24 && key.length != 32) {
         return nil;
     }
