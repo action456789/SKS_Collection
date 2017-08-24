@@ -122,6 +122,7 @@
 		812DE3341F4EC8DB001AAB2A /* NSDictionary+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3331F4EC8DB001AAB2A /* NSDictionary+Encode.m */; };
 		812DE3371F4EC921001AAB2A /* NSDictionary+XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3361F4EC921001AAB2A /* NSDictionary+XML.m */; };
 		812DE33A1F4ED072001AAB2A /* NSDate+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3391F4ED072001AAB2A /* NSDate+Component.m */; };
+		812DE33D1F4ED2D7001AAB2A /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE33C1F4ED2D7001AAB2A /* NSDate+String.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
@@ -375,6 +376,8 @@
 		812DE3361F4EC921001AAB2A /* NSDictionary+XML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XML.m"; sourceTree = "<group>"; };
 		812DE3381F4ED072001AAB2A /* NSDate+Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Component.h"; sourceTree = "<group>"; };
 		812DE3391F4ED072001AAB2A /* NSDate+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Component.m"; sourceTree = "<group>"; };
+		812DE33B1F4ED2D7001AAB2A /* NSDate+String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
+		812DE33C1F4ED2D7001AAB2A /* NSDate+String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
@@ -903,6 +906,8 @@
 				10DD98711D226B7D00193A69 /* NSDate+KS.m */,
 				812DE3381F4ED072001AAB2A /* NSDate+Component.h */,
 				812DE3391F4ED072001AAB2A /* NSDate+Component.m */,
+				812DE33B1F4ED2D7001AAB2A /* NSDate+String.h */,
+				812DE33C1F4ED2D7001AAB2A /* NSDate+String.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -1738,6 +1743,7 @@
 				81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */,
 				2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
+				812DE33D1F4ED2D7001AAB2A /* NSDate+String.m in Sources */,
 				103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */,
 				81C7ABFC1F4EBB1900DAC8E0 /* NSString+Trim.m in Sources */,
 				81C7AB7D1F4E65EB00DAC8E0 /* NSObject+Invocation.m in Sources */,
