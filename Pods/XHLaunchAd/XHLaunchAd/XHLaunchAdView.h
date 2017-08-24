@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
+#import "XHLaunchAdImage.h"
 
 @interface XHLaunchAdView : UIImageView
 
@@ -19,7 +20,7 @@
 
 #pragma mark - imageAdView
 @interface XHLaunchImageAdView : XHLaunchAdView
-
+@property (nonatomic,copy) NSString *runLoopMode;
 @end
 
 #pragma mark - videoAdView
@@ -27,5 +28,6 @@
 
 @property (strong, nonatomic) MPMoviePlayerController *adVideoPlayer;
 @property(nonatomic,assign)MPMovieScalingMode adVideoScalingMode;
-
+-(void)stopVideoPlayer;
 @end
+

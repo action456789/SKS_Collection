@@ -16,14 +16,16 @@ PODS:
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8.1)
   - FLAnimatedImage (1.0.12)
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
-  - Masonry (0.6.4)
-  - MBProgressHUD (0.9.2)
-  - MJExtension (2.5.16)
-  - NVActivityIndicatorView (3.6.1)
-  - pop (1.0.9)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
+  - pop (1.0.10)
   - SAMKeychain (1.5.2)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
@@ -31,40 +33,40 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - Shimmer (1.0.2)
-  - XHLaunchAd (3.4.4)
+  - XHLaunchAd (3.5.6)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.0)
-  - DZNEmptyDataSet (~> 1.8.1)
-  - FLAnimatedImage (~> 1.0.12)
+  - AFNetworking
+  - DZNEmptyDataSet
+  - FLAnimatedImage
   - FMDB
-  - Masonry (~> 0.6.3)
-  - MBProgressHUD (~> 0.9.1)
-  - MJExtension (~> 2.5.14)
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
   - NVActivityIndicatorView
-  - pop (~> 1.0)
+  - pop
   - SAMKeychain
-  - SDCycleScrollView (~> 1.64)
-  - SDWebImage (~> 3.7)
-  - Shimmer (~> 1.0.2)
+  - SDCycleScrollView
+  - SDWebImage (~> 3.8)
+  - Shimmer
   - XHLaunchAd
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
-  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
-  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
-  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
-  XHLaunchAd: e808954f98d5fdf9d336ef1e61c544126ad5c79e
+  XHLaunchAd: 76bed9e969483ee90e5d54a087af3844eeb88c53
 
-PODFILE CHECKSUM: 81c11ac0b95eea8b23018b9f2dd142ef67e8942d
+PODFILE CHECKSUM: 1f46c8e23aed42a55e78878777983dd9623b9622
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1

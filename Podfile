@@ -1,50 +1,48 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
-# Uncomment this line if you're using Swift
- use_frameworks!
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '8.0'
 
 target 'SKS_Collection' do
-platform :ios, '8.0'
-pod 'SDWebImage', '~>3.7'
-pod 'MBProgressHUD', '~> 0.9.1'
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
-pod 'FMDB'
-#pod 'FMDB/SQLCipher'  #if use SQLCipher
+  # Pods for SKS_Collection
 
-pod 'AFNetworking', '~> 3.0'
+    pod 'SDWebImage', '~>3.8'
+    pod 'MBProgressHUD'
 
-# 切片编程
-#pod 'Aspects', '~> 1.4.1'
+    pod 'FMDB'
+    #pod 'FMDB/SQLCipher'  #if use SQLCipher
 
-pod 'Masonry', '~> 0.6.3'
+    pod 'AFNetworking'
 
-pod 'pop', '~> 1.0'
+    # 切片编程
+    #pod 'Aspects'
 
-# 文字辉光效果
-pod 'Shimmer', '~> 1.0.2'
+    pod 'Masonry'
 
-# 字典转模型
-pod 'MJExtension', '~> 2.5.14'
+    pod 'pop'
 
-# gif 图片
-pod 'FLAnimatedImage', '~> 1.0.12'
+    # 文字辉光效果
+    pod 'Shimmer'
 
-# 启动页广告（闪屏）
-pod 'XHLaunchAd'
+    # 字典转模型
+    pod 'MJExtension'
 
-# 控制台 Log 工具
-#pod 'CocoaLumberjack', '~> 2.3.0'
+    # gif 图片
+    pod 'FLAnimatedImage'
 
-# 钥匙串访问
-pod 'SAMKeychain'
+    # 启动页广告（闪屏）
+    pod 'XHLaunchAd'
 
-#图片轮播器
-pod 'SDCycleScrollView','~> 1.64'
+    # 钥匙串访问
+    pod 'SAMKeychain'
 
-# 空数据页面
-pod 'DZNEmptyDataSet', '~> 1.8.1'
+    #图片轮播器
+    pod 'SDCycleScrollView'
 
-pod 'NVActivityIndicatorView'
+    # 空数据页面
+    pod 'DZNEmptyDataSet'
+
+    pod 'NVActivityIndicatorView'
 
 end
-

@@ -6,12 +6,23 @@
 //  Copyright © 2016年 it7090.com. All rights reserved.
 //  代码地址:https://github.com/CoderZhuXH/XHLaunchAd
 
+//  版本:3.5.6
+//  发布:2017.08.20
+
+//  如果你在使用过程中出现bug,请及时以下面任意一种方式联系我，我会及时修复bug并帮您解决问题。
+//  QQ交流群:537476189
+//  Email:it7090@163.com
+//  新浪微博:朱晓辉Allen
+
+//  GitHub:https://github.com/CoderZhuXH
+//  使用说明:https://github.com/CoderZhuXH/XHLaunchAd/blob/master/README.md
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "XHLaunchAdConfiguration.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
+NS_ASSUME_NONNULL_BEGIN
 @class XHLaunchAd;
 
 @protocol XHLaunchAdDelegate <NSObject>
@@ -30,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  图片本地读取/或下载完成回调
  *
  *  @param launchAd  XHLaunchAd
- *  @param imageSize image
+ *  @param image 下载的image
  */
 -(void)xhLaunchAd:(XHLaunchAd *)launchAd imageDownLoadFinish:(UIImage *)image;
 
@@ -53,17 +64,17 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)xhLaunchAd:(XHLaunchAd *)launchAd videoDownLoadProgress:(float)progress total:(unsigned long long)total current:(unsigned long long)current;
 
 /**
- *  广告显示完成
- */
--(void)xhLaunchShowFinish:(XHLaunchAd *)launchAd;
-
-/**
  *  倒计时回调
  *
  *  @param launchAd XHLaunchAd
  *  @param duration 倒计时时间
  */
 -(void)xhLaunchAd:(XHLaunchAd *)launchAd customSkipView:(UIView *)customSkipView duration:(NSInteger)duration;
+
+/**
+ *  广告显示完成
+ */
+-(void)xhLaunchShowFinish:(XHLaunchAd *)launchAd;
 
 /**
  如果你想用SDWebImage等框架加载网络广告图片,请实现此代理
@@ -164,6 +175,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(BOOL)checkVideoInCacheWithURL:(NSURL *)url;
 
+#pragma mark - 获取缓存url
+/**
+ 从缓存中获取上一次的ImageURLString(XHLaunchAd 会默认缓存imageURLString)
+ 
+ @return imageUrlString
+ */
++(NSString *)cacheImageURLString;
+
+/**
+ 从缓存中获取上一次的videoURLString(XHLaunchAd 会默认缓存VideoURLString)
+ 
+ @return videoUrlString
+ */
++(NSString *)cacheVideoURLString;
+
 #pragma mark - 缓存清除及大小
 /**
  *  清除XHLaunch本地缓存
@@ -181,5 +207,4 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)xhLaunchAdCachePath;
 
 @end
-
 NS_ASSUME_NONNULL_END

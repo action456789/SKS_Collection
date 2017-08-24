@@ -8,20 +8,20 @@
 
 #import "XHLaunchImageView.h"
 
-
 @interface XHLaunchImageView ()
 
 @end
 
 @implementation XHLaunchImageView
 
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        
         self.frame = [UIScreen mainScreen].bounds;
         self.userInteractionEnabled = YES;
+        self.backgroundColor = [UIColor whiteColor];
         self.image = [self launchImage];
     }
     return self;
@@ -32,7 +32,7 @@
     UIImage *imageP = [self launchImageWithType:@"Portrait"];
     if(imageP) return imageP;
     UIImage *imageL = [self launchImageWithType:@"Landscape"];
-    if(imageL) return imageL;
+    if(imageL)  return imageL;
     NSLog(@"获取LaunchImage失败!请检查是否添加启动图,或者规格是否有误.");
     return nil;
 }
@@ -62,4 +62,5 @@
     }
     return nil;
 }
+
 @end
