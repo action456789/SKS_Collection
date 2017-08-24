@@ -10,27 +10,45 @@
 
 @implementation NSArray (Plist)
 
-+ (NSArray *)arrayWithPlistData:(NSData *)plist {
++ (NSArray *)kk_arrayWithPlistData:(NSData *)plist {
     if (!plist) return nil;
     NSArray *array = [NSPropertyListSerialization propertyListWithData:plist options:NSPropertyListImmutable format:NULL error:NULL];
     if ([array isKindOfClass:[NSArray class]]) return array;
     return nil;
 }
 
-+ (NSArray *)arrayWithPlistString:(NSString *)plist {
++ (NSArray *)kk_arrayWithPlistString:(NSString *)plist {
     if (!plist) return nil;
     NSData *data = [plist dataUsingEncoding:NSUTF8StringEncoding];
-    return [self arrayWithPlistData:data];
+    return [self kk_arrayWithPlistData:data];
 }
 
-- (NSData *)plistData {
+- (NSData *)kk_plistData {
     return [NSPropertyListSerialization dataWithPropertyList:self format:NSPropertyListBinaryFormat_v1_0 options:kNilOptions error:NULL];
 }
 
-- (NSString *)plistString {
+- (NSString *)kk_plistString {
     NSData *xmlData = [NSPropertyListSerialization dataWithPropertyList:self format:NSPropertyListXMLFormat_v1_0 options:kNilOptions error:NULL];
     if (xmlData) return [[NSString alloc] initWithData:xmlData encoding:kCFStringEncodingUTF8];
     return nil;
 }
+
+@end
+
+@implementation NSMutableArray (Plist)
+
++ (NSMutableArray *)kk_arrayWithPlistData:(NSData *)plist {
+    if (!plist) return nil;
+    NSMutableArray *array = [NSPropertyListSerialization propertyListWithData:plist options:NSPropertyListMutableContainersAndLeaves format:NULL error:NULL];
+    if ([array isKindOfClass:[NSMutableArray class]]) return array;
+    return nil;
+}
+
++ (NSMutableArray *)kk_arrayWithPlistString:(NSString *)plist {
+    if (!plist) return nil;
+    NSData *data = [plist dataUsingEncoding:NSUTF8StringEncoding];
+    return [self kk_arrayWithPlistData:data];
+}
+
 
 @end
