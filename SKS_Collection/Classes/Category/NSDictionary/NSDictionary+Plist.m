@@ -39,17 +39,17 @@
 
 @implementation NSMutableDictionary (Plist)
 
-+ (NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist {
++ (NSMutableDictionary *)kk_dictionaryWithPlistData:(NSData *)plist {
     if (!plist) return nil;
     NSMutableDictionary *dictionary = [NSPropertyListSerialization propertyListWithData:plist options:NSPropertyListMutableContainersAndLeaves format:NULL error:NULL];
     if ([dictionary isKindOfClass:[NSMutableDictionary class]]) return dictionary;
     return nil;
 }
 
-+ (NSMutableDictionary *)dictionaryWithPlistString:(NSString *)plist {
++ (NSMutableDictionary *)kk_dictionaryWithPlistString:(NSString *)plist {
     if (!plist) return nil;
     NSData *data = [plist dataUsingEncoding:NSUTF8StringEncoding];
-    return [self dictionaryWithPlistData:data];
+    return [self kk_dictionaryWithPlistData:data];
 }
 
 @end

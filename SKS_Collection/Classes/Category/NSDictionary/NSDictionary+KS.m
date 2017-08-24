@@ -56,3 +56,28 @@
 }
 
 @end
+
+
+
+@implementation NSMutableDictionary (KS)
+
+- (id)kk_popObjectForKey:(id)aKey {
+    if (!aKey) return nil;
+    id value = self[aKey];
+    [self removeObjectForKey:aKey];
+    return value;
+}
+
+- (NSDictionary *)kk_popEntriesForKeys:(NSArray *)keys {
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    for (id key in keys) {
+        id value = self[key];
+        if (value) {
+            [self removeObjectForKey:key];
+            dic[key] = value;
+        }
+    }
+    return [dic copy];
+}
+
+@end

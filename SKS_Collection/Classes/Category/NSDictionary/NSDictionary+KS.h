@@ -26,3 +26,26 @@
 - (NSString *)ks_jsonString;
 
 @end
+
+
+@interface NSMutableDictionary (KS)
+
+/**
+ Removes and returns the value associated with a given key.
+ 
+ @param aKey The key for which to return and remove the corresponding value.
+ @return The value associated with aKey, or nil if no value is associated with aKey.
+ */
+- (nullable id)kk_popObjectForKey:(id)aKey;
+
+/**
+ Returns a new dictionary containing the entries for keys, and remove these
+ entries from receiver. If the keys is empty or nil, it just returns an
+ empty dictionary.
+ 
+ @param keys The keys.
+ @return The entries for the keys.
+ */
+- (NSDictionary *)kk_popEntriesForKeys:(NSArray *)keys;
+
+@end
