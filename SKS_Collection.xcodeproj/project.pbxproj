@@ -121,6 +121,7 @@
 		812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE32F1F4EC602001AAB2A /* NSDictionary+Plist.m */; };
 		812DE3341F4EC8DB001AAB2A /* NSDictionary+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3331F4EC8DB001AAB2A /* NSDictionary+Encode.m */; };
 		812DE3371F4EC921001AAB2A /* NSDictionary+XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3361F4EC921001AAB2A /* NSDictionary+XML.m */; };
+		812DE33A1F4ED072001AAB2A /* NSDate+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3391F4ED072001AAB2A /* NSDate+Component.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
@@ -372,6 +373,8 @@
 		812DE3331F4EC8DB001AAB2A /* NSDictionary+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Encode.m"; sourceTree = "<group>"; };
 		812DE3351F4EC921001AAB2A /* NSDictionary+XML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XML.h"; sourceTree = "<group>"; };
 		812DE3361F4EC921001AAB2A /* NSDictionary+XML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XML.m"; sourceTree = "<group>"; };
+		812DE3381F4ED072001AAB2A /* NSDate+Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Component.h"; sourceTree = "<group>"; };
+		812DE3391F4ED072001AAB2A /* NSDate+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Component.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
@@ -898,6 +901,8 @@
 			children = (
 				10DD98701D226B7D00193A69 /* NSDate+KS.h */,
 				10DD98711D226B7D00193A69 /* NSDate+KS.m */,
+				812DE3381F4ED072001AAB2A /* NSDate+Component.h */,
+				812DE3391F4ED072001AAB2A /* NSDate+Component.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -1753,6 +1758,7 @@
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
+				812DE33A1F4ED072001AAB2A /* NSDate+Component.m in Sources */,
 				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
