@@ -14,15 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Aspects (1.4.1)
-  - CocoaLumberjack (2.3.0):
-    - CocoaLumberjack/Default (= 2.3.0)
-    - CocoaLumberjack/Extensions (= 2.3.0)
-  - CocoaLumberjack/Core (2.3.0)
-  - CocoaLumberjack/Default (2.3.0):
-    - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.3.0):
-    - CocoaLumberjack/Default
   - DZNEmptyDataSet (1.8.1)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
@@ -43,8 +34,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - Aspects (~> 1.4.1)
-  - CocoaLumberjack (~> 2.3.0)
   - DZNEmptyDataSet (~> 1.8.1)
   - FLAnimatedImage (~> 1.0.12)
   - FMDB
@@ -60,8 +49,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -75,6 +62,6 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   XHLaunchAd: e808954f98d5fdf9d336ef1e61c544126ad5c79e
 
-PODFILE CHECKSUM: 7c80eff1ad8225f988b76329f29ed8f3c0f1c94b
+PODFILE CHECKSUM: bc7169f1a5d0f10a13d733b896b96e1cecb3f653
 
 COCOAPODS: 1.1.1

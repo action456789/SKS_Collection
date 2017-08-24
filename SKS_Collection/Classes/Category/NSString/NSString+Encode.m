@@ -1,16 +1,21 @@
 //
-//  NSString+Code.m
+//  NSString+Encode.m
 //  SKS_Collection
 //
-//  Created by KeSen on 7/22/16.
-//  Copyright © 2016 SenKe. All rights reserved.
+//  Created by sen.ke on 2017/8/24.
+//  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "NSString+Code.h"
+#import "NSString+Encode.h"
+#import "NSData+Encode.h"
 
-@implementation NSString (Code)
+@implementation NSString (Encode)
 
-- (NSString *)encodedString
+- (NSString *)kk_base64EncodedString {
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] kk_base64EncodedString];
+}
+
+- (NSString *)kk_encodedString
 {
     if (!self.length) {
         return @"";
@@ -26,7 +31,7 @@
     return (__bridge_transfer NSString *)escapedString;
 }
 
-- (NSString *)decodedString
+- (NSString *)kk_decodedString
 {
     if (!self.length) {
         return @"";

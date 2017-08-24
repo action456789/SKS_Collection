@@ -11,7 +11,7 @@
 @implementation NSTimer (BlockSupurt)
 
 // NSRunloopDefaultMode
-+ (NSTimer *)sks_scheduledTimerWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)())block
++ (NSTimer *)sks_scheduledTimerWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)(void))block
 {
     return [NSTimer scheduledTimerWithTimeInterval:ti
                                             target:self
@@ -20,7 +20,7 @@
                                            repeats:yesOrNo];
 }
 
-+ (NSTimer *)sks_scheduledTimerInCommonModesWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)())block
++ (NSTimer *)sks_scheduledTimerInCommonModesWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)(void))block
 {
     NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate distantPast]
                                               interval:ti
@@ -35,7 +35,7 @@
 
 + (void)_blockInvoke:(NSTimer *)timer
 {
-    void (^block)() = timer.userInfo;
+    void (^block)(void) = timer.userInfo;
     if (block) {
         block();
         block = nil;

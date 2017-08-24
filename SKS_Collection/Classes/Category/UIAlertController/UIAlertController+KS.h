@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^KSAlertBlock)();
+typedef void (^ __nullable KSAlertBlock)(UIAlertAction * _Nullable action);
 
 #define PARST(A, B) A##B
 #if !defined(PROALERT_MESSAGE_DICT)
@@ -45,6 +45,6 @@ typedef void (^KSAlertBlock)();
     @"confirm" : @"确定"};
  */
 
-+ (instancetype)ks_alertControllerWithMessage:(NSDictionary *)dict cancelBlock:(KSAlertBlock)cancelBlock confirmBlock:(KSAlertBlock)confirmBlock;
++ (instancetype)ks_alertControllerWithMessage:(NSDictionary *_Nonnull)dict cancelBlock:(KSAlertBlock)cancelBlock confirmBlock:(KSAlertBlock)confirmBlock;
 
 @end

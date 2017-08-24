@@ -8,7 +8,7 @@
 
 #import "DiskCacheFile.h"
 #import "NSFileManager+File.h"
-#import "NSString+Code.h"
+#import "NSString+Encode.h"
 
 #define kCachePrex @"com.kk.diskCacheFile."
 #define kioQueueName kCachePrex"ioSerialQueue."
@@ -48,7 +48,7 @@
 
 - (void)setObject:(id<NSCoding>)object forKey:(NSString *)key
 {
-    NSString *encodedKey = [key encodedString];
+    NSString *encodedKey = [key kk_encodedString];
     [_memoryCache setObject:object forKey:key];
     
     dispatch_async(_ioSerialQueue, ^{
@@ -62,7 +62,7 @@
 
 - (id)objectForKey:(NSString *)key
 {
-    NSString *encodedKey = [key encodedString];
+    NSString *encodedKey = [key kk_encodedString];
     id<NSCoding> object = [_memoryCache objectForKey:encodedKey];
     
     if (!object) {
@@ -77,7 +77,7 @@
 
 - (void)removeObjectForKey:(NSString *)key
 {
-    NSString *encodedKey = [key encodedString];
+    NSString *encodedKey = [key kk_encodedString];
     [_memoryCache removeObjectForKey:key];
     
     NSString *filePath = [_cacheDirectory stringByAppendingPathComponent:encodedKey];

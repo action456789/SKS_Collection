@@ -10,8 +10,8 @@
 
 @interface NSTimer (BlockSupurt)
 
-+ (NSTimer *)sks_scheduledTimerWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)())block;
++ (NSTimer *)sks_scheduledTimerWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)(void))block;
 
-+ (NSTimer *)sks_scheduledTimerInCommonModesWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)())block;
++ (NSTimer *)sks_scheduledTimerInCommonModesWithTimeInterval:(NSTimeInterval)ti repeats:(BOOL)yesOrNo block:(void (^)(void))block;
 
 @end

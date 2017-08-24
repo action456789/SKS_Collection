@@ -28,7 +28,7 @@
     CGFloat y = 200;
     CGFloat thumbWidht = 100;
     
-    CGPoint startPoint = CGPointMake(x, y);
+//    CGPoint startPoint = CGPointMake(x, y);
     CGPoint endPoint = CGPointMake(x + thumbWidht, y);
     
     UIBezierPath *path = UIBezierPath.bezierPath;

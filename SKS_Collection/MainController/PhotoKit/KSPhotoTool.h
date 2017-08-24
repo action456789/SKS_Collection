@@ -13,7 +13,7 @@
 
 @interface KSPhotoTool : NSObject
 
-typedef void (^success)();
+typedef void (^success)(void);
 typedef void (^failure)(NSError *error);
 
 // 创建一个相册，存在时直接返回

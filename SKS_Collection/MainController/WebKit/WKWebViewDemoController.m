@@ -68,8 +68,8 @@
         
 //      webView.customUserAgent = @"WebViewDemo/1.0.0"; //自定义UA，UIWebView就没有此功能
         
-        NSString *urlString = @"http://www.baidu.com";
-        NSURL *url = [NSURL URLWithString:urlString];
+//        NSString *urlString = @"http://www.baidu.com";
+//        NSURL *url = [NSURL URLWithString:urlString];
 //        NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
@@ -223,7 +223,7 @@
                 
                 SEL selector = NSSelectorFromString(functionName);
                 if ([obj respondsToSelector:selector]) {
-                    [obj performSelector:selector withObject:data];
+//                    [obj performSelector:selector withObject:data];
                 } else {
                     NSLog(@"方法未找到");
                 }

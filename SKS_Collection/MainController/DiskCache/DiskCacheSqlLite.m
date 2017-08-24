@@ -9,7 +9,7 @@
 #import "DiskCacheSqlLite.h"
 #import <FMDB/FMDB.h>
 #import "NSFileManager+File.h"
-#import "NSString+Code.h"
+#import "NSString+Encode.h"
 
 @interface DiskCacheSqlLite()
 {
@@ -87,7 +87,7 @@
 {
     if (!_db) return;
     
-    NSString *encodeKey = [key encodedString];
+    NSString *encodeKey = [key kk_encodedString];
     [_memoryCache setObject:object forKey:encodeKey];
     
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
@@ -99,7 +99,7 @@
 
 - (id<NSCoding>)dbGetItemWithKey:(NSString *)key
 {
-    NSString *encodeKey = [key encodedString];
+    NSString *encodeKey = [key kk_encodedString];
     id data = [_memoryCache objectForKey:encodeKey];
     
     if (data) {
@@ -121,7 +121,7 @@
 {
     if (!_db) return;
     
-    NSString *encodeKey = [key encodedString];
+    NSString *encodeKey = [key kk_encodedString];
     [_memoryCache setObject:object forKey:encodeKey];
     
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
@@ -135,7 +135,7 @@
 {
     if (!_db) return;
     
-    NSString *encodeKey = [key encodedString];
+    NSString *encodeKey = [key kk_encodedString];
     [_memoryCache removeObjectForKey:encodeKey];
     
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {

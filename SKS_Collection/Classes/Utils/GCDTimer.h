@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, CGDTimerAccuracy) {
                                          queue:(dispatch_queue_t)queue
                                        repeats:(BOOL)isRepeats
                                          delay:(NSTimeInterval)delay
-                                         block:(void (^)())block;
+                                         block:(void (^)(void))block;
 
 - (void)invalidate;
 

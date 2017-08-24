@@ -33,7 +33,6 @@
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
-		10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4B1D41F35500D9F486 /* NSString+Code.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
 		10C00EE91E0A63D5003D51AD /* KKSlideTabBarBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE21E0A63D5003D51AD /* KKSlideTabBarBaseLayout.m */; };
 		10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE41E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.m */; };
@@ -143,6 +142,8 @@
 		81C7AB7D1F4E65EB00DAC8E0 /* NSObject+Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB771F4E65EA00DAC8E0 /* NSObject+Invocation.m */; };
 		81C7AB7E1F4E65EB00DAC8E0 /* NSObject+Swizzel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB7A1F4E65EB00DAC8E0 /* NSObject+Swizzel.m */; };
 		81C7AB7F1F4E65EB00DAC8E0 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB7B1F4E65EB00DAC8E0 /* NSObject+KVO.m */; };
+		81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */; };
+		81C7AB881F4E6C6E00DAC8E0 /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,8 +199,6 @@
 		106362F51D869D0700FD47B0 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		10694E4A1D41F35500D9F486 /* NSString+Code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Code.h"; sourceTree = "<group>"; };
-		10694E4B1D41F35500D9F486 /* NSString+Code.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Code.m"; sourceTree = "<group>"; };
 		10694E4D1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLiteDemoController.h; sourceTree = "<group>"; };
 		10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLiteDemoController.m; sourceTree = "<group>"; };
 		1097CDE21D93C21C006E6A3A /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
@@ -421,6 +420,10 @@
 		81C7AB7A1F4E65EB00DAC8E0 /* NSObject+Swizzel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzel.m"; sourceTree = "<group>"; };
 		81C7AB7B1F4E65EB00DAC8E0 /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 		81C7AB7C1F4E65EB00DAC8E0 /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		81C7AB831F4E6B7E00DAC8E0 /* NSData+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encode.h"; sourceTree = "<group>"; };
+		81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encode.m"; sourceTree = "<group>"; };
+		81C7AB861F4E6C6E00DAC8E0 /* NSString+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
+		81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		E22A625CAC15A8FA149AAFAA /* libPods-SKS_Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKS_Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -875,8 +878,8 @@
 				10DD987A1D226B7D00193A69 /* NSString+Hash.m */,
 				81C7AB6E1F4E658800DAC8E0 /* NSString+YYHash.h */,
 				81C7AB6F1F4E658800DAC8E0 /* NSString+YYHash.m */,
-				10694E4A1D41F35500D9F486 /* NSString+Code.h */,
-				10694E4B1D41F35500D9F486 /* NSString+Code.m */,
+				81C7AB861F4E6C6E00DAC8E0 /* NSString+Encode.h */,
+				81C7AB871F4E6C6E00DAC8E0 /* NSString+Encode.m */,
 				10DD987B1D226B7D00193A69 /* NSString+Regular.h */,
 				10DD987C1D226B7D00193A69 /* NSString+Regular.m */,
 				8140197D1EC2B36A00C5B854 /* NSString+random.h */,
@@ -1349,6 +1352,8 @@
 				81C7AB651F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.m */,
 				81C7AB661F4D8C0300DAC8E0 /* NSData+YYHash.h */,
 				81C7AB671F4D8C0300DAC8E0 /* NSData+YYHash.m */,
+				81C7AB831F4E6B7E00DAC8E0 /* NSData+Encode.h */,
+				81C7AB841F4E6B7E00DAC8E0 /* NSData+Encode.m */,
 				81C7AB6B1F4E642700DAC8E0 /* NSData+zip.h */,
 				81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */,
 			);
@@ -1394,7 +1399,7 @@
 		10DD982E1D226B1F00193A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = SenKe;
 				TargetAttributes = {
 					10DD98351D226B1F00193A69 = {
@@ -1591,6 +1596,7 @@
 				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */,
+				81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
 				81C7AB7E1F4E65EB00DAC8E0 /* NSObject+Swizzel.m in Sources */,
@@ -1625,11 +1631,11 @@
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
 				10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */,
 				10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */,
-				10694E4C1D41F35500D9F486 /* NSString+Code.m in Sources */,
 				2E38E9321E27BF7E0086B870 /* CycleScrollViewDemoVC.m in Sources */,
 				10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */,
 				81C7AB7F1F4E65EB00DAC8E0 /* NSObject+KVO.m in Sources */,
 				1032C2D61D4600E700D55DE0 /* QRCodeView.m in Sources */,
+				81C7AB881F4E6C6E00DAC8E0 /* NSString+Encode.m in Sources */,
 				2EDD99171E35A9C10077AEEF /* BanberViewController.m in Sources */,
 				10DD98D71D226B7D00193A69 /* NSString+Regular.m in Sources */,
 			);
@@ -1666,14 +1672,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1712,14 +1724,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

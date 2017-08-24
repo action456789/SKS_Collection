@@ -14,7 +14,7 @@ pod 'FMDB'
 pod 'AFNetworking', '~> 3.0'
 
 # 切片编程
-pod 'Aspects', '~> 1.4.1'
+#pod 'Aspects', '~> 1.4.1'
 
 pod 'Masonry', '~> 0.6.3'
 
@@ -33,7 +33,7 @@ pod 'FLAnimatedImage', '~> 1.0.12'
 pod 'XHLaunchAd'
 
 # 控制台 Log 工具
-pod 'CocoaLumberjack', '~> 2.3.0'
+#pod 'CocoaLumberjack', '~> 2.3.0'
 
 # 钥匙串访问
 pod 'SAMKeychain'
