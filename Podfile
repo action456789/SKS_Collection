@@ -1,5 +1,11 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '8.0'
+platform :ios, '8.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+# ignore warnings from a specific pod
+# pod 'FBSDKCoreKit', :inhibit_warnings => true
 
 target 'SKS_Collection' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks

@@ -16,7 +16,7 @@ singleton_implementation(MetaDataManager);
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Cities.plist" ofType:nil];
     NSArray *dataArray = [NSArray arrayWithContentsOfFile:path].mutableCopy;
-    return [CityA2ZItem objectArrayWithKeyValuesArray:dataArray];
+    return [CityA2ZItem mj_objectArrayWithKeyValuesArray:dataArray];
 }
 
 - (NSArray<CityDistrict *> *)districts
