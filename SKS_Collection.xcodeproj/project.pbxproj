@@ -154,6 +154,7 @@
 		81D405D71F501F68005FB382 /* UIControl+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405D61F501F68005FB382 /* UIControl+BlockSupport.m */; };
 		81D405DB1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405DA1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m */; };
 		81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */; };
+		81D405E21F50265E005FB382 /* UIView+CoordinateSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405E11F50265E005FB382 /* UIView+CoordinateSystem.m */; };
 		C05CD9A2A44890E92A5A0A07 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -498,6 +499,8 @@
 		81D405DA1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BlockSupport.m"; sourceTree = "<group>"; };
 		81D405DD1F502210005FB382 /* UIGestureRecognizer+BlockSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+BlockSupport.h"; sourceTree = "<group>"; };
 		81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlockSupport.m"; sourceTree = "<group>"; };
+		81D405E01F50265E005FB382 /* UIView+CoordinateSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CoordinateSystem.h"; sourceTree = "<group>"; };
+		81D405E11F50265E005FB382 /* UIView+CoordinateSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CoordinateSystem.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1547,6 +1550,8 @@
 				81C7ABE41F4EA7A400DAC8E0 /* UIView+Screenshot.m */,
 				81C7ABE51F4EA7A400DAC8E0 /* UIView+Utils.h */,
 				81C7ABE61F4EA7A400DAC8E0 /* UIView+Utilsl.m */,
+				81D405E01F50265E005FB382 /* UIView+CoordinateSystem.h */,
+				81D405E11F50265E005FB382 /* UIView+CoordinateSystem.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1830,6 +1835,7 @@
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
 				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
+				81D405E21F50265E005FB382 /* UIView+CoordinateSystem.m in Sources */,
 				81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */,
 				101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,

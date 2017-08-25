@@ -10,6 +10,21 @@
 
 @interface UIView (Screenshot)
 
-- (UIImage *)convertViewToImage;
+/**
+ Create a snapshot image of the complete view hierarchy.
+ */
+- (nullable UIImage *)kk_snapshotImage;
+
+/**
+ Create a snapshot image of the complete view hierarchy.
+ @discussion It's faster than "snapshotImage", but may cause screen updates.
+ See -[UIView drawViewHierarchyInRect:afterScreenUpdates:] for more information.
+ */
+- (nullable UIImage *)kk_snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
+
+/**
+ Create a snapshot PDF of the complete view hierarchy.
+ */
+- (nullable NSData *)kk_snapshotPDF;
 
 @end

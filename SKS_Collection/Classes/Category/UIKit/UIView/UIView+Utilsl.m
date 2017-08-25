@@ -10,19 +10,8 @@
 
 @implementation UIView (Utils)
 
-//在view下显示阴影
--(void)showShadow:(BOOL)val {
-    self.layer.shadowOpacity = val ? 0.8f : 0.0f;
-    if (val) {
-        //        self.layer.cornerRadius = 4.0f;
-        self.layer.shadowOffset = CGSizeMake(0, 4);
-        self.layer.shadowRadius = 4.0f;
-        //        self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
-    }
-}
-
 // 判断View是否显示在屏幕上
-- (BOOL)isDisplayedInScreen {
+- (BOOL)kk_isDisplayedInScreen {
     if (self == nil) return FALSE;
     
     CGRect screenRect = [UIScreen mainScreen].bounds;
@@ -47,15 +36,41 @@
     return TRUE;
 }
 
-// 获取 view 所在控制器
-- (id)viewController {
-    for (UIView* next = [self superview]; next; next = next.superview) {
-        UIResponder* nextResponder = [next nextResponder];
+- (void)kk_removeAllSubviews {
+    //[self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    while (self.subviews.count) {
+        [self.subviews.lastObject removeFromSuperview];
+    }
+}
+
+
+- (UIViewController *)kk_viewController {
+    for (UIView *view = self; view; view = view.superview) {
+        UIResponder *nextResponder = [view nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return nextResponder;
+            return (UIViewController *)nextResponder;
         }
     }
     return nil;
+}
+
+- (CGFloat)kk_visibleAlpha {
+    if ([self isKindOfClass:[UIWindow class]]) {
+        if (self.hidden) return 0;
+        return self.alpha;
+    }
+    if (!self.window) return 0;
+    CGFloat alpha = 1;
+    UIView *v = self;
+    while (v) {
+        if (v.hidden) {
+            alpha = 0;
+            break;
+        }
+        alpha *= v.alpha;
+        v = v.superview;
+    }
+    return alpha;
 }
 
 @end
