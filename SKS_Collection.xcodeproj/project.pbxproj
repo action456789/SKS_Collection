@@ -151,6 +151,9 @@
 		81D405CD1F500858005FB382 /* UIImage+CornerRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405CC1F500858005FB382 /* UIImage+CornerRadio.m */; };
 		81D405D01F50089E005FB382 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405CF1F50089E005FB382 /* UIImage+Rotate.m */; };
 		81D405D31F500B2C005FB382 /* UIImage+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405D21F500B2C005FB382 /* UIImage+Effect.m */; };
+		81D405D71F501F68005FB382 /* UIControl+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405D61F501F68005FB382 /* UIControl+BlockSupport.m */; };
+		81D405DB1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405DA1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m */; };
+		81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */; };
 		C05CD9A2A44890E92A5A0A07 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -440,8 +443,6 @@
 		81C7ABBB1F4EA7A400DAC8E0 /* UIAlertController+KS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KS.m"; sourceTree = "<group>"; };
 		81C7ABBD1F4EA7A400DAC8E0 /* UIApplication+EnterPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EnterPoint.swift"; sourceTree = "<group>"; };
 		81C7ABC01F4EA7A400DAC8E0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		81C7ABC11F4EA7A400DAC8E0 /* UIColor+SKS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SKS.h"; sourceTree = "<group>"; };
-		81C7ABC21F4EA7A400DAC8E0 /* UIColor+SKS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SKS.m"; sourceTree = "<group>"; };
 		81C7ABC41F4EA7A400DAC8E0 /* UIDevice+Identifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
 		81C7ABC51F4EA7A400DAC8E0 /* UIDevice+Identifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Identifier.m"; sourceTree = "<group>"; };
 		81C7ABC61F4EA7A400DAC8E0 /* UIDevice+KS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+KS.h"; sourceTree = "<group>"; };
@@ -491,6 +492,12 @@
 		81D405CF1F50089E005FB382 /* UIImage+Rotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		81D405D11F500B2C005FB382 /* UIImage+Effect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Effect.h"; sourceTree = "<group>"; };
 		81D405D21F500B2C005FB382 /* UIImage+Effect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Effect.m"; sourceTree = "<group>"; };
+		81D405D51F501F68005FB382 /* UIControl+BlockSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+BlockSupport.h"; sourceTree = "<group>"; };
+		81D405D61F501F68005FB382 /* UIControl+BlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BlockSupport.m"; sourceTree = "<group>"; };
+		81D405D91F50215B005FB382 /* UIBarButtonItem+BlockSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BlockSupport.h"; sourceTree = "<group>"; };
+		81D405DA1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BlockSupport.m"; sourceTree = "<group>"; };
+		81D405DD1F502210005FB382 /* UIGestureRecognizer+BlockSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+BlockSupport.h"; sourceTree = "<group>"; };
+		81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlockSupport.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1412,6 +1419,9 @@
 		81C7ABB81F4EA7A400DAC8E0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				81D405DC1F5021FE005FB382 /* UIGestureRecognizer */,
+				81D405D81F50214D005FB382 /* UIBarButtonItem */,
+				81D405D41F501E96005FB382 /* UIControl */,
 				81C7ABB91F4EA7A400DAC8E0 /* UIAlertController */,
 				81C7ABBC1F4EA7A400DAC8E0 /* UIApplication */,
 				81C7ABBE1F4EA7A400DAC8E0 /* UIButton */,
@@ -1455,8 +1465,6 @@
 			isa = PBXGroup;
 			children = (
 				81C7ABC01F4EA7A400DAC8E0 /* UIColor+Extension.swift */,
-				81C7ABC11F4EA7A400DAC8E0 /* UIColor+SKS.h */,
-				81C7ABC21F4EA7A400DAC8E0 /* UIColor+SKS.m */,
 				812DE3411F4FC91B001AAB2A /* UIColor+FormatConversion.h */,
 				812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */,
 				81D405C51F5005D2005FB382 /* UIColor+Creator.h */,
@@ -1562,6 +1570,33 @@
 				81C7ABF21F4EB4E300DAC8E0 /* NSNumber+String.m */,
 			);
 			path = NSNumber;
+			sourceTree = "<group>";
+		};
+		81D405D41F501E96005FB382 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				81D405D51F501F68005FB382 /* UIControl+BlockSupport.h */,
+				81D405D61F501F68005FB382 /* UIControl+BlockSupport.m */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		81D405D81F50214D005FB382 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				81D405D91F50215B005FB382 /* UIBarButtonItem+BlockSupport.h */,
+				81D405DA1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		81D405DC1F5021FE005FB382 /* UIGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				81D405DD1F502210005FB382 /* UIGestureRecognizer+BlockSupport.h */,
+				81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */,
+			);
+			path = UIGestureRecognizer;
 			sourceTree = "<group>";
 		};
 		E523159E204DDECA056A572D /* Pods */ = {
@@ -1766,6 +1801,7 @@
 				2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */,
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
+				81D405DB1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m in Sources */,
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
@@ -1794,6 +1830,7 @@
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
 				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
+				81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */,
 				101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
@@ -1813,6 +1850,7 @@
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */,
+				81D405D71F501F68005FB382 /* UIControl+BlockSupport.m in Sources */,
 				81C7AB971F4E771D00DAC8E0 /* NSString+Regular.m in Sources */,
 				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,
 				810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */,

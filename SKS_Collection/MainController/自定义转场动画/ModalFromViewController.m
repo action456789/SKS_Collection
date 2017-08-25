@@ -11,8 +11,10 @@
 
 #import "PresentBottomUpTransitioning.h"
 
-@interface ModalFromViewController ()
+#import "UIImage+Effect.h"
 
+@interface ModalFromViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation ModalFromViewController
@@ -25,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.imageView.image = [self.imageView.image kk_imageByGrayscale];
     
 //    self.navigationController.delegate = self;
 }

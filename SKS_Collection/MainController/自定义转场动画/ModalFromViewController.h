@@ -10,4 +10,5 @@
 
 @interface ModalFromViewController : UIViewController <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
+
 @end
