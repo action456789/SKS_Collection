@@ -10,6 +10,7 @@
 
 @interface UITableViewCell (Seperator)
 
+// 隐藏UITableViewCell分割线
 - (void)hidenSeperator;
 
 @end

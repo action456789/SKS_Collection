@@ -131,6 +131,7 @@
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 		819A27341F0CF20D003ED28E /* ColorSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A27321F0CF20D003ED28E /* ColorSliderViewController.m */; };
 		819A273C1F0DCA0C003ED28E /* ColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A273B1F0DCA0C003ED28E /* ColorSlider.m */; };
+		819B11E01F5028760029C55B /* UIScrollView+Scroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */; };
 		81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */; };
 		81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */; };
 		81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6F1F4E658800DAC8E0 /* NSString+YYHash.m */; };
@@ -408,6 +409,8 @@
 		819A27321F0CF20D003ED28E /* ColorSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSliderViewController.m; sourceTree = "<group>"; };
 		819A273A1F0DCA0C003ED28E /* ColorSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSlider.h; sourceTree = "<group>"; };
 		819A273B1F0DCA0C003ED28E /* ColorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSlider.m; sourceTree = "<group>"; };
+		819B11DE1F5028760029C55B /* UIScrollView+Scroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Scroll.h"; sourceTree = "<group>"; };
+		819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Scroll.m"; sourceTree = "<group>"; };
 		81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
 		81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt_Decrypt.h"; sourceTree = "<group>"; };
@@ -1366,6 +1369,15 @@
 			path = "彩色Slider";
 			sourceTree = "<group>";
 		};
+		819B11DD1F5028450029C55B /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				819B11DE1F5028760029C55B /* UIScrollView+Scroll.h */,
+				819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
 		81C7AB631F4D8C0300DAC8E0 /* NSData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1422,6 +1434,7 @@
 		81C7ABB81F4EA7A400DAC8E0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				819B11DD1F5028450029C55B /* UIScrollView */,
 				81D405DC1F5021FE005FB382 /* UIGestureRecognizer */,
 				81D405D81F50214D005FB382 /* UIBarButtonItem */,
 				81D405D41F501E96005FB382 /* UIControl */,
@@ -1888,6 +1901,7 @@
 				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
 				81C7ABF91F4EB8A700DAC8E0 /* NSData+String.m in Sources */,
 				81C7AB7E1F4E65EB00DAC8E0 /* NSObject+Swizzel.m in Sources */,
+				819B11E01F5028760029C55B /* UIScrollView+Scroll.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
 				812DE3341F4EC8DB001AAB2A /* NSDictionary+Encode.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
