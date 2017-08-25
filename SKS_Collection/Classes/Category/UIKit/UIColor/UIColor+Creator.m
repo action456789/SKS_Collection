@@ -6,10 +6,10 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "UIColor+Creating.h"
+#import "UIColor+Creator.h"
 #import "UIColor+FormatConversion.h"
 
-@implementation UIColor (Creating)
+@implementation UIColor (Creator)
 
 + (instancetype)kk_randomColor
 {

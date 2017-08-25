@@ -43,6 +43,6 @@
  @param plist   A property list xml string whose root object is a dictionary.
  @return A new dictionary created from the plist string, or nil if an error occurs.
  */
-+ (nullable NSMutableDictionary *)kk_dictionaryWithPlistString:(NSString *)plist;
++ (nullable NSMutableDictionary *)kk_dictionaryWithPlistString:(NSString *_Nullable)plist;
 
 @end

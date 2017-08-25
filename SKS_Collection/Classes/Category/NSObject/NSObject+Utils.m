@@ -16,7 +16,7 @@
 + (instancetype)deepCopyObject:(id)obj
 {
     id newObj = [[obj class] new];
-    [[obj class] enumerateProperties:^(MJProperty *property, BOOL *stop) {
+    [[obj class] mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
         id value = [obj valueForKey:property.name];
         [newObj setObject:value forKey:property.name];
     }];

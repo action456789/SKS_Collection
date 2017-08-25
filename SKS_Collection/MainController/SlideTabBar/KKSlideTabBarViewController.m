@@ -10,7 +10,7 @@
 #import "KKSlideTabBarView.h"
 #import "SlideTabBarItemController.h"
 #import "Masonry.h"
-#import "UIColor+Creating.h"
+#import "UIColor+Creator.h"
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
 

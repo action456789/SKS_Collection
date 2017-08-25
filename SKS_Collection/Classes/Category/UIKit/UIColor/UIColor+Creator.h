@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (Creating)
+@interface UIColor (Creator)
 
 #pragma mark - Create a UIColor Object
 ///=============================================================================
