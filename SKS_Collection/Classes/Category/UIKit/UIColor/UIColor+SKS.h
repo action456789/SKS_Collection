@@ -19,8 +19,4 @@
  */
 + (instancetype)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 
-// 返回随机颜色
-
-+ (instancetype)randomColor;
-
 @end

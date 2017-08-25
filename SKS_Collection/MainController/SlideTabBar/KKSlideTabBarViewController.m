@@ -10,7 +10,7 @@
 #import "KKSlideTabBarView.h"
 #import "SlideTabBarItemController.h"
 #import "Masonry.h"
-#import "UIColor+SKS.h"
+#import "UIColor+Creating.h"
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
 
@@ -103,7 +103,7 @@
             controller = [[SlideTabBarItemController alloc] init];
             controller.delegate = self;
             controller.view.frame = self.view.frame;
-            controller.view.backgroundColor = [UIColor randomColor];
+            controller.view.backgroundColor = [UIColor kk_randomColor];
             [_cache setObject:controller forKey:@(to)];
         }
         [_tabBar updateControllerFromIndex:from toIndex:to withController:controller];

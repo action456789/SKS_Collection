@@ -114,6 +114,7 @@
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
 		2EDD99171E35A9C10077AEEF /* BanberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD99161E35A9C10077AEEF /* BanberViewController.m */; };
 		810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 810A327C1F4EBE260075560D /* NSArray+SafeAccess.m */; };
+		810F5AB71F4FDA130048FD2A /* UIColor+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 810F5AB61F4FDA130048FD2A /* UIColor+Component.m */; };
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
 		812DE3221F4EBF5F001AAB2A /* NSArray+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */; };
@@ -123,6 +124,9 @@
 		812DE3371F4EC921001AAB2A /* NSDictionary+XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3361F4EC921001AAB2A /* NSDictionary+XML.m */; };
 		812DE33A1F4ED072001AAB2A /* NSDate+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3391F4ED072001AAB2A /* NSDate+Component.m */; };
 		812DE33D1F4ED2D7001AAB2A /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE33C1F4ED2D7001AAB2A /* NSDate+String.m */; };
+		812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE33F1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m */; };
+		812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */; };
+		812DE34B1F4FCC81001AAB2A /* UIColor+Creating.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE34A1F4FCC81001AAB2A /* UIColor+Creating.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
@@ -360,6 +364,8 @@
 		8107D1B81F4D323E000D9C35 /* YYDispatch_Queue_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDispatch_Queue_Macro.h; sourceTree = "<group>"; };
 		810A327B1F4EBE260075560D /* NSArray+SafeAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeAccess.h"; sourceTree = "<group>"; };
 		810A327C1F4EBE260075560D /* NSArray+SafeAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeAccess.m"; sourceTree = "<group>"; };
+		810F5AB51F4FDA130048FD2A /* UIColor+Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Component.h"; sourceTree = "<group>"; };
+		810F5AB61F4FDA130048FD2A /* UIColor+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Component.m"; sourceTree = "<group>"; };
 		8118A5EA1EA62B6300E225CD /* UPEjectShrinkBtnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPEjectShrinkBtnsView.h; sourceTree = "<group>"; };
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
@@ -378,6 +384,13 @@
 		812DE3391F4ED072001AAB2A /* NSDate+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Component.m"; sourceTree = "<group>"; };
 		812DE33B1F4ED2D7001AAB2A /* NSDate+String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
 		812DE33C1F4ED2D7001AAB2A /* NSDate+String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
+		812DE33E1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+ThreadSafe.h"; sourceTree = "<group>"; };
+		812DE33F1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+ThreadSafe.m"; sourceTree = "<group>"; };
+		812DE3411F4FC91B001AAB2A /* UIColor+FormatConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+FormatConversion.h"; sourceTree = "<group>"; };
+		812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FormatConversion.m"; sourceTree = "<group>"; };
+		812DE3451F4FCA9B001AAB2A /* YYDummy_Class_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDummy_Class_Macro.h; sourceTree = "<group>"; };
+		812DE3491F4FCC81001AAB2A /* UIColor+Creating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Creating.h"; sourceTree = "<group>"; };
+		812DE34A1F4FCC81001AAB2A /* UIColor+Creating.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Creating.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
@@ -961,6 +974,7 @@
 				8107D1B51F4D300E000D9C35 /* YYCategory_Property_Macro.h */,
 				8107D1B71F4D318E000D9C35 /* YYBenchmark_Macro.h */,
 				8107D1B81F4D323E000D9C35 /* YYDispatch_Queue_Macro.h */,
+				812DE3451F4FCA9B001AAB2A /* YYDummy_Class_Macro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1349,6 +1363,8 @@
 			isa = PBXGroup;
 			children = (
 				81C7ABAF1F4E792D00DAC8E0 /* DispatchQueue+Extension.swift */,
+				812DE33E1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.h */,
+				812DE33F1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m */,
 			);
 			path = DispatchQueue;
 			sourceTree = "<group>";
@@ -1427,6 +1443,12 @@
 				81C7ABC01F4EA7A400DAC8E0 /* UIColor+Extension.swift */,
 				81C7ABC11F4EA7A400DAC8E0 /* UIColor+SKS.h */,
 				81C7ABC21F4EA7A400DAC8E0 /* UIColor+SKS.m */,
+				812DE3411F4FC91B001AAB2A /* UIColor+FormatConversion.h */,
+				812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */,
+				812DE3491F4FCC81001AAB2A /* UIColor+Creating.h */,
+				812DE34A1F4FCC81001AAB2A /* UIColor+Creating.m */,
+				810F5AB51F4FDA130048FD2A /* UIColor+Component.h */,
+				810F5AB61F4FDA130048FD2A /* UIColor+Component.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -1764,6 +1786,7 @@
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
 				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
+				812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */,
 				812DE33A1F4ED072001AAB2A /* NSDate+Component.m in Sources */,
 				103954A41DCAFAF000DADA5E /* SAMKeychainDemoViewController.m in Sources */,
 				10F7EF031D5D664700801FD6 /* AppleSystemService.m in Sources */,
@@ -1772,6 +1795,7 @@
 				81C7AB971F4E771D00DAC8E0 /* NSString+Regular.m in Sources */,
 				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,
 				810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */,
+				810F5AB71F4FDA130048FD2A /* UIColor+Component.m in Sources */,
 				812DE3371F4EC921001AAB2A /* NSDictionary+XML.m in Sources */,
 				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
@@ -1781,6 +1805,7 @@
 				2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */,
 				10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */,
 				81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */,
+				812DE34B1F4FCC81001AAB2A /* UIColor+Creating.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
@@ -1791,6 +1816,7 @@
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
 				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
+				812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */,
 				818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */,
 				81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
