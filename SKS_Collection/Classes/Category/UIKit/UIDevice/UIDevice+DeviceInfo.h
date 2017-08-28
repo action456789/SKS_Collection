@@ -16,7 +16,17 @@
 ///=============================================================================
 
 /// Device system version (e.g. 8.1)
-+ (double)systemVersion;
++ (double)kk_systemVersion;
+
++ (BOOL)kk_isiOS7Later;
+
++ (BOOL)kk_isiOS8Later;
+
++ (BOOL)kk_isiOS9Later;
+
++ (BOOL)kk_isiOS10Later;
+
++ (BOOL)kk_isiOS11Later;
 
 /// Whether the device is iPad/iPad mini.
 @property (nonatomic, readonly) BOOL kk_isPad;

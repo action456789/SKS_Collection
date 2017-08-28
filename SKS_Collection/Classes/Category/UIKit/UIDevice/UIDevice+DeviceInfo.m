@@ -20,6 +20,26 @@
     return version;
 }
 
++ (BOOL)kk_isiOS7Later {
+    return [self kk_systemVersion] >= 7;
+}
+
++ (BOOL)kk_isiOS8Later {
+    return [self kk_systemVersion] >= 8;
+}
+
++ (BOOL)kk_isiOS9Later {
+    return [self kk_systemVersion] >= 9;
+}
+
++ (BOOL)kk_isiOS10Later {
+    return [self kk_systemVersion] >= 10;
+}
+
++ (BOOL)kk_isiOS11Later {
+    return [self kk_systemVersion] >= 11;
+}
+
 - (BOOL)kk_isPad {
     static dispatch_once_t one;
     static BOOL pad;

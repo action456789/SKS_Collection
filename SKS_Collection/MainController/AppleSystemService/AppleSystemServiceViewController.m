@@ -7,13 +7,13 @@
 //
 
 #import "AppleSystemServiceViewController.h"
+#import "UIDevice+DeviceInfo.h"
 
 @implementation AppleSystemServiceViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 }
 
 @end

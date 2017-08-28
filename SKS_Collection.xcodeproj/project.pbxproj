@@ -131,6 +131,9 @@
 		812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE33F1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m */; };
 		812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
+		8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */; };
+		8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8141F53D158004B7638 /* UIDevice+Memory.m */; };
+		8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 		819A27341F0CF20D003ED28E /* ColorSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A27321F0CF20D003ED28E /* ColorSliderViewController.m */; };
@@ -414,6 +417,12 @@
 		812DE3451F4FCA9B001AAB2A /* YYDummy_Class_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDummy_Class_Macro.h; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
+		8160F8101F53D148004B7638 /* UIDevice+DiskSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DiskSpace.h"; sourceTree = "<group>"; };
+		8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DiskSpace.m"; sourceTree = "<group>"; };
+		8160F8131F53D158004B7638 /* UIDevice+Memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Memory.h"; sourceTree = "<group>"; };
+		8160F8141F53D158004B7638 /* UIDevice+Memory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Memory.m"; sourceTree = "<group>"; };
+		8160F8161F53D1C8004B7638 /* UIDevice+CPU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CPU.h"; sourceTree = "<group>"; };
+		8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CPU.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
 		8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNotFluentMonitor.m; sourceTree = "<group>"; };
 		818131511EBAC96C00CEEA97 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
@@ -1528,6 +1537,12 @@
 				81C7ABC51F4EA7A400DAC8E0 /* UIDevice+Identifier.m */,
 				812224CE1F53BE2500117C25 /* UIDevice+DeviceInfo.h */,
 				812224CF1F53BE2500117C25 /* UIDevice+DeviceInfo.m */,
+				8160F8101F53D148004B7638 /* UIDevice+DiskSpace.h */,
+				8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */,
+				8160F8131F53D158004B7638 /* UIDevice+Memory.h */,
+				8160F8141F53D158004B7638 /* UIDevice+Memory.m */,
+				8160F8161F53D1C8004B7638 /* UIDevice+CPU.h */,
+				8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */,
 			);
 			path = UIDevice;
 			sourceTree = "<group>";
@@ -1855,6 +1870,7 @@
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
+				8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */,
 				812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
@@ -1942,6 +1958,7 @@
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */,
 				81D405C41F5004D5005FB382 /* YYCGUtiilites.m in Sources */,
+				8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */,
 				812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
@@ -1950,6 +1967,7 @@
 				8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
+				8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
 				2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
