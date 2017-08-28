@@ -134,6 +134,8 @@
 		8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */; };
 		8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8141F53D158004B7638 /* UIDevice+Memory.m */; };
 		8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */; };
+		8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */; };
+		8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 		819A27341F0CF20D003ED28E /* ColorSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A27321F0CF20D003ED28E /* ColorSliderViewController.m */; };
@@ -423,6 +425,11 @@
 		8160F8141F53D158004B7638 /* UIDevice+Memory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Memory.m"; sourceTree = "<group>"; };
 		8160F8161F53D1C8004B7638 /* UIDevice+CPU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CPU.h"; sourceTree = "<group>"; };
 		8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CPU.m"; sourceTree = "<group>"; };
+		8160F81D1F53F1EC004B7638 /* UIApplication+EnterPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EnterPoint.swift"; sourceTree = "<group>"; };
+		8160F81E1F53F259004B7638 /* UIApplication+Sandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Sandbox.h"; sourceTree = "<group>"; };
+		8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Sandbox.m"; sourceTree = "<group>"; };
+		8160F8211F53F2DF004B7638 /* UIApplication+AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppInfo.h"; sourceTree = "<group>"; };
+		8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
 		8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNotFluentMonitor.m; sourceTree = "<group>"; };
 		818131511EBAC96C00CEEA97 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
@@ -1385,6 +1392,25 @@
 			path = UIScreen;
 			sourceTree = "<group>";
 		};
+		8160F81C1F53F1EC004B7638 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				8160F81D1F53F1EC004B7638 /* UIApplication+EnterPoint.swift */,
+				8160F81E1F53F259004B7638 /* UIApplication+Sandbox.h */,
+				8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */,
+				8160F8211F53F2DF004B7638 /* UIApplication+AppInfo.h */,
+				8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		8160F8241F53FD38004B7638 /* UIBezierPath */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIBezierPath;
+			sourceTree = "<group>";
+		};
 		8181314A1EBAC71E00CEEA97 /* 卡顿监听 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1471,8 +1497,10 @@
 		81C7ABB81F4EA7A400DAC8E0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				812224CA1F53BC9200117C25 /* UIScreen */,
+				8160F8241F53FD38004B7638 /* UIBezierPath */,
 				819B11DD1F5028450029C55B /* UIScrollView */,
+				8160F81C1F53F1EC004B7638 /* UIApplication */,
+				812224CA1F53BC9200117C25 /* UIScreen */,
 				81D405DC1F5021FE005FB382 /* UIGestureRecognizer */,
 				81D405D81F50214D005FB382 /* UIBarButtonItem */,
 				81D405D41F501E96005FB382 /* UIControl */,
@@ -1872,6 +1900,7 @@
 				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
 				8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */,
 				812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */,
+				8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */,
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
@@ -1977,6 +2006,7 @@
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
+				8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */,
 				81D405CD1F500858005FB382 /* UIImage+CornerRadio.m in Sources */,
 				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
