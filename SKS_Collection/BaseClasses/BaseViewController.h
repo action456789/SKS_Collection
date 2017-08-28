@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIDevice+KS.h"
 
 @interface BaseViewController : UIViewController
 

@@ -8,7 +8,6 @@
 
 #import "QRCodeViewController.h"
 #import "QRCodeView.h"
-#import "UIDevice+KS.h"
 #import "QRCodeMaskView.h"
 #import "UIView+Frame.h"
 #import <AVFoundation/AVFoundation.h>

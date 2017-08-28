@@ -7,7 +7,6 @@
 //
 
 #import "SearchDemoController.h"
-#import "UIDevice+KS.h"
 #import "CityCounty.h"
 #import "MetaDataManager.h"
 

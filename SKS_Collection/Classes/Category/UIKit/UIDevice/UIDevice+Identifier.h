@@ -10,6 +10,7 @@
 
 @interface UIDevice (Identifier)
 
+// 获取app的唯一id
 + (NSString *)identifierForVendor1;
 
 @end
