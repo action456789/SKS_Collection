@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
 
 @interface CALayer (Transform)
 
@@ -21,5 +22,16 @@
 @property (nonatomic) CGFloat kk_transformTranslationX; ///< key path "tranform.translation.x"
 @property (nonatomic) CGFloat kk_transformTranslationY; ///< key path "tranform.translation.y"
 @property (nonatomic) CGFloat kk_transformTranslationZ; ///< key path "tranform.translation.z"
+
+/**
+ Shortcut for transform.m34, -1/1000 is a good value.
+ It should be set before other transform shortcut.
+ */
+@property (nonatomic) CGFloat kk_transformDepth;
+
+/**
+ Wrapper for `contentsGravity` property.
+ */
+@property (nonatomic) UIViewContentMode kk_contentMode;
 
 @end
