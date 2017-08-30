@@ -115,12 +115,15 @@
 		2EDD99171E35A9C10077AEEF /* BanberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD99161E35A9C10077AEEF /* BanberViewController.m */; };
 		810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 810A327C1F4EBE260075560D /* NSArray+SafeAccess.m */; };
 		810F5AB71F4FDA130048FD2A /* UIColor+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 810F5AB61F4FDA130048FD2A /* UIColor+Component.m */; };
+		8111FB991F5657AD00769233 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8111FB981F5657AD00769233 /* UIView+Snapshot.m */; };
+		8111FB9F1F56588000769233 /* CALayer+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8111FB9E1F56588000769233 /* CALayer+Frame.m */; };
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
 		812224C51F53BAD900117C25 /* UITableView+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C41F53BAD900117C25 /* UITableView+Update.m */; };
 		812224C91F53BC2E00117C25 /* UITextField+selectText.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C81F53BC2E00117C25 /* UITextField+selectText.m */; };
 		812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CC1F53BCAE00117C25 /* UIScreen+Size.m */; };
 		812224D01F53BE2500117C25 /* UIDevice+DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CF1F53BE2500117C25 /* UIDevice+DeviceInfo.m */; };
+		8126CA601F565608000385C8 /* CALayer+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126CA5F1F565608000385C8 /* CALayer+Snapshot.m */; };
 		812DE3221F4EBF5F001AAB2A /* NSArray+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */; };
 		812DE32E1F4EC5EE001AAB2A /* NSArray+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE32D1F4EC5EE001AAB2A /* NSArray+Plist.m */; };
 		812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE32F1F4EC602001AAB2A /* NSDictionary+Plist.m */; };
@@ -165,6 +168,7 @@
 		81D405DB1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405DA1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m */; };
 		81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */; };
 		81D405E21F50265E005FB382 /* UIView+CoordinateSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D405E11F50265E005FB382 /* UIView+CoordinateSystem.m */; };
+		81E197001F565C58009E32B6 /* CALayer+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E196FF1F565C58009E32B6 /* CALayer+Transform.m */; };
 		C05CD9A2A44890E92A5A0A07 /* Pods_SKS_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */; };
 /* End PBXBuildFile section */
 
@@ -386,6 +390,10 @@
 		810A327C1F4EBE260075560D /* NSArray+SafeAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeAccess.m"; sourceTree = "<group>"; };
 		810F5AB51F4FDA130048FD2A /* UIColor+Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Component.h"; sourceTree = "<group>"; };
 		810F5AB61F4FDA130048FD2A /* UIColor+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Component.m"; sourceTree = "<group>"; };
+		8111FB971F5657AD00769233 /* UIView+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
+		8111FB981F5657AD00769233 /* UIView+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		8111FB9D1F56588000769233 /* CALayer+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Frame.h"; sourceTree = "<group>"; };
+		8111FB9E1F56588000769233 /* CALayer+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Frame.m"; sourceTree = "<group>"; };
 		8118A5EA1EA62B6300E225CD /* UPEjectShrinkBtnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPEjectShrinkBtnsView.h; sourceTree = "<group>"; };
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
@@ -398,6 +406,8 @@
 		812224CC1F53BCAE00117C25 /* UIScreen+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Size.m"; sourceTree = "<group>"; };
 		812224CE1F53BE2500117C25 /* UIDevice+DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DeviceInfo.h"; sourceTree = "<group>"; };
 		812224CF1F53BE2500117C25 /* UIDevice+DeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceInfo.m"; sourceTree = "<group>"; };
+		8126CA5E1F565608000385C8 /* CALayer+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Snapshot.h"; sourceTree = "<group>"; };
+		8126CA5F1F565608000385C8 /* CALayer+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Snapshot.m"; sourceTree = "<group>"; };
 		812DE3201F4EBF5F001AAB2A /* NSArray+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Encode.h"; sourceTree = "<group>"; };
 		812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Encode.m"; sourceTree = "<group>"; };
 		812DE32C1F4EC5ED001AAB2A /* NSArray+Plist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Plist.h"; sourceTree = "<group>"; };
@@ -493,8 +503,6 @@
 		81C7ABE01F4EA7A400DAC8E0 /* UIView+CornerRadio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadio.m"; sourceTree = "<group>"; };
 		81C7ABE11F4EA7A400DAC8E0 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		81C7ABE21F4EA7A400DAC8E0 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		81C7ABE31F4EA7A400DAC8E0 /* UIView+Screenshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
-		81C7ABE41F4EA7A400DAC8E0 /* UIView+Screenshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		81C7ABE51F4EA7A400DAC8E0 /* UIView+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		81C7ABE61F4EA7A400DAC8E0 /* UIView+Utilsl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilsl.m"; sourceTree = "<group>"; };
 		81C7ABE81F4EA7A400DAC8E0 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
@@ -530,6 +538,8 @@
 		81D405DE1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlockSupport.m"; sourceTree = "<group>"; };
 		81D405E01F50265E005FB382 /* UIView+CoordinateSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CoordinateSystem.h"; sourceTree = "<group>"; };
 		81D405E11F50265E005FB382 /* UIView+CoordinateSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CoordinateSystem.m"; sourceTree = "<group>"; };
+		81E196FE1F565C58009E32B6 /* CALayer+Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transform.h"; sourceTree = "<group>"; };
+		81E196FF1F565C58009E32B6 /* CALayer+Transform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transform.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -945,6 +955,12 @@
 			children = (
 				10DD986B1D226B7D00193A69 /* CALayer+Animation.h */,
 				10DD986C1D226B7D00193A69 /* CALayer+Animation.m */,
+				8126CA5E1F565608000385C8 /* CALayer+Snapshot.h */,
+				8126CA5F1F565608000385C8 /* CALayer+Snapshot.m */,
+				8111FB9D1F56588000769233 /* CALayer+Frame.h */,
+				8111FB9E1F56588000769233 /* CALayer+Frame.m */,
+				81E196FE1F565C58009E32B6 /* CALayer+Transform.h */,
+				81E196FF1F565C58009E32B6 /* CALayer+Transform.m */,
 			);
 			path = CALayer;
 			sourceTree = "<group>";
@@ -1634,8 +1650,8 @@
 				81C7ABE01F4EA7A400DAC8E0 /* UIView+CornerRadio.m */,
 				81C7ABE11F4EA7A400DAC8E0 /* UIView+Frame.h */,
 				81C7ABE21F4EA7A400DAC8E0 /* UIView+Frame.m */,
-				81C7ABE31F4EA7A400DAC8E0 /* UIView+Screenshot.h */,
-				81C7ABE41F4EA7A400DAC8E0 /* UIView+Screenshot.m */,
+				8111FB971F5657AD00769233 /* UIView+Snapshot.h */,
+				8111FB981F5657AD00769233 /* UIView+Snapshot.m */,
 				81C7ABE51F4EA7A400DAC8E0 /* UIView+Utils.h */,
 				81C7ABE61F4EA7A400DAC8E0 /* UIView+Utilsl.m */,
 				81D405E01F50265E005FB382 /* UIView+CoordinateSystem.h */,
@@ -1890,6 +1906,7 @@
 				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
 				81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */,
 				10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */,
+				8111FB991F5657AD00769233 /* UIView+Snapshot.m in Sources */,
 				1046D6841D62E20000E6D7EF /* TipsView.m in Sources */,
 				2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */,
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
@@ -1927,6 +1944,7 @@
 				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
 				81D405E21F50265E005FB382 /* UIView+CoordinateSystem.m in Sources */,
 				81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */,
+				8111FB9F1F56588000769233 /* CALayer+Frame.m in Sources */,
 				101859621D797D19006929D1 /* NSDictionary+KS.m in Sources */,
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				103C3CD81D52D89200401306 /* StaticCellDemoViewController.m in Sources */,
@@ -1952,6 +1970,7 @@
 				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,
 				810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */,
 				810F5AB71F4FDA130048FD2A /* UIColor+Component.m in Sources */,
+				81E197001F565C58009E32B6 /* CALayer+Transform.m in Sources */,
 				812DE3371F4EC921001AAB2A /* NSDictionary+XML.m in Sources */,
 				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
@@ -1992,6 +2011,7 @@
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
+				8126CA601F565608000385C8 /* CALayer+Snapshot.m in Sources */,
 				2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */,
 				8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,

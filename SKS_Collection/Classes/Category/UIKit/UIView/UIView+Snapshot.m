@@ -1,14 +1,14 @@
 //
-//  UIView+Screenshot.m
+//  UIView+Snapshot.m
 //  SKS_Collection
 //
-//  Created by sen.ke on 2017/6/4.
+//  Created by sen.ke on 2017/8/30.
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "UIView+Screenshot.h"
+#import "UIView+Snapshot.h"
 
-@implementation UIView (Screenshot)
+@implementation UIView (Snapshot)
 
 - (UIImage *)kk_snapshotImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
@@ -20,7 +20,7 @@
 
 - (UIImage *)kk_snapshotImageAfterScreenUpdates:(BOOL)afterUpdates {
     if (![self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
-        return [self snapshotImage];
+        return [self kk_snapshotImage];
     }
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:afterUpdates];
