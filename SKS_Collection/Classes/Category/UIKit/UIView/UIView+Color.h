@@ -10,6 +10,6 @@
 
 @interface UIView (Color)
 
-- (UIColor *)colorOfPoint:(CGPoint)point;
+- (UIColor *)kk_colorOfPoint:(CGPoint)point;
 
 @end

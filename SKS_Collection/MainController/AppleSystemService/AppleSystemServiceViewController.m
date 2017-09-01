@@ -11,7 +11,9 @@
 #import "UIDevice+DiskSpace.h"
 #import "UIDevice+DeviceInfo.h"
 
-@implementation AppleSystemServiceViewController
+@implementation AppleSystemServiceViewController {
+    
+}
 
 - (void)viewDidLoad
 {
@@ -33,6 +35,8 @@
     NSLog(@"kk_cpuCount: %lu", (unsigned long)[[UIDevice currentDevice] kk_cpuCount]);
     NSLog(@"kk_cpuUsage: %f", [[UIDevice currentDevice] kk_cpuUsage]);
     NSLog(@"kk_cpuUsagePerProcessor: %@", [[UIDevice currentDevice] kk_cpuUsagePerProcessor]);
+    
+    
 }
 
 @end

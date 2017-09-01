@@ -24,13 +24,12 @@
     return self;
 }
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
+- (void)createBezierPath {
+    if (self.bezierPath) {
+        return;
+    }
     
     CGRect frame = self.bounds;
-    
     CGPoint center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
     CGFloat radius = frame.size.width * 0.5 - [self lineWidth] * 0.5;
     
@@ -42,8 +41,15 @@
         
         path;
     });
+}
+
+- (void)createProgressLabel {
+    if (_progressLabel) {
+        return;
+    }
     
-    self.sharpLayer.path = self.bezierPath.CGPath;
+    CGRect frame = self.bounds;
+    CGPoint center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
     
     _progressLabel = ({
         UILabel *label = [UILabel new];
@@ -56,6 +62,17 @@
         
         label;
     });
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    [self createBezierPath];
+
+    self.sharpLayer.path = self.bezierPath.CGPath;
+    
+    [self createProgressLabel];
 }
 
 - (void)showWithProgress:(CGFloat)progress

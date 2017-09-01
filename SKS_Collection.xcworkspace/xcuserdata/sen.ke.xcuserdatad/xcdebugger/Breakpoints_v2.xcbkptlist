@@ -58,13 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKS_Collection/MainController/AppleSystemService/AppleSystemServiceViewController.m"
-            timestampString = "525752351.521018"
+            timestampString = "525860861.924076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "AppleSystemServiceViewController"
-            landmarkType = "3">
+            startingLineNumber = "43"
+            endingLineNumber = "43">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

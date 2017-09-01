@@ -11,7 +11,7 @@
 @implementation UIView (Color)
 
 // http://blog.csdn.net/caryaliu/article/details/49283793
-- (UIColor *)colorOfPoint:(CGPoint)point {
+- (UIColor *)kk_colorOfPoint:(CGPoint)point {
     unsigned char pixel[4] = {0};
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();

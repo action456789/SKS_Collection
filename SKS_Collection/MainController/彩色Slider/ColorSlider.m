@@ -71,7 +71,7 @@
 }
 
 - (void)setThumb {
-    UIColor *color = [self colorOfPoint:CGPointMake(1, self.frame.size.height - 1)];
+    UIColor *color = [self kk_colorOfPoint:CGPointMake(1, self.frame.size.height - 1)];
     
     UIImage *image = [self getThumbImageWithColor:color];
     
@@ -102,7 +102,7 @@
 
 -(void)sliderValueChanged:(UISlider*)slider {
     CGPoint point = CGPointMake(_slider.frame.size.width * slider.value, self.frame.size.height - 1);
-    UIColor *color = [self colorOfPoint:point];
+    UIColor *color = [self kk_colorOfPoint:point];
     
     _selectColor = color;
     

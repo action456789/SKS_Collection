@@ -72,7 +72,7 @@
                         ,[StaticCellItem itemWithTitle:@"11. WKWebView的加载过程" icon:nil objectClass:[WKWebViewDemoController class]]
                         ,[StaticCellItem itemWithTitle:@"12. 静态单元格" icon:nil objectClass:[StaticCellDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"13. 数字增长动画" icon:nil objectClass:[NumberIncresingVc class]]
-                        ,[StaticCellItem itemWithTitle:@"14. √ × 动画" icon:nil objectClass:[CheckMarkAnimVc class]]
+                        ,[StaticCellItem itemWithTitle:@"14. CALayer动画" icon:nil objectClass:[CheckMarkAnimVc class]]
                         ,[StaticCellItem itemWithTitle:@"15. 可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
                         ,[StaticCellItem itemWithTitle:@"16. 弹出 tips view" icon:nil type:StaticCellTypeHandle handle:^{[weakSelf showTipsView];}]
                         ,[StaticCellItem itemWithTitle:@"17. 加载 gif 图片" icon:nil objectClass:[GifDemoViewController class]]

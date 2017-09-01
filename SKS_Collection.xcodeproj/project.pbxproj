@@ -483,7 +483,6 @@
 		81C7ABB61F4EA6B000DAC8E0 /* MBProgressHUD+message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+message.m"; sourceTree = "<group>"; };
 		81C7ABBA1F4EA7A400DAC8E0 /* UIAlertController+KS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+KS.h"; sourceTree = "<group>"; };
 		81C7ABBB1F4EA7A400DAC8E0 /* UIAlertController+KS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KS.m"; sourceTree = "<group>"; };
-		81C7ABBD1F4EA7A400DAC8E0 /* UIApplication+EnterPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EnterPoint.swift"; sourceTree = "<group>"; };
 		81C7ABC01F4EA7A400DAC8E0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		81C7ABC41F4EA7A400DAC8E0 /* UIDevice+Identifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
 		81C7ABC51F4EA7A400DAC8E0 /* UIDevice+Identifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Identifier.m"; sourceTree = "<group>"; };
@@ -1521,7 +1520,6 @@
 				81D405D81F50214D005FB382 /* UIBarButtonItem */,
 				81D405D41F501E96005FB382 /* UIControl */,
 				81C7ABB91F4EA7A400DAC8E0 /* UIAlertController */,
-				81C7ABBC1F4EA7A400DAC8E0 /* UIApplication */,
 				81C7ABBE1F4EA7A400DAC8E0 /* UIButton */,
 				81C7ABBF1F4EA7A400DAC8E0 /* UIColor */,
 				81C7ABC31F4EA7A400DAC8E0 /* UIDevice */,
@@ -1543,14 +1541,6 @@
 				81C7ABBB1F4EA7A400DAC8E0 /* UIAlertController+KS.m */,
 			);
 			path = UIAlertController;
-			sourceTree = "<group>";
-		};
-		81C7ABBC1F4EA7A400DAC8E0 /* UIApplication */ = {
-			isa = PBXGroup;
-			children = (
-				81C7ABBD1F4EA7A400DAC8E0 /* UIApplication+EnterPoint.swift */,
-			);
-			path = UIApplication;
 			sourceTree = "<group>";
 		};
 		81C7ABBE1F4EA7A400DAC8E0 /* UIButton */ = {
