@@ -11,7 +11,7 @@
 
 @implementation UILabel (NumberIncreaseAnim)
 
-- (void)kk_AnimateFromNumber:(CGFloat)from toNumber:(CGFloat)to WithDuration:(CGFloat)duration delay:(CGFloat)delay {
+- (void)kk_animateFromNumber:(CGFloat)from toNumber:(CGFloat)to duration:(CGFloat)duration delay:(CGFloat)delay {
     
     POPAnimatableProperty *prop = [POPAnimatableProperty propertyWithName:@"prop" initializer:^(POPMutableAnimatableProperty *prop) {
         

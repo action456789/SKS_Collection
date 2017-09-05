@@ -10,6 +10,6 @@
 
 @interface UILabel (NumberIncreaseAnim)
 
-- (void)kk_AnimateFromNumber:(CGFloat)from toNumber:(CGFloat)to WithDuration:(CGFloat)duration delay:(CGFloat)delay;
+- (void)kk_animateFromNumber:(CGFloat)from toNumber:(CGFloat)to duration:(CGFloat)duration delay:(CGFloat)delay;
 
 @end

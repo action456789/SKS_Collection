@@ -24,7 +24,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 200, 300)];
     label.text = @"100";
     [self.view addSubview:label];
-    [label kk_AnimateFromNumber:100 toNumber:3000 WithDuration:5 delay:0];
+    [label kk_animateFromNumber:100 toNumber:3000 duration:5 delay:0];
 }
 
 @end
