@@ -124,6 +124,7 @@
 		812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CC1F53BCAE00117C25 /* UIScreen+Size.m */; };
 		812224D01F53BE2500117C25 /* UIDevice+DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CF1F53BE2500117C25 /* UIDevice+DeviceInfo.m */; };
 		8126CA601F565608000385C8 /* CALayer+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126CA5F1F565608000385C8 /* CALayer+Snapshot.m */; };
+		8127CDDA1F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127CDD91F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m */; };
 		812DE3221F4EBF5F001AAB2A /* NSArray+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */; };
 		812DE32E1F4EC5EE001AAB2A /* NSArray+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE32D1F4EC5EE001AAB2A /* NSArray+Plist.m */; };
 		812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE32F1F4EC602001AAB2A /* NSDictionary+Plist.m */; };
@@ -408,6 +409,8 @@
 		812224CF1F53BE2500117C25 /* UIDevice+DeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceInfo.m"; sourceTree = "<group>"; };
 		8126CA5E1F565608000385C8 /* CALayer+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Snapshot.h"; sourceTree = "<group>"; };
 		8126CA5F1F565608000385C8 /* CALayer+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Snapshot.m"; sourceTree = "<group>"; };
+		8127CDD81F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+NumberIncreaseAnim.h"; sourceTree = "<group>"; };
+		8127CDD91F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NumberIncreaseAnim.m"; sourceTree = "<group>"; };
 		812DE3201F4EBF5F001AAB2A /* NSArray+Encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Encode.h"; sourceTree = "<group>"; };
 		812DE3211F4EBF5F001AAB2A /* NSArray+Encode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Encode.m"; sourceTree = "<group>"; };
 		812DE32C1F4EC5ED001AAB2A /* NSArray+Plist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Plist.h"; sourceTree = "<group>"; };
@@ -1407,6 +1410,15 @@
 			path = UIScreen;
 			sourceTree = "<group>";
 		};
+		8127CDD71F5E58CE00E42FD6 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				8127CDD81F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.h */,
+				8127CDD91F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		8160F81C1F53F1EC004B7638 /* UIApplication */ = {
 			isa = PBXGroup;
 			children = (
@@ -1512,6 +1524,7 @@
 		81C7ABB81F4EA7A400DAC8E0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8127CDD71F5E58CE00E42FD6 /* UILabel */,
 				8160F8241F53FD38004B7638 /* UIBezierPath */,
 				819B11DD1F5028450029C55B /* UIScrollView */,
 				8160F81C1F53F1EC004B7638 /* UIApplication */,
@@ -2017,6 +2030,7 @@
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
 				8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */,
+				8127CDDA1F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m in Sources */,
 				81D405CD1F500858005FB382 /* UIImage+CornerRadio.m in Sources */,
 				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,

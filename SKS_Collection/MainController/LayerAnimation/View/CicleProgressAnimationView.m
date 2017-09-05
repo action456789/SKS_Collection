@@ -11,8 +11,10 @@
 @implementation CicleProgressAnimationView
 {
     NSProgress *_progress;
-    CABasicAnimation *_animation;
     UILabel *_progressLabel;
+    
+    CGPoint _center;
+    CGFloat _radius;
 }
 
 - (instancetype)init
@@ -28,16 +30,11 @@
     if (self.bezierPath) {
         return;
     }
-    
-    CGRect frame = self.bounds;
-    CGPoint center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
-    CGFloat radius = frame.size.width * 0.5 - [self lineWidth] * 0.5;
-    
     self.bezierPath = ({
         CGFloat startA = 0;
         CGFloat endA = M_PI * 2;
         
-        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES]; // clockwise:YES 即顺时针
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:_center radius:_radius startAngle:startA endAngle:endA clockwise:YES]; // clockwise:YES 即顺时针
         
         path;
     });
@@ -47,17 +44,13 @@
     if (_progressLabel) {
         return;
     }
-    
-    CGRect frame = self.bounds;
-    CGPoint center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
-    
     _progressLabel = ({
         UILabel *label = [UILabel new];
-        label.bounds = CGRectMake(0, 0, frame.size.width * 0.8, frame.size.height * 0.7);
-        label.center = center;
+        label.bounds = CGRectMake(0, 0, self.frame.size.width * 0.8, self.frame.size.height * 0.7);
+        label.center = _center;
         label.textAlignment = NSTextAlignmentCenter;
         label.text = @"0%";
-        label.font = [UIFont fontWithName:@"Heiti SC" size:ceil(frame.size.width/4.0f)];
+        label.font = [UIFont fontWithName:@"Heiti SC" size:ceil(self.frame.size.width/4.0f)];
         [self addSubview:label];
         
         label;
@@ -68,14 +61,15 @@
 {
     [super layoutSubviews];
 
-    [self createBezierPath];
-
-    self.sharpLayer.path = self.bezierPath.CGPath;
+    _center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    _radius = self.frame.size.width * 0.5 - [self lineWidth] * 0.5;
     
+    [self createBezierPath];
+    self.sharpLayer.path = self.bezierPath.CGPath;
     [self createProgressLabel];
 }
 
-- (void)showWithProgress:(CGFloat)progress
+- (void)showWithProgress:(int64_t)progress
 {
     _progress.completedUnitCount = progress;
     

@@ -10,6 +10,6 @@
 
 @interface CicleProgressAnimationView : BaseLayerAnimationView
 
-- (void)showWithProgress:(CGFloat)progress;
+- (void)showWithProgress:(int64_t)progress;
 
 @end
