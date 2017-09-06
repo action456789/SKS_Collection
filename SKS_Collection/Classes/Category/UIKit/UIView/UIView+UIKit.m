@@ -7,7 +7,7 @@
 //
 
 #import "UIView+UIKit.h"
-#import "UIImage+Utils.h"
+#import "UIImage+Creator.h"
 
 @implementation UIView (UIKit)
 
@@ -16,11 +16,11 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = self.bounds;
     
-    UIImage *normalImage = [UIImage imageWithColor:[UIColor clearColor] size:btn.frame.size];
+    UIImage *normalImage = [UIImage kk_imageWithColor:[UIColor clearColor] size:btn.frame.size];
     [btn setBackgroundImage:normalImage forState:UIControlStateNormal];
     
     UIColor *highLightColor = color ? color : [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
-    UIImage *highlightImage = [UIImage imageWithColor: highLightColor size:btn.frame.size];
+    UIImage *highlightImage = [UIImage kk_imageWithColor: highLightColor size:btn.frame.size];
     [btn setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
     
     [self addSubview:btn];

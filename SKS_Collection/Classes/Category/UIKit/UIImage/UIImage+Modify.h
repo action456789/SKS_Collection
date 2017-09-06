@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable UIImage *)kk_imageByResizeToSize:(CGSize)size contentMode:(UIViewContentMode)contentMode;
 
-
+- (UIImage *)kk_scaleToWidth:(CGFloat)width;
 
 @end
 

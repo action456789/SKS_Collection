@@ -79,4 +79,23 @@
     return image;
 }
 
+// 按照你想要的比例去缩放图片
+- (UIImage *)kk_scaleToWidth:(CGFloat)width {
+    // 如果传入的宽度比当前宽度还要大,就直接返回
+    if (width > self.size.width) {
+        return  self;
+    }
+    
+    // 计算缩放之后的高度
+    CGFloat height = (width / self.size.width) * self.size.height;
+    CGRect rect = CGRectMake(0, 0, width, height);
+    
+    UIGraphicsBeginImageContext(rect.size);
+    [self drawInRect:rect];
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 @end
