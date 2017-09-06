@@ -134,6 +134,7 @@
 		812DE33D1F4ED2D7001AAB2A /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE33C1F4ED2D7001AAB2A /* NSDate+String.m */; };
 		812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE33F1F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m */; };
 		812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */; };
+		8133C5F11F5FF2ED00637CC9 /* UIView+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
 		8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */; };
 		8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8141F53D158004B7638 /* UIDevice+Memory.m */; };
@@ -430,6 +431,10 @@
 		812DE3411F4FC91B001AAB2A /* UIColor+FormatConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+FormatConversion.h"; sourceTree = "<group>"; };
 		812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FormatConversion.m"; sourceTree = "<group>"; };
 		812DE3451F4FCA9B001AAB2A /* YYDummy_Class_Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDummy_Class_Macro.h; sourceTree = "<group>"; };
+		8133C5ED1F5FF2B700637CC9 /* UINavigationController+SubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SubView.m"; sourceTree = "<group>"; };
+		8133C5EE1F5FF2B700637CC9 /* UINavigationController+SubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SubView.h"; sourceTree = "<group>"; };
+		8133C5EF1F5FF2ED00637CC9 /* UIView+UIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UIKit.h"; sourceTree = "<group>"; };
+		8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIKit.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
 		8160F8101F53D148004B7638 /* UIDevice+DiskSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DiskSpace.h"; sourceTree = "<group>"; };
@@ -489,8 +494,6 @@
 		81C7ABC01F4EA7A400DAC8E0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		81C7ABC41F4EA7A400DAC8E0 /* UIDevice+Identifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
 		81C7ABC51F4EA7A400DAC8E0 /* UIDevice+Identifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Identifier.m"; sourceTree = "<group>"; };
-		81C7ABD01F4EA7A400DAC8E0 /* UINavigationController+UIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+UIKit.h"; sourceTree = "<group>"; };
-		81C7ABD11F4EA7A400DAC8E0 /* UINavigationController+UIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+UIKit.m"; sourceTree = "<group>"; };
 		81C7ABD31F4EA7A400DAC8E0 /* UITableView+RadioCornerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+RadioCornerCell.h"; sourceTree = "<group>"; };
 		81C7ABD41F4EA7A400DAC8E0 /* UITableView+RadioCornerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RadioCornerCell.m"; sourceTree = "<group>"; };
 		81C7ABD51F4EA7A400DAC8E0 /* UITableViewCell+ImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ImageView.h"; sourceTree = "<group>"; };
@@ -1419,6 +1422,15 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		8135B9A71F5F9DFB00E8CB62 /* UINavigationCotroller */ = {
+			isa = PBXGroup;
+			children = (
+				8133C5EE1F5FF2B700637CC9 /* UINavigationController+SubView.h */,
+				8133C5ED1F5FF2B700637CC9 /* UINavigationController+SubView.m */,
+			);
+			path = UINavigationCotroller;
+			sourceTree = "<group>";
+		};
 		8160F81C1F53F1EC004B7638 /* UIApplication */ = {
 			isa = PBXGroup;
 			children = (
@@ -1524,6 +1536,7 @@
 		81C7ABB81F4EA7A400DAC8E0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8135B9A71F5F9DFB00E8CB62 /* UINavigationCotroller */,
 				8127CDD71F5E58CE00E42FD6 /* UILabel */,
 				8160F8241F53FD38004B7638 /* UIBezierPath */,
 				819B11DD1F5028450029C55B /* UIScrollView */,
@@ -1537,7 +1550,6 @@
 				81C7ABBF1F4EA7A400DAC8E0 /* UIColor */,
 				81C7ABC31F4EA7A400DAC8E0 /* UIDevice */,
 				81C7ABC81F4EA7A400DAC8E0 /* UIImage */,
-				81C7ABCF1F4EA7A400DAC8E0 /* UINavigationCotroller */,
 				81C7ABD21F4EA7A400DAC8E0 /* UITableView */,
 				812224C61F53BC0A00117C25 /* UITextField */,
 				81C7ABD91F4EA7A400DAC8E0 /* UITextView */,
@@ -1611,15 +1623,6 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
-		81C7ABCF1F4EA7A400DAC8E0 /* UINavigationCotroller */ = {
-			isa = PBXGroup;
-			children = (
-				81C7ABD01F4EA7A400DAC8E0 /* UINavigationController+UIKit.h */,
-				81C7ABD11F4EA7A400DAC8E0 /* UINavigationController+UIKit.m */,
-			);
-			path = UINavigationCotroller;
-			sourceTree = "<group>";
-		};
 		81C7ABD21F4EA7A400DAC8E0 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1647,6 +1650,8 @@
 		81C7ABDC1F4EA7A400DAC8E0 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				8133C5EF1F5FF2ED00637CC9 /* UIView+UIKit.h */,
+				8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */,
 				81C7ABDD1F4EA7A400DAC8E0 /* UIView+Color.h */,
 				81C7ABDE1F4EA7A400DAC8E0 /* UIView+Color.m */,
 				81C7ABDF1F4EA7A400DAC8E0 /* UIView+CornerRadio.h */,
@@ -1986,6 +1991,7 @@
 				81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
+				8133C5F11F5FF2ED00637CC9 /* UIView+UIKit.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				812224C91F53BC2E00117C25 /* UITextField+selectText.m in Sources */,
 				2E38E9981E28D6830086B870 /* StaticCollectionViewDemoVC.m in Sources */,
@@ -2185,6 +2191,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = SKS_Collection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2212,6 +2219,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = SKS_Collection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

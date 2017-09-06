@@ -15,10 +15,12 @@
     
     POPAnimatableProperty *prop = [POPAnimatableProperty propertyWithName:@"prop" initializer:^(POPMutableAnimatableProperty *prop) {
         
+        // 告诉POP当前的属性值
         prop.readBlock = ^(id obj, CGFloat values[]) {
-            self.text = [NSString stringWithFormat:@"%.0f%%", from];
+            self.text = [NSString stringWithFormat:@"%.0f%%", (CGFloat)values[0]];
         };
         
+        // 修改变化后的属性值
         prop.writeBlock = ^(id obj, const CGFloat values[]) {
             self.text = [NSString stringWithFormat:@"%.0f%%", (CGFloat)values[0]];
         };
