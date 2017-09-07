@@ -136,6 +136,7 @@
 		812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */; };
 		8133C5F11F5FF2ED00637CC9 /* UIView+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
+		8156A7581F611F3A00AB8E41 /* CAGradientLayer+Creator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156A7571F611F3900AB8E41 /* CAGradientLayer+Creator.m */; };
 		8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */; };
 		8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8141F53D158004B7638 /* UIDevice+Memory.m */; };
 		8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */; };
@@ -437,6 +438,8 @@
 		8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIKit.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
+		8156A7561F611F3900AB8E41 /* CAGradientLayer+Creator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+Creator.h"; sourceTree = "<group>"; };
+		8156A7571F611F3900AB8E41 /* CAGradientLayer+Creator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+Creator.m"; sourceTree = "<group>"; };
 		8160F8101F53D148004B7638 /* UIDevice+DiskSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DiskSpace.h"; sourceTree = "<group>"; };
 		8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DiskSpace.m"; sourceTree = "<group>"; };
 		8160F8131F53D158004B7638 /* UIDevice+Memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Memory.h"; sourceTree = "<group>"; };
@@ -966,6 +969,8 @@
 				8111FB9E1F56588000769233 /* CALayer+Frame.m */,
 				81E196FE1F565C58009E32B6 /* CALayer+Transform.h */,
 				81E196FF1F565C58009E32B6 /* CALayer+Transform.m */,
+				8156A7561F611F3900AB8E41 /* CAGradientLayer+Creator.h */,
+				8156A7571F611F3900AB8E41 /* CAGradientLayer+Creator.m */,
 			);
 			path = CALayer;
 			sourceTree = "<group>";
@@ -1949,6 +1954,7 @@
 				812DE3221F4EBF5F001AAB2A /* NSArray+Encode.m in Sources */,
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
+				8156A7581F611F3A00AB8E41 /* CAGradientLayer+Creator.m in Sources */,
 				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
 				81D405E21F50265E005FB382 /* UIView+CoordinateSystem.m in Sources */,
 				81D405DF1F502210005FB382 /* UIGestureRecognizer+BlockSupport.m in Sources */,
