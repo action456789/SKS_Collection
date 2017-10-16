@@ -7,7 +7,7 @@
 //
 
 #import "DiskCacheSqlLite.h"
-#import <FMDB/FMDB.h>
+#import <fmdb/FMDB.h>
 #import "NSFileManager+File.h"
 #import "NSString+Encode.h"
 

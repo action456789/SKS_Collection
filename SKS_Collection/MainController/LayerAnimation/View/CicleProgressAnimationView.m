@@ -76,7 +76,7 @@
     if (self.animationType == KSKLayerAnimationTypeDefault) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.sharpLayer.strokeEnd = progress;
-            _progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
+            _progressLabel.text = [NSString stringWithFormat:@"%.0lld%%", progress * 100];
         });
     }
 }

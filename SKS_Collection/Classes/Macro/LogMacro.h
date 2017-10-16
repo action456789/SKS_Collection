@@ -10,13 +10,13 @@
 #define LogMacro
 
 // 获得RGB颜色
-#define KSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define KKColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 // 自定义Log
-#ifdef DEBUG
-#define KSLog(...) NSLog(__VA_ARGS__)
-#else
-#define KSLog(...)
+#ifdef DEBUG // 处于开发阶段
+#define  KKLog(s, ... ) NSLog( @"<[文件名:%@]:[行数:%d] [内容:%@]", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else // 处于发布阶段
+#define KKLog(...)
 #endif
 
 // 快速定义 weak self

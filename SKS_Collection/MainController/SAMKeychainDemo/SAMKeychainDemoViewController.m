@@ -10,7 +10,7 @@
 
 #import "SAMKeychainQuery.h"
 
-#import <FMDB/FMDB.h>
+#import <fmdb/FMDB.h>
 #import <SAMKeychain/SAMKeychain.h>
 
 @interface SAMKeychainDemoViewController ()
