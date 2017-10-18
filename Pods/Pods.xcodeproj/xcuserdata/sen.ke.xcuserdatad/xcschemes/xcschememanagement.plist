@@ -69,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>XHLaunchAd.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -81,82 +86,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>0682FC4288DC4C73157B105DCB4C75EF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0F8A208779342D08A614B9419FD8F4A5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>251BAD17812F7EBF6532EACF66F941C3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5AA17C95E926B760FD08E0B487DAEFA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7C3CC2A698AD61208BE3776559FC75F4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>83B5B60C676A8D31829A6AE91CE86A75</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9E25DD3567B957652EFD6ABFBFCFD7D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8D4CDC77F871772A2F465C5E7C48639</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C308E52048D63DF82ADD06E75CBE421A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C9843E956BE39B53570884DBDC0AA9A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D386C75EFD4F03725E4EFB866B600B9A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

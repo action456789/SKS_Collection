@@ -11,6 +11,15 @@
 
 @interface StaticCellItemGroup : NSObject
 
+typedef NS_ENUM(NSUInteger, GroupType) {
+    GroupTypeNone,
+    GroupTypeSingleCheckMark, // 单选
+    GroupTypeSingleCheckMarkCanCancle, // 单选，再次选择时会取消选择
+    GroupTypeMultipleCheckMark, // 多选
+};
+
+typedef void (^DidSelectedRowBlock)(NSArray<NSIndexPath *> *selectedIndexPaths);
+
 @property (nonatomic, copy) NSString *headerTitle;
 @property (nonatomic, copy) NSString *footerTitle;
 
@@ -19,10 +28,18 @@
 
 @property (nonatomic, strong) NSArray<StaticCellItem *> *items;
 
-+ (instancetype)itemGroupWithHeaderTitle:(NSString *)headerTitle
-                            headerHeight:(CGFloat)headerHeight
-                             footerTitle:(NSString *)footerTitle
-                            footerHeight:(CGFloat)footerHeight
-                                   items:(NSArray *)items;
+@property (nonatomic, assign) GroupType type;
+
+// 点击了 group 中某个 cell 时执行
+@property (nonatomic, copy) DidSelectedRowBlock didSelectedRowBlock;
+
+// 单选时默认选中的 item
+@property (nonatomic, assign) NSInteger defaultSelectedIndex;
+
+// 多选时选中的 item
+@property (nonatomic, strong) NSMutableArray<NSIndexPath *> *selectedIndexPaths;
+
++ (instancetype)itemGroupWithItems:(NSArray *)items;
+
 
 @end

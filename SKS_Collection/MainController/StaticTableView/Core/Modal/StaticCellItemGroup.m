@@ -10,20 +10,27 @@
 
 @implementation StaticCellItemGroup
 
-+ (instancetype)itemGroupWithHeaderTitle:(NSString *)headerTitle
-                            headerHeight:(CGFloat)headerHeight
-                             footerTitle:(NSString *)footerTitle
-                            footerHeight:(CGFloat)footerHeight
-                                   items:(NSArray *)items
-{
++ (instancetype)itemGroupWithItems:(NSArray *)items {
     StaticCellItemGroup *group = [[StaticCellItemGroup alloc] init];
-    group.headerTitle = headerTitle;
-    group.footerTitle = footerTitle;
-    group.headerHeight = headerHeight;
-    group.footerHeight = footerHeight;
     group.items = items;
+    group.headerTitle = nil;
+    group.footerTitle = nil;
+    group.headerHeight = 0;
+    group.footerHeight = 0;
     
     return group;
 }
+
+- (NSMutableArray<NSIndexPath *> *)selectedIndexPaths {
+    if (_selectedIndexPaths == nil) {
+        _selectedIndexPaths = [NSMutableArray array];
+    }
+    return _selectedIndexPaths;
+}
+
+- (void)setDidSelectedRowBlock:(DidSelectedRowBlock)didSelectedRowBlock {
+    _didSelectedRowBlock = [didSelectedRowBlock copy];
+}
+
 
 @end

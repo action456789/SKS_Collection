@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LightControlPannelVC">
+            <connections>
+                <outlet property="bgColorView" destination="ifB-We-eSV" id="6Ap-eU-JZg"/>
+                <outlet property="pannelContentView" destination="QE2-u2-zG2" id="u8b-pg-r3o"/>
+                <outlet property="progressView" destination="Ms1-fX-mDS" id="9pz-aT-Ro6"/>
+                <outlet property="view" destination="iN0-l3-epB" id="lAS-pQ-Nyn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifB-We-eSV" userLabel="BgView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QE2-u2-zG2">
+                    <rect key="frame" x="47.5" y="100" width="281" height="281"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ms1-fX-mDS" customClass="LightControlPannelProgressView">
+                            <rect key="frame" x="8" y="8" width="265" height="265"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdB-9h-ByN">
+                            <rect key="frame" x="122" y="217" width="37" height="34"/>
+                            <gestureRecognizers/>
+                            <state key="normal" title="减少">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="decrease:" destination="-1" eventType="touchUpInside" id="uw8-W3-1A2"/>
+                                <outletCollection property="gestureRecognizers" destination="bDD-Ff-qxg" appends="YES" id="54f-rl-BUn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-Qb-0ZB">
+                            <rect key="frame" x="122" y="30" width="37" height="34"/>
+                            <gestureRecognizers/>
+                            <state key="normal" title="增加">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="increase:" destination="-1" eventType="touchUpInside" id="kEf-0k-8Bq"/>
+                                <outletCollection property="gestureRecognizers" destination="G6R-Ib-jkn" appends="YES" id="gd1-E4-eRn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="YdB-9h-ByN" firstAttribute="centerX" secondItem="QE2-u2-zG2" secondAttribute="centerX" id="0q9-ck-udu"/>
+                        <constraint firstItem="Ms1-fX-mDS" firstAttribute="top" secondItem="QE2-u2-zG2" secondAttribute="top" constant="8" id="Jz4-VB-aF9"/>
+                        <constraint firstAttribute="width" secondItem="QE2-u2-zG2" secondAttribute="height" multiplier="1:1" id="NjF-aQ-dCk"/>
+                        <constraint firstItem="xTt-Qb-0ZB" firstAttribute="top" secondItem="QE2-u2-zG2" secondAttribute="top" constant="30" id="dF0-K6-1x5"/>
+                        <constraint firstAttribute="trailing" secondItem="Ms1-fX-mDS" secondAttribute="trailing" constant="8" id="ffD-hS-NNl"/>
+                        <constraint firstAttribute="bottom" secondItem="Ms1-fX-mDS" secondAttribute="bottom" constant="8" id="mPz-qN-MYD"/>
+                        <constraint firstItem="Ms1-fX-mDS" firstAttribute="leading" secondItem="QE2-u2-zG2" secondAttribute="leading" constant="8" id="nOl-Eg-RO1"/>
+                        <constraint firstItem="xTt-Qb-0ZB" firstAttribute="centerX" secondItem="QE2-u2-zG2" secondAttribute="centerX" id="ov6-Fu-HeC"/>
+                        <constraint firstAttribute="bottom" secondItem="YdB-9h-ByN" secondAttribute="bottom" constant="30" id="xne-gK-y38"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ifB-We-eSV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8fM-Cj-R7r"/>
+                <constraint firstItem="QE2-u2-zG2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9hN-No-9ZC"/>
+                <constraint firstAttribute="bottom" secondItem="ifB-We-eSV" secondAttribute="bottom" id="DZd-nj-pzm"/>
+                <constraint firstItem="QE2-u2-zG2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="fMl-KH-5Vq"/>
+                <constraint firstAttribute="trailing" secondItem="ifB-We-eSV" secondAttribute="trailing" id="h3T-7f-zyb"/>
+                <constraint firstItem="QE2-u2-zG2" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="hR3-ha-Rnx"/>
+                <constraint firstItem="ifB-We-eSV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l0n-Q1-0CH"/>
+            </constraints>
+            <point key="canvasLocation" x="-299" y="-143"/>
+        </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="G6R-Ib-jkn">
+            <connections>
+                <action selector="increaseLongPress:" destination="-1" id="0QG-Jf-3qp"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bDD-Ff-qxg">
+            <connections>
+                <action selector="decreaseLongPress:" destination="-1" id="9Bv-cH-7qM"/>
+            </connections>
+        </pongPressGestureRecognizer>
+    </objects>
+</document>

@@ -8,14 +8,18 @@
 
 #import "StaticCell.h"
 #import "StaticCellItem.h"
+#import "CommonMacro.h"
+#import "UIView+Frame.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <Masonry/Masonry.h>
 
 @interface StaticCell()
 
 @property (nonatomic, strong) UISwitch *rightContentSwitchView;
-@property (nonatomic, strong) UILabel *rightContentLabel;
-@property (nonatomic, copy) StaticCellHandle cellClickedHandle;
 
 @property (nonatomic, strong) UIView *divider;
+
+@property (nonatomic, strong) UIImageView *rightContentImageView;
 
 @end
 
@@ -30,11 +34,44 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.contentView.backgroundColor = [UIColor clearColor];
-        self.textLabel.backgroundColor = [UIColor clearColor];
-        self.detailTextLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.divider];
     }
     return self;
+}
+
++ (BOOL)requiresConstraintBasedLayout {
+    return YES;
+}
+
+- (void)updateConstraints {
+    // 当为customerView时，如果customerView使用了Autolayout，cell内部也要使用Autolayout布局，否则会出现customerView的位置错乱
+    if (self.item.customerView) {
+        [self.item.customerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+    }
+    
+    if (self.item.rightContentImage) {
+        [self.rightContentImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.contentView.mas_right);
+            make.centerY.equalTo(self.contentView);
+            make.width.equalTo(self.contentView.mas_height).multipliedBy(0.8);
+            make.height.equalTo(self.contentView.mas_height).multipliedBy(0.8);
+        }];
+    }
+    
+    [self setLabelColor];
+    [super updateConstraints];
+}
+
+- (void)setLabelColor {
+    self.textLabel.backgroundColor = [UIColor clearColor];
+    self.textLabel.font = [UIFont systemFontOfSize:16];
+    [self.textLabel setTextColor: kColorWithHex(0x333333)];
+    
+    self.detailTextLabel.backgroundColor = [UIColor clearColor];
+    self.detailTextLabel.font = [UIFont systemFontOfSize:14];
+    [self.detailTextLabel setTextColor: kColorWithHex(0x666666)];
 }
 
 - (void)setItem:(StaticCellItem *)item
@@ -42,64 +79,89 @@
     _item = item;
     
     [self _setupData];
-    [self _setupRightContent];
+    [self _setupType];
 }
 
 - (void)_setupData
 {
-    if (self.item.icon) {
-        self.imageView.image = [UIImage imageNamed:self.item.icon];
+    if (_item.icon) {
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        if ([self.item.icon hasPrefix:@"http://"] || [self.item.icon hasPrefix:@"https://"]) {
+            [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.item.icon] placeholderImage:[UIImage imageNamed:self.item.iconPlaceHolder]];
+        } else {
+            self.imageView.image = [UIImage imageNamed:self.item.icon];
+        }
     }
     
-    if (self.item.title) {
+    if (_item.title) {
         self.textLabel.text = self.item.title;
+    }
+    
+    if (_item.detail) {
+        self.detailTextLabel.text = self.item.detail;
+    }
+    
+    if (_item.detailAttributeString) {
+        self.detailTextLabel.attributedText = self.item.detailAttributeString;
+    }
+    
+    if (_item.customerView) {
+        [self addSubview:self.item.customerView];
+    }
+    
+    if (_item.rightContentImage) {
+        [self.contentView addSubview:self.rightContentImageView];
+    } else {
+        [self _setupAccessoryDisclosureIndicator];
+    }
+    
+    if (_item.rightContentButton) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.accessoryView = _item.rightContentButton;
+    } else {
+        [self _setupAccessoryDisclosureIndicator];
+    }
+    
+    // 开关
+    if (_item.switchValue != StaticCellSwitchValueNone) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.accessoryView = self.rightContentSwitchView;
+        
+        if (_item.switchValue == StaticCellSwitchValueDefault) {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            self.rightContentSwitchView.on = [defaults boolForKey:self.item.title];
+        } else {
+            self.rightContentSwitchView.on = _item.switchValue;
+        }
     }
 }
 
-- (void)_setupRightContent
+- (void)_setupAccessoryDisclosureIndicator
 {
-    switch (self.item.cellType) {
-        case StaticCellTypeDisclosureIndicator: {
-            self.selectionStyle = UITableViewCellSelectionStyleDefault;
-            self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            break;
-        }
-            
-        case StaticCellTypeButton: {
+    if (_item.isShowIndicator) {
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else {
+        self.accessoryType = UITableViewCellAccessoryNone;
+    }
+}
+
+- (void)_setupType
+{
+    switch (_item.cellType) {
+        case StaticCellTypeCheckMark: {
             self.selectionStyle = UITableViewCellSelectionStyleNone;
-            self.accessoryView = self.rightContentButton;
-            break;
-        }
+            self.accessoryType = UITableViewCellAccessoryCheckmark;
             
-        case StaticCellTypeSwitch: {
-            self.selectionStyle = UITableViewCellSelectionStyleNone;
-            self.accessoryView = self.rightContentSwitchView;
-            
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            self.rightContentSwitchView.on = [defaults boolForKey:self.item.title];
-            
-            break;
-        }
-            
-        case StaticCellTypeLabel: {
-            self.selectionStyle = UITableViewCellSelectionStyleNone;
-            self.accessoryView = self.rightContentLabel;
-            self.rightContentLabel.text = self.item.subTitle;
-            
-            break;
-        }
-            
-        case StaticCellTypeHandle: {
-            self.selectionStyle = UITableViewCellSelectionStyleDefault;
             break;
         }
             
         default: {
-            self.accessoryView = nil;
             self.selectionStyle = UITableViewCellSelectionStyleDefault;
         }
     }
 }
+
+#pragma mark - setter
 
 #pragma mark - getter
 
@@ -119,26 +181,14 @@
     [defaults synchronize];
 }
 
-- (UILabel *)rightContentLabel
+- (UIImageView *)rightContentImageView
 {
-    if (!_rightContentLabel) {
-        _rightContentLabel = [[UILabel alloc] init];
-        _rightContentLabel.bounds = CGRectMake(0, 0, 100, 30);
-        _rightContentLabel.backgroundColor = [UIColor clearColor];
-        _rightContentLabel.textAlignment = NSTextAlignmentCenter;
-        _rightContentLabel.text = self.item.subTitle;
-        _rightContentLabel.font = [UIFont systemFontOfSize:14];
+    if (!_rightContentImageView) {
+        _rightContentImageView = [UIImageView new];
+        _rightContentImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
-    return _rightContentLabel;
-}
-
-- (UIButton *)rightContentButton
-{
-    if (!_rightContentButton) {
-        _rightContentButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _rightContentButton.bounds = CGRectMake(0, 0, 100, 30);
-    }
-    return _rightContentButton;
+    _rightContentImageView.image = self.item.rightContentImage;
+    return _rightContentImageView;
 }
 
 - (UIView *)divider
@@ -168,9 +218,11 @@
     CGFloat dividerH = kStaticCellDeviderH;
     CGFloat dividerW = [UIScreen mainScreen].bounds.size.width;
     
-    self.divider.frame = CGRectMake(dividerX, dividerY, dividerW, dividerH);
-    
-    [self _setSelectedBgColor:[UIColor redColor]];
+    if (self.isShowBgDivider) {
+        self.divider.frame = CGRectMake(dividerX, dividerY, dividerW, dividerH);
+    } else {
+        self.divider.frame = CGRectZero;
+    }
     
     if (self.item.icon) {
         CGFloat imageViewWH = 30;
@@ -184,6 +236,14 @@
             CGFloat w = self.textLabel.frame.size.width;
             CGFloat h = self.textLabel.frame.size.height;
             self.textLabel.frame = CGRectMake(x, y, w, h);
+        }
+    }
+    
+    if (self.isShowSeperator == NO) {
+        for (UIView *subview in self.contentView.superview.subviews) {
+            if ([NSStringFromClass(subview.class) hasSuffix:@"SeparatorView"]) {
+                subview.hidden = YES;
+            }
         }
     }
 }

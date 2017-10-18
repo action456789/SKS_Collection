@@ -25,7 +25,8 @@ target 'SKS_Collection' do
     #pod 'Aspects'
 
     pod 'Masonry'
-
+    pod 'SnapKit', '~> 3.2.0'
+    
     pod 'pop'
 
     # 文字辉光效果

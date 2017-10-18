@@ -9,13 +9,19 @@
 #import <UIKit/UIKit.h>
 @class StaticCellItem;
 
-#define kStaticCellH 50.f
+#define kStaticCellH 45.f
 #define kStaticCellDeviderH 5
 
 @interface StaticCell : UITableViewCell
 
-@property (nonatomic, strong) UIButton *rightContentButton;
-
 @property (nonatomic, strong) StaticCellItem *item;
+
+@property (nonatomic, assign) BOOL isShowBgDivider;
+
+@property (nonatomic, assign) BOOL isShowSeperator;
+
+@property (nonatomic, assign) CGFloat cellWidth;
+
+@property (nonatomic, strong) UIButton *rightContentButton;
 
 @end

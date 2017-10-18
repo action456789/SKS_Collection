@@ -13,60 +13,33 @@
 + (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type
 {
     StaticCellItem *item  = [[[self class] alloc] init];
-    item.title = title;
-    item.cellType = type;
     item.icon = icon;
+    item.title = title;
+    item.detail = nil;
+    item.isShowIndicator = YES;
+    item.clickedHandle = nil;
+    item.objectClass = nil;
+    item.switchValue = StaticCellSwitchValueNone;
+    item.cellType = type;
     
     return item;
 }
 
 + (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon objectClass:(Class)objectClass
 {
-    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeDisclosureIndicator];
+    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeNone];
     item.objectClass = objectClass;
-    
+
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type handle:(StaticCellHandle)handle;
-{
-    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:type];
-    item.clickedHandle = handle;
-    return item;
+- (BOOL)isSwitchOn {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:self.title];
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon subTitle:(NSString *)subTitle
-{
-    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeLabel];
-    item.subTitle = subTitle;
-    
-    return item;
-}
-
-#pragma mark - getter, setter
-
-- (void)setSubTitle:(NSString *)subTitle
-{
-    if (_subTitle) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kStaticCellUpdataNofication object:nil];
-    }
-    _subTitle = subTitle;
-}
-
-- (void)setTitle:(NSString *)title
-{
-    if (_title) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kStaticCellUpdataNofication object:nil];
-    }
-    _title = title;
-}
-
-- (void)setIcon:(NSString *)icon
-{
-    if (_title) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kStaticCellUpdataNofication object:nil];
-    }
-    _icon = icon;
+- (void)setClickedHandle:(kk_CellHandle)clickedHandle {
+    _clickedHandle = [clickedHandle copy];
 }
 
 @end
