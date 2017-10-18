@@ -40,12 +40,8 @@
 #import "ColorSliderViewController.h"
 #import "LightControlPannelVC.h"
 
-#import "NSArray+Dict.h"
-
+// OC 使用 Swift 代码
 #import "SKS_Collection-Swift.h"
-
-#import "NSData+Encode.h"
-
 
 @interface RootViewController()
 
@@ -58,14 +54,6 @@
     [super viewDidLoad];
     
     [self initData];
-    
-    NSString *string = @"我是一只鱼";
-    NSString *encodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] kk_base64EncodedString];
-    NSLog(@"%@", encodedString);
-    
-    NSData *decodedData = [NSData kk_dataWithBase64EncodedString:encodedString];
-    NSString *decodeString = decodedData.kk_utf8String;
-    NSLog(@"%@", decodeString);
 }
 
 - (void)initData
