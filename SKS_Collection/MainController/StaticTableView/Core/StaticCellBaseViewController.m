@@ -188,7 +188,7 @@
     StaticCellItem *item = group.items[indexPath.row];
     
     if (item.objectClass) {
-        UIViewController *controller = [UIViewController controllerWithClass:item.objectClass];
+        UIViewController *controller = [item.objectClass kk_nibPriorityInstance];
         [self.navigationController pushViewController:controller animated:YES];
         return;
         

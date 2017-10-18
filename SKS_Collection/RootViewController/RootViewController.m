@@ -68,18 +68,6 @@
         [weakSelf showTipsView];
     };
     
-    StaticCellItem *lightControlPanelItem = [StaticCellItem itemWithTitle:@"28. 圆环控制动画控制器" icon:nil objectClass:nil];
-    lightControlPanelItem.clickedHandle = ^(NSIndexPath *indexPath) {
-        LightControlPannelVC *vc = [[LightControlPannelVC alloc] initWithNibName:nil bundle:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-    };
-    
-    StaticCellItem *staticCellItem = [StaticCellItem itemWithTitle:@"12. 静态单元格" icon:nil objectClass:nil];
-    staticCellItem.clickedHandle = ^(NSIndexPath *indexPath) {
-        FeedBackViewController *feedBackVC = [[FeedBackViewController alloc] init];
-        [self.navigationController pushViewController:feedBackVC animated:YES];
-    };
-    
     NSArray *items = @[ [StaticCellItem itemWithTitle:@" 1. 倒计时按钮" icon:nil objectClass:[CountDownButtonDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"2. 转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
                         ,[StaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSlideTabBarViewController class]]
@@ -95,7 +83,6 @@
                         ,[StaticCellItem itemWithTitle:@"13. 数字增长动画" icon:nil objectClass:[NumberIncresingVc class]]
                         ,[StaticCellItem itemWithTitle:@"14. CALayer动画" icon:nil objectClass:[CheckMarkAnimVc class]]
                         ,[StaticCellItem itemWithTitle:@"15. 可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"16. 弹出 tips view" icon:nil objectClass:[ExpandableViewController class]]
                         ,tipsViewItem
                         ,[StaticCellItem itemWithTitle:@"17. 加载 gif 图片" icon:nil objectClass:[GifDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"18. 链式编程-计算器" icon:nil objectClass:[CaculaterViewController class]]
@@ -112,7 +99,7 @@
                         ,[StaticCellItem itemWithTitle:@"26. 启动引导图、无线循环View" icon:nil objectClass:[BanberViewController class]]
                         ,[StaticCellItem itemWithTitle:@"27. 弹性按钮" icon:nil objectClass:[EjectShrinkBtnsDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"28. 彩色滑块" icon:nil objectClass:[ColorSliderViewController class]]
-                        ,lightControlPanelItem
+                        ,[StaticCellItem itemWithTitle:@"29. 圆环控制动画控制器" icon:nil objectClass:[LightControlPannelVC class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithItems:items];

@@ -151,6 +151,8 @@
 		81B312EC1F96E94A004C0EC8 /* UITextView+Placeholder.h in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABDA1F4EA7A400DAC8E0 /* UITextView+Placeholder.h */; };
 		81B312ED1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.h in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABEA1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.h */; };
 		81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABEB1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.m */; };
+		81B312EF1F96F3BB004C0EC8 /* UINavigationController+SubView.h in Sources */ = {isa = PBXBuildFile; fileRef = 8133C5EE1F5FF2B700637CC9 /* UINavigationController+SubView.h */; };
+		81B312F01F96F3BB004C0EC8 /* UINavigationController+SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8133C5ED1F5FF2B700637CC9 /* UINavigationController+SubView.m */; };
 		81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */; };
 		81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */; };
 		81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6F1F4E658800DAC8E0 /* NSString+YYHash.m */; };
@@ -1957,6 +1959,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B312EF1F96F3BB004C0EC8 /* UINavigationController+SubView.h in Sources */,
+				81B312F01F96F3BB004C0EC8 /* UINavigationController+SubView.m in Sources */,
 				81B312ED1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.h in Sources */,
 				81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */,
 				81B312EC1F96E94A004C0EC8 /* UITextView+Placeholder.h in Sources */,
