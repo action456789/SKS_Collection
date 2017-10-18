@@ -10,6 +10,13 @@
 
 @interface NSString (random)
 
+
+/**
+ 返回len位随机字符
+
+ @param len 产生的随机字符位数
+ @return 随机字符串
+ */
 + (NSString *)randomStringWithLength:(int)len;
 
 @end

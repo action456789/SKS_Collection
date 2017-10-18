@@ -36,9 +36,36 @@
 
 
 /**
- Returns an NSString for base64 encoded.
+ Base64 encoded.
+
+ @code
+ 
+ NSString *string = @"我是一只鱼";
+ NSString *encodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] kk_base64EncodedString];
+ NSLog(@"%@", encodedString);
+ 
+ @endcode
+ 
+ @return base64 encoded String
  */
 - (nullable NSString *)kk_base64EncodedString;
+
+
+/**
+ Base64 decode.
+
+ @code
+ 
+ NSData *decodedData = [NSData kk_dataWithBase64EncodedString:encodedString];
+ NSString *decodeString = decodedData.kk_utf8String;
+ NSLog(@"%@", decodeString);
+ 
+ @endcode
+ 
+ @param base64EncodedString The encoded string.
+ @return decoded string
+ */
++ (nullable NSData *)kk_dataWithBase64EncodedString:(NSString *_Nonnull)base64EncodedString;
 
 /**
  Returns an NSDictionary or NSArray for decoded self.

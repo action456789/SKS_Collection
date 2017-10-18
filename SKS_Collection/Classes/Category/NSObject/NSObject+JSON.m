@@ -1,16 +1,16 @@
 //
-//  NSArray+Encode.m
+//  NSObject+JSON.m
 //  SKS_Collection
 //
-//  Created by sen.ke on 2017/8/24.
+//  Created by sen.ke on 2017/10/18.
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "NSArray+Encode.h"
+#import "NSObject+JSON.h"
 
-@implementation NSArray (Encode)
+@implementation NSObject (JSON)
 
-- (NSString *)kk_jsonStringEncoded {
+- (NSString *)kk_jsonString {
     if ([NSJSONSerialization isValidJSONObject:self]) {
         NSError *error = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:0 error:&error];
@@ -20,7 +20,7 @@
     return nil;
 }
 
-- (NSString *)kk_jsonPrettyStringEncoded {
+- (NSString *)kk_jsonPrettyString {
     if ([NSJSONSerialization isValidJSONObject:self]) {
         NSError *error = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
@@ -28,6 +28,19 @@
         if (!error) return json;
     }
     return nil;
+}
+
++ (id)kk_JSONObjectFrom:(NSString *)jsonString
+{
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *error;
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        NSLog(@"%@", error);
+    }
+    
+    return jsonDict;
 }
 
 @end
