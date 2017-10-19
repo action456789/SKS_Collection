@@ -16,7 +16,7 @@
 
 @end
 
-@interface WeekSelectorView : UIView
+@interface KKWeekSelectorView : UIView
 
 // 选中的天
 @property (nonatomic, strong, readonly) NSMutableArray<KKDay *> *selectedDays;

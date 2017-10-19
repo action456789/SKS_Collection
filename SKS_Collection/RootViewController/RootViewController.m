@@ -37,9 +37,9 @@
 #import "ModalFromViewController.h"
 #import "BanberViewController.h"
 #import "EjectShrinkBtnsDemoVC.h"
-#import "ColorSliderViewController.h"
 #import "LightControlPannelVC.h"
 #import "WeekSelectorVCDemo.h"
+#import "ColorSliderDemoVC.h"
 
 // OC 使用 Swift 代码
 #import "SKS_Collection-Swift.h"
@@ -95,7 +95,7 @@
                         ,[StaticCellItem itemWithTitle:@"25. 自定义转场动画" icon:nil objectClass:[ModalFromViewController class]]
                         ,[StaticCellItem itemWithTitle:@"26. 启动引导图、无线循环View" icon:nil objectClass:[BanberViewController class]]
                         ,[StaticCellItem itemWithTitle:@"27. 弹性按钮" icon:nil objectClass:[EjectShrinkBtnsDemoVC class]]
-                        ,[StaticCellItem itemWithTitle:@"28. 彩色滑块" icon:nil objectClass:[ColorSliderViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"28. 彩色滑块" icon:nil objectClass:[ColorSliderDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"30. 圆环控制动画控制器" icon:nil objectClass:[LightControlPannelVC class]]
                         ,[StaticCellItem itemWithTitle:@"31. 周选择器" icon:nil objectClass:[WeekSelectorVCDemo class]]
                         ];

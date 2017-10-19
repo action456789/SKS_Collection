@@ -8,11 +8,11 @@
 
 #import "WeekSelectorVCDemo.h"
 
-#import "WeekSelectorView.h"
+#import "KKWeekSelectorView.h"
 
 @interface WeekSelectorVCDemo () <WeekSelectorViewDelegate>
 
-@property (weak, nonatomic) IBOutlet WeekSelectorView *weekSelector;
+@property (weak, nonatomic) IBOutlet KKWeekSelectorView *weekSelector;
 
 @end
 

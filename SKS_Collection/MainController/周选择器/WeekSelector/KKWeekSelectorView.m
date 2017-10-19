@@ -6,13 +6,13 @@
 //  Copyright © 2017年 ke sen. All rights reserved.
 //
 
-#import "WeekSelectorView.h"
+#import "KKWeekSelectorView.h"
 #import <Masonry/Masonry.h>
 #import "CommonMacro.h"
 #import "KKWeek.h"
 #import "KKDay.h"
 
-@implementation WeekSelectorView {
+@implementation KKWeekSelectorView {
     KKWeek *_week;
     
     NSMutableArray<UIButton *> *_btnArray;
