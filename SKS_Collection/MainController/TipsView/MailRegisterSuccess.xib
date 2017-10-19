@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="189"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forecast" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-zl-3jZ">
+                    <rect key="frame" x="0.0" y="30" width="314" height="40"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已将验证码发送到" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-A2-b2T">
+                    <rect key="frame" x="0.0" y="119.5" width="314" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的邮箱，请注意查收" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg9-Ag-1Cb">
+                    <rect key="frame" x="0.0" y="148.5" width="314" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zg9-Ag-1Cb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0an-8p-QP0"/>
+                <constraint firstItem="Zg9-Ag-1Cb" firstAttribute="top" secondItem="dAh-A2-b2T" secondAttribute="bottom" constant="8.5" id="12S-kG-Un8"/>
+                <constraint firstItem="dhs-zl-3jZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4Yq-os-js8"/>
+                <constraint firstItem="dAh-A2-b2T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9kS-hg-fnp"/>
+                <constraint firstAttribute="trailing" secondItem="Zg9-Ag-1Cb" secondAttribute="trailing" id="Eep-JJ-BWX"/>
+                <constraint firstItem="dhs-zl-3jZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="GvJ-1w-uBE"/>
+                <constraint firstAttribute="bottom" secondItem="Zg9-Ag-1Cb" secondAttribute="bottom" constant="20" id="QUJ-yv-Yem"/>
+                <constraint firstAttribute="trailing" secondItem="dAh-A2-b2T" secondAttribute="trailing" id="Rk5-yT-Qxg"/>
+                <constraint firstAttribute="trailing" secondItem="dhs-zl-3jZ" secondAttribute="trailing" id="iB3-ki-wHM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-185" y="-82.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="forecast" width="40" height="40"/>
+    </resources>
+</document>

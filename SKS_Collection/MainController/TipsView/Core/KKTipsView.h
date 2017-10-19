@@ -10,18 +10,23 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, TipsViewShowType) {
-    TipsViewShowTypeCenter,
-    TipsViewShowTypeFromBottom,
+typedef NS_ENUM(NSUInteger, KKTipsViewShowType) {
+    KKTipsViewShowTypeCenter,
+    KKTipsViewShowTypeFromBottom,
 };
 
-@interface TipsView : UIView
+@interface KKTipsView : UIView
 
-@property (nonatomic, assign) TipsViewShowType showType;
+@property (nonatomic, assign) KKTipsViewShowType showType;
 
 @property (nonatomic, strong) UIView *contentView;
 
 @property (nonatomic, assign) CGSize contentViewSize;
+
+// 是否显示遮罩，默认显示
+@property (nonatomic, assign) BOOL showingMask;
+// 遮罩是否响应事件，默认 YES
+@property (nonatomic, assign) BOOL isMaskUserInteractive;
 
 @property (nonatomic, assign, readonly) BOOL isAnimating;
 @property (nonatomic, assign, readonly) BOOL isShowing;

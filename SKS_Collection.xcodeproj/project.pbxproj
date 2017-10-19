@@ -26,7 +26,6 @@
 		103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
 		103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */; };
-		1046D6841D62E20000E6D7EF /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6831D62E20000E6D7EF /* TipsView.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
@@ -139,6 +138,10 @@
 		8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */; };
 		816F08181F989CD800CCF924 /* CoutdownBtnDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */; };
 		816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */; };
+		817C6E321F98A00B0086A05B /* TipsViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 817C6E301F98A00B0086A05B /* TipsViewDemoVC.m */; };
+		817C6E331F98A00B0086A05B /* TipsViewDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817C6E311F98A00B0086A05B /* TipsViewDemoVC.xib */; };
+		817C6E3A1F98A0D70086A05B /* KKTipsMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817C6E371F98A0B30086A05B /* KKTipsMaskView.m */; };
+		817C6E3B1F98A0D70086A05B /* KKTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817C6E391F98A0B30086A05B /* KKTipsView.m */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 		819B11E01F5028760029C55B /* UIScrollView+Scroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */; };
@@ -147,6 +150,9 @@
 		81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABEB1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.m */; };
 		81B312F01F96F3BB004C0EC8 /* UINavigationController+SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8133C5ED1F5FF2B700637CC9 /* UINavigationController+SubView.m */; };
 		81B313981F974034004C0EC8 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B313971F974034004C0EC8 /* NSObject+JSON.m */; };
+		81B6D9CF1F98A378009E0E54 /* MailRegisterSuccess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817C6E341F98A0130086A05B /* MailRegisterSuccess.xib */; };
+		81B6D9D11F98A3F8009E0E54 /* EditMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */; };
+		81B6D9D21F98A4FC009E0E54 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABE21F4EA7A400DAC8E0 /* UIView+Frame.m */; };
 		81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */; };
 		81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */; };
 		81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6F1F4E658800DAC8E0 /* NSString+YYHash.m */; };
@@ -231,8 +237,6 @@
 		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		103DBDB91DB3519000BEFBBE /* KSBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBlockButton.h; sourceTree = "<group>"; };
 		103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBlockButton.m; sourceTree = "<group>"; };
-		1046D6821D62E20000E6D7EF /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
-		1046D6831D62E20000E6D7EF /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		1046D6941D64596E00E6D7EF /* GifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoViewController.h; sourceTree = "<group>"; };
 		1046D6951D64596E00E6D7EF /* GifDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDemoViewController.m; sourceTree = "<group>"; };
 		106362F41D869D0700FD47B0 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
@@ -461,6 +465,14 @@
 		816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoutdownBtnDemoVC.h; sourceTree = "<group>"; };
 		816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoutdownBtnDemoVC.m; sourceTree = "<group>"; };
 		816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoutdownBtnDemoVC.xib; sourceTree = "<group>"; };
+		817C6E2F1F98A00B0086A05B /* TipsViewDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipsViewDemoVC.h; sourceTree = "<group>"; };
+		817C6E301F98A00B0086A05B /* TipsViewDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipsViewDemoVC.m; sourceTree = "<group>"; };
+		817C6E311F98A00B0086A05B /* TipsViewDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewDemoVC.xib; sourceTree = "<group>"; };
+		817C6E341F98A0130086A05B /* MailRegisterSuccess.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailRegisterSuccess.xib; sourceTree = "<group>"; };
+		817C6E361F98A0B30086A05B /* KKTipsMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKTipsMaskView.h; sourceTree = "<group>"; };
+		817C6E371F98A0B30086A05B /* KKTipsMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKTipsMaskView.m; sourceTree = "<group>"; };
+		817C6E381F98A0B30086A05B /* KKTipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKTipsView.h; sourceTree = "<group>"; };
+		817C6E391F98A0B30086A05B /* KKTipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKTipsView.m; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
 		8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNotFluentMonitor.m; sourceTree = "<group>"; };
 		818131511EBAC96C00CEEA97 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
@@ -468,6 +480,7 @@
 		819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Scroll.m"; sourceTree = "<group>"; };
 		81B313961F974034004C0EC8 /* NSObject+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		81B313971F974034004C0EC8 /* NSObject+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMenuView.xib; sourceTree = "<group>"; };
 		81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
 		81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt_Decrypt.h"; sourceTree = "<group>"; };
@@ -797,8 +810,12 @@
 		1046D6811D62E1BD00E6D7EF /* TipsView */ = {
 			isa = PBXGroup;
 			children = (
-				1046D6821D62E20000E6D7EF /* TipsView.h */,
-				1046D6831D62E20000E6D7EF /* TipsView.m */,
+				817C6E351F98A0B30086A05B /* Core */,
+				817C6E2F1F98A00B0086A05B /* TipsViewDemoVC.h */,
+				817C6E301F98A00B0086A05B /* TipsViewDemoVC.m */,
+				817C6E311F98A00B0086A05B /* TipsViewDemoVC.xib */,
+				817C6E341F98A0130086A05B /* MailRegisterSuccess.xib */,
+				81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */,
 			);
 			path = TipsView;
 			sourceTree = "<group>";
@@ -1491,6 +1508,17 @@
 			path = UIBezierPath;
 			sourceTree = "<group>";
 		};
+		817C6E351F98A0B30086A05B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				817C6E361F98A0B30086A05B /* KKTipsMaskView.h */,
+				817C6E371F98A0B30086A05B /* KKTipsMaskView.m */,
+				817C6E381F98A0B30086A05B /* KKTipsView.h */,
+				817C6E391F98A0B30086A05B /* KKTipsView.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		8181314A1EBAC71E00CEEA97 /* 卡顿监听 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1870,9 +1898,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B6D9D11F98A3F8009E0E54 /* EditMenuView.xib in Resources */,
+				81B6D9CF1F98A378009E0E54 /* MailRegisterSuccess.xib in Resources */,
 				81ED55391F96130D0087D1DF /* LightControlPannelVC.xib in Resources */,
 				81E2F2221F989617008ECB04 /* ColorSliderDemoVC.xib in Resources */,
 				10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */,
+				817C6E331F98A00B0086A05B /* TipsViewDemoVC.xib in Resources */,
 				10DD4E4B1D6EF6D100F7BA25 /* CheckMark.png in Resources */,
 				10DD98491D226B1F00193A69 /* LaunchScreen.storyboard in Resources */,
 				2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */,
@@ -1994,6 +2025,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B6D9D21F98A4FC009E0E54 /* UIView+Frame.m in Sources */,
+				817C6E3A1F98A0D70086A05B /* KKTipsMaskView.m in Sources */,
+				817C6E3B1F98A0D70086A05B /* KKTipsView.m in Sources */,
 				81E2F21A1F989432008ECB04 /* UIView+Color.m in Sources */,
 				81E2F2151F988E3E008ECB04 /* KKDay.m in Sources */,
 				81E2F2161F988E3E008ECB04 /* KKWeek.m in Sources */,
@@ -2016,7 +2050,6 @@
 				81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */,
 				10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */,
 				8111FB991F5657AD00769233 /* UIView+Snapshot.m in Sources */,
-				1046D6841D62E20000E6D7EF /* TipsView.m in Sources */,
 				2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */,
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
@@ -2037,6 +2070,7 @@
 				10DD98E81D226B7D00193A69 /* Reachability.m in Sources */,
 				1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */,
 				10F7EF061D5D6EDC00801FD6 /* AppleSystemServiceViewController.m in Sources */,
+				817C6E321F98A00B0086A05B /* TipsViewDemoVC.m in Sources */,
 				81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */,
 				2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,

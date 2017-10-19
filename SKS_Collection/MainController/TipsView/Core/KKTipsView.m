@@ -6,8 +6,10 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "TipsView.h"
+#import "KKTipsView.h"
 #import "Masonry.h"
+#import "UIView+Frame.h"
+#import "KKTipsMaskView.h"
 
 #define kLandscape      UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
 
@@ -15,22 +17,22 @@
 #define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
 
 /* 结构
- TipsView
- _shadowView
- _containertView
+TipsView
+  _shadowView
+  _containertView
  
  */
 
 
-@interface TipsView()
+@interface KKTipsView()
 
 @property (nonatomic, strong) UIWindow *containerView;
 
 @end
 
-@implementation TipsView
+@implementation KKTipsView
 {
-    UIView *_shadowView;
+    KKTipsMaskView *_maskView;
     UIView *_containertView;
 }
 
@@ -40,15 +42,32 @@
         self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         _isShowing = NO;
         _isAnimating = NO;
+        
+        _showingMask = YES;
+        _isMaskUserInteractive = YES;
+        
         [self _createSubViews];
     }
     return self;
 }
 
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if (self.isMaskUserInteractive) {
+        return [super hitTest:point withEvent:event];
+    } else {
+        UIView *hitView = [super hitTest:point withEvent:event];
+        if(hitView == self) {
+            return nil;
+        }
+        return hitView;
+    }
+}
+
 - (void)_createSubViews
 {
-    _shadowView = ({
-        UIView *view = [[UIView alloc] init];
+    _maskView = ({
+        KKTipsMaskView *view = [[KKTipsMaskView alloc] init];
         view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
         [self addSubview:view];
         
@@ -105,11 +124,11 @@
     }];
 }
 
-- (void)setShowType:(TipsViewShowType)showType
+- (void)setShowType:(KKTipsViewShowType)showType
 {
     _showType = showType;
     
-    if (showType == TipsViewShowTypeFromBottom) {
+    if (showType == KKTipsViewShowTypeFromBottom) {
         [_containertView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(self);
             make.top.mas_equalTo(self.mas_bottom);
@@ -140,6 +159,7 @@
 - (void)showInView:(UIView *)superView animatable:(BOOL)animatable {
     if (_isShowing) {
         [self hideWithAnimatable:NO];
+        return;
     }
     
     _isShowing = YES;
@@ -149,12 +169,15 @@
         superViewOrKeyWindows = self.containerView;
     } else {
         superViewOrKeyWindows = superView;
+        self.kk_size = CGSizeMake(superView.frame.size.width, superView.frame.size.height);
     }
+    
+    _maskView.hidden = !self.showingMask;
     
     if (animatable) {
         _isAnimating = YES;
         
-        if (self.showType == TipsViewShowTypeFromBottom) {
+        if (self.showType == KKTipsViewShowTypeFromBottom) {
             [superViewOrKeyWindows addSubview:self];
             
             CGFloat offset = 0;
@@ -164,22 +187,22 @@
             
             [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
                 _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height-offset);
-                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+                _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:^(BOOL finished) {
                 _isAnimating = NO;
             }];
             
         } else {
-            [UIView transitionWithView:superView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            [UIView transitionWithView:superViewOrKeyWindows duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 [superViewOrKeyWindows addSubview:self];
-                _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+                _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:nil];
         }
     } else {
-        if (self.showType == TipsViewShowTypeFromBottom) {
+        if (self.showType == KKTipsViewShowTypeFromBottom) {
             [superViewOrKeyWindows addSubview:self];
             _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height);
-            _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+            _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         } else {
             [superViewOrKeyWindows addSubview:self];
         }
@@ -192,14 +215,14 @@
     if (animatable) {
         _isAnimating = YES;
         
-        if (self.showType == TipsViewShowTypeFromBottom) {
+        if (self.showType == KKTipsViewShowTypeFromBottom) {
             if ([[UIDevice currentDevice].systemVersion doubleValue] < 8.0) {
                 [self removeFromSuperview];
                 _isAnimating = NO;
             } else {
                 [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
                     _containertView.transform = CGAffineTransformIdentity;
-                    _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+                    _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
                 } completion:^(BOOL finished) {
                     [self removeFromSuperview];
                     _isAnimating = NO;
@@ -211,9 +234,9 @@
             } completion:nil];
         }
     } else {
-        if (self.showType == TipsViewShowTypeFromBottom) {
+        if (self.showType == KKTipsViewShowTypeFromBottom) {
             _containertView.transform = CGAffineTransformIdentity;
-            _shadowView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+            _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
             [self removeFromSuperview];
         } else {
             [self removeFromSuperview];

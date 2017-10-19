@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TipsViewDemoVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-X7-kAZ">
+                    <rect key="frame" x="153.5" y="318.5" width="68" height="30"/>
+                    <state key="normal" title="弹出动画1"/>
+                    <connections>
+                        <action selector="showTips1:" destination="-1" eventType="touchUpInside" id="o1g-kw-fLy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyP-KA-qgK">
+                    <rect key="frame" x="153.5" y="375" width="71" height="30"/>
+                    <state key="normal" title="弹出动画2"/>
+                    <connections>
+                        <action selector="showTips2:" destination="-1" eventType="touchUpInside" id="DCo-bV-NQh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZGz-X7-kAZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4jh-yQ-sm7"/>
+                <constraint firstItem="lyP-KA-qgK" firstAttribute="leading" secondItem="ZGz-X7-kAZ" secondAttribute="leading" id="9QI-SF-ETv"/>
+                <constraint firstItem="ZGz-X7-kAZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HJW-HY-Md0"/>
+                <constraint firstItem="lyP-KA-qgK" firstAttribute="top" secondItem="ZGz-X7-kAZ" secondAttribute="bottom" constant="26.5" id="rcS-8c-GO1"/>
+            </constraints>
+            <point key="canvasLocation" x="63.5" y="-84.5"/>
+        </view>
+    </objects>
+</document>

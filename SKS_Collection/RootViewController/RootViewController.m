@@ -21,7 +21,6 @@
 #import "NumberIncresingVc.h"
 #import "CheckMarkAnimVc.h"
 #import "ExpandableViewController.h"
-#import "TipsView.h"
 #import "GifDemoViewController.h"
 #import "CaculaterViewController.h"
 #import "SearchDemoController.h"
@@ -40,6 +39,7 @@
 #import "LightControlPannelVC.h"
 #import "WeekSelectorVCDemo.h"
 #import "ColorSliderDemoVC.h"
+#import "TipsViewDemoVC.h"
 
 // OC 使用 Swift 代码
 #import "SKS_Collection-Swift.h"
@@ -59,12 +59,6 @@
 
 - (void)initData
 {
-    __weak __typeof(self) weakSelf = self;
-    StaticCellItem *tipsViewItem = [StaticCellItem itemWithTitle:@"16. 弹出 tips view" icon:nil objectClass:nil];
-    tipsViewItem.clickedHandle = ^(NSIndexPath *indexPath) {
-        [weakSelf showTipsView];
-    };
-    
     NSArray *items = @[ [StaticCellItem itemWithTitle:@" 1. 倒计时按钮" icon:nil objectClass:[CoutdownBtnDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"2. 转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
                         ,[StaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSlideTabBarViewController class]]
@@ -80,7 +74,7 @@
                         ,[StaticCellItem itemWithTitle:@"13. 数字增长动画" icon:nil objectClass:[NumberIncresingVc class]]
                         ,[StaticCellItem itemWithTitle:@"14. CALayer动画" icon:nil objectClass:[CheckMarkAnimVc class]]
                         ,[StaticCellItem itemWithTitle:@"15. 可展开的班级学生列表" icon:nil objectClass:[ExpandableViewController class]]
-                        ,tipsViewItem
+                        ,[StaticCellItem itemWithTitle:@"16. TipsView" icon:nil objectClass:[TipsViewDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"17. 加载 gif 图片" icon:nil objectClass:[GifDemoViewController class]]
                         ,[StaticCellItem itemWithTitle:@"18. 链式编程-计算器" icon:nil objectClass:[CaculaterViewController class]]
                         ,[StaticCellItem itemWithTitle:@"19. UISearchController" icon:nil objectClass:[SearchDemoController class]]
@@ -102,23 +96,6 @@
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithItems:items];
     self.dataArray = @[group];
-}
-
-- (void)showTipsView
-{
-    UIView *contentView = [UIView new];
-    contentView.backgroundColor = [UIColor redColor];
-    
-    TipsView *tipsView = [[TipsView alloc] init];
-    tipsView.showType = TipsViewShowTypeCenter;
-    tipsView.contentView = contentView;
-    tipsView.contentViewSize = CGSizeMake(kScreenWidth, 243);
-    
-    if (tipsView.isAnimating) {
-        return;
-    }
-    
-    [tipsView showInView:nil animatable:YES];
 }
 
 @end
