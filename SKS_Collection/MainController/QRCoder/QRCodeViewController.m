@@ -12,6 +12,7 @@
 #import "UIView+Frame.h"
 #import <AVFoundation/AVFoundation.h>
 #import "CommonMacro.h"
+#import "NSString+Regular.h"
 
 #define kViewfinderWH kScreenWidth * 0.8
 #define kPadding 10
@@ -82,22 +83,48 @@
     [_scannerLineView.layer addAnimation:animation forKey:nil];
 }
 
+//- (void)test:(NSString *)result {
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"扫描结果"
+//                                                                             message:result
+//                                                                      preferredStyle:UIAlertControllerStyleAlert];
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [alertController dismissViewControllerAnimated:YES completion:nil];
+//        [_qrCodeView startReading];
+//    }]];
+//    
+//    [self presentViewController:alertController animated:YES completion:nil];
+//}
+
+#pragma mark - QRCodeViewDelegate
+
 - (void)QRCodeView:(QRCodeView *)view scanedResultString:(NSString *)result
 {
-    NSLog(@"%s", __func__);
-    [_qrCodeView stopReading];
+    [view stopReading];
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate); // 震动
     AudioServicesPlaySystemSound (1052);// 声音
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"扫描结果"
-                                                                             message:result
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [alertController dismissViewControllerAnimated:YES completion:^{
-            [_qrCodeView startReading];
-        }];
-    }]];
+//    [self test:result];
     
-    [self presentViewController:alertController animated:YES completion:nil];
+    if (!IsValidateString(result)) {
+        NSLog(@"无效的二维码");
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(qrCodeResultInvalidateCode)]) {
+            [self.delegate qrCodeResultInvalidateCode];
+        }
+        [view startReading];
+        return;
+    }
+    
+    if (result.isMacAddress) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(qrCodeResultMacAddress:)]) {
+            [self.delegate qrCodeResultMacAddress:result];
+        }
+    } else {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(qrCodeResultHttpAddress:)]) {
+            [self.delegate qrCodeResultHttpAddress:result];
+        }
+    }
 }
+
+
 @end

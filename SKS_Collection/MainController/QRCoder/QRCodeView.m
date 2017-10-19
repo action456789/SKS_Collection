@@ -14,6 +14,8 @@
     AVCaptureDevice *_captureDevice;
     AVCaptureDeviceInput *_inputDevice;
     AVCaptureVideoPreviewLayer *_previewLayer;
+    
+    BOOL _isRunning;
 }
 @end
 
@@ -35,6 +37,8 @@
 
 - (void)startReading
 {
+    _isRunning = YES;
+    
     AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     _captureDevice = captureDevice;
     
@@ -69,6 +73,12 @@
 
 - (void)stopReading
 {
+    if (!_isRunning) {
+        return;
+    }
+    
+    _isRunning = NO;
+    
     [_session stopRunning];
     [_previewLayer removeFromSuperlayer];
     _inputDevice = nil;
@@ -80,6 +90,10 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
+    if (_isRunning == NO) {
+        return;
+    }
+    
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
@@ -87,11 +101,12 @@
         NSString *result = nil;
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             result = metadataObj.stringValue;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(QRCodeView:scanedResultString:)]) {
-                dispatch_async(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (self.delegate && [self.delegate respondsToSelector:@selector(QRCodeView:scanedResultString:)]) {
                     [self.delegate QRCodeView:self scanedResultString:result];
-                });
-            }
+                }
+            });
+            
         } else {
             NSLog(@"不是二维码");
         }
