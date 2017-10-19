@@ -23,11 +23,10 @@
 - (NSString *)kk_jsonPrettyString;
 
 /**
- JSON 字符串 -> 字典/数组
- 
- @param jsonString JSON字符串
+ JSON 字符串/JSON Data -> 字典/数组
+
  @return 对象
  */
-+ (id)kk_JSONObjectFrom:(NSString *)jsonString;
+- (id)kk_JSONObject;
 
 @end

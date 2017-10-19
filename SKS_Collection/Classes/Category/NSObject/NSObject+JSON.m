@@ -30,9 +30,17 @@
     return nil;
 }
 
-+ (id)kk_JSONObjectFrom:(NSString *)jsonString
-{
-    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+- (id)kk_JSONObject {
+    NSData *data = nil;
+    if ([self isKindOfClass: [NSString class]]) {
+        NSString *jsonString = (NSString *)self;
+        data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    } else if ([self isKindOfClass:[NSData class]]) {
+        data = (NSData *)self;
+    } else {
+        NSLog(@"NSObject+JSON: 无法转换");
+        return nil;
+    }
     
     NSError *error;
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
