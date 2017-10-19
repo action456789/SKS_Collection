@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 @class StaticCollectionViewCell;
 
-typedef void (^StaticCellHandle)(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title);
+typedef void (^kk_StaticCellHandle)(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title);
 
 @interface StaticCollectionViewCellItem : NSObject
 
 - (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title;
-- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title handle:(StaticCellHandle)handle;
+- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title handle:(kk_StaticCellHandle)handle;
 
 @property (nonatomic, copy) NSString *imageName;
+@property (nonatomic, strong) NSString *placeHolderImageName; // image 的占位图片
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) StaticCellHandle clickedHandle;
+@property (nonatomic, copy) kk_StaticCellHandle clickedHandle;
 
 @end

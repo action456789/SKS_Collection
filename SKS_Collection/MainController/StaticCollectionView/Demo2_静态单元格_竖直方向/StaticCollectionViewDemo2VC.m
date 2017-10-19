@@ -6,15 +6,17 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "StaticCollectionViewDemoVC.h"
+#import "StaticCollectionViewDemo2VC.h"
 #import "StaticCollectionView.h"
 #import "CommonMacro.h"
 
-@interface StaticCollectionViewDemoVC ()
+#import "StaticCollectionViewDemo2Cell.h"
+
+@interface StaticCollectionViewDemo2VC ()
 
 @end
 
-@implementation StaticCollectionViewDemoVC
+@implementation StaticCollectionViewDemo2VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,17 +52,19 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         layout.headerReferenceSize = CGSizeMake(0, 25);
-        layout.itemSize = CGSizeMake(kScreenWidth / 4, 75);
+        layout.itemSize = CGSizeMake(kScreenWidth / 4, 100);
         layout.minimumLineSpacing = 10;
         layout.minimumInteritemSpacing = 0;
         layout;
     });
     
-    StaticCollectionView *collectionView = [[StaticCollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 300)
+    CGRect frame = CGRectMake(0, 0, kScreenWidth, 300);
+    StaticCollectionView *collectionView = [[StaticCollectionView alloc] initWithFrame:frame
                                                                                 layout:flowLayout
+                                                                          registerCell:[StaticCollectionViewDemo2Cell class]
                                                                              dataArray:array];
+    
     collectionView.backgroundColor = [UIColor lightGrayColor];
-    collectionView.imageViewContentMode = UIViewContentModeCenter;
     
     [self.view addSubview:collectionView];
     
@@ -68,24 +72,6 @@
         item1.title = @"你是SB";
         [collectionView reloadData];
     });
-    
-    // 一排显示
-    UICollectionViewFlowLayout *flowLayout1 = ({
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        layout.itemSize = CGSizeMake(kScreenWidth / 4, 75);
-        layout.minimumLineSpacing = 10;
-        layout.minimumInteritemSpacing = 0;
-        layout;
-    });
-    
-    StaticCollectionView *collectionView1 = [[StaticCollectionView alloc] initWithFrame:CGRectMake(0, 500, kScreenWidth, 100)
-                                                                                layout:flowLayout1
-                                                                             dataArray:array];
-    collectionView1.backgroundColor = [UIColor lightGrayColor];
-    collectionView1.imageViewContentMode = UIViewContentModeCenter;
-    
-    [self.view addSubview:collectionView1];
 }
 
 @end

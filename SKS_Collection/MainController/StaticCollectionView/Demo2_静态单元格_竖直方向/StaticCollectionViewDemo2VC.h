@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface StaticCollectionViewDemoVC : BaseViewController
+@interface StaticCollectionViewDemo2VC : BaseViewController
 
 @end

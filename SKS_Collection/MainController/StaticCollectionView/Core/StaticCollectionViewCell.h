@@ -13,8 +13,6 @@
 
 @property (nonatomic, strong) StaticCollectionViewCellItem *dataModal;
 
-@property (nonatomic, assign) UIViewContentMode imageViewContentMode;
-
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *titleLabel;
 

@@ -25,9 +25,6 @@
 
 @property (nonatomic, strong, readonly) NSArray<StaticCollectionViewCellItem *> *dataArray;
 
-// 设置 cell 的图片 UIViewContentMode
-@property (nonatomic, assign) UIViewContentMode imageViewContentMode;
-
 - (void)reloadData;
 
 @end

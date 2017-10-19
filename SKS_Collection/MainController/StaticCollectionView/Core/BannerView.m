@@ -28,7 +28,7 @@
 
 static NSString * const reuseIdentifier = @"StaticCell";
 
-- (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray autoScroll:(BOOL)autoScroll {
+- (instancetype)initWithFrame:(CGRect)frame registerCell:(Class)cellClass dataArray:(NSArray *)dataArray autoScroll:(BOOL)autoScroll {
     
     UICollectionViewFlowLayout *flowLayout = ({
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -39,14 +39,13 @@ static NSString * const reuseIdentifier = @"StaticCell";
         layout;
     });
     
-    if (self = [super initWithFrame:frame layout:flowLayout dataArray:dataArray]) {
+    if (self = [super initWithFrame:frame layout:flowLayout registerCell:cellClass dataArray:dataArray]) {
         self.collectionView.pagingEnabled = YES;
-        self.imageViewContentMode = UIViewContentModeScaleToFill;
         _totalItemsCount = dataArray.count * 3;
         _layout = flowLayout;
         _currentIndex = 0;
         _infiniteLoop = YES;
-        _autoScrollTimeInterval = 2.0;
+        _autoScrollTimeInterval = 3.0;
         
         if (autoScroll) {
             [self setupTimerWithTimeInterval:_autoScrollTimeInterval];
@@ -69,7 +68,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 - (void)setupTimerWithTimeInterval:(NSTimeInterval)interval {
     _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)autoScroll {
@@ -94,7 +93,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
 
 #pragma mark - getter &&& setter
 
-- (void)setAutoScrollTimeInterval:(CGFloat)autoScrollTimeInterval {
+- (void)setAutoScrollTimeInterval:(NSTimeInterval)autoScrollTimeInterval {
     _autoScrollTimeInterval = autoScrollTimeInterval;
     [self invalidateTimer];
     [self setupTimerWithTimeInterval:autoScrollTimeInterval];
@@ -149,7 +148,6 @@ static NSString * const reuseIdentifier = @"StaticCell";
     StaticCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     cell.dataModal = self.dataArray[indexPath.row % self.dataArray.count];
-    cell.imageViewContentMode = self.imageViewContentMode;
     
     return cell;
 }

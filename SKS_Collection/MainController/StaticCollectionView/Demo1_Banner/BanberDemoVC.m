@@ -6,15 +6,16 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "BanberViewController.h"
+#import "BanberDemoVC.h"
 #import "BannerView.h"
 #import "CommonMacro.h"
+#import "BannerDemoCell.h"
 
-@interface BanberViewController ()
+@interface BanberDemoVC ()
 @property (nonatomic, strong) BannerView *bannerView;
 @end
 
-@implementation BanberViewController
+@implementation BanberDemoVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +37,10 @@
     
     NSArray *array = @[item1, item2, item3];
     
-    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 200) dataArray:array autoScroll:YES];
+    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 200)
+                                                  registerCell:[BannerDemoCell class]
+                                                     dataArray:array
+                                                    autoScroll:YES];
     [self.view addSubview:bannerView];
     self.bannerView = bannerView;
 }

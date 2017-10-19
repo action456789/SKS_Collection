@@ -18,11 +18,21 @@
     return self;
 }
 
-- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title handle:(StaticCellHandle)handle {
+- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title handle:(kk_StaticCellHandle)handle {
     if (self = [self init]) {
         _imageName = imageName;
         _title = title;
-        _clickedHandle = handle;
+        _clickedHandle = [handle copy];
+    }
+    return self;
+}
+
+- (instancetype)initWithImageName:(NSString *)imageName placeHolderImageName:(NSString *)placeHolderImageName title:(NSString *)title handle:(kk_StaticCellHandle)handle {
+    
+    if (self = [self init]) {
+        _imageName = imageName;
+        _title = title;
+        _clickedHandle = [handle copy];
     }
     return self;
 }

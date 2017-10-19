@@ -10,7 +10,10 @@
 
 @interface BannerView : StaticCollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray autoScroll:(BOOL)autoScroll;
+- (instancetype)initWithFrame:(CGRect)frame
+                 registerCell:(Class)cellClass
+                    dataArray:(NSArray *)dataArray
+                   autoScroll:(BOOL)autoScroll;
 
 @property (nonatomic, assign, readonly) NSInteger currentIndex;
 

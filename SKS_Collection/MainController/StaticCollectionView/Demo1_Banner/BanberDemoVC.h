@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface BanberViewController : UIViewController
+@interface BanberDemoVC : UIViewController
 
 @end

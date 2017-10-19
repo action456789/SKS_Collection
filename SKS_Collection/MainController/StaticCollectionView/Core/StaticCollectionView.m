@@ -79,9 +79,6 @@ static NSString * const reuseIdentifier = @"StaticCell";
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor clearColor];
-        _collectionView.showsHorizontalScrollIndicator = NO;
-        _collectionView.showsVerticalScrollIndicator = NO;
-        
     }
     return _collectionView;
 }
@@ -96,7 +93,6 @@ static NSString * const reuseIdentifier = @"StaticCell";
     StaticCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     cell.dataModal = _dataArray[indexPath.row % _dataArray.count];
-    cell.imageViewContentMode = self.imageViewContentMode;
     
     return cell;
 }
@@ -106,7 +102,7 @@ static NSString * const reuseIdentifier = @"StaticCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     StaticCollectionViewCellItem *item = _dataArray[indexPath.row];
 
-    StaticCollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    StaticCollectionViewCell *cell = (StaticCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
     if (item.clickedHandle) {
         item.clickedHandle(cell, nil, nil);

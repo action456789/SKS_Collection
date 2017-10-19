@@ -32,9 +32,9 @@
 #import "AddClickAreaButtonDemeVC.h"
 #import "CycleScrollViewDemoVC.h"
 #import "EmptyContentTableViewController.h"
-#import "StaticCollectionViewDemoVC.h"
+#import "StaticCollectionViewDemo2VC.h"
 #import "ModalFromViewController.h"
-#import "BanberViewController.h"
+#import "BanberDemoVC.h"
 #import "EjectShrinkBtnsDemoVC.h"
 #import "LightControlPannelVC.h"
 #import "WeekSelectorVCDemo.h"
@@ -85,13 +85,14 @@
                         ,[StaticCellItem itemWithTitle:@"24. 增加按钮点击区域" icon:nil objectClass:[AddClickAreaButtonDemeVC class]]
                         ,[StaticCellItem itemWithTitle:@"25. 无限滚动" icon:nil objectClass:[CycleScrollViewDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"24. 无数据视图" icon:nil objectClass:[EmptyContentTableViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"25. 静态CollectionViewCell" icon:nil objectClass:[StaticCollectionViewDemoVC class]]
-                        ,[StaticCellItem itemWithTitle:@"25. 自定义转场动画" icon:nil objectClass:[ModalFromViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"26. 启动引导图、无线循环View" icon:nil objectClass:[BanberViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"27. 弹性按钮" icon:nil objectClass:[EjectShrinkBtnsDemoVC class]]
-                        ,[StaticCellItem itemWithTitle:@"28. 彩色滑块" icon:nil objectClass:[ColorSliderDemoVC class]]
-                        ,[StaticCellItem itemWithTitle:@"30. 圆环控制动画控制器" icon:nil objectClass:[LightControlPannelVC class]]
-                        ,[StaticCellItem itemWithTitle:@"31. 周选择器" icon:nil objectClass:[WeekSelectorVCDemo class]]
+                        ,[StaticCellItem itemWithTitle:@"25. 静态CollectionViewCell demo1 无限循环View" icon:nil objectClass:[BanberDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"26. 静态CollectionViewCell demo2" icon:nil objectClass:[StaticCollectionViewDemo2VC class]]
+                        ,[StaticCellItem itemWithTitle:@"27. 静态CollectionViewCell demo3" icon:nil objectClass:[StaticCollectionViewDemo3VC class]]
+                        ,[StaticCellItem itemWithTitle:@"28. 自定义转场动画" icon:nil objectClass:[ModalFromViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"29. 弹性按钮" icon:nil objectClass:[EjectShrinkBtnsDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"30. 彩色滑块" icon:nil objectClass:[ColorSliderDemoVC class]]
+                        ,[StaticCellItem itemWithTitle:@"31. 圆环控制动画控制器" icon:nil objectClass:[LightControlPannelVC class]]
+                        ,[StaticCellItem itemWithTitle:@"32. 周选择器" icon:nil objectClass:[WeekSelectorVCDemo class]]
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithItems:items];

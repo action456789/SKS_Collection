@@ -4,3 +4,6 @@
 
 #import "StaticCellBaseViewController.h"
 #import "UITextView+Placeholder.h"
+
+#import "StaticCollectionView.h"
+#import "StaticCollectionViewDemo2Cell.h"
