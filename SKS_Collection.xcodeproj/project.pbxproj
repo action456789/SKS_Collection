@@ -22,7 +22,6 @@
 		103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */; };
 		103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */; };
 		103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */; };
-		103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */; };
 		103A55521D3CCCF200366D8F /* KKSlideTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */; };
 		103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
@@ -138,6 +137,8 @@
 		8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */; };
 		8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */; };
 		8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */; };
+		816F08181F989CD800CCF924 /* CoutdownBtnDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */; };
+		816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */; };
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 		819B11E01F5028760029C55B /* UIScrollView+Scroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */; };
@@ -222,8 +223,6 @@
 		103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoToolViewController.m; sourceTree = "<group>"; };
 		103A55431D3CCCF200366D8F /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
 		103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
-		103A55461D3CCCF200366D8F /* CountDownButtonDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonDemoVC.h; sourceTree = "<group>"; };
-		103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButtonDemoVC.m; sourceTree = "<group>"; };
 		103A554B1D3CCCF200366D8F /* KKSlideTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarViewController.h; sourceTree = "<group>"; };
 		103A554C1D3CCCF200366D8F /* KKSlideTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarViewController.m; sourceTree = "<group>"; };
 		103A554D1D3CCCF200366D8F /* SlideTabBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarItemController.h; sourceTree = "<group>"; };
@@ -459,6 +458,9 @@
 		8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Sandbox.m"; sourceTree = "<group>"; };
 		8160F8211F53F2DF004B7638 /* UIApplication+AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppInfo.h"; sourceTree = "<group>"; };
 		8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
+		816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoutdownBtnDemoVC.h; sourceTree = "<group>"; };
+		816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoutdownBtnDemoVC.m; sourceTree = "<group>"; };
+		816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoutdownBtnDemoVC.xib; sourceTree = "<group>"; };
 		8181314E1EBAC82B00CEEA97 /* KKNotFluentMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNotFluentMonitor.h; sourceTree = "<group>"; };
 		8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNotFluentMonitor.m; sourceTree = "<group>"; };
 		818131511EBAC96C00CEEA97 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
@@ -742,8 +744,9 @@
 			children = (
 				81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */,
 				81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */,
-				103A55461D3CCCF200366D8F /* CountDownButtonDemoVC.h */,
-				103A55471D3CCCF200366D8F /* CountDownButtonDemoVC.m */,
+				816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */,
+				816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */,
+				816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */,
 			);
 			path = CountDownButton;
 			sourceTree = "<group>";
@@ -1881,6 +1884,7 @@
 				81E2F2141F988DF6008ECB04 /* WeekSelectorVCDemo.xib in Resources */,
 				2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */,
 				10DD98441D226B1F00193A69 /* Main.storyboard in Resources */,
+				816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */,
 				10DD99211D22802A00193A69 /* girl.png in Resources */,
 				2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */,
 				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
@@ -2095,7 +2099,6 @@
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
 				812DE32E1F4EC5EE001AAB2A /* NSArray+Plist.m in Sources */,
 				10DD983E1D226B1F00193A69 /* AppDelegate.m in Sources */,
-				103A55501D3CCCF200366D8F /* CountDownButtonDemoVC.m in Sources */,
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */,
 				818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */,
@@ -2109,6 +2112,7 @@
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */,
 				81D405C41F5004D5005FB382 /* YYCGUtiilites.m in Sources */,
+				816F08181F989CD800CCF924 /* CoutdownBtnDemoVC.m in Sources */,
 				8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */,
 				812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
