@@ -27,7 +27,7 @@
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
 		103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
-		106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* GCDTimer.m */; };
+		106362F61D869D0700FD47B0 /* KKGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* KKGCDTimer.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
 		10C00EE91E0A63D5003D51AD /* KKSlideTabBarBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE21E0A63D5003D51AD /* KKSlideTabBarBaseLayout.m */; };
@@ -242,8 +242,8 @@
 		103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBlockButton.m; sourceTree = "<group>"; };
 		1046D6941D64596E00E6D7EF /* GifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoViewController.h; sourceTree = "<group>"; };
 		1046D6951D64596E00E6D7EF /* GifDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDemoViewController.m; sourceTree = "<group>"; };
-		106362F41D869D0700FD47B0 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
-		106362F51D869D0700FD47B0 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		106362F41D869D0700FD47B0 /* KKGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGCDTimer.h; sourceTree = "<group>"; };
+		106362F51D869D0700FD47B0 /* KKGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKGCDTimer.m; sourceTree = "<group>"; };
 		10642B971D34D80F001217CF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		10642B981D34D80F001217CF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		10694E4D1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLiteDemoController.h; sourceTree = "<group>"; };
@@ -600,6 +600,8 @@
 		81ED553E1F9619120087D1DF /* InputFeedBackTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFeedBackTextView.swift; sourceTree = "<group>"; };
 		81ED553F1F9619120087D1DF /* InputContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContactView.swift; sourceTree = "<group>"; };
 		81ED55431F96DE490087D1DF /* CommonMacroSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMacroSwift.swift; sourceTree = "<group>"; };
+		81F5E7911F9E0BDE007F41AA /* NSBundle+Language.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
+		81F5E7921F9E0BDE007F41AA /* NSBundle+Language.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
 		C2A05B50C31DDCA991316407 /* Pods-SKS_Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.release.xcconfig"; sourceTree = "<group>"; };
 		F67FAD5DC98E1A18F319EEB5 /* Pods-SKS_Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKS_Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1001,6 +1003,7 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				81F5E7901F9E0BD8007F41AA /* NSBundle */,
 				10DD986A1D226B7D00193A69 /* CALayer */,
 				10DD986D1D226B7D00193A69 /* Foundation */,
 				81C7ABB81F4EA7A400DAC8E0 /* UIKit */,
@@ -1203,8 +1206,8 @@
 				10DD98CB1D226B7D00193A69 /* KK_ObserveredMutableArray.m */,
 				10DD98CC1D226B7D00193A69 /* KK_ThreadSafeArray.h */,
 				10DD98CD1D226B7D00193A69 /* KK_ThreadSafeArray.m */,
-				106362F41D869D0700FD47B0 /* GCDTimer.h */,
-				106362F51D869D0700FD47B0 /* GCDTimer.m */,
+				106362F41D869D0700FD47B0 /* KKGCDTimer.h */,
+				106362F51D869D0700FD47B0 /* KKGCDTimer.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1863,6 +1866,15 @@
 			path = LightControlPannel;
 			sourceTree = "<group>";
 		};
+		81F5E7901F9E0BD8007F41AA /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				81F5E7911F9E0BDE007F41AA /* NSBundle+Language.h */,
+				81F5E7921F9E0BDE007F41AA /* NSBundle+Language.m */,
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
 		E523159E204DDECA056A572D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2098,7 +2110,7 @@
 				81D405DB1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m in Sources */,
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
-				106362F61D869D0700FD47B0 /* GCDTimer.m in Sources */,
+				106362F61D869D0700FD47B0 /* KKGCDTimer.m in Sources */,
 				8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */,
 				812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */,
 				8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */,

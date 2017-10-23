@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, CGDTimerAccuracy) {
     CGDTimerAccuracyNormal,
 };
 
-@interface GCDTimer : NSObject
+@interface KKGCDTimer : NSObject
 
 @property (nonatomic, assign) CGDTimerAccuracy accuracy;
 

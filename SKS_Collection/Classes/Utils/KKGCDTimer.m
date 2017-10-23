@@ -6,16 +6,16 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "GCDTimer.h"
+#import "KKGCDTimer.h"
 
-@interface GCDTimer()
+@interface KKGCDTimer()
 
 @property (nonatomic, assign) dispatch_source_t timer;
 @property (nonatomic, assign) BOOL isClear;
 
 @end
 
-@implementation GCDTimer
+@implementation KKGCDTimer
 
 + (instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)ti
                                          queue:(dispatch_queue_t)queue
@@ -23,7 +23,7 @@
                                          delay:(NSTimeInterval)delay
                                          block:(void (^)(void))block
 {
-    GCDTimer *gcdTimer = [GCDTimer new];
+    KKGCDTimer *gcdTimer = [KKGCDTimer new];
     gcdTimer.isClear = NO;
     
     NSTimeInterval leeway = 0.f;
