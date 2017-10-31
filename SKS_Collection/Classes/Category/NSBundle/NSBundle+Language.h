@@ -13,6 +13,6 @@
 /**
  @return 当前APP使用的语言是否为中文
  */
-- (BOOL)kk_isAppLanguageChinese;
++ (BOOL)kk_isAppLanguageChinese;
 
 @end

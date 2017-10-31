@@ -144,6 +144,7 @@
 		818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181314F1EBAC82B00CEEA97 /* KKNotFluentMonitor.m */; };
 		818131521EBAC96C00CEEA97 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818131511EBAC96C00CEEA97 /* CrashReporter.framework */; };
 		819B11E01F5028760029C55B /* UIScrollView+Scroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */; };
+		81A272C81FA85BA300291762 /* UIApplication+window.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A272C61FA85BA300291762 /* UIApplication+window.m */; };
 		81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABD41F4EA7A400DAC8E0 /* UITableView+RadioCornerCell.m */; };
 		81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABDB1F4EA7A400DAC8E0 /* UITextView+Placeholder.m */; };
 		81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABEB1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.m */; };
@@ -479,6 +480,8 @@
 		818131511EBAC96C00CEEA97 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
 		819B11DE1F5028760029C55B /* UIScrollView+Scroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Scroll.h"; sourceTree = "<group>"; };
 		819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Scroll.m"; sourceTree = "<group>"; };
+		81A272C61FA85BA300291762 /* UIApplication+window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+window.m"; sourceTree = "<group>"; };
+		81A272C71FA85BA300291762 /* UIApplication+window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+window.h"; sourceTree = "<group>"; };
 		81B313961F974034004C0EC8 /* NSObject+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		81B313971F974034004C0EC8 /* NSObject+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMenuView.xib; sourceTree = "<group>"; };
@@ -629,7 +632,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */ = {
+		102185E11D5B0AE400C5AD64 /* 数字增长动画 */ = {
 			isa = PBXGroup;
 			children = (
 				102185E21D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.h */,
@@ -637,7 +640,7 @@
 				102185E51D5B0B2D00C5AD64 /* NumberIncresingVc.h */,
 				102185E61D5B0B2D00C5AD64 /* NumberIncresingVc.m */,
 			);
-			path = NumberIncressingAnimation;
+			path = "数字增长动画";
 			sourceTree = "<group>";
 		};
 		1032C2C91D45DF0800D55DE0 /* CAGradienLayer */ = {
@@ -737,7 +740,7 @@
 				1046D6811D62E1BD00E6D7EF /* TipsView */,
 				10F7EF001D5D65FB00801FD6 /* AppleSystemService */,
 				10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */,
-				102185E11D5B0AE400C5AD64 /* NumberIncressingAnimation */,
+				102185E11D5B0AE400C5AD64 /* 数字增长动画 */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
 				2E38E9511E28A38B0086B870 /* StaticCollectionView */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
@@ -747,7 +750,7 @@
 				10F4DFD61D4097DB00E0D223 /* DiskCache */,
 				10F4DFCC1D3F85FE00E0D223 /* BlurEffect */,
 				103A55421D3CCCF200366D8F /* AnimatePauseAndResume */,
-				103A55451D3CCCF200366D8F /* CountDownButton */,
+				103A55451D3CCCF200366D8F /* 倒计时按钮 */,
 				103A55481D3CCCF200366D8F /* SlideTabBar */,
 			);
 			path = MainController;
@@ -762,7 +765,7 @@
 			path = AnimatePauseAndResume;
 			sourceTree = "<group>";
 		};
-		103A55451D3CCCF200366D8F /* CountDownButton */ = {
+		103A55451D3CCCF200366D8F /* 倒计时按钮 */ = {
 			isa = PBXGroup;
 			children = (
 				81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */,
@@ -771,7 +774,7 @@
 				816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */,
 				816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */,
 			);
-			path = CountDownButton;
+			path = "倒计时按钮";
 			sourceTree = "<group>";
 		};
 		103A55481D3CCCF200366D8F /* SlideTabBar */ = {
@@ -1003,6 +1006,7 @@
 		10DD98691D226B7D00193A69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				81A272C51FA85B9B00291762 /* UIApplication */,
 				81F5E7901F9E0BD8007F41AA /* NSBundle */,
 				10DD986A1D226B7D00193A69 /* CALayer */,
 				10DD986D1D226B7D00193A69 /* Foundation */,
@@ -1558,6 +1562,15 @@
 				819B11DF1F5028760029C55B /* UIScrollView+Scroll.m */,
 			);
 			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		81A272C51FA85B9B00291762 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				81A272C71FA85BA300291762 /* UIApplication+window.h */,
+				81A272C61FA85BA300291762 /* UIApplication+window.m */,
+			);
+			path = UIApplication;
 			sourceTree = "<group>";
 		};
 		81C7AB631F4D8C0300DAC8E0 /* NSData */ = {
@@ -2161,6 +2174,7 @@
 				10DD98F31D226B7D00193A69 /* KK_ThreadSafeArray.m in Sources */,
 				812224D01F53BE2500117C25 /* UIDevice+DeviceInfo.m in Sources */,
 				103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */,
+				81A272C81FA85BA300291762 /* UIApplication+window.m in Sources */,
 				81D405D71F501F68005FB382 /* UIControl+BlockSupport.m in Sources */,
 				81C7AB971F4E771D00DAC8E0 /* NSString+Regular.m in Sources */,
 				102185E41D5B0AF000C5AD64 /* KSNumberIncreaseAnimationView.m in Sources */,

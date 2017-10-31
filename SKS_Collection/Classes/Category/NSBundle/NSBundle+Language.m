@@ -10,7 +10,8 @@
 
 @implementation NSBundle (Language)
 
-- (BOOL)kk_isAppLanguageChinese {
+// https://mjtsai.com/blog/2014/12/09/nslocale-preferredlanguages-vs-nsbundle-preferredlocalizations/
++ (BOOL)kk_isAppLanguageChinese {
     NSArray *array = [[NSBundle mainBundle] preferredLocalizations];
     return [array.firstObject isEqualToString:@"zh-Hans"];
 }
