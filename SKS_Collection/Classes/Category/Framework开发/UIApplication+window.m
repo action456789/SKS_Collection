@@ -19,11 +19,12 @@
 }
 
 + (UIViewController *)kk_rootViewController {
-    return [[[self class] kk_keyWindow] rootViewController];
+    return [UIApplication sharedApplication].delegate.window.rootViewController;
 }
 
 + (void)kk_setRootViewController:(UIViewController *)viewController {
-    [self kk_keyWindow].rootViewController = viewController;
+    [UIApplication sharedApplication].delegate.window.rootViewController = viewController;
 }
 
 @end
+
