@@ -3,7 +3,7 @@
 //  SmartSocket
 //
 //  Created by sen.ke on 2017/10/31.
-//  Copyright © 2017年 宋旭华. All rights reserved.
+//  Copyright © 2017年 sen.ke All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
