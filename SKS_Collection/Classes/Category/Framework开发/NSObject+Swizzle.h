@@ -10,6 +10,8 @@
 
 @interface NSObject (Swizzle)
 
-+ (BOOL)kk_swizzleMethod:(SEL)originalSel with:(SEL)newSel;
++ (BOOL)kk_swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel;
+
++ (BOOL)kk_swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
 
 @end

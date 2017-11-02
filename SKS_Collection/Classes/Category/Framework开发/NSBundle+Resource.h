@@ -11,10 +11,10 @@
 // 按照 bundle 的名称进行修改
 #define kk_BundleName @"D103FrameworkBundle"
 
-// 加载 Localizable.strings
+// 加载 Bundle 中的国际化语句
 #undef NSLocalizedString
 #define NSLocalizedString(key, comment) \
-[[NSBundle kk_bundleWithName:kk_BundleName] localizedStringForKey:(key) value:@"" table:nil]
+[NSBundle mj_localizedStringForKey:(key)]
 
 @interface NSBundle (Resource)
 
@@ -23,5 +23,9 @@
 + (NSString *)kk_pathInBundle:(NSString *)bundleName withAssetName:(NSString *)assetName;
 
 + (UIImage *)kk_imageInBundle:(NSString *)bundleName imageName:(NSString *)imageName;
+
++ (NSString *)mj_localizedStringForKey:(NSString *)key;
+
++ (NSString *)mj_localizedStringForKey:(NSString *)key value:(NSString *)value;
 
 @end
