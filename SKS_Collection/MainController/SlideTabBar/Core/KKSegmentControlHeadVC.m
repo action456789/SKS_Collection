@@ -175,7 +175,13 @@
 - (void)itemPressed:(UIButton *)sender {
     [self _updateItemButtonWithButton:sender];
     [self _updateItemLineWithButton:sender animate:YES];
-    [self _autoScrollItemsScrollViewFromIndex:_selectedItem.tag toIndex:sender.tag animate:YES];
+    
+    if (_selectedItem.tag != sender.tag) {
+        [self _autoScrollItemsScrollViewFromIndex:_selectedItem.tag toIndex:sender.tag animate:YES];
+        if ([self.delegate respondsToSelector:@selector(segmentControlHeadVC:itemChangedFromIndex:toIndex:)]) {
+            [self.delegate segmentControlHeadVC:self itemChangedFromIndex:_selectedItem.tag toIndex:sender.tag];
+        }
+    }
 }
 
 - (void)_autoScrollItemsScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate {

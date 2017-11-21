@@ -13,6 +13,7 @@
 @protocol KKSegmentControlHeadVCDelegate <NSObject>
 @optional
 - (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemMoreClicked:(UIButton *)itemMore;
+- (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
 @end
 
 @interface KKSegmentControlHeadVC : UIViewController
