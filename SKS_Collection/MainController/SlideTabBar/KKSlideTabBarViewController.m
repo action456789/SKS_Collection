@@ -17,7 +17,9 @@
 #import "KKSegmentControlHeadVC.h"
 #import "CommonMacro.h"
 
-@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate>
+#import "KKSegmentControlPageVC.h"
+
+@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlPageVCDelegate>
 {
     KKSlideTabBarView *_tabBar;
     
@@ -29,6 +31,7 @@
 
 @implementation KKSlideTabBarViewController {
     KKSegmentControlHeadVC *headVC;
+    KKSegmentControlPageVC *pageVC;
 }
 
 - (void)viewDidLoad
@@ -38,15 +41,44 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点今日热", @"今日热点今  ", @"电影", @"电影asdfas", nil];
-//        [self _createTabBarView];
+//    [self _createTabBarView];
     
     KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
     headVC = [[KKSegmentControlHeadVC alloc] initWithItemTitles:_titles layout:layout];
     [self.view addSubview:headVC.view];
     [self addChildViewController:headVC];
-    
+
     headVC.view.frame = CGRectMake(0, 100, kScreenWidth, 80);
 
+//    NSArray *controllers = [self createControllers];
+    pageVC = [[KKSegmentControlPageVC alloc] initWithItemCount:_titles.count controllers:nil];
+    pageVC.delegate = self;
+    [pageVC setCurrentPage:0 withAnimate:NO];
+    [self.view addSubview:pageVC.view];
+    pageVC.view.frame = CGRectMake(0, 200, kScreenWidth, 200);
+    [self addChildViewController:pageVC];
+
+}
+
+# pragma mark KKSegmentControlPageVC delegate
+
+- (void)segmentControlPageVC:(KKSegmentControlPageVC *)vc pageChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
+    NSLog(@"%ld, %ld", (unsigned long)from, (unsigned long)to);
+    if (!pageVC.realtimePage) {
+        return;
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        SlideTabBarItemController *controller = [_cache objectForKey:@(to)];
+        if (!controller) {
+            controller = [[SlideTabBarItemController alloc] init];
+            controller.delegate = self;
+            controller.view.frame = self.view.frame;
+            controller.view.backgroundColor = [UIColor kk_randomColor];
+            [_cache setObject:controller forKey:@(to)];
+        }
+        [pageVC updateControllerFromIndex:from toIndex:to withController:controller];
+    });
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -68,7 +100,7 @@
     [_cache removeAllObjects];
 }
 
-- (void)_initControllersDate
+- (NSMutableArray *)createControllers
 {
     NSMutableArray *controllers = [NSMutableArray array];
     for (int i=0; i<_titles.count; i++) {
@@ -77,6 +109,7 @@
         controller.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255.0f)/255.0f green:arc4random_uniform(255.0f)/255.0f blue:arc4random_uniform(255.0f)/255.0f alpha:1];
         [controllers addObject:controller];
     }
+    return controllers;
 }
 
 - (void)_createTabBarView

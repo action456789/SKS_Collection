@@ -46,7 +46,3 @@
 - (void)updateControllerFromIndex:(NSUInteger)from toIndex:(NSUInteger)to withController:(UIViewController *)controller;
 
 @end
-
-@interface FsPlaceholdViewController : UIViewController
-
-@end

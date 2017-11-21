@@ -117,6 +117,7 @@
 		81208AFC1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208AFB1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m */; };
 		81208AFF1FC3CDD300AA0637 /* KKSegmentControlPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */; };
 		81208B021FC3CDE400AA0637 /* KKSegmentControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */; };
+		81208B051FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208B041FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.m */; };
 		812224C51F53BAD900117C25 /* UITableView+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C41F53BAD900117C25 /* UITableView+Update.m */; };
 		812224C91F53BC2E00117C25 /* UITextField+selectText.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C81F53BC2E00117C25 /* UITextField+selectText.m */; };
 		812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CC1F53BCAE00117C25 /* UIScreen+Size.m */; };
@@ -433,6 +434,8 @@
 		81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPageVC.m; sourceTree = "<group>"; };
 		81208B001FC3CDE400AA0637 /* KKSegmentControlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlVC.h; sourceTree = "<group>"; };
 		81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlVC.m; sourceTree = "<group>"; };
+		81208B031FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlPlaceholdVC.h; sourceTree = "<group>"; };
+		81208B041FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPlaceholdVC.m; sourceTree = "<group>"; };
 		812224C31F53BAD900117C25 /* UITableView+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Update.h"; sourceTree = "<group>"; };
 		812224C41F53BAD900117C25 /* UITableView+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Update.m"; sourceTree = "<group>"; };
 		812224C71F53BC2E00117C25 /* UITextField+selectText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+selectText.h"; sourceTree = "<group>"; };
@@ -883,6 +886,8 @@
 				81208AFB1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m */,
 				81208AFD1FC3CDD300AA0637 /* KKSegmentControlPageVC.h */,
 				81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */,
+				81208B031FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.h */,
+				81208B041FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.m */,
 				81208B001FC3CDE400AA0637 /* KKSegmentControlVC.h */,
 				81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */,
 				10C00EE71E0A63D5003D51AD /* KKSlideTabBarView.h */,
@@ -2146,6 +2151,7 @@
 				81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */,
 				81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */,
 				8177E2331FAB0D47009314DB /* NSBundle+LocalizationSwizzle.m in Sources */,
+				81208B051FC42A1E00AA0637 /* KKSegmentControlPlaceholdVC.m in Sources */,
 				81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */,
 				81ED55451F96DF980087D1DF /* CommonMacroSwift.swift in Sources */,
 				81ED55441F96DEF60087D1DF /* UIColor+Extension.swift in Sources */,

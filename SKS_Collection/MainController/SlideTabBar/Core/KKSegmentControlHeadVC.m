@@ -10,7 +10,7 @@
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
 
-@interface KKSegmentControlHeadVC () <UIScrollViewDelegate>
+@interface KKSegmentControlHeadVC ()
 {
     UIView          *_containerView;
     UIScrollView    *_itemsScrollView;
@@ -51,14 +51,13 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    
-    _itemsScrollView.contentSize = CGSizeMake(self.itemScrollViewContentW + STB_SCREEN_WIDTH * 0.1, 0);
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
-    
+    _itemsScrollView.contentSize = CGSizeMake(self.itemScrollViewContentW + STB_SCREEN_WIDTH * 0.1, 0);
+    [self createNotNeedToSrollToCenterBtns];
 }
 
 
@@ -72,7 +71,6 @@
     _itemsScrollView.showsHorizontalScrollIndicator = NO;
     _itemsScrollView.showsVerticalScrollIndicator = NO;
     _itemsScrollView.bounces = NO;
-    _itemsScrollView.delegate = self;
     _itemsScrollView.scrollEnabled = self.layout.itemScrollViewScrollEnable;
     [_containerView addSubview:_itemsScrollView];
     
@@ -173,24 +171,19 @@
 }
 
 - (void)itemPressed:(UIButton *)sender {
-    [self _updateItemButtonWithButton:sender];
-    [self _updateItemLineWithButton:sender animate:YES];
-    
     if (_selectedItem.tag != sender.tag) {
         [self _autoScrollItemsScrollViewFromIndex:_selectedItem.tag toIndex:sender.tag animate:YES];
+        
         if ([self.delegate respondsToSelector:@selector(segmentControlHeadVC:itemChangedFromIndex:toIndex:)]) {
             [self.delegate segmentControlHeadVC:self itemChangedFromIndex:_selectedItem.tag toIndex:sender.tag];
         }
     }
+
+    [self _updateItemButtonWithButton:sender];
+    [self _updateItemLineWithButton:sender animate:YES];
 }
 
 - (void)_autoScrollItemsScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate {
-    // 计算最右边不需要滚动的按钮
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self createNotNeedToSrollToCenterBtns];
-    });
-    
     // 最左边不需要滚动的按钮
     UIButton *lastBtn = _itemButtons.lastObject;
     if ((lastBtn.frame.origin.x + lastBtn.frame.size.width) < (STB_SCREEN_WIDTH - kSTBItemMoreWidth - kSTBLastItemRightPadding)) {

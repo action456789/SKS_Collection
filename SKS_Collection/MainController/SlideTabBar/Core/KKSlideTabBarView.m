@@ -9,6 +9,7 @@
 #import "KKSlideTabBarView.h"
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
+#import "KKSegmentControlPlaceholdVC.h"
 
 @interface KKSlideTabBarView() <UIScrollViewDelegate>
 @property (nonatomic, assign) CGFloat itemScrollViewContentW;
@@ -381,13 +382,13 @@
         [self _addControllerAtIndex:to withController:controller];
         
     } else if (to < count) {
-        BOOL sameKindOfObject = [_controllers[to] isKindOfClass:[FsPlaceholdViewController class]];
+        BOOL sameKindOfObject = [_controllers[to] isKindOfClass:[KKSegmentControlPlaceholdVC class]];
         if (self.realtimePage || sameKindOfObject) {
             [self _replaceControllerAtIndex:to withController:controller];
         }
     } else {// jump
         for (NSUInteger i=from+1; i<to; i++) {
-            FsPlaceholdViewController *placeholdController = [[FsPlaceholdViewController alloc] init];
+            KKSegmentControlPlaceholdVC *placeholdController = [[KKSegmentControlPlaceholdVC alloc] init];
             [self _addControllerAtIndex:i withController:placeholdController];
         }
         [self updateControllerFromIndex:from toIndex:to withController:controller];
@@ -408,9 +409,5 @@
         self.currentPage = page;
     }
 }
-
-@end
-
-@implementation FsPlaceholdViewController
 
 @end
