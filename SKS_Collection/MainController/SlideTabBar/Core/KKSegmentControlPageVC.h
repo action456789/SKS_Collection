@@ -21,6 +21,8 @@
 /// when sliding to a page again, whether to replace the old and load a new page controller. YES, to replace the old and load a new.
 @property (nonatomic, assign, readonly) BOOL realtimePage;
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 @property (nonatomic, assign) id <KKSegmentControlPageVCDelegate> delegate;
 
 - (instancetype)initWithItemCount:(NSInteger)count
@@ -31,11 +33,16 @@
                           toIndex:(NSUInteger)to
                    withController:(UIViewController *)controller;
 
+/// 滚到到某个 index
 - (void)autoScrollBottomScrollViewFromIndex:(NSUInteger)from
                                     toIndex:(NSUInteger)to
                                     animate:(BOOL)animate;
 
 /// set the current page, and the slider and page controller will slide suitably
 - (void)setCurrentPage:(NSUInteger)currentPage withAnimate:(BOOL)animate;
+
+@end
+
+@interface KKSegmentControlPlaceholdVC : UIViewController
 
 @end

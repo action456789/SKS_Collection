@@ -26,14 +26,14 @@
 }
 
 @property (nonatomic, assign) CGFloat itemScrollViewContentW;
-@property (nonatomic, strong) KKSlideTabBarBaseLayout *layout;
+@property (nonatomic, strong) KKSegmentControlBaseLayout *layout;
 
 @end
 
 @implementation KKSegmentControlHeadVC
 
 - (instancetype)initWithItemTitles:(NSMutableArray *)itemTitles
-                            layout:(KKSlideTabBarBaseLayout *)layout {
+                            layout:(KKSegmentControlBaseLayout *)layout {
     if (self = [super init]) {
         _itemTitles = itemTitles;
         _layout = layout;
@@ -149,12 +149,14 @@
     UIButton *lastBtn = _itemButtons.lastObject;
     CGFloat tailMaxX = 0;
     CGFloat tailMinX = 0;
-    if ((lastBtn.frame.origin.x + kSTBLastItemRightPadding) > (STB_SCREEN_WIDTH - kSTBItemMoreWidth)) {
+    CGFloat width = self.view.bounds.size.width;
+    
+    if ((lastBtn.frame.origin.x + kSTBLastItemRightPadding) > (width - kSTBItemMoreWidth)) {
         tailMaxX = lastBtn.frame.origin.x + lastBtn.frame.size.width + kSTBLastItemRightPadding;
-        tailMinX = tailMaxX - (STB_SCREEN_WIDTH * 0.5 - kSTBItemMoreWidth);
+        tailMinX = tailMaxX - (width * 0.5 - kSTBItemMoreWidth);
     } else {
         tailMaxX = lastBtn.frame.origin.x + lastBtn.frame.size.width + kSTBLastItemRightPadding;
-        tailMinX = STB_SCREEN_WIDTH * 0.5;
+        tailMinX = width * 0.5;
     }
     _notNeedToSrollToCenterBtns = [NSMutableArray array];
     for (UIButton *btn in _itemButtons) {
@@ -188,8 +190,10 @@
                                    toIndex:(NSUInteger)to
                                    animate:(BOOL)animate {
     // 最左边不需要滚动的按钮
+    CGFloat totalW = self.view.bounds.size.width;
+    
     UIButton *lastBtn = _itemButtons.lastObject;
-    if ((lastBtn.frame.origin.x + lastBtn.frame.size.width) < (STB_SCREEN_WIDTH - kSTBItemMoreWidth - kSTBLastItemRightPadding)) {
+    if ((lastBtn.frame.origin.x + lastBtn.frame.size.width) < (totalW - kSTBItemMoreWidth - kSTBLastItemRightPadding)) {
         return;
     }
     
@@ -197,7 +201,7 @@
     [self _updateItemLineWithButton:btnTo animate:YES];
     [self _updateItemButtonWithButton:btnTo];
     
-    CGFloat screenCenterX = STB_SCREEN_WIDTH * 0.5;
+    CGFloat screenCenterX = totalW * 0.5;
     CGFloat contentOffsetY = _itemsScrollView.contentOffset.y;
     CGFloat contentOffsetX = btnTo.center.x - screenCenterX;
     
@@ -209,7 +213,7 @@
                 [_itemsScrollView setContentOffset:CGPointMake(0, contentOffsetY) animated:animate];
             }
         } else { // 滚动到屏幕最右边
-            CGFloat tailX = lastBtn.frame.origin.x + lastBtn.frame.size.width + kSTBLastItemRightPadding - (STB_SCREEN_WIDTH - kSTBItemMoreWidth);
+            CGFloat tailX = lastBtn.frame.origin.x + lastBtn.frame.size.width + kSTBLastItemRightPadding - (totalW - kSTBItemMoreWidth);
             [_itemsScrollView setContentOffset:CGPointMake(tailX, contentOffsetY) animated:animate];
         }
     }

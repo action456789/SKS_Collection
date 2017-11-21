@@ -9,12 +9,9 @@
 #import "KKSegmentControlVC.h"
 #import "KKSegmentControlHeadVC.h"
 #import "KKSegmentControlPageVC.h"
-#import "KKSlideTabBarBaseLayout.h"
+#import "KKSegmentControlBaseLayout.h"
 
 #import "Masonry.h"
-
-#import "SlideTabBarItemController.h"
-#import "UIColor+Creator.h"
 
 @interface KKSegmentControlVC () <KKSegmentControlPageVCDelegate, KKSegmentControlHeadVCDelegate>
 
@@ -30,7 +27,7 @@
 
 - (instancetype)initWithItemTitles:(NSMutableArray *)itemTitles
                        controllers:(NSMutableArray *)controllers
-                            layout:(KKSlideTabBarBaseLayout *)layout {
+                            layout:(KKSegmentControlBaseLayout *)layout {
     if (self = [super init]) {
         _headVC = [[KKSegmentControlHeadVC alloc] initWithItemTitles:itemTitles layout:layout];
         _headVC.delegate = self;
@@ -47,7 +44,7 @@
 }
 
 - (instancetype)initWithItemTitles:(NSMutableArray *)itemTitles
-                            layout:(KKSlideTabBarBaseLayout *)layout {
+                            layout:(KKSegmentControlBaseLayout *)layout {
     return [self initWithItemTitles:itemTitles controllers:nil layout:layout];
 }
 
@@ -55,6 +52,8 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    // gesture back
+    [_pageVC.scrollView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,8 +65,11 @@
     [super viewDidLayoutSubviews];
     
     [self.headVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.mas_equalTo(self.view);
-        make.height.equalTo(@(kSTBTopViewHeight));
+//        make.left.top.right.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view);
+        make.width.mas_equalTo(@(300));
+        make.centerX.mas_equalTo(self.view);
+        make.height.mas_equalTo(@(kSTBTopViewHeight));
     }];
     
     [self.pageVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -78,8 +80,13 @@
 
 #pragma mark KKSegmentControlPageVC delegate
 
-- (void)segmentControlPageVC:(KKSegmentControlPageVC *)vc pageChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
+- (void)segmentControlPageVC:(KKSegmentControlPageVC *)vc
+        pageChangedFromIndex:(NSUInteger)from
+                     toIndex:(NSUInteger)to
+{
     NSLog(@"%ld, %ld", (unsigned long)from, (unsigned long)to);
+    
+    [self.headVC autoScrollItemsScrollViewFromIndex:from toIndex:to animate:YES];
     if (!self.pageVC.realtimePage) {
         return;
     }
@@ -93,13 +100,14 @@
         }
         [self.pageVC updateControllerFromIndex:from toIndex:to withController:controller];
     });
-    
-    [self.headVC autoScrollItemsScrollViewFromIndex:from toIndex:to animate:YES];
 }
 
 #pragma mark KKSegmentControlHeadVC delegate
 
-- (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
+- (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc
+        itemChangedFromIndex:(NSUInteger)from
+                     toIndex:(NSUInteger)to
+{
     NSLog(@"%lu, %lu", (unsigned long)from, to);
     [self.pageVC autoScrollBottomScrollViewFromIndex:from toIndex:to animate:YES];
 }

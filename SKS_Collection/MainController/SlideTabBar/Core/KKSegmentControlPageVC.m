@@ -8,14 +8,12 @@
 
 #import "KKSegmentControlPageVC.h"
 #import "CommonMacro.h"
-#import "KKSlideTabBarBaseLayout.h"
-#import "KKSegmentControlPlaceholdVC.h"
+#import "KKSegmentControlBaseLayout.h"
 #import "Masonry.h"
 
 @interface KKSegmentControlPageVC () <UIScrollViewDelegate>
 {
     UIView          *_containerView;
-    UIScrollView    *_scrollView;
     NSUInteger      _itemCount;
     NSMutableArray<__kindof UIViewController *>  *_controllers;
 }
@@ -173,3 +171,8 @@
 }
 
 @end
+
+@implementation KKSegmentControlPlaceholdVC
+
+@end
+

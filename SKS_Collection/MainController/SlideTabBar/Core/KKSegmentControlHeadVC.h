@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class KKSlideTabBarBaseLayout;
+@class KKSegmentControlBaseLayout;
 @class KKSegmentControlHeadVC;
 
 @protocol KKSegmentControlHeadVCDelegate <NSObject>
@@ -21,7 +21,7 @@
 @property (nonatomic, assign) id <KKSegmentControlHeadVCDelegate> delegate;
 
 - (instancetype)initWithItemTitles:(NSMutableArray *)itemTitles
-                            layout:(KKSlideTabBarBaseLayout *)layout;
+                            layout:(KKSegmentControlBaseLayout *)layout;
 
 - (void)autoScrollItemsScrollViewFromIndex:(NSUInteger)from
                                    toIndex:(NSUInteger)to

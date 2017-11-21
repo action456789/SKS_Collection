@@ -6,8 +6,8 @@
 //  Copyright © 2016年 SenKe. All rights reserved.
 //
 
-#import "KKSlideTabBarBaseLayout.h"
+#import "KKSegmentControlBaseLayout.h"
 
-@interface KKSlideTabBarLayoutAuto : KKSlideTabBarBaseLayout
+@interface KKSlideTabBarLayoutAuto : KKSegmentControlBaseLayout
 
 @end

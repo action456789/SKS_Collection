@@ -9,12 +9,11 @@
 #import "KKSlideTabBarView.h"
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
-#import "KKSegmentControlPlaceholdVC.h"
 
 @interface KKSlideTabBarView() <UIScrollViewDelegate>
 @property (nonatomic, assign) CGFloat itemScrollViewContentW;
 @property (nonatomic, assign) NSUInteger currentPage;
-@property (nonatomic, strong) KKSlideTabBarBaseLayout *layout;
+@property (nonatomic, strong) KKSegmentControlBaseLayout *layout;
 @end
 
 @implementation KKSlideTabBarView {
@@ -48,7 +47,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
                    itemTitles:(NSMutableArray *)itemTitles
                   controllers:(NSMutableArray *)controllers
-                       layout:(KKSlideTabBarBaseLayout *)layout
+                       layout:(KKSegmentControlBaseLayout *)layout
 {
     if (self = [super initWithFrame:frame]) {
         _itemTitles = itemTitles;
@@ -67,7 +66,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
                    itemTitles:(NSMutableArray *)itemTitles
-                       layout:(KKSlideTabBarBaseLayout *)layout
+                       layout:(KKSegmentControlBaseLayout *)layout
 {
     self = [self initWithFrame:frame itemTitles:itemTitles controllers:nil layout:layout];
     return self;

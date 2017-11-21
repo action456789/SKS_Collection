@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "CoutdownBtnDemoVC.h"
 #import "RotateAnimateViewController.h"
-#import "KKSlideTabBarViewController.h"
+#import "KKSegmentControlDemoVC.h"
 #import "BlurEffectDemoController.h"
 #import "FileCacheDemoController.h"
 #import "DiskCacheSqlLiteDemoController.h"
@@ -61,7 +61,7 @@
 {
     NSArray *items = @[ [StaticCellItem itemWithTitle:@" 1. 倒计时按钮" icon:nil objectClass:[CoutdownBtnDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"2. 转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
-                        ,[StaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSlideTabBarViewController class]]
+                        ,[StaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSegmentControlDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"4. 模糊效果" icon:nil objectClass:[BlurEffectDemoController class]]
                         ,[StaticCellItem itemWithTitle:@"5. 文件缓存" icon:nil objectClass:[FileCacheDemoController class]]
                         ,[StaticCellItem itemWithTitle:@"6. sqlite缓存" icon:nil objectClass:[DiskCacheSqlLiteDemoController class]]

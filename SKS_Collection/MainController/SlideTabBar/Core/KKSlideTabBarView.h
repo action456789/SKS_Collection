@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
+// 获取 KKSegmentControlPlaceholdVC 类
+#import "KKSegmentControlPageVC.h"
+
 @class KKSlideTabBarView;
-@class KKSlideTabBarBaseLayout;
+@class KKSegmentControlBaseLayout;
 
 @protocol KKSlideTabBarViewDelegate <NSObject>
 @optional;
@@ -29,13 +33,13 @@
 /// init all items but the array of page controllers is nil
 - (instancetype)initWithFrame:(CGRect)frame
                    itemTitles:(NSMutableArray *)itemTitles
-                       layout:(KKSlideTabBarBaseLayout *)layout;
+                       layout:(KKSegmentControlBaseLayout *)layout;
 
 /// designated init, init all items and page controllers once a time
 - (instancetype)initWithFrame:(CGRect)frame
                    itemTitles:(NSMutableArray *)itemTitles
                   controllers:(NSMutableArray *)controllers
-                       layout:(KKSlideTabBarBaseLayout *)layout;
+                       layout:(KKSegmentControlBaseLayout *)layout;
 
 - (void)configTabBar;
 

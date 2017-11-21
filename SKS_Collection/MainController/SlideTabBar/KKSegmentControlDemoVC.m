@@ -11,14 +11,11 @@
 #import "SlideTabBarItemController.h"
 #import "Masonry.h"
 #import "UIColor+Creator.h"
-#import "KKSlideTabBarLayoutAuto.h"
-#import "KKSlideTabBarLayoutBisect.h"
 
-#import "KKSegmentControlHeadVC.h"
 #import "CommonMacro.h"
 
-#import "KKSegmentControlPageVC.h"
 #import "KKSegmentControlVC.h"
+#import "KKSlideTabBarLayoutAuto.h"
 
 @interface KKSegmentControlDemoVC () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlVCDelegate>
 {
@@ -31,8 +28,6 @@
 @end
 
 @implementation KKSegmentControlDemoVC {
-    KKSegmentControlHeadVC *headVC;
-    KKSegmentControlPageVC *pageVC;
     KKSegmentControlVC *segmentVC;
 }
 
@@ -45,7 +40,7 @@
     _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点今日热", @"今日热点今  ", @"电影", @"电影asdfas", nil];
 //    [self _createTabBarView];
     
-    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
+    KKSegmentControlBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
     segmentVC = [[KKSegmentControlVC alloc] initWithItemTitles:_titles layout:layout];
     segmentVC.delegate = self;
     [self.view addSubview:segmentVC.view];
@@ -79,7 +74,7 @@
 - (void)_createTabBarView
 {
 //    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutBisect alloc] initWithItemTitles:_titles];
-    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
+    KKSegmentControlBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
     _tabBar = [[KKSlideTabBarView alloc] initWithFrame:CGRectZero itemTitles:_titles layout:layout];
     _tabBar.delegate = self;
     [_tabBar setCurrentPage:0 withAnimate:NO];
