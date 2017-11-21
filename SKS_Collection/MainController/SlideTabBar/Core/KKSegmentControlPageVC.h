@@ -31,6 +31,10 @@
                           toIndex:(NSUInteger)to
                    withController:(UIViewController *)controller;
 
+- (void)autoScrollBottomScrollViewFromIndex:(NSUInteger)from
+                                    toIndex:(NSUInteger)to
+                                    animate:(BOOL)animate;
+
 /// set the current page, and the slider and page controller will slide suitably
 - (void)setCurrentPage:(NSUInteger)currentPage withAnimate:(BOOL)animate;
 

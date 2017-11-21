@@ -72,28 +72,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKS_Collection/MainController/SlideTabBar/Core/KKSlideTabBarView.m"
-            timestampString = "532952122.744693"
+            timestampString = "532962217.672497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "-initWithFrame:itemTitles:controllers:layout:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SKS_Collection/MainController/SlideTabBar/Core/KKSlideTabBarView.m"
-            timestampString = "532952122.745171"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
-            landmarkName = "-setCurrentPage:withAnimate:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

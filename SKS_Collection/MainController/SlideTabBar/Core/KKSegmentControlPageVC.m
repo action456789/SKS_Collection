@@ -39,7 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self _autoScrollBottomScrollViewFromIndex:-1 toIndex:0 animate:YES];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self autoScrollBottomScrollViewFromIndex:-1 toIndex:0 animate:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,7 +134,9 @@
     }];
 }
 
-- (void)_autoScrollBottomScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate {
+- (void)autoScrollBottomScrollViewFromIndex:(NSUInteger)from
+                                    toIndex:(NSUInteger)to
+                                    animate:(BOOL)animate {
     CGFloat x = to * STB_SCREEN_WIDTH;
     CGFloat y = _scrollView.frame.origin.y;
     [_scrollView setContentOffset:CGPointMake(x, y) animated:animate];
@@ -151,7 +154,7 @@
 }
 
 - (void)setCurrentPage:(NSUInteger)currentPage withAnimate:(BOOL)animate {
-    [self _autoScrollBottomScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
+    [self autoScrollBottomScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
     
     if (_currentPage != currentPage) {
         if ([self.delegate respondsToSelector:@selector(segmentControlPageVC:pageChangedFromIndex:toIndex:)]) {

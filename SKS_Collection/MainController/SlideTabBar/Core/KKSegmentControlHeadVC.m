@@ -45,8 +45,10 @@
     return self;
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview {
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -113,9 +115,7 @@
 
 - (void)_autoLayoutSubviews {
     [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view.mas_top).offset(44);
-        make.height.mas_equalTo(@(kSTBTopViewHeight));
+        make.edges.mas_equalTo(self.view);
     }];
     
     [_itemsScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -175,7 +175,7 @@
     
     NSInteger from = _selectedItem.tag;
     NSInteger to = sender.tag;
-    [self _autoScrollItemsScrollViewFromIndex:from toIndex:to animate:YES];
+    [self autoScrollItemsScrollViewFromIndex:from toIndex:to animate:YES];
     
     if (from != to) {
         if ([self.delegate respondsToSelector:@selector(segmentControlHeadVC:itemChangedFromIndex:toIndex:)]) {
@@ -184,7 +184,9 @@
     }
 }
 
-- (void)_autoScrollItemsScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate {
+- (void)autoScrollItemsScrollViewFromIndex:(NSUInteger)from
+                                   toIndex:(NSUInteger)to
+                                   animate:(BOOL)animate {
     // 最左边不需要滚动的按钮
     UIButton *lastBtn = _itemButtons.lastObject;
     if ((lastBtn.frame.origin.x + lastBtn.frame.size.width) < (STB_SCREEN_WIDTH - kSTBItemMoreWidth - kSTBLastItemRightPadding)) {

@@ -18,8 +18,9 @@
 #import "CommonMacro.h"
 
 #import "KKSegmentControlPageVC.h"
+#import "KKSegmentControlVC.h"
 
-@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlPageVCDelegate, KKSegmentControlHeadVCDelegate>
+@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlVCDelegate>
 {
     KKSlideTabBarView *_tabBar;
     
@@ -32,6 +33,7 @@
 @implementation KKSlideTabBarViewController {
     KKSegmentControlHeadVC *headVC;
     KKSegmentControlPageVC *pageVC;
+    KKSegmentControlVC *segmentVC;
 }
 
 - (void)viewDidLoad
@@ -44,66 +46,22 @@
 //    [self _createTabBarView];
     
     KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
-    
-    headVC = [[KKSegmentControlHeadVC alloc] initWithItemTitles:_titles layout:layout];
-    headVC.delegate = self;
-    [self.view addSubview:headVC.view];
-    [self addChildViewController:headVC];
-
-    headVC.view.frame = CGRectMake(0, 100, kScreenWidth, 80);
-
-//    NSArray *controllers = [self createControllers];
-    pageVC = [[KKSegmentControlPageVC alloc] initWithItemCount:_titles.count controllers:nil];
-    pageVC.delegate = self;
-    [pageVC setCurrentPage:0 withAnimate:NO];
-    [self.view addSubview:pageVC.view];
-    pageVC.view.frame = CGRectMake(0, 200, kScreenWidth, 200);
-    [self addChildViewController:pageVC];
-
+    segmentVC = [[KKSegmentControlVC alloc] initWithItemTitles:_titles layout:layout];
+    segmentVC.delegate = self;
+    [self.view addSubview:segmentVC.view];
+    [self addChildViewController:segmentVC];
+    [segmentVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view).offset(64);
+    }];
 }
 
-# pragma mark KKSegmentControlPageVC delegate
-
-- (void)segmentControlPageVC:(KKSegmentControlPageVC *)vc pageChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
-    NSLog(@"%ld, %ld", (unsigned long)from, (unsigned long)to);
-    if (!pageVC.realtimePage) {
-        return;
-    }
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        SlideTabBarItemController *controller = [_cache objectForKey:@(to)];
-        if (!controller) {
-            controller = [[SlideTabBarItemController alloc] init];
-            controller.delegate = self;
-            controller.view.frame = self.view.frame;
-            controller.view.backgroundColor = [UIColor kk_randomColor];
-            [_cache setObject:controller forKey:@(to)];
-        }
-        [pageVC updateControllerFromIndex:from toIndex:to withController:controller];
-    });
-}
-
-- (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
-    NSLog(@"%d, %d", from, to);
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [self resetNavBar];
-}
-
-- (void)viewDidLayoutSubviews
-{
-    if ([UIDevice currentDevice].systemVersion.doubleValue >= 7.0) { // fix bug: iOS 7 cannot scorll
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [_tabBar configTabBar];
-        });
-    }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [_cache removeAllObjects];
+#pragma mark - KKSegmentControlVCDelegate
+- (UIViewController *)segmentControlVC:(KKSegmentControlVC *)segmentControl viewControllerForPageAtIndex:(NSInteger)index {
+    SlideTabBarItemController *controller = [[SlideTabBarItemController alloc] init];
+    controller.delegate = self;
+    controller.view.backgroundColor = [UIColor kk_randomColor];
+    return controller;
 }
 
 - (NSMutableArray *)createControllers

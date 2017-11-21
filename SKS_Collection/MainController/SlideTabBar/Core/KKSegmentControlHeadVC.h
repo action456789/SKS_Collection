@@ -23,4 +23,8 @@
 - (instancetype)initWithItemTitles:(NSMutableArray *)itemTitles
                             layout:(KKSlideTabBarBaseLayout *)layout;
 
+- (void)autoScrollItemsScrollViewFromIndex:(NSUInteger)from
+                                   toIndex:(NSUInteger)to
+                                   animate:(BOOL)animate;
+
 @end
