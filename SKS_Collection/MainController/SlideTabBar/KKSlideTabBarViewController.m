@@ -14,6 +14,9 @@
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
 
+#import "KKSegmentControlHeadVC.h"
+#import "CommonMacro.h"
+
 @interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate>
 {
     KKSlideTabBarView *_tabBar;
@@ -24,7 +27,9 @@
 }
 @end
 
-@implementation KKSlideTabBarViewController
+@implementation KKSlideTabBarViewController {
+    KKSegmentControlHeadVC *headVC;
+}
 
 - (void)viewDidLoad
 {
@@ -32,8 +37,16 @@
     _cache = [[NSCache alloc] init];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self _initTitlesDate];
-    [self _createTabBarView];
+    _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点今日热", @"今日热点今  ", @"电影", @"电影asdfas", nil];
+//        [self _createTabBarView];
+    
+    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
+    headVC = [[KKSegmentControlHeadVC alloc] initWithItemTitles:_titles layout:layout];
+    [self.view addSubview:headVC.view];
+    [self addChildViewController:headVC];
+    
+    headVC.view.frame = CGRectMake(0, 100, kScreenWidth, 80);
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -53,12 +66,6 @@
 - (void)didReceiveMemoryWarning
 {
     [_cache removeAllObjects];
-}
-
-- (void)_initTitlesDate
-{
-    _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点今日热", @"今日热点今  ", @"电影", @"电影asdfas", nil];
-//    _titles = [NSMutableArray arrayWithObjects:@"电影", @"今日热点", @"新闻", @"今日热点", nil];
 }
 
 - (void)_initControllersDate
