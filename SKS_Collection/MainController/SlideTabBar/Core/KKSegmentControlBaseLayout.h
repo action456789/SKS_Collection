@@ -36,7 +36,7 @@ static const CGFloat kSTBSperaterHeight          = 18;
 #define kSTBItemFontColor 0x808080
 #define kSTBSeperaterColor 0x808080
 
-@interface KKSlideTabBarBaseLayout : NSObject
+@interface KKSegmentControlBaseLayout : NSObject
 
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *itemStringWidths;
 @property (nonatomic, strong) NSArray<NSString *> *itemTitles;

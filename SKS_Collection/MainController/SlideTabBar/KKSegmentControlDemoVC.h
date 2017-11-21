@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface KKSlideTabBarViewController : BaseViewController
+@interface KKSegmentControlDemoVC : BaseViewController
 
 @end

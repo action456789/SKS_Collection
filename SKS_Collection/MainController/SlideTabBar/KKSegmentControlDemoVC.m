@@ -6,7 +6,7 @@
 //  Copyright © 2016年 KeSen. All rights reserved.
 //
 
-#import "KKSlideTabBarViewController.h"
+#import "KKSegmentControlDemoVC.h"
 #import "KKSlideTabBarView.h"
 #import "SlideTabBarItemController.h"
 #import "Masonry.h"
@@ -20,7 +20,7 @@
 #import "KKSegmentControlPageVC.h"
 #import "KKSegmentControlVC.h"
 
-@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlVCDelegate>
+@interface KKSegmentControlDemoVC () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlVCDelegate>
 {
     KKSlideTabBarView *_tabBar;
     
@@ -30,7 +30,7 @@
 }
 @end
 
-@implementation KKSlideTabBarViewController {
+@implementation KKSegmentControlDemoVC {
     KKSegmentControlHeadVC *headVC;
     KKSegmentControlPageVC *pageVC;
     KKSegmentControlVC *segmentVC;

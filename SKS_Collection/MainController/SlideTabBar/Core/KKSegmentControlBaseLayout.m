@@ -6,9 +6,9 @@
 //  Copyright © 2016年 SenKe. All rights reserved.
 //
 
-#import "KKSlideTabBarBaseLayout.h"
+#import "KKSegmentControlBaseLayout.h"
 
-@implementation KKSlideTabBarBaseLayout {
+@implementation KKSegmentControlBaseLayout {
     UIView *_superView;
 }
 
