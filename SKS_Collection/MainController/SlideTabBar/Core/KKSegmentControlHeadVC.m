@@ -171,16 +171,17 @@
 }
 
 - (void)itemPressed:(UIButton *)sender {
-    if (_selectedItem.tag != sender.tag) {
-        [self _autoScrollItemsScrollViewFromIndex:_selectedItem.tag toIndex:sender.tag animate:YES];
-        
+    [self _updateItemLineWithButton:sender animate:YES];
+    
+    NSInteger from = _selectedItem.tag;
+    NSInteger to = sender.tag;
+    [self _autoScrollItemsScrollViewFromIndex:from toIndex:to animate:YES];
+    
+    if (from != to) {
         if ([self.delegate respondsToSelector:@selector(segmentControlHeadVC:itemChangedFromIndex:toIndex:)]) {
-            [self.delegate segmentControlHeadVC:self itemChangedFromIndex:_selectedItem.tag toIndex:sender.tag];
+            [self.delegate segmentControlHeadVC:self itemChangedFromIndex:from toIndex:to];
         }
     }
-
-    [self _updateItemButtonWithButton:sender];
-    [self _updateItemLineWithButton:sender animate:YES];
 }
 
 - (void)_autoScrollItemsScrollViewFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate {
@@ -212,8 +213,7 @@
     }
 }
 
-- (void)_updateItemLineWithButton:(UIButton *)button animate:(BOOL)animate
-{
+- (void)_updateItemLineWithButton:(UIButton *)button animate:(BOOL)animate {
     CGFloat lineX = _itemLinePreFrame.origin.x;
     CGFloat lineY = _itemLinePreFrame.origin.y;
     CGFloat lineW = [self.layout lineWidthWithIndex:button.tag];
@@ -241,8 +241,7 @@
     _itemLinePreFrame = _itemLine.frame;
 }
 
-- (void)_updateItemButtonWithButton:(UIButton *)button
-{
+- (void)_updateItemButtonWithButton:(UIButton *)button {
     _selectedItem.selected = NO;
     button.selected = YES;
     _selectedItem = button;

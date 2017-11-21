@@ -19,7 +19,7 @@
 
 #import "KKSegmentControlPageVC.h"
 
-@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlPageVCDelegate>
+@interface KKSlideTabBarViewController () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlPageVCDelegate, KKSegmentControlHeadVCDelegate>
 {
     KKSlideTabBarView *_tabBar;
     
@@ -44,7 +44,9 @@
 //    [self _createTabBarView];
     
     KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
+    
     headVC = [[KKSegmentControlHeadVC alloc] initWithItemTitles:_titles layout:layout];
+    headVC.delegate = self;
     [self.view addSubview:headVC.view];
     [self addChildViewController:headVC];
 
@@ -79,6 +81,10 @@
         }
         [pageVC updateControllerFromIndex:from toIndex:to withController:controller];
     });
+}
+
+- (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
+    NSLog(@"%d, %d", from, to);
 }
 
 - (void)viewDidDisappear:(BOOL)animated
