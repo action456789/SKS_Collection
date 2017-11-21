@@ -93,7 +93,7 @@
     [_itemMore setTitle:@"更多" forState:UIControlStateNormal];
     _itemMore.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_itemMore.titleLabel setFont:[UIFont systemFontOfSize:kSTBItemFontSize]];
-    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontColor) forState:UIControlStateNormal];
+    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontNormalColor) forState:UIControlStateNormal];
     [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemLineBgColor) forState:UIControlStateSelected];
     [_itemMore addTarget:self action:@selector(itemMoreClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_topContainerView addSubview:_itemMore];

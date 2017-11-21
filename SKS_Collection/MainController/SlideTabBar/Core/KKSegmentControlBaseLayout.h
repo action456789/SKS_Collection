@@ -33,7 +33,8 @@ static const CGFloat kSTBSperaterHeight          = 18;
 #define kSTBBarBgColor 0x292e37
 #define kSTBBottomBgColor 0x1f232a
 #define kSTBItemLineBgColor 0xff7608
-#define kSTBItemFontColor 0x808080
+#define kSTBItemFontNormalColor 0x808080
+#define kSTBItemFontSelectedColor 0x808080
 #define kSTBSeperaterColor 0x808080
 
 @interface KKSegmentControlBaseLayout : NSObject

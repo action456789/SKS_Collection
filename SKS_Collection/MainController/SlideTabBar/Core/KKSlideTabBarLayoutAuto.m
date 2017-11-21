@@ -24,7 +24,7 @@
         itemButton.titleLabel.textAlignment = NSTextAlignmentCenter;
         itemButton.titleLabel.font = [UIFont systemFontOfSize:kSTBItemFontSize];
         
-        [itemButton setTitleColor:kSTBColorWithHex(kSTBItemFontColor) forState:UIControlStateNormal];
+        [itemButton setTitleColor:kSTBColorWithHex(kSTBItemFontNormalColor) forState:UIControlStateNormal];
         [itemButton setTitleColor:kSTBColorWithHex(kSTBItemLineBgColor) forState:UIControlStateSelected];
         
         CGFloat titleStringW = [self.itemStringWidths[idx] floatValue];

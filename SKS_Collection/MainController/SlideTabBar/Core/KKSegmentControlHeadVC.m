@@ -60,6 +60,13 @@
     
     _itemsScrollView.contentSize = CGSizeMake(self.itemScrollViewContentW + STB_SCREEN_WIDTH * 0.1, 0);
     [self createNotNeedToSrollToCenterBtns];
+    
+    // 是否显示滑块
+    BOOL isShowItemLine = YES;
+    if ([self.delegate respondsToSelector:@selector(isShowItemLineForSegmentControlHeadVC:)]) {
+        isShowItemLine = [self.delegate isShowItemLineForSegmentControlHeadVC:self];
+    }
+    _itemLine.hidden = !isShowItemLine;
 }
 
 
@@ -82,7 +89,7 @@
     [_itemMore setTitle:@"更多" forState:UIControlStateNormal];
     _itemMore.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_itemMore.titleLabel setFont:[UIFont systemFontOfSize:kSTBItemFontSize]];
-    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontColor) forState:UIControlStateNormal];
+    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontNormalColor) forState:UIControlStateNormal];
     [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemLineBgColor) forState:UIControlStateSelected];
     [_itemMore addTarget:self action:@selector(itemMoreClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_containerView addSubview:_itemMore];

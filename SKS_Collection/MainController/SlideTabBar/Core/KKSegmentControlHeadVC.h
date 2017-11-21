@@ -13,7 +13,11 @@
 @protocol KKSegmentControlHeadVCDelegate <NSObject>
 @optional
 - (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemMoreClicked:(UIButton *)itemMore;
+
 - (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
+
+// 是否显示滑块
+- (BOOL)isShowItemLineForSegmentControlHeadVC:(KKSegmentControlHeadVC *)vc;
 @end
 
 @interface KKSegmentControlHeadVC : UIViewController

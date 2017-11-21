@@ -112,4 +112,8 @@
     [self.pageVC autoScrollBottomScrollViewFromIndex:from toIndex:to animate:YES];
 }
 
+- (BOOL)isShowItemLineForSegmentControlHeadVC:(KKSegmentControlHeadVC *)vc {
+    return NO;
+}
+
 @end
