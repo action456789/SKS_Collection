@@ -114,6 +114,8 @@
 		8111FB9F1F56588000769233 /* CALayer+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8111FB9E1F56588000769233 /* CALayer+Frame.m */; };
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
+		81208AF01FC3158000AA0637 /* KKSlideTabBarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208AEF1FC3158000AA0637 /* KKSlideTabBarHeaderView.m */; };
+		81208AF31FC315AA00AA0637 /* KKSlideTabBarPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208AF21FC315AA00AA0637 /* KKSlideTabBarPageView.m */; };
 		812224C51F53BAD900117C25 /* UITableView+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C41F53BAD900117C25 /* UITableView+Update.m */; };
 		812224C91F53BC2E00117C25 /* UITextField+selectText.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C81F53BC2E00117C25 /* UITextField+selectText.m */; };
 		812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CC1F53BCAE00117C25 /* UIScreen+Size.m */; };
@@ -424,6 +426,10 @@
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
 		8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectShrinkBtnsDemoVC.m; sourceTree = "<group>"; };
+		81208AEE1FC3158000AA0637 /* KKSlideTabBarHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarHeaderView.h; sourceTree = "<group>"; };
+		81208AEF1FC3158000AA0637 /* KKSlideTabBarHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarHeaderView.m; sourceTree = "<group>"; };
+		81208AF11FC315AA00AA0637 /* KKSlideTabBarPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarPageView.h; sourceTree = "<group>"; };
+		81208AF21FC315AA00AA0637 /* KKSlideTabBarPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarPageView.m; sourceTree = "<group>"; };
 		812224C31F53BAD900117C25 /* UITableView+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Update.h"; sourceTree = "<group>"; };
 		812224C41F53BAD900117C25 /* UITableView+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Update.m"; sourceTree = "<group>"; };
 		812224C71F53BC2E00117C25 /* UITextField+selectText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+selectText.h"; sourceTree = "<group>"; };
@@ -872,6 +878,10 @@
 			children = (
 				10C00EE71E0A63D5003D51AD /* KKSlideTabBarView.h */,
 				10C00EE81E0A63D5003D51AD /* KKSlideTabBarView.m */,
+				81208AEE1FC3158000AA0637 /* KKSlideTabBarHeaderView.h */,
+				81208AEF1FC3158000AA0637 /* KKSlideTabBarHeaderView.m */,
+				81208AF11FC315AA00AA0637 /* KKSlideTabBarPageView.h */,
+				81208AF21FC315AA00AA0637 /* KKSlideTabBarPageView.m */,
 				10C00EE11E0A63D5003D51AD /* KKSlideTabBarBaseLayout.h */,
 				10C00EE21E0A63D5003D51AD /* KKSlideTabBarBaseLayout.m */,
 				10C00EE31E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.h */,
@@ -2131,7 +2141,9 @@
 				81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */,
 				81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */,
 				8177E2331FAB0D47009314DB /* NSBundle+LocalizationSwizzle.m in Sources */,
+				81208AF31FC315AA00AA0637 /* KKSlideTabBarPageView.m in Sources */,
 				81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */,
+				81208AF01FC3158000AA0637 /* KKSlideTabBarHeaderView.m in Sources */,
 				81ED55451F96DF980087D1DF /* CommonMacroSwift.swift in Sources */,
 				81ED55441F96DEF60087D1DF /* UIColor+Extension.swift in Sources */,
 				81ED55401F96DD730087D1DF /* FeedBackViewController.swift in Sources */,
