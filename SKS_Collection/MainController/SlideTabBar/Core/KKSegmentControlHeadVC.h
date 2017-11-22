@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommonMacro.h"
 @class KKSegmentControlBaseLayout;
 @class KKSegmentControlHeadVC;
 
@@ -18,6 +19,7 @@
 
 // 是否显示滑块
 - (BOOL)isShowItemLineForSegmentControlHeadVC:(KKSegmentControlHeadVC *)vc;
+
 @end
 
 @interface KKSegmentControlHeadVC : UIViewController

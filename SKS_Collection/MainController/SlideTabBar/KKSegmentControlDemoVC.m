@@ -7,7 +7,6 @@
 //
 
 #import "KKSegmentControlDemoVC.h"
-#import "KKSlideTabBarView.h"
 #import "SlideTabBarItemController.h"
 #import "Masonry.h"
 #import "UIColor+Creator.h"
@@ -17,10 +16,8 @@
 #import "KKSegmentControlVC.h"
 #import "KKSlideTabBarLayoutAuto.h"
 
-@interface KKSegmentControlDemoVC () <KKSlideTabBarViewDelegate, SlideTabBarItemControllerDelegate, KKSegmentControlVCDelegate>
+@interface KKSegmentControlDemoVC () <SlideTabBarItemControllerDelegate, KKSegmentControlVCDelegate>
 {
-    KKSlideTabBarView *_tabBar;
-    
     /// container of item titles
     NSMutableArray<NSString *> *_titles;
     NSCache<NSNumber *, __kindof UIViewController *> *_cache;
@@ -71,44 +68,6 @@
     return controllers;
 }
 
-- (void)_createTabBarView
-{
-//    KKSlideTabBarBaseLayout *layout = [[KKSlideTabBarLayoutBisect alloc] initWithItemTitles:_titles];
-    KKSegmentControlBaseLayout *layout = [[KKSlideTabBarLayoutAuto alloc] initWithItemTitles:_titles];
-    _tabBar = [[KKSlideTabBarView alloc] initWithFrame:CGRectZero itemTitles:_titles layout:layout];
-    _tabBar.delegate = self;
-    [_tabBar setCurrentPage:0 withAnimate:NO];
-    _tabBar.navigationController = self.navigationController;
-    [self.view addSubview:_tabBar];
-    
-    [_tabBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view.mas_top).offset(20);
-    }];
-}
-
-#pragma mark KKSlideTabBarView Delegate
-
-- (void)slideTabBarView:(KKSlideTabBarView *)tabBar pageChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to
-{
-    NSLog(@"%ld, %ld", (unsigned long)from, (unsigned long)to);
-    if (!_tabBar.realtimePage) {
-        return;
-    }
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        SlideTabBarItemController *controller = [_cache objectForKey:@(to)];
-        if (!controller) {
-            controller = [[SlideTabBarItemController alloc] init];
-            controller.delegate = self;
-            controller.view.frame = self.view.frame;
-            controller.view.backgroundColor = [UIColor kk_randomColor];
-            [_cache setObject:controller forKey:@(to)];
-        }
-        [_tabBar updateControllerFromIndex:from toIndex:to withController:controller];
-    });
-}
-
 #pragma mark SlideTabBarItemControllerDelegate Delegate
 
 - (void)scrollDown
@@ -126,13 +85,13 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     
-    [UIView animateWithDuration:0.20 animations:^{
-        [_tabBar mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.view.mas_top).offset(-24);
-            make.bottom.mas_equalTo(self.view);
-        }];
-        [_tabBar layoutIfNeeded];
-    }];
+//    [UIView animateWithDuration:0.20 animations:^{
+//        [_tabBar mas_updateConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(self.view.mas_top).offset(-24);
+//            make.bottom.mas_equalTo(self.view);
+//        }];
+//        [_tabBar layoutIfNeeded];
+//    }];
 }
 
 - (void)showNavBar
@@ -140,13 +99,13 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     
-    [UIView animateWithDuration:0.20 animations:^{
-        [_tabBar mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(self.view);
-            make.top.mas_equalTo(self.view.mas_top).offset(20);
-        }];
-        [_tabBar layoutIfNeeded];
-    }];
+//    [UIView animateWithDuration:0.20 animations:^{
+//        [_tabBar mas_updateConstraints:^(MASConstraintMaker *make) {
+//            make.bottom.mas_equalTo(self.view);
+//            make.top.mas_equalTo(self.view.mas_top).offset(20);
+//        }];
+//        [_tabBar layoutIfNeeded];
+//    }];
 }
 
 - (void)resetNavBar

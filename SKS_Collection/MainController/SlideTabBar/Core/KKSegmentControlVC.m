@@ -69,7 +69,7 @@
         make.top.mas_equalTo(self.view);
         make.width.mas_equalTo(@(300));
         make.centerX.mas_equalTo(self.view);
-        make.height.mas_equalTo(@(kSTBTopViewHeight));
+        make.height.mas_equalTo(@(SegmentControl_HeaderViewHeight));
     }];
     
     [self.pageVC.view mas_makeConstraints:^(MASConstraintMaker *make) {

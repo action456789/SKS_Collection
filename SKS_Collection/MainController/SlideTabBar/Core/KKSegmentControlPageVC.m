@@ -39,6 +39,8 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self autoScrollBottomScrollViewFromIndex:-1 toIndex:0 animate:YES];
+    
+    self.view.backgroundColor = SegmentControl_PageBackgroundColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,12 +64,12 @@
 
 - (void)_createSubViewsWithControllers:(NSMutableArray *)controllers {
     _containerView = [UIView new];
-    _containerView.backgroundColor = kSTBColorWithHex(kSTBBottomBgColor);
+    _containerView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_containerView];
     
     _scrollView = [UIScrollView new];
     _scrollView.showsHorizontalScrollIndicator = YES;
-    _scrollView.backgroundColor = kSTBColorWithHex(kSTBBottomBgColor);
+    _scrollView.backgroundColor = [UIColor clearColor];
     _scrollView.pagingEnabled = YES;
     _scrollView.bounces = NO;
     _scrollView.delegate = self;
@@ -88,7 +90,7 @@
     [_scrollView addSubview:controller.view];
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.height.width.mas_equalTo(_scrollView);
-        make.left.mas_equalTo(_scrollView.mas_left).offset(index*STB_SCREEN_WIDTH);
+        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kScreenWidth);
     }];
 }
 
@@ -99,7 +101,7 @@
     [_scrollView addSubview:controller.view];
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.height.width.mas_equalTo(_scrollView);
-        make.left.mas_equalTo(_scrollView.mas_left).offset(index*STB_SCREEN_WIDTH);
+        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kScreenWidth);
     }];
 }
 
@@ -135,14 +137,14 @@
 - (void)autoScrollBottomScrollViewFromIndex:(NSUInteger)from
                                     toIndex:(NSUInteger)to
                                     animate:(BOOL)animate {
-    CGFloat x = to * STB_SCREEN_WIDTH;
+    CGFloat x = to * kScreenWidth;
     CGFloat y = _scrollView.frame.origin.y;
     [_scrollView setContentOffset:CGPointMake(x, y) animated:animate];
 }
 
 @synthesize currentPage = _currentPage;
 - (NSUInteger)currentPage {
-    return _scrollView.contentOffset.x / STB_SCREEN_WIDTH;
+    return _scrollView.contentOffset.x / kScreenWidth;
 }
 
 #pragma mark setter

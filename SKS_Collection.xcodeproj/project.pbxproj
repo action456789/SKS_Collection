@@ -33,7 +33,6 @@
 		10C00EE91E0A63D5003D51AD /* KKSegmentControlBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE21E0A63D5003D51AD /* KKSegmentControlBaseLayout.m */; };
 		10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE41E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.m */; };
 		10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE61E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.m */; };
-		10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE81E0A63D5003D51AD /* KKSlideTabBarView.m */; };
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
 		10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D7F5E31D800F38004D7DC7 /* CaculaterViewController.m */; };
@@ -265,8 +264,6 @@
 		10C00EE41E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutAuto.m; sourceTree = "<group>"; };
 		10C00EE51E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutBisect.h; sourceTree = "<group>"; };
 		10C00EE61E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutBisect.m; sourceTree = "<group>"; };
-		10C00EE71E0A63D5003D51AD /* KKSlideTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarView.h; sourceTree = "<group>"; };
-		10C00EE81E0A63D5003D51AD /* KKSlideTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarView.m; sourceTree = "<group>"; };
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
@@ -885,8 +882,6 @@
 				81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */,
 				81208B001FC3CDE400AA0637 /* KKSegmentControlVC.h */,
 				81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */,
-				10C00EE71E0A63D5003D51AD /* KKSlideTabBarView.h */,
-				10C00EE81E0A63D5003D51AD /* KKSlideTabBarView.m */,
 				10C00EE11E0A63D5003D51AD /* KKSegmentControlBaseLayout.h */,
 				10C00EE21E0A63D5003D51AD /* KKSegmentControlBaseLayout.m */,
 				10C00EE31E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.h */,
@@ -2287,7 +2282,6 @@
 				8127CDDA1F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m in Sources */,
 				81E2F2211F989617008ECB04 /* ColorSliderDemoVC.m in Sources */,
 				81D405CD1F500858005FB382 /* UIImage+CornerRadio.m in Sources */,
-				10C00EEC1E0A63D6003D51AD /* KKSlideTabBarView.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */,

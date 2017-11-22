@@ -8,34 +8,29 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
+#import "CommonMacro.h"
 
-static const CGFloat kSTBTopViewHeight          = 45;
-static const CGFloat kSTBFirstItemLeftPadding   = 5;
-static const CGFloat kSTBLastItemRightPadding   = 5;
-static const CGFloat kSTBItemHorizontalSpace    = 15;
-static const CGFloat kSTBItemMoreWidth          = 0;
-static const CGFloat kSTBItemLineLeftOverWidtht = 5;
-static const CGFloat kSTBItemHeightRatio        = 0.9f;
+static const CGFloat SegmentControl_HeaderViewHeight          = 45;
+static const CGFloat SegmentControl_HeaderFirstItemLeftPadding   = 5;
+static const CGFloat SegmentControl_HeaderLastItemRightPadding   = 5;
+static const CGFloat SegmentControl_HeaderItemHorizontalSpace    = 15;
+static const CGFloat SegmentControl_HeaderItemMoreWidth          = 0;
+static const CGFloat SegmentControl_HeaderItemLineLeftOverWidtht = 5;
+static const CGFloat SegmentControl_HeaderItemHeightRatio        = 0.9f;
 
-static const CGFloat kSTBItemFontSize           = 14;
+static const CGFloat SegmentControl_HeaderItemFontSize           = 14;
 
-static const CGFloat kSTBSperaterWidth          = 0.5;
-static const CGFloat kSTBSperaterHeight          = 18;
+static const CGFloat SegmentControl_HeaderSperaterWidth          = 0.5;
+static const CGFloat SegmentControl_HeaderSperaterHeight          = 18;
 
-#define STB_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define STB_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define SegmentControl_HeaderBackgroundColor [UIColor clearColor]
+#define SegmentControl_HeaderItemLineBgColor kColorWithHex(0xff7608)
+#define SegmentControl_HeaderItemFontNormalColor kColorWithHex(0xFFFFFF)
+#define SegmentControl_HeaderItemFontSelectedColor kColorWithHex(0x33C47C)
+#define SegmentControl_HeaderItemSeperaterColor kColorWithHex(0x808080)
+#define SegmentControl_HeaderSliderColor kColorWithHex(0x33C47C)
 
-#define kSTBColorWithHex(rgbValue) \
-    [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
-    green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 \
-    blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
-
-#define kSTBBarBgColor 0x292e37
-#define kSTBBottomBgColor 0x1f232a
-#define kSTBItemLineBgColor 0xff7608
-#define kSTBItemFontNormalColor 0x808080
-#define kSTBItemFontSelectedColor 0x808080
-#define kSTBSeperaterColor 0x808080
+#define SegmentControl_PageBackgroundColor [UIColor clearColor]
 
 @interface KKSegmentControlBaseLayout : NSObject
 

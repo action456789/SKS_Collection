@@ -26,7 +26,7 @@
 {
     if (!_itemStringWidths) {
         _itemStringWidths = [NSMutableArray array];
-        NSDictionary *attrs = @{NSFontAttributeName : [UIFont systemFontOfSize:kSTBItemFontSize]};
+        NSDictionary *attrs = @{NSFontAttributeName : [UIFont systemFontOfSize:SegmentControl_HeaderItemFontSize]};
         for (NSString *title in _itemTitles) {
             CGFloat w = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size.width;
             [_itemStringWidths addObject:@(ceil(w))];
