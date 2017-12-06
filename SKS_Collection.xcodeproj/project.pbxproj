@@ -22,17 +22,12 @@
 		103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03931D98C7A100A8F8A1 /* KSPhotoTool.m */; };
 		103A03971D98C7F700A8F8A1 /* PhotoToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */; };
 		103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */; };
-		103A55521D3CCCF200366D8F /* KKSegmentControlDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554C1D3CCCF200366D8F /* KKSegmentControlDemoVC.m */; };
-		103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */; };
 		103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103A55561D3CCD1900366D8F /* BaseViewController.m */; };
 		103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DBDBA1DB3519000BEFBBE /* KSBlockButton.m */; };
 		1046D6961D64596E00E6D7EF /* GifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046D6951D64596E00E6D7EF /* GifDemoViewController.m */; };
 		106362F61D869D0700FD47B0 /* KKGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 106362F51D869D0700FD47B0 /* KKGCDTimer.m */; };
 		10642B991D34D80F001217CF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10642B981D34D80F001217CF /* RootViewController.m */; };
 		10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */; };
-		10C00EE91E0A63D5003D51AD /* KKSegmentControlBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE21E0A63D5003D51AD /* KKSegmentControlBaseLayout.m */; };
-		10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE41E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.m */; };
-		10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00EE61E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.m */; };
 		10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D78CBF1D48B1BD00ACDBF8 /* test.html */; };
 		10D78CC31D48BE8500ACDBF8 /* CalledByScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */; };
 		10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D7F5E31D800F38004D7DC7 /* CaculaterViewController.m */; };
@@ -113,9 +108,6 @@
 		8111FB9F1F56588000769233 /* CALayer+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8111FB9E1F56588000769233 /* CALayer+Frame.m */; };
 		8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */; };
 		8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */; };
-		81208AFC1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208AFB1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m */; };
-		81208AFF1FC3CDD300AA0637 /* KKSegmentControlPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */; };
-		81208B021FC3CDE400AA0637 /* KKSegmentControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */; };
 		812224C51F53BAD900117C25 /* UITableView+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C41F53BAD900117C25 /* UITableView+Update.m */; };
 		812224C91F53BC2E00117C25 /* UITextField+selectText.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224C81F53BC2E00117C25 /* UITextField+selectText.m */; };
 		812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 812224CC1F53BCAE00117C25 /* UIScreen+Size.m */; };
@@ -137,6 +129,14 @@
 		8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8171F53D1C8004B7638 /* UIDevice+CPU.m */; };
 		8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */; };
 		8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */; };
+		8162F5C21FC5536600E6300A /* KKSegmentControlBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5B31FC5536500E6300A /* KKSegmentControlBaseLayout.m */; };
+		8162F5C31FC5536600E6300A /* KKSegmentControlHeadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5B51FC5536500E6300A /* KKSegmentControlHeadVC.m */; };
+		8162F5C41FC5536600E6300A /* KKSegmentControlPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5B71FC5536500E6300A /* KKSegmentControlPageVC.m */; };
+		8162F5C51FC5536600E6300A /* KKSegmentControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5B91FC5536500E6300A /* KKSegmentControlVC.m */; };
+		8162F5C61FC5536600E6300A /* KKSlideTabBarLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5BB1FC5536500E6300A /* KKSlideTabBarLayoutAuto.m */; };
+		8162F5C71FC5536600E6300A /* KKSlideTabBarLayoutBisect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5BD1FC5536500E6300A /* KKSlideTabBarLayoutBisect.m */; };
+		8162F5C81FC5536600E6300A /* KKSegmentControlDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5BF1FC5536500E6300A /* KKSegmentControlDemoVC.m */; };
+		8162F5C91FC5536600E6300A /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5C11FC5536500E6300A /* SlideTabBarItemController.m */; };
 		816F08181F989CD800CCF924 /* CoutdownBtnDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */; };
 		816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */; };
 		8177E22F1FAB0D47009314DB /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8177E2251FAB0D46009314DB /* NSObject+Swizzle.m */; };
@@ -241,10 +241,6 @@
 		103A03961D98C7F700A8F8A1 /* PhotoToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoToolViewController.m; sourceTree = "<group>"; };
 		103A55431D3CCCF200366D8F /* RotateAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimateViewController.h; sourceTree = "<group>"; };
 		103A55441D3CCCF200366D8F /* RotateAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimateViewController.m; sourceTree = "<group>"; };
-		103A554B1D3CCCF200366D8F /* KKSegmentControlDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlDemoVC.h; sourceTree = "<group>"; };
-		103A554C1D3CCCF200366D8F /* KKSegmentControlDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlDemoVC.m; sourceTree = "<group>"; };
-		103A554D1D3CCCF200366D8F /* SlideTabBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarItemController.h; sourceTree = "<group>"; };
-		103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarItemController.m; sourceTree = "<group>"; };
 		103A55551D3CCD1900366D8F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		103A55561D3CCD1900366D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		103DBDB91DB3519000BEFBBE /* KSBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBlockButton.h; sourceTree = "<group>"; };
@@ -258,12 +254,6 @@
 		10694E4D1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCacheSqlLiteDemoController.h; sourceTree = "<group>"; };
 		10694E4E1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheSqlLiteDemoController.m; sourceTree = "<group>"; };
 		1097CDE21D93C21C006E6A3A /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
-		10C00EE11E0A63D5003D51AD /* KKSegmentControlBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlBaseLayout.h; sourceTree = "<group>"; };
-		10C00EE21E0A63D5003D51AD /* KKSegmentControlBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlBaseLayout.m; sourceTree = "<group>"; };
-		10C00EE31E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutAuto.h; sourceTree = "<group>"; };
-		10C00EE41E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutAuto.m; sourceTree = "<group>"; };
-		10C00EE51E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutBisect.h; sourceTree = "<group>"; };
-		10C00EE61E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutBisect.m; sourceTree = "<group>"; };
 		10D78CBF1D48B1BD00ACDBF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		10D78CC11D48BE8500ACDBF8 /* CalledByScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalledByScriptObject.h; sourceTree = "<group>"; };
 		10D78CC21D48BE8500ACDBF8 /* CalledByScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalledByScriptObject.m; sourceTree = "<group>"; };
@@ -424,12 +414,6 @@
 		8118A5EB1EA62B6300E225CD /* UPEjectShrinkBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPEjectShrinkBtnsView.m; sourceTree = "<group>"; };
 		8118A5F01EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectShrinkBtnsDemoVC.h; sourceTree = "<group>"; };
 		8118A5F11EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectShrinkBtnsDemoVC.m; sourceTree = "<group>"; };
-		81208AFA1FC3CDC100AA0637 /* KKSegmentControlHeadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlHeadVC.h; sourceTree = "<group>"; };
-		81208AFB1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlHeadVC.m; sourceTree = "<group>"; };
-		81208AFD1FC3CDD300AA0637 /* KKSegmentControlPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlPageVC.h; sourceTree = "<group>"; };
-		81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPageVC.m; sourceTree = "<group>"; };
-		81208B001FC3CDE400AA0637 /* KKSegmentControlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlVC.h; sourceTree = "<group>"; };
-		81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlVC.m; sourceTree = "<group>"; };
 		812224C31F53BAD900117C25 /* UITableView+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Update.h"; sourceTree = "<group>"; };
 		812224C41F53BAD900117C25 /* UITableView+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Update.m"; sourceTree = "<group>"; };
 		812224C71F53BC2E00117C25 /* UITextField+selectText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+selectText.h"; sourceTree = "<group>"; };
@@ -476,6 +460,22 @@
 		8160F81F1F53F259004B7638 /* UIApplication+Sandbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Sandbox.m"; sourceTree = "<group>"; };
 		8160F8211F53F2DF004B7638 /* UIApplication+AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppInfo.h"; sourceTree = "<group>"; };
 		8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
+		8162F5B21FC5536500E6300A /* KKSegmentControlBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlBaseLayout.h; sourceTree = "<group>"; };
+		8162F5B31FC5536500E6300A /* KKSegmentControlBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlBaseLayout.m; sourceTree = "<group>"; };
+		8162F5B41FC5536500E6300A /* KKSegmentControlHeadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlHeadVC.h; sourceTree = "<group>"; };
+		8162F5B51FC5536500E6300A /* KKSegmentControlHeadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlHeadVC.m; sourceTree = "<group>"; };
+		8162F5B61FC5536500E6300A /* KKSegmentControlPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlPageVC.h; sourceTree = "<group>"; };
+		8162F5B71FC5536500E6300A /* KKSegmentControlPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPageVC.m; sourceTree = "<group>"; };
+		8162F5B81FC5536500E6300A /* KKSegmentControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlVC.h; sourceTree = "<group>"; };
+		8162F5B91FC5536500E6300A /* KKSegmentControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlVC.m; sourceTree = "<group>"; };
+		8162F5BA1FC5536500E6300A /* KKSlideTabBarLayoutAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutAuto.h; sourceTree = "<group>"; };
+		8162F5BB1FC5536500E6300A /* KKSlideTabBarLayoutAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutAuto.m; sourceTree = "<group>"; };
+		8162F5BC1FC5536500E6300A /* KKSlideTabBarLayoutBisect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutBisect.h; sourceTree = "<group>"; };
+		8162F5BD1FC5536500E6300A /* KKSlideTabBarLayoutBisect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutBisect.m; sourceTree = "<group>"; };
+		8162F5BE1FC5536500E6300A /* KKSegmentControlDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlDemoVC.h; sourceTree = "<group>"; };
+		8162F5BF1FC5536500E6300A /* KKSegmentControlDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlDemoVC.m; sourceTree = "<group>"; };
+		8162F5C01FC5536500E6300A /* SlideTabBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarItemController.h; sourceTree = "<group>"; };
+		8162F5C11FC5536500E6300A /* SlideTabBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarItemController.m; sourceTree = "<group>"; };
 		816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoutdownBtnDemoVC.h; sourceTree = "<group>"; };
 		816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoutdownBtnDemoVC.m; sourceTree = "<group>"; };
 		816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoutdownBtnDemoVC.xib; sourceTree = "<group>"; };
@@ -763,6 +763,7 @@
 				10F7EF001D5D65FB00801FD6 /* AppleSystemService */,
 				10F7EEF41D5C0EC200801FD6 /* ExpandableTableView */,
 				102185E11D5B0AE400C5AD64 /* 数字增长动画 */,
+				8162F5B01FC5536500E6300A /* SegmentControl */,
 				103C3CB61D5195AD00401306 /* StaticTableView */,
 				2E38E9511E28A38B0086B870 /* StaticCollectionView */,
 				1032C2DE1D47501B00D55DE0 /* WebKit */,
@@ -773,7 +774,6 @@
 				10F4DFCC1D3F85FE00E0D223 /* BlurEffect */,
 				103A55421D3CCCF200366D8F /* AnimatePauseAndResume */,
 				103A55451D3CCCF200366D8F /* 倒计时按钮 */,
-				103A55481D3CCCF200366D8F /* SlideTabBar */,
 			);
 			path = MainController;
 			sourceTree = "<group>";
@@ -797,18 +797,6 @@
 				816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */,
 			);
 			path = "倒计时按钮";
-			sourceTree = "<group>";
-		};
-		103A55481D3CCCF200366D8F /* SlideTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				10C00EE01E0A63AD003D51AD /* Core */,
-				103A554B1D3CCCF200366D8F /* KKSegmentControlDemoVC.h */,
-				103A554C1D3CCCF200366D8F /* KKSegmentControlDemoVC.m */,
-				103A554D1D3CCCF200366D8F /* SlideTabBarItemController.h */,
-				103A554E1D3CCCF200366D8F /* SlideTabBarItemController.m */,
-			);
-			path = SlideTabBar;
 			sourceTree = "<group>";
 		};
 		103A55541D3CCCFA00366D8F /* BaseClasses */ = {
@@ -871,25 +859,6 @@
 				10642B981D34D80F001217CF /* RootViewController.m */,
 			);
 			path = RootViewController;
-			sourceTree = "<group>";
-		};
-		10C00EE01E0A63AD003D51AD /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				81208AFA1FC3CDC100AA0637 /* KKSegmentControlHeadVC.h */,
-				81208AFB1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m */,
-				81208AFD1FC3CDD300AA0637 /* KKSegmentControlPageVC.h */,
-				81208AFE1FC3CDD300AA0637 /* KKSegmentControlPageVC.m */,
-				81208B001FC3CDE400AA0637 /* KKSegmentControlVC.h */,
-				81208B011FC3CDE400AA0637 /* KKSegmentControlVC.m */,
-				10C00EE11E0A63D5003D51AD /* KKSegmentControlBaseLayout.h */,
-				10C00EE21E0A63D5003D51AD /* KKSegmentControlBaseLayout.m */,
-				10C00EE31E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.h */,
-				10C00EE41E0A63D5003D51AD /* KKSlideTabBarLayoutAuto.m */,
-				10C00EE51E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.h */,
-				10C00EE61E0A63D5003D51AD /* KKSlideTabBarLayoutBisect.m */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		10D7F5E11D800F0A004D7DC7 /* 链式编程 */ = {
@@ -1548,6 +1517,37 @@
 			path = UIBezierPath;
 			sourceTree = "<group>";
 		};
+		8162F5B01FC5536500E6300A /* SegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				8162F5B11FC5536500E6300A /* Core */,
+				8162F5BE1FC5536500E6300A /* KKSegmentControlDemoVC.h */,
+				8162F5BF1FC5536500E6300A /* KKSegmentControlDemoVC.m */,
+				8162F5C01FC5536500E6300A /* SlideTabBarItemController.h */,
+				8162F5C11FC5536500E6300A /* SlideTabBarItemController.m */,
+			);
+			path = SegmentControl;
+			sourceTree = "<group>";
+		};
+		8162F5B11FC5536500E6300A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8162F5B21FC5536500E6300A /* KKSegmentControlBaseLayout.h */,
+				8162F5B31FC5536500E6300A /* KKSegmentControlBaseLayout.m */,
+				8162F5B41FC5536500E6300A /* KKSegmentControlHeadVC.h */,
+				8162F5B51FC5536500E6300A /* KKSegmentControlHeadVC.m */,
+				8162F5B61FC5536500E6300A /* KKSegmentControlPageVC.h */,
+				8162F5B71FC5536500E6300A /* KKSegmentControlPageVC.m */,
+				8162F5B81FC5536500E6300A /* KKSegmentControlVC.h */,
+				8162F5B91FC5536500E6300A /* KKSegmentControlVC.m */,
+				8162F5BA1FC5536500E6300A /* KKSlideTabBarLayoutAuto.h */,
+				8162F5BB1FC5536500E6300A /* KKSlideTabBarLayoutAuto.m */,
+				8162F5BC1FC5536500E6300A /* KKSlideTabBarLayoutBisect.h */,
+				8162F5BD1FC5536500E6300A /* KKSlideTabBarLayoutBisect.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		817C6E351F98A0B30086A05B /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -2159,11 +2159,12 @@
 				2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */,
 				8177E2311FAB0D47009314DB /* NSBundle+Resource.m in Sources */,
 				1032C2D91D46131000D55DE0 /* QRCodeMaskView.m in Sources */,
-				81208AFC1FC3CDC100AA0637 /* KKSegmentControlHeadVC.m in Sources */,
 				1032C2D31D45F34F00D55DE0 /* QRCodeViewController.m in Sources */,
+				8162F5C31FC5536600E6300A /* KKSegmentControlHeadVC.m in Sources */,
 				81D405DB1F50215B005FB382 /* UIBarButtonItem+BlockSupport.m in Sources */,
 				2E38E9941E28D6110086B870 /* StaticCellBaseViewController.m in Sources */,
 				2E38E9851E28D5BB0086B870 /* StaticCollectionViewCell.m in Sources */,
+				8162F5C41FC5536600E6300A /* KKSegmentControlPageVC.m in Sources */,
 				106362F61D869D0700FD47B0 /* KKGCDTimer.m in Sources */,
 				8160F8181F53D1C8004B7638 /* UIDevice+CPU.m in Sources */,
 				812DE3311F4EC602001AAB2A /* NSDictionary+Plist.m in Sources */,
@@ -2183,7 +2184,6 @@
 				2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */,
 				10F4DFF51D41C2B600E0D223 /* BaseNavigationController.m in Sources */,
 				812DE33D1F4ED2D7001AAB2A /* NSDate+String.m in Sources */,
-				103A55521D3CCCF200366D8F /* KKSegmentControlDemoVC.m in Sources */,
 				81C7ABFC1F4EBB1900DAC8E0 /* NSString+Trim.m in Sources */,
 				81C7AB7D1F4E65EB00DAC8E0 /* NSObject+Invocation.m in Sources */,
 				1032C2DD1D47427100D55DE0 /* ShimmerDemeController.m in Sources */,
@@ -2200,13 +2200,13 @@
 				10DD98E31D226B7D00193A69 /* RegexKitLite.m in Sources */,
 				81D405BC1F50015E005FB382 /* UIImage+Modify.m in Sources */,
 				10F7EEFC1D5C0EC200801FD6 /* HeaderView.m in Sources */,
+				8162F5C81FC5536600E6300A /* KKSegmentControlDemoVC.m in Sources */,
 				81D405C71F5005D4005FB382 /* UIColor+Creator.m in Sources */,
 				2EABE29A1E2E417200498F7F /* ModalToViewController.m in Sources */,
 				103954A81DCB073C00DADA5E /* LocksDemoViewController.m in Sources */,
 				10D7F5E41D800F38004D7DC7 /* CaculaterViewController.m in Sources */,
 				10DD98D01D226B7D00193A69 /* CALayer+Animation.m in Sources */,
 				10DD98EF1D226B7D00193A69 /* JingRoundView.m in Sources */,
-				103A55531D3CCCF200366D8F /* SlideTabBarItemController.m in Sources */,
 				81D405D31F500B2C005FB382 /* UIImage+Effect.m in Sources */,
 				812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */,
 				812DE33A1F4ED072001AAB2A /* NSDate+Component.m in Sources */,
@@ -2224,14 +2224,14 @@
 				81E197001F565C58009E32B6 /* CALayer+Transform.m in Sources */,
 				812DE3371F4EC921001AAB2A /* NSDictionary+XML.m in Sources */,
 				10F4DFE11D40981500E0D223 /* DiskCacheSqlLite.m in Sources */,
+				8162F5C71FC5536600E6300A /* KKSlideTabBarLayoutBisect.m in Sources */,
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
+				8162F5C91FC5536600E6300A /* SlideTabBarItemController.m in Sources */,
 				81E2F2131F988DF6008ECB04 /* WeekSelectorVCDemo.m in Sources */,
-				10C00EE91E0A63D5003D51AD /* KKSegmentControlBaseLayout.m in Sources */,
 				81D405B61F4FFE41005FB382 /* UIImage+Creator.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				10F5B0661D81539E00382E50 /* CityCounty.m in Sources */,
 				2E38E9921E28D6110086B870 /* StaticCellItem.m in Sources */,
-				10C00EEB1E0A63D6003D51AD /* KKSlideTabBarLayoutBisect.m in Sources */,
 				81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
@@ -2244,12 +2244,14 @@
 				10DD98E91D226B7D00193A69 /* Reachability+KS.m in Sources */,
 				812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */,
 				818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */,
+				8162F5C51FC5536600E6300A /* KKSegmentControlVC.m in Sources */,
 				81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
 				81C7AB7E1F4E65EB00DAC8E0 /* NSObject+Swizzel.m in Sources */,
 				819B11E01F5028760029C55B /* UIScrollView+Scroll.m in Sources */,
 				10DD98CE1D226B7D00193A69 /* KSAudioTool.m in Sources */,
+				8162F5C21FC5536600E6300A /* KKSegmentControlBaseLayout.m in Sources */,
 				10DD98F21D226B7D00193A69 /* KK_ObserveredMutableArray.m in Sources */,
 				10DD98E71D226B7D00193A69 /* KK_DownloaderModal.m in Sources */,
 				103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */,
@@ -2261,7 +2263,6 @@
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
 				8126CA601F565608000385C8 /* CALayer+Snapshot.m in Sources */,
-				81208B021FC3CDE400AA0637 /* KKSegmentControlVC.m in Sources */,
 				2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */,
 				8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */,
 				8177E2321FAB0D47009314DB /* NSBundle+Language.m in Sources */,
@@ -2284,11 +2285,10 @@
 				81D405CD1F500858005FB382 /* UIImage+CornerRadio.m in Sources */,
 				2E38E9401E2875E90086B870 /* EmptyContentTableViewController.m in Sources */,
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
-				10C00EEA1E0A63D6003D51AD /* KKSlideTabBarLayoutAuto.m in Sources */,
-				81208AFF1FC3CDD300AA0637 /* KKSegmentControlPageVC.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
 				10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */,
+				8162F5C61FC5536600E6300A /* KKSlideTabBarLayoutAuto.m in Sources */,
 				10DD4E591D7421FC00F7BA25 /* CicleProgressAnimationView.m in Sources */,
 				81D405D01F50089E005FB382 /* UIImage+Rotate.m in Sources */,
 				8177E2301FAB0D47009314DB /* UIImage+Swizzle.m in Sources */,
