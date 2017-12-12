@@ -12,7 +12,7 @@
 
 NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-+ (NSString *)randomStringWithLength:(int)len {
++ (NSString *)kk_randomStringWithLength:(int)len {
     
     NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
     

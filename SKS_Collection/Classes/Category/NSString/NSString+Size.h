@@ -17,7 +17,7 @@
  *
  *  @return 字符串占据的范围
  */
-- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+- (CGSize)kk_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 
 /**
  Returns the size of the string if it were rendered with the specified constraints.
@@ -33,7 +33,7 @@
  @return              The width and height of the resulting string's bounding box.
  These values may be rounded up to the nearest whole number.
  */
-- (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode;
+- (CGSize)kk_sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode;
 
 /**
  Returns the width of the string if it were to be rendered with the specified
@@ -44,7 +44,7 @@
  @return      The width of the resulting string's bounding box. These values may be
  rounded up to the nearest whole number.
  */
-- (CGFloat)widthForFont:(UIFont *)font;
+- (CGFloat)kk_widthForFont:(UIFont *)font;
 
 /**
  Returns the height of the string if it were rendered with the specified constraints.

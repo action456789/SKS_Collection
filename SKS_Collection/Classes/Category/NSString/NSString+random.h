@@ -17,6 +17,6 @@
  @param len 产生的随机字符位数
  @return 随机字符串
  */
-+ (NSString *)randomStringWithLength:(int)len;
++ (NSString *)kk_randomStringWithLength:(int)len;
 
 @end

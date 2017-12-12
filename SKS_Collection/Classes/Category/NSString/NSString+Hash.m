@@ -20,7 +20,7 @@
 	return [self stringFromBytes:bytes length:CC_MD5_DIGEST_LENGTH];
 }
 
-- (NSString *)sha1String
+- (NSString *)kk_sha1String
 {
 	const char *string = self.UTF8String;
 	int length = (int)strlen(string);
@@ -29,7 +29,7 @@
 	return [self stringFromBytes:bytes length:CC_SHA1_DIGEST_LENGTH];
 }
 
-- (NSString *)sha256String
+- (NSString *)kk_sha256String
 {
 	const char *string = self.UTF8String;
 	int length = (int)strlen(string);
@@ -38,7 +38,7 @@
 	return [self stringFromBytes:bytes length:CC_SHA256_DIGEST_LENGTH];
 }
 
-- (NSString *)sha512String
+- (NSString *)kk_sha512String
 {
 	const char *string = self.UTF8String;
 	int length = (int)strlen(string);
@@ -47,7 +47,7 @@
 	return [self stringFromBytes:bytes length:CC_SHA512_DIGEST_LENGTH];
 }
 
-- (NSString *)hmacSHA1StringWithKey:(NSString *)key
+- (NSString *)kk_hmacSHA1StringWithKey:(NSString *)key
 {
 	NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
 	NSData *messageData = [self dataUsingEncoding:NSUTF8StringEncoding];
@@ -56,7 +56,7 @@
 	return [self stringFromBytes:(unsigned char *)mutableData.bytes length:(int)mutableData.length];
 }
 
-- (NSString *)hmacSHA256StringWithKey:(NSString *)key
+- (NSString *)kk_hmacSHA256StringWithKey:(NSString *)key
 {
 	NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
 	NSData *messageData = [self dataUsingEncoding:NSUTF8StringEncoding];
@@ -65,7 +65,7 @@
 	return [self stringFromBytes:(unsigned char *)mutableData.bytes length:(int)mutableData.length];
 }
 
-- (NSString *)hmacSHA512StringWithKey:(NSString *)key
+- (NSString *)kk_hmacSHA512StringWithKey:(NSString *)key
 {
 	NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
 	NSData *messageData = [self dataUsingEncoding:NSUTF8StringEncoding];

@@ -11,7 +11,7 @@
 @implementation NSString (Size)
 
 // 返回字符串所占用的尺寸
-- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize
+- (CGSize)kk_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize
 {
     // NSStringDrawingUsesLineFragmentOrigin 整个文本将以每行组成的矩形为单位计算整个文本的尺寸
     // NSStringDrawingUsesFontLeading
@@ -19,7 +19,7 @@
     return [self boundingRectWithSize:maxSize options: NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
 }
 
-- (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode {
+- (CGSize)kk_sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode {
     CGSize result;
     if (!font) font = [UIFont systemFontOfSize:12];
     if ([self respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
@@ -43,13 +43,13 @@
     return result;
 }
 
-- (CGFloat)widthForFont:(UIFont *)font {
-    CGSize size = [self sizeForFont:font size:CGSizeMake(HUGE, HUGE) mode:NSLineBreakByWordWrapping];
+- (CGFloat)kk_widthForFont:(UIFont *)font {
+    CGSize size = [self kk_sizeForFont:font size:CGSizeMake(HUGE, HUGE) mode:NSLineBreakByWordWrapping];
     return size.width;
 }
 
 - (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width {
-    CGSize size = [self sizeForFont:font size:CGSizeMake(width, HUGE) mode:NSLineBreakByWordWrapping];
+    CGSize size = [self kk_sizeForFont:font size:CGSizeMake(width, HUGE) mode:NSLineBreakByWordWrapping];
     return size.height;
 }
 
