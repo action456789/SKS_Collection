@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 @class StaticCellItem;
+@class StaticCell;
 
-#define kStaticCellH 45.f
+#define kStaticCellH 50.f
 #define kStaticCellDeviderH 5
 
+@protocol StaticCellDelegate <NSObject>
+@optional
+- (void)staticCellSetupAppearance:(StaticCell *)cell;
+@end
+
 @interface StaticCell : UITableViewCell
+
+@property (nonatomic,weak) id<StaticCellDelegate> delegate;
 
 @property (nonatomic, strong) StaticCellItem *item;
 

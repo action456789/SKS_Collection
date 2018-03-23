@@ -11,6 +11,8 @@
 
 @interface StaticCellItemGroup : NSObject
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, GroupType) {
     GroupTypeNone,
     GroupTypeSingleCheckMark, // 单选
@@ -20,8 +22,8 @@ typedef NS_ENUM(NSUInteger, GroupType) {
 
 typedef void (^DidSelectedRowBlock)(NSArray<NSIndexPath *> *selectedIndexPaths);
 
-@property (nonatomic, copy) NSString *headerTitle;
-@property (nonatomic, copy) NSString *footerTitle;
+@property (nonatomic, copy) NSString * _Nullable headerTitle;
+@property (nonatomic, copy) NSString * _Nullable footerTitle;
 
 @property (nonatomic, assign) CGFloat headerHeight;
 @property (nonatomic, assign) CGFloat footerHeight;
@@ -31,15 +33,16 @@ typedef void (^DidSelectedRowBlock)(NSArray<NSIndexPath *> *selectedIndexPaths);
 @property (nonatomic, assign) GroupType type;
 
 // 点击了 group 中某个 cell 时执行
-@property (nonatomic, copy) DidSelectedRowBlock didSelectedRowBlock;
+@property (nonatomic, copy) DidSelectedRowBlock _Nullable didSelectedRowBlock;
 
 // 单选时默认选中的 item
 @property (nonatomic, assign) NSInteger defaultSelectedIndex;
 
 // 多选时选中的 item
-@property (nonatomic, strong) NSMutableArray<NSIndexPath *> *selectedIndexPaths;
+@property (nonatomic, strong) NSMutableArray<NSIndexPath *> * _Nullable selectedIndexPaths;
 
 + (instancetype)itemGroupWithItems:(NSArray *)items;
 
-
 @end
+
+NS_ASSUME_NONNULL_END

@@ -72,11 +72,11 @@
 }
 
 - (void)pauseBtnEvent:(UIButton *)sender {
-    [_imageView.layer pauseLayer];
+    [_imageView.layer kk_pauseAnimation];
 }
 
 - (void)resumeBtnEvent:(UIButton *)sender {
-    [_imageView.layer resumeLayer];
+    [_imageView.layer kk_resumeAnimation];
 }
 
 @end

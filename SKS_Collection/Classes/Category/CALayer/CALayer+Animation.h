@@ -12,10 +12,11 @@
 /**
  *  暂停动画
  */
--(void)pauseLayer;
+-(void)kk_pauseAnimation;
 /**
  *  继续动画
  */
--(void)resumeLayer;
+-(void)kk_resumeAnimation;
 
 @end
+

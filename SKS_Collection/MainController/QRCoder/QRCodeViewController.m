@@ -115,7 +115,7 @@
         return;
     }
     
-    if (result.isMacAddress) {
+    if (result.kk_isMacAddress) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(qrCodeResultMacAddress:)]) {
             [self.delegate qrCodeResultMacAddress:result];
         }

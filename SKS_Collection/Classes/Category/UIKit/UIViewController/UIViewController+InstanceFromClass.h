@@ -10,6 +10,7 @@
 
 @interface UIViewController (InstanceFromClass)
 
-+ (instancetype)kk_nibPriorityInstance;
++ (instancetype)controllerWithClass:(Class)class;
 
 @end
+

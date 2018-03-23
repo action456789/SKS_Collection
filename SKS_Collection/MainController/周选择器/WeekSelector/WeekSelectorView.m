@@ -6,13 +6,13 @@
 //  Copyright © 2017年 ke sen. All rights reserved.
 //
 
-#import "KKWeekSelectorView.h"
+#import "WeekSelectorView.h"
 #import <Masonry/Masonry.h>
 #import "CommonMacro.h"
 #import "KKWeek.h"
 #import "KKDay.h"
 
-@implementation KKWeekSelectorView {
+@implementation WeekSelectorView {
     KKWeek *_week;
     
     NSMutableArray<UIButton *> *_btnArray;
@@ -23,36 +23,40 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _selectedDays = [NSMutableArray array];
-        _week = [KKWeek new];
-        [self createSubviews];
+        [self commonInit];
     }
     return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        _selectedDays = [NSMutableArray array];
-        _week = [KKWeek new];
-        [self createSubviews];
+        [self commonInit];
     }
     return self;
+}
+
+- (void)commonInit {
+    _selectedDays = [NSMutableArray array];
+    _week = [[KKWeek alloc] initWithDescType:KKDayDescTypeCHShort];
+    [self createSubviews];
 }
 
 - (void)createSubviews {
     _btnArray = [NSMutableArray array];
     
     for (int i = 0; i < _week.aWeek.count; i++) {
-        NSString *title = [_week.aWeek[i] description];
+        KKDay *day = _week.aWeek[i];
+        NSString *title = [day description];
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [btn setTitle:title forState:UIControlStateNormal];
-        [btn setTitleColor:kColorWithHex(0x333333) forState:UIControlStateNormal];
+        [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [btn setBackgroundImage:[UIImage imageNamed:@"weekSelectorBg"] forState:UIControlStateSelected];
+        [btn setBackgroundImage:[UIImage imageNamed:@"green"] forState:UIControlStateSelected];
+        [btn setBackgroundImage:[UIImage imageNamed:@"circle"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchDown];
-        btn.tag = i;
+        btn.tag = day.week_day;
         
         [self addSubview:btn];
         
@@ -63,7 +67,7 @@
 - (void)btnAction:(UIButton *)sender {
     [sender setSelected:!sender.isSelected];
     
-    KKDay *day = _week.aWeek[sender.tag];
+    KKDay *day = [[KKDay alloc] initWithIndex:sender.tag];
     
     if (sender.isSelected) {
         if (![self.selectedDays containsObject:day]) {
@@ -82,11 +86,12 @@
 
 - (void)setDefaultSelectedDays:(NSMutableArray<KKDay *> *)defaultSelectedDays {
     _defaultSelectedDays = defaultSelectedDays;
+    [_selectedDays removeAllObjects];
     [_selectedDays addObjectsFromArray:defaultSelectedDays];
     
     for (KKDay *day in defaultSelectedDays) {
         for (UIButton *btn in _btnArray) {
-            if ([[btn titleForState:UIControlStateNormal] isEqualToString:day.description]) {
+            if (btn.tag == day.week_day) {
                 [btn setSelected:YES];
             }
         }

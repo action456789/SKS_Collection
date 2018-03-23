@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-@class KKDay;
+#import "KKDay.h"
+
+#define KK_WEEK_DAY_FIRST_DAY_MONDAY
 
 @interface KKWeek : NSObject
 
+- (instancetype)initWithDescType:(KKDayDescType)descType;
 
 + (NSString *)daysDescription:(NSArray<KKDay *>*)days;
 

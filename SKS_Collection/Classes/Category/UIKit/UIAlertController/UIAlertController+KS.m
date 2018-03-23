@@ -7,26 +7,33 @@
 //
 
 #import "UIAlertController+KS.h"
+#import <objc/runtime.h>
 
 @implementation UIAlertController (KS)
 
-/**
- NSString *title = NSLocalizedString(@"global_alert_starttakeoff", nil);
- NSString *message = @"";
- NSString *cancel  = NSLocalizedString(@"alert_button_cancel", nil);
- NSString *confirm = NSLocalizedString(@"global_alert_select_ok", nil);
+/*
+ * swift
+ let message = ["title" : "注销确认"
+ , "message" : "确认注销吗？"
+ , "cancel" : "取消"
+ , "confirm" : "确认"]
  
- NSDictionary *messageDict = @{ @"title"   : title,
-    @"message" : message,
-    @"cancel"  : cancel,
-    @"confirm" : confirm };
+ let alert = UIAlertController(message: message, cancel: nil, confirmBlock: {})
+ self.present(alert!, animated: true, completion: nil)
  
- UIAlertController *alertVc = [UIAlertController controllerWithPresentedController:self message:messageDict cancelBlock:nil confirmBlock:^{
- 
+ * OC
+ NSDictionary *msg = @{@"title" : @"提示",
+ @"message" : @"没有相机/相册访问权限，请前往系统设置页面开启。",
+ @"cancel" : @"取消",
+ @"confirm" : @"确认"};
+ UIAlertController *alert = [UIAlertController controllerWithMessage:msg cancelBlock:nil confirmBlock:^(UIAlertAction * _Nonnull action) {
  }];
+ [self presentViewController:alert animated:YES completion:nil];
  */
 
-+ (instancetype)ks_alertControllerWithMessage:(NSDictionary *)dict cancelBlock:(KSAlertBlock)cancelBlock confirmBlock:(KSAlertBlock)confirmBlock; {
+
+
++ (instancetype)kk_controllerWithMessage:(NSDictionary *)dict cancelBlock:(KSAlertBlock)cancelBlock confirmBlock:(KSAlertBlock)confirmBlock {
     
     NSString *title   = [dict valueForKey:@"title"];
     NSString *message = [dict valueForKey:@"message"];
@@ -35,18 +42,37 @@
     
     UIAlertController *alert;
     if (title) {
-        alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+        alert = [UIAlertController alertControllerWithTitle:title
+                                                    message:message
+                                             preferredStyle:UIAlertControllerStyleAlert];
+    } else {
+        return nil;
     }
     
     if (cancel && ![cancel isEqual:@""]) {
-        [alert addAction:[UIAlertAction actionWithTitle:cancel style:UIAlertActionStyleCancel handler:cancelBlock]];
+        [alert addAction:[UIAlertAction actionWithTitle:cancel
+                                                  style:UIAlertActionStyleCancel
+                                                handler:cancelBlock]];
     }
+    
     if (confirm && ![confirm isEqual:@""]) {
-        [alert addAction:[UIAlertAction actionWithTitle:confirm style:UIAlertActionStyleDefault handler:confirmBlock]];
+        [alert addAction:[UIAlertAction actionWithTitle:confirm
+                                                  style:UIAlertActionStyleDefault
+                                                handler:confirmBlock]];
     }
     
     return alert;
 }
 
++ (void)kk_showMessage:(NSString *)message fromViewControler:(UIViewController *)from {
+    NSDictionary *msg = @{@"title" : @"提示",
+                          @"message" : message,
+                          @"confirm" : @"确认"};
+    UIAlertController *alert = [UIAlertController kk_controllerWithMessage:msg
+                                                               cancelBlock:nil
+                                                              confirmBlock:nil];
+    [from presentViewController:alert animated:YES completion:nil];
+}
 
 @end
+

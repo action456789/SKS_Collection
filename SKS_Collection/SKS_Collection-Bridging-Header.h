@@ -7,3 +7,4 @@
 
 #import "StaticCollectionView.h"
 #import "StaticCollectionViewDemo2Cell.h"
+#import "KKDay.h"

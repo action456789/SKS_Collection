@@ -12,7 +12,7 @@
 
 // 将数组参数编码为 url 可接受的字符串
 // 如 参数为 [1, 2, 3] 转换为 1,2,3
-- (NSString *)encodeToURLParaString {
+- (NSString *)kk_encodeToURLParaString {
     NSString *str = @"";
     for (int i = 0; i < self.count; i++) {
         NSString *component = [NSString stringWithFormat:@"%@", self[i]];
@@ -27,3 +27,4 @@
 }
 
 @end
+

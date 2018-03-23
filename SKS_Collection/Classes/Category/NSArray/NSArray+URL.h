@@ -10,6 +10,7 @@
 
 @interface NSArray (URL)
 
-- (NSString *)encodeToURLParaString;
+- (NSString *)kk_encodeToURLParaString;
 
 @end
+

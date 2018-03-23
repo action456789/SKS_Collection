@@ -13,8 +13,7 @@
 #import "UIViewController+InstanceFromClass.h"
 #import "UITableView+RadioCornerCell.h"
 
-@interface StaticCellBaseViewController() <UITableViewDelegate, UITableViewDataSource>
-{
+@interface StaticCellBaseViewController() <UITableViewDelegate, UITableViewDataSource, StaticCellDelegate> {
     NSInteger _selectedIndex;
 }
 
@@ -22,17 +21,7 @@
 
 @implementation StaticCellBaseViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    if (self = [super init]) {
-        self.tableViewStyle = style;
-    }
-    return self;
-}
-
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
@@ -40,49 +29,46 @@
     [self addNotification];
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)addNotification
-{
+- (void)addNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshData:)
                                                  name:kStaticCellUpdataNofication
                                                object:nil ];
 }
 
-- (void)refreshData:(NSNotification *)notification
-{
+- (void)refreshData:(NSNotification *)notification {
     NSLog(@"%s", __func__);
     [self.tableView reloadData];
 }
 
 # pragma mark abstract mathod
 
-- (UIView *)viewForHeaderInSection:(NSInteger)section
-{
+- (UIView *)viewForHeaderInSection:(NSInteger)section {
     return nil;
 }
 
-- (UIView *)viewForFooterInSection:(NSInteger)section
-{
+- (UIView *)viewForFooterInSection:(NSInteger)section {
     return nil;
 }
 
-- (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath
-{
+- (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)setupStaticCellAppearence:(StaticCell *)cell {
     
 }
 
 #pragma setter, getter
 
-- (UITableView *)tableView
-{
+- (UITableView *)tableView {
     if (_tableView == nil) {
         CGRect frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
-        UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:self.tableViewStyle];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:[self tableViewStyle]];
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.rowHeight = kStaticCellH;
@@ -99,13 +85,11 @@
 
 #pragma mark - tableView DataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataArray.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray[section].items.count;
 }
 
@@ -120,20 +104,17 @@
     return size.height > 0 ? size.height : tableView.rowHeight;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.dataArray[section].headerTitle;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
-{
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     return self.dataArray[section].footerTitle;
 }
 
 #pragma mark - tableView delegate
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(StaticCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView willDisplayCell:(StaticCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.backgroundColor = [UIColor whiteColor];
     
     BOOL isLastCell = indexPath.row == self.dataArray[indexPath.section].items.count - 1 && indexPath.section == self.dataArray.count - 1;
@@ -146,8 +127,7 @@
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     StaticCellItemGroup *group = self.dataArray[indexPath.section];
     StaticCellItem *item = group.items[indexPath.row];
     
@@ -160,6 +140,7 @@
     
     // 因为每个 cell 都可能不同，所以不使用 cell 重用。所以本框架不适用于数据量很大的情况
     StaticCell *cell = [[StaticCell alloc] initWithStyle:style reuseIdentifier:@""];
+    cell.delegate = self;
     
     // 多选、单选、可取消的单选状态下，默认选中的 item
     BOOL shouldShowCheckMark = group.defaultSelectedIndex == indexPath.row
@@ -180,15 +161,20 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    StaticCell *cell = (StaticCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (!cell.item.isSelectionStyleEnable) {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        cell.selected = NO;
+    }
     
     StaticCellItemGroup *group = self.dataArray[indexPath.section];
     StaticCellItem *item = group.items[indexPath.row];
     
     if (item.objectClass) {
-        UIViewController *controller = [item.objectClass kk_nibPriorityInstance];
+        UIViewController *controller = [UIViewController controllerWithClass:item.objectClass];
         [self.navigationController pushViewController:controller animated:YES];
         return;
         
@@ -242,51 +228,54 @@
     }
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     return [self viewForHeaderInSection:section];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return [self viewForFooterInSection:section];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return self.dataArray[section].headerHeight;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return self.dataArray[section].footerHeight;
 }
 
 #pragma - mark Edit
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     return item.deleteHandle != nil;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"删除";
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     if (item.deleteHandle) {
         kk_CellLeftScrollDeleteHandle handleCopy = [item.deleteHandle copy];
         handleCopy(indexPath);
     }
+}
+
+# pragma mark - 设置UITableViewSytle
+- (UITableViewStyle)tableViewStyle {
+    return UITableViewStylePlain;
+}
+
+# pragma mark - StaticCellDelegate
+
+- (void)staticCellSetupAppearance:(StaticCell *)cell {
+    [self setupStaticCellAppearence:cell];
 }
 
 @end

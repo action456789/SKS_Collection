@@ -10,8 +10,7 @@
 
 @implementation StaticCellItem
 
-+ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type
-{
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type {
     StaticCellItem *item  = [[[self class] alloc] init];
     item.icon = icon;
     item.title = title;
@@ -21,12 +20,12 @@
     item.objectClass = nil;
     item.switchValue = StaticCellSwitchValueNone;
     item.cellType = type;
+    item.isSelectionStyleEnable = YES;
     
     return item;
 }
 
-+ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon objectClass:(Class)objectClass
-{
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon objectClass:(Class)objectClass {
     StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeNone];
     item.objectClass = objectClass;
 
@@ -38,8 +37,12 @@
     return [defaults boolForKey:self.title];
 }
 
-- (void)setClickedHandle:(kk_CellHandle)clickedHandle {
+- (void)setClickedHandle:(kk_CellClickHandle)clickedHandle {
     _clickedHandle = [clickedHandle copy];
+}
+
+- (void)setSwitchValueChangeHandle:(kk_CellSwitchValueChangeHandle)switchValueChangeHandle {
+    _switchValueChangeHandle = [switchValueChangeHandle copy];
 }
 
 @end

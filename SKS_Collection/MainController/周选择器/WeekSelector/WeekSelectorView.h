@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-@class KKDay;
+#import "KKDay.h"
+@class WeekSelectorView;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol WeekSelectorViewDelegate <NSObject>
 
 @optional
-- (void)weekSelectorView:(UIView *)view didSelectedDays:(NSArray<KKDay *> *)days;
+- (void)weekSelectorView:(WeekSelectorView *)view didSelectedDays:(NSArray<KKDay *> *)days;
 
 @end
 
-@interface KKWeekSelectorView : UIView
+@interface WeekSelectorView : UIView
 
 // 选中的天
 @property (nonatomic, strong, readonly) NSMutableArray<KKDay *> *selectedDays;
@@ -27,3 +30,5 @@
 @property (nonatomic,weak) id <WeekSelectorViewDelegate> delegate;
 
 @end
+
+NS_ASSUME_NONNULL_END

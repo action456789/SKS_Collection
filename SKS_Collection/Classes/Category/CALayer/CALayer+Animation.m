@@ -10,7 +10,7 @@
 
 @implementation CALayer (KS_Animate)
 
-- (void)pauseLayer
+- (void)kk_pauseAnimation
 {
     CALayer *layer = self;
     
@@ -26,7 +26,7 @@
     layer.timeOffset = pausedTime;
 }
 
-- (void)resumeLayer
+- (void)kk_resumeAnimation
 {
     CALayer *layer = self;
     
@@ -47,3 +47,4 @@
     layer.beginTime = timeSincePause;
 }
 @end
+

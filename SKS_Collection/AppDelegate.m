@@ -34,7 +34,7 @@
     
 //    [self startLanuchAd];
     
-    RootViewController *rootVc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+    RootViewController *rootVc = [[RootViewController alloc] init];
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:rootVc];
     self.window.rootViewController = nav;
     

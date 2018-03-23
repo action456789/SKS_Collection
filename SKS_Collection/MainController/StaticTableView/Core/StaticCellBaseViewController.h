@@ -8,16 +8,15 @@
 
 #import "StaticCellItem.h"
 #import "StaticCellItemGroup.h"
+#import "StaticCell.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface StaticCellBaseViewController : UIViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style;
-
-@property (nonatomic, strong) NSArray<StaticCellItemGroup *> *dataArray;
+@property (nonatomic, strong) NSArray<StaticCellItemGroup *> * dataArray;
 
 @property (nonatomic, strong) UITableView *tableView;
-
-@property (nonatomic, assign) UITableViewStyle tableViewStyle;
 
 @property (nonatomic, assign) BOOL isShowBgDivider;
 
@@ -27,11 +26,20 @@
 @property (nonatomic, assign) BOOL isShowCornerRadio;
 
 // 设置圆角后选中时的背景颜色
-@property (nonatomic, strong) UIColor *selectedBgColor;
+@property (nonatomic, strong) UIColor * __nullable selectedBgColor;
 
 - (void)configureCellButton:(UIButton *)cellButton atIndexPath:(NSIndexPath *)indexPath;
 
-- (UIView *)viewForHeaderInSection:(NSInteger)section;
-- (UIView *)viewForFooterInSection:(NSInteger)section;
+// 抽象方法，由子类重载
+- (UIView * __nullable)viewForHeaderInSection:(NSInteger)section;
+- (UIView * __nullable)viewForFooterInSection:(NSInteger)section;
+
+// 自定义 TableViewCell 界面风格，如字体等
+- (void)setupStaticCellAppearence:(StaticCell *)cell;
+
+// 设置UITableViewStyle，由子类重载
+- (UITableViewStyle)tableViewStyle;
 
 @end
+
+NS_ASSUME_NONNULL_END

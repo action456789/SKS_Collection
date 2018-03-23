@@ -9,7 +9,18 @@
 #import "KKWeek.h"
 #import "KKDay.h"
 
-@implementation KKWeek
+@implementation KKWeek {
+    KKDayDescType _descType;
+}
+
+- (instancetype)initWithDescType:(KKDayDescType)descType;
+{
+    self = [super init];
+    if (self) {
+        _descType = descType;
+    }
+    return self;
+}
 
 - (NSString *)daysDescription:(NSArray<KKDay *>*)days {
     BOOL isWorkingDay = [[self class] compareDays1:self.workingDay withDays2:days];
@@ -102,16 +113,25 @@
 
 // 周一 至 周日
 - (NSArray<KKDay *> *)aWeek {
-    if (_aWeek == nil) {
-        _aWeek = @[[KKDay day:kk_week_sunday],
-                   [KKDay day:kk_week_monday],
-                   [KKDay day:kk_week_tuesday],
-                   [KKDay day:kk_week_wednesday],
-                   [KKDay day:kk_week_thursday],
-                   [KKDay day:kk_week_friday],
-                   [KKDay day:kk_week_saturday]];
-    }
+#ifdef KK_WEEK_DAY_FIRST_DAY_MONDAY
+    _aWeek = @[[KKDay day:kk_week_monday descType:_descType],
+               [KKDay day:kk_week_tuesday descType:_descType],
+               [KKDay day:kk_week_wednesday descType:_descType],
+               [KKDay day:kk_week_thursday descType:_descType],
+               [KKDay day:kk_week_friday descType:_descType],
+               [KKDay day:kk_week_saturday descType:_descType],
+               [KKDay day:kk_week_sunday descType:_descType]];
+#else
+    _aWeek = @[[KKDay day:kk_week_sunday descType:_descType],
+               [KKDay day:kk_week_monday descType:_descType],
+               [KKDay day:kk_week_tuesday descType:_descType],
+               [KKDay day:kk_week_wednesday descType:_descType],
+               [KKDay day:kk_week_thursday descType:_descType],
+               [KKDay day:kk_week_friday descType:_descType],
+               [KKDay day:kk_week_saturday descType:_descType]];
+#endif
     return _aWeek;
 }
+
 
 @end

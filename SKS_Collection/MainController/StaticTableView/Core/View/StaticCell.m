@@ -60,11 +60,17 @@
         }];
     }
     
-    [self setLabelColor];
+    if ([self.delegate respondsToSelector:@selector(staticCellSetupAppearance:)]) {
+        [self.delegate staticCellSetupAppearance:self];
+    } else {
+        // 默认设置
+        [self setCellAppearance];
+    }
+    
     [super updateConstraints];
 }
 
-- (void)setLabelColor {
+- (void)setCellAppearance {
     self.textLabel.backgroundColor = [UIColor clearColor];
     self.textLabel.font = [UIFont systemFontOfSize:16];
     [self.textLabel setTextColor: kColorWithHex(0x333333)];
@@ -74,16 +80,14 @@
     [self.detailTextLabel setTextColor: kColorWithHex(0x666666)];
 }
 
-- (void)setItem:(StaticCellItem *)item
-{
+- (void)setItem:(StaticCellItem *)item {
     _item = item;
     
     [self _setupData];
     [self _setupType];
 }
 
-- (void)_setupData
-{
+- (void)_setupData {
     if (_item.icon) {
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         if ([self.item.icon hasPrefix:@"http://"] || [self.item.icon hasPrefix:@"https://"]) {
@@ -127,7 +131,7 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.accessoryView = self.rightContentSwitchView;
         
-        if (_item.switchValue == StaticCellSwitchValueDefault) {
+        if (_item.switchValue == StaticCellSwitchValueDefault && IsValidateString(self.item.title)) {
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             self.rightContentSwitchView.on = [defaults boolForKey:self.item.title];
         } else {
@@ -136,8 +140,7 @@
     }
 }
 
-- (void)_setupAccessoryDisclosureIndicator
-{
+- (void)_setupAccessoryDisclosureIndicator {
     if (_item.isShowIndicator) {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
@@ -145,8 +148,7 @@
     }
 }
 
-- (void)_setupType
-{
+- (void)_setupType {
     switch (_item.cellType) {
         case StaticCellTypeCheckMark: {
             self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -165,8 +167,7 @@
 
 #pragma mark - getter
 
-- (UISwitch *)rightContentSwitchView
-{
+- (UISwitch *)rightContentSwitchView {
     if (!_rightContentSwitchView) {
         _rightContentSwitchView = [[UISwitch alloc] init];
         [_rightContentSwitchView addTarget:self action:@selector(switchStateChange) forControlEvents:UIControlEventValueChanged];
@@ -174,15 +175,17 @@
     return _rightContentSwitchView;
 }
 
-- (void)switchStateChange
-{
+- (void)switchStateChange {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:self.rightContentSwitchView.isOn forKey:self.item.title];
     [defaults synchronize];
+    
+    if (self.rightContentSwitchView && self.item.switchValueChangeHandle) {
+        self.item.switchValueChangeHandle(self.rightContentSwitchView);
+    }
 }
 
-- (UIImageView *)rightContentImageView
-{
+- (UIImageView *)rightContentImageView {
     if (!_rightContentImageView) {
         _rightContentImageView = [UIImageView new];
         _rightContentImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -191,8 +194,7 @@
     return _rightContentImageView;
 }
 
-- (UIView *)divider
-{
+- (UIView *)divider {
     if (!_divider) {
         _divider = [[UIView alloc] init];
         _divider.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.4];
@@ -200,8 +202,7 @@
     return _divider;
 }
 
-- (void)_setSelectedBgColor:(UIColor *)color
-{
+- (void)_setSelectedBgColor:(UIColor *)color {
     if (!_selectedBgView) {
         _selectedBgView = [[UIView alloc] initWithFrame:self.selectedBackgroundView.bounds];
         _selectedBgView.backgroundColor = color;
@@ -209,8 +210,7 @@
     [self.selectedBackgroundView addSubview:_selectedBgView];
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     CGFloat dividerX = 0;
@@ -225,13 +225,14 @@
     }
     
     if (self.item.icon) {
-        CGFloat imageViewWH = 30;
+        CGFloat imageViewWH = 20;
         CGFloat imageViewX = self.imageView.frame.origin.x;
         CGFloat imageViewY = self.imageView.center.y - imageViewWH * 0.5;
         self.imageView.frame = CGRectMake(imageViewX, imageViewY, imageViewWH, imageViewWH);
         
+        // 图片不标准时，可能引发 title 的错位
         if (self.item.title) {
-            CGFloat x = self.textLabel.frame.origin.x - imageViewWH;
+            CGFloat x = self.textLabel.frame.origin.x;
             CGFloat y = self.textLabel.frame.origin.y;
             CGFloat w = self.textLabel.frame.size.width;
             CGFloat h = self.textLabel.frame.size.height;
