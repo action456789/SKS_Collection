@@ -118,6 +118,14 @@
 		812DE3431F4FC91B001AAB2A /* UIColor+FormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DE3421F4FC91B001AAB2A /* UIColor+FormatConversion.m */; };
 		8133C5F11F5FF2ED00637CC9 /* UIView+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */; };
 		8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140197E1EC2B36A00C5B854 /* NSString+random.m */; };
+		814ABB122064F7DB006DFA1F /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB112064F7DB006DFA1F /* LXReorderableCollectionViewFlowLayout.m */; };
+		814ABB162064F81A006DFA1F /* KKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB142064F81A006DFA1F /* KKTextField.m */; };
+		814ABB1A2064F931006DFA1F /* KKSysPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB182064F931006DFA1F /* KKSysPhotoManager.m */; };
+		814ABB1E2064F95D006DFA1F /* KKAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB1C2064F95D006DFA1F /* KKAuthorizationManager.m */; };
+		814ABB222064F985006DFA1F /* KKCoreLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB212064F985006DFA1F /* KKCoreLocationManager.m */; };
+		814ABB262064F9AE006DFA1F /* SQLiteTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB242064F9AE006DFA1F /* SQLiteTool.swift */; };
+		814ABB272064F9AE006DFA1F /* ArchiverTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB252064F9AE006DFA1F /* ArchiverTool.swift */; };
+		814ABB2A2064F9C4006DFA1F /* VerificationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ABB292064F9C4006DFA1F /* VerificationInput.swift */; };
 		8156A7581F611F3A00AB8E41 /* CAGradientLayer+Creator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156A7571F611F3900AB8E41 /* CAGradientLayer+Creator.m */; };
 		8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8111F53D148004B7638 /* UIDevice+DiskSpace.m */; };
 		8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8141F53D158004B7638 /* UIDevice+Memory.m */; };
@@ -447,6 +455,19 @@
 		8133C5F01F5FF2ED00637CC9 /* UIView+UIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIKit.m"; sourceTree = "<group>"; };
 		8140197D1EC2B36A00C5B854 /* NSString+random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+random.h"; sourceTree = "<group>"; };
 		8140197E1EC2B36A00C5B854 /* NSString+random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+random.m"; sourceTree = "<group>"; };
+		814ABB102064F7DA006DFA1F /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		814ABB112064F7DB006DFA1F /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		814ABB142064F81A006DFA1F /* KKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTextField.m; sourceTree = "<group>"; };
+		814ABB152064F81A006DFA1F /* KKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTextField.h; sourceTree = "<group>"; };
+		814ABB182064F931006DFA1F /* KKSysPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSysPhotoManager.m; sourceTree = "<group>"; };
+		814ABB192064F931006DFA1F /* KKSysPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSysPhotoManager.h; sourceTree = "<group>"; };
+		814ABB1C2064F95D006DFA1F /* KKAuthorizationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAuthorizationManager.m; sourceTree = "<group>"; };
+		814ABB1D2064F95D006DFA1F /* KKAuthorizationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAuthorizationManager.h; sourceTree = "<group>"; };
+		814ABB202064F985006DFA1F /* KKCoreLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCoreLocationManager.h; sourceTree = "<group>"; };
+		814ABB212064F985006DFA1F /* KKCoreLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCoreLocationManager.m; sourceTree = "<group>"; };
+		814ABB242064F9AE006DFA1F /* SQLiteTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteTool.swift; sourceTree = "<group>"; };
+		814ABB252064F9AE006DFA1F /* ArchiverTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiverTool.swift; sourceTree = "<group>"; };
+		814ABB292064F9C4006DFA1F /* VerificationInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationInput.swift; sourceTree = "<group>"; };
 		8156A7561F611F3900AB8E41 /* CAGradientLayer+Creator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+Creator.h"; sourceTree = "<group>"; };
 		8156A7571F611F3900AB8E41 /* CAGradientLayer+Creator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+Creator.m"; sourceTree = "<group>"; };
 		8160F8101F53D148004B7638 /* UIDevice+DiskSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DiskSpace.h"; sourceTree = "<group>"; };
@@ -775,6 +796,13 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				814ABB282064F9BB006DFA1F /* 输入验证 */,
+				814ABB232064F9A1006DFA1F /* 持久化 */,
+				814ABB1F2064F97A006DFA1F /* 定位管理 */,
+				814ABB1B2064F950006DFA1F /* 授权管理 */,
+				814ABB172064F920006DFA1F /* 照片选择器 */,
+				814ABB132064F80A006DFA1F /* KKTextField */,
+				814ABB0F2064F7C3006DFA1F /* UICollectionView拖动排序 */,
 				81E2F2081F988DC5008ECB04 /* 周选择器 */,
 				81ED552E1F96126F0087D1DF /* 圆环控制动画 */,
 				819A272A1F0CEFCA003ED28E /* 颜色选择器Slider */,
@@ -1496,6 +1524,68 @@
 			path = UINavigationCotroller;
 			sourceTree = "<group>";
 		};
+		814ABB0F2064F7C3006DFA1F /* UICollectionView拖动排序 */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB102064F7DA006DFA1F /* LXReorderableCollectionViewFlowLayout.h */,
+				814ABB112064F7DB006DFA1F /* LXReorderableCollectionViewFlowLayout.m */,
+			);
+			path = "UICollectionView拖动排序";
+			sourceTree = "<group>";
+		};
+		814ABB132064F80A006DFA1F /* KKTextField */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB152064F81A006DFA1F /* KKTextField.h */,
+				814ABB142064F81A006DFA1F /* KKTextField.m */,
+			);
+			path = KKTextField;
+			sourceTree = "<group>";
+		};
+		814ABB172064F920006DFA1F /* 照片选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB192064F931006DFA1F /* KKSysPhotoManager.h */,
+				814ABB182064F931006DFA1F /* KKSysPhotoManager.m */,
+			);
+			path = "照片选择器";
+			sourceTree = "<group>";
+		};
+		814ABB1B2064F950006DFA1F /* 授权管理 */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB1D2064F95D006DFA1F /* KKAuthorizationManager.h */,
+				814ABB1C2064F95D006DFA1F /* KKAuthorizationManager.m */,
+			);
+			path = "授权管理";
+			sourceTree = "<group>";
+		};
+		814ABB1F2064F97A006DFA1F /* 定位管理 */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB202064F985006DFA1F /* KKCoreLocationManager.h */,
+				814ABB212064F985006DFA1F /* KKCoreLocationManager.m */,
+			);
+			path = "定位管理";
+			sourceTree = "<group>";
+		};
+		814ABB232064F9A1006DFA1F /* 持久化 */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB252064F9AE006DFA1F /* ArchiverTool.swift */,
+				814ABB242064F9AE006DFA1F /* SQLiteTool.swift */,
+			);
+			path = "持久化";
+			sourceTree = "<group>";
+		};
+		814ABB282064F9BB006DFA1F /* 输入验证 */ = {
+			isa = PBXGroup;
+			children = (
+				814ABB292064F9C4006DFA1F /* VerificationInput.swift */,
+			);
+			path = "输入验证";
+			sourceTree = "<group>";
+		};
 		8160F81C1F53F1EC004B7638 /* UIApplication */ = {
 			isa = PBXGroup;
 			children = (
@@ -2191,6 +2281,7 @@
 				81D2EF651F98B3800008BCE3 /* BannerDemoCell.m in Sources */,
 				81E7CF7320230C9F00CBD015 /* NSBundle+LocalizationSwizzle.m in Sources */,
 				81D2EF671F98B4570008BCE3 /* BanberDemoVC.m in Sources */,
+				814ABB122064F7DB006DFA1F /* LXReorderableCollectionViewFlowLayout.m in Sources */,
 				81D2EF631F98B36F0008BCE3 /* StaticCollectionViewDemo2VC.m in Sources */,
 				81D2EF641F98B36F0008BCE3 /* StaticCollectionViewDemo3VC.swift in Sources */,
 				81B6D9D21F98A4FC009E0E54 /* UIView+Frame.m in Sources */,
@@ -2208,6 +2299,7 @@
 				81A87BF02064F3D5008F9F4F /* InputFeedBackTextView.swift in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
+				814ABB2A2064F9C4006DFA1F /* VerificationInput.swift in Sources */,
 				81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */,
 				81A87BB32064EE93008F9F4F /* NSNumber+Random.m in Sources */,
 				10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */,
@@ -2298,6 +2390,7 @@
 				102185E71D5B0B2D00C5AD64 /* NumberIncresingVc.m in Sources */,
 				8162F5C91FC5536600E6300A /* SlideTabBarItemController.m in Sources */,
 				81E2F2131F988DF6008ECB04 /* WeekSelectorVCDemo.m in Sources */,
+				814ABB1A2064F931006DFA1F /* KKSysPhotoManager.m in Sources */,
 				81D405B61F4FFE41005FB382 /* UIImage+Creator.m in Sources */,
 				103A55571D3CCD1900366D8F /* BaseViewController.m in Sources */,
 				10F5B0661D81539E00382E50 /* CityCounty.m in Sources */,
@@ -2314,7 +2407,9 @@
 				812DE3401F4EE01A001AAB2A /* NSNotificationCenter+ThreadSafe.m in Sources */,
 				818131501EBAC82B00CEEA97 /* KKNotFluentMonitor.m in Sources */,
 				8162F5C51FC5536600E6300A /* KKSegmentControlVC.m in Sources */,
+				814ABB1E2064F95D006DFA1F /* KKAuthorizationManager.m in Sources */,
 				81C7AB851F4E6B7E00DAC8E0 /* NSData+Encode.m in Sources */,
+				814ABB222064F985006DFA1F /* KKCoreLocationManager.m in Sources */,
 				10DD4E531D6EFF0800F7BA25 /* CheckMarkAnimationView.m in Sources */,
 				2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */,
 				81C7AB7E1F4E65EB00DAC8E0 /* NSObject+Swizzel.m in Sources */,
@@ -2340,9 +2435,12 @@
 				8177E2321FAB0D47009314DB /* NSBundle+Language.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
+				814ABB272064F9AE006DFA1F /* ArchiverTool.swift in Sources */,
 				81A87BBE2064EF3C008F9F4F /* NSObject+KVO.m in Sources */,
+				814ABB262064F9AE006DFA1F /* SQLiteTool.swift in Sources */,
 				8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */,
 				1032C2CC1D45DF2E00D55DE0 /* GradientLayerDemoController.m in Sources */,
+				814ABB162064F81A006DFA1F /* KKTextField.m in Sources */,
 				2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
 				10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */,

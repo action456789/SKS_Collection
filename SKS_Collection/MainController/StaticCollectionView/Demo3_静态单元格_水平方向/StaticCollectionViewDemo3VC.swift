@@ -31,7 +31,7 @@ class StaticCollectionViewDemo3VC: UIViewController {
             
         })
         
-        var array: [StaticCollectionViewCellItem] = [item1!, item2!, item3!, item4!, item5!, item6!]
+        var array: [StaticCollectionViewCellItem] = [item1, item2, item3, item4, item5, item6]
         
         let lineSpacing = CGFloat(10)
         let topTailPadding = CGFloat(0)
