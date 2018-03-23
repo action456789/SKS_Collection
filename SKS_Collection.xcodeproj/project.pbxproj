@@ -174,6 +174,7 @@
 		81A87BEE2064F3D5008F9F4F /* InputContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BEB2064F3D4008F9F4F /* InputContactView.swift */; };
 		81A87BEF2064F3D5008F9F4F /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BEC2064F3D4008F9F4F /* FeedBackViewController.swift */; };
 		81A87BF02064F3D5008F9F4F /* InputFeedBackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BED2064F3D4008F9F4F /* InputFeedBackTextView.swift */; };
+		81A87BF32064F4F7008F9F4F /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */; };
 		81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABD41F4EA7A400DAC8E0 /* UITableView+RadioCornerCell.m */; };
 		81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABDB1F4EA7A400DAC8E0 /* UITextView+Placeholder.m */; };
 		81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABEB1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.m */; };
@@ -181,7 +182,6 @@
 		81B6D9CF1F98A378009E0E54 /* MailRegisterSuccess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817C6E341F98A0130086A05B /* MailRegisterSuccess.xib */; };
 		81B6D9D11F98A3F8009E0E54 /* EditMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */; };
 		81B6D9D21F98A4FC009E0E54 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABE21F4EA7A400DAC8E0 /* UIView+Frame.m */; };
-		81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */; };
 		81C7AB6D1F4E642700DAC8E0 /* NSData+zip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6C1F4E642700DAC8E0 /* NSData+zip.m */; };
 		81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB6F1F4E658800DAC8E0 /* NSString+YYHash.m */; };
 		81C7AB7D1F4E65EB00DAC8E0 /* NSObject+Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7AB771F4E65EA00DAC8E0 /* NSObject+Invocation.m */; };
@@ -551,11 +551,11 @@
 		81A87BEB2064F3D4008F9F4F /* InputContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputContactView.swift; path = ../../../../../../.Trash/InputContactView.swift; sourceTree = "<group>"; };
 		81A87BEC2064F3D4008F9F4F /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = ../../../../../../.Trash/FeedBackViewController.swift; sourceTree = "<group>"; };
 		81A87BED2064F3D4008F9F4F /* InputFeedBackTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputFeedBackTextView.swift; path = ../../../../../../.Trash/InputFeedBackTextView.swift; sourceTree = "<group>"; };
+		81A87BF12064F4F7008F9F4F /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
+		81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		81B313961F974034004C0EC8 /* NSObject+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		81B313971F974034004C0EC8 /* NSObject+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMenuView.xib; sourceTree = "<group>"; };
-		81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
-		81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		81C7AB641F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt_Decrypt.h"; sourceTree = "<group>"; };
 		81C7AB651F4D8C0300DAC8E0 /* NSData+Encrypt_Decrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt_Decrypt.m"; sourceTree = "<group>"; };
 		81C7AB661F4D8C0300DAC8E0 /* NSData+YYHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+YYHash.h"; sourceTree = "<group>"; };
@@ -823,8 +823,8 @@
 		103A55451D3CCCF200366D8F /* 倒计时按钮 */ = {
 			isa = PBXGroup;
 			children = (
-				81C7AB541F4D7F0900DAC8E0 /* SKSCountDownButton.h */,
-				81C7AB551F4D7F0A00DAC8E0 /* SKSCountDownButton.m */,
+				81A87BF12064F4F7008F9F4F /* SKSCountDownButton.h */,
+				81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */,
 				816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */,
 				816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */,
 				816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */,
@@ -2206,7 +2206,6 @@
 				81ED55381F9612FC0087D1DF /* LightControlPannelVC.m in Sources */,
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
 				81A87BF02064F3D5008F9F4F /* InputFeedBackTextView.swift in Sources */,
-				81C7AB561F4D7F0A00DAC8E0 /* SKSCountDownButton.m in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
 				81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */,
@@ -2352,6 +2351,7 @@
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
 				8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */,
+				81A87BF32064F4F7008F9F4F /* SKSCountDownButton.m in Sources */,
 				8127CDDA1F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m in Sources */,
 				81E2F2211F989617008ECB04 /* ColorSliderDemoVC.m in Sources */,
 				81D405CD1F500858005FB382 /* UIImage+CornerRadio.m in Sources */,

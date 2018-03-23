@@ -9,26 +9,88 @@
 #import "SKSCountDownButton.h"
 #import "NSTimer+BlockSupurt.h"
 
+@interface SKSCountDownButton()
+
+@end
+
 @implementation SKSCountDownButton {
     NSTimer           *_timer;
     NSString          *_titleForNormal;
+    
+    NSTimeInterval    _enterBackgroudTime; // 进入后台持续的时间
+
+    NSTimeInterval    _restTime; // 剩下的时间
+    
+    BOOL _isRunning; // 正在倒计时
 }
 
-- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(TouchUpInsideBlock)handle
-{
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth
+                     clickdHandle:(TouchUpInsideBlock)handle {
     if(self = [super init]) {
         _timeLength = timeLenth > 0 ? timeLenth : 60;
         [self addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         _clickHandle = [handle copy];
+        
+        [self commonInit];
     }
     return self;
 }
 
-- (void)dealloc
-{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit {
+    _enterBackgroudTime = 0;
+    _restTime = 0;
+    [self addNotification];
+}
+
+- (void)dealloc {
+    [self invalidateTimer];
+    [self removeNotification];
+}
+
+- (void)invalidateTimer {
     if(_timer) {
         [_timer invalidate];
         _timer = nil;
+    }
+}
+
+- (void)addNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive) name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillResignActive)
+                                                 name: UIApplicationWillResignActiveNotification
+                                               object:nil];
+}
+
+- (void)removeNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)applicationWillResignActive {
+    _enterBackgroudTime = CACurrentMediaTime();
+    [self invalidateTimer];
+}
+
+- (void)applicationDidBecomeActive {
+    if(_restTime == self.timeLength) {
+        return;
+    }
+    CFTimeInterval duration = CACurrentMediaTime() - _enterBackgroudTime;
+    if (duration < _restTime) {
+        [self invalidateTimer];
+        [self _startTimerWithDuraion:(_restTime - duration)];
+    } else {
+        [self reset];
     }
 }
 
@@ -46,8 +108,7 @@
 
 #pragma mark - private method
 
-- (void)btnClicked:(SKSCountDownButton *)sender
-{
+- (void)btnClicked:(SKSCountDownButton *)sender {
     if (_clickHandle) {
         _clickHandle(sender);
     }
@@ -59,27 +120,34 @@
     
     [self setTitle:[NSString stringWithFormat:@"%lu", (unsigned long)self.timeLength] forState:UIControlStateNormal];
     
-    [self _startTimer];
+    [self _startTimerWithDuraion:self.timeLength];
 }
 
-- (void)_startTimer
-{
-    __block NSInteger timeLeft = self.timeLength;
+- (void)_startTimerWithDuraion:(NSTimeInterval)duration {
+    _restTime = duration;
     __block NSString *title = @"";
     
+    NSString *t = [NSString stringWithFormat:@"%lu", (unsigned long)_restTime];
+    [self setTitle:t forState:UIControlStateNormal];
+    
     _timer = [NSTimer sks_scheduledTimerInCommonModesWithTimeInterval:1.0f repeats:YES block:^{
-        timeLeft--;
-        title = [NSString stringWithFormat:@"%lu", (unsigned long)timeLeft];
+        _restTime--;
+        title = [NSString stringWithFormat:@"%lu", (unsigned long)_restTime];
         
-        if (timeLeft < 0) {
-            [self setTitle:_titleForNormal forState:UIControlStateNormal];
-            self.userInteractionEnabled = YES;
-            [_timer invalidate];
+        if (_restTime < 0) {
+            [self reset];
         } else {
             [self setTitle:title forState:UIControlStateNormal];
             self.userInteractionEnabled = NO;
         }
     }];
+}
+
+- (void)reset {
+    _restTime = self.timeLength;
+    [self setTitle:_titleForNormal forState:UIControlStateNormal];
+    self.userInteractionEnabled = YES;
+    [_timer invalidate];
 }
 
 @end

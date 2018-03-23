@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 @class StaticCollectionViewCell;
 
-typedef void (^kk_StaticCellHandle)(StaticCollectionViewCell *cell, UIImageView *icon, UILabel *title);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^kk_StaticCellHandle)(StaticCollectionViewCell *_Nullable cell, UIImageView *_Nullable icon, UILabel *_Nullable title);
 
 @interface StaticCollectionViewCellItem : NSObject
 
-- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title;
-- (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title handle:(kk_StaticCellHandle)handle;
+- (instancetype)initWithImageName:(NSString * _Nullable)imageName
+                            title:(NSString * _Nullable)title;
+
+- (instancetype)initWithImageName:(NSString * _Nullable)imageName
+                            title:(NSString * _Nullable)title
+                           handle:(kk_StaticCellHandle _Nullable)handle;
 
 @property (nonatomic, copy) NSString *imageName;
 @property (nonatomic, strong) NSString *placeHolderImageName; // image 的占位图片
@@ -22,3 +28,5 @@ typedef void (^kk_StaticCellHandle)(StaticCollectionViewCell *cell, UIImageView 
 @property (nonatomic, copy) kk_StaticCellHandle clickedHandle;
 
 @end
+
+NS_ASSUME_NONNULL_END
