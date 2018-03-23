@@ -40,6 +40,7 @@
 #import "WeekSelectorVCDemo.h"
 #import "ColorSliderDemoVC.h"
 #import "TipsViewDemoVC.h"
+#import "RiciColorPaletteVC.h"
 
 // OC 使用 Swift 代码
 #import "SKS_Collection-Swift.h"
@@ -93,6 +94,8 @@
                         ,[StaticCellItem itemWithTitle:@"30. 彩色滑块" icon:nil objectClass:[ColorSliderDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"31. 圆环控制动画控制器" icon:nil objectClass:[LightControlPannelVC class]]
                         ,[StaticCellItem itemWithTitle:@"32. 周选择器" icon:nil objectClass:[WeekSelectorVCDemo class]]
+                        ,[StaticCellItem itemWithTitle:@"33. 色盘" icon:nil objectClass:[RiciColorPaletteVC class]]
+                        
                         ];
     
     StaticCellItemGroup *group = [StaticCellItemGroup itemGroupWithItems:items];
