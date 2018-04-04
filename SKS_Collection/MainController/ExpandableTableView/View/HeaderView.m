@@ -95,14 +95,13 @@
     _highlightTitleLable.text = classModal.name;
 }
 
-- (void)startAnimationNormal
-{
+- (void)startAnimationNormal{
     [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:1.f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         
-        _normalTitleLable.alpha = 1.f;
-        _normalTitleLable.kk_x -= 10;
-        _highlightTitleLable.alpha = 0.f;
-        _highlightTitleLable.kk_x -= 10;
+        self->_normalTitleLable.alpha = 1.f;
+        self->_normalTitleLable.kk_x -= 10;
+        self->_highlightTitleLable.alpha = 0.f;
+        self->_highlightTitleLable.kk_x -= 10;
         
     } completion:nil];
 }
@@ -112,10 +111,10 @@
 
     [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:1.f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         
-        _normalTitleLable.alpha = 0.f;
-        _normalTitleLable.kk_x += 10;
-        _highlightTitleLable.alpha   = 1.f;
-        _highlightTitleLable.kk_x += 10;
+        self->_normalTitleLable.alpha = 0.f;
+        self->_normalTitleLable.kk_x += 10;
+        self->_highlightTitleLable.alpha   = 1.f;
+        self->_highlightTitleLable.kk_x += 10;
         
     } completion:nil];
 }

@@ -153,13 +153,13 @@
 - (void)firstLoadDataAnimation
 {
     dispatch_async(dispatch_get_main_queue(), ^{ //TODO 为什么不加这个线程代码就没有动画效果呢？
-        _isSectionFirstLoad = YES;
+        self->_isSectionFirstLoad = YES;
         
         NSIndexSet *indexSet  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, _dataArray.count)];
-        [_tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+        [self->_tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self headerViewDidClicked:_firstHeadView withSection:0];
+            [self headerViewDidClicked:self->_firstHeadView withSection:0];
         });
     });
 }

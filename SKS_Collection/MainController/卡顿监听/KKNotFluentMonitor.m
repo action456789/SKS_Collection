@@ -42,18 +42,18 @@ singleton_implementation(KKNotFluentMonitor)
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         //子线程开启一个持续的loop用来进行监控
         while (YES) {
-            long semaphoreWait = dispatch_semaphore_wait(dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 30*NSEC_PER_MSEC));
+            long semaphoreWait = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 30*NSEC_PER_MSEC));
             if (semaphoreWait != 0) {
-                if (!runLoopObserver) {
-                    timeoutCount = 0;
-                    dispatchSemaphore = 0;
-                    runLoopActivity = 0;
+                if (!self->runLoopObserver) {
+                    self->timeoutCount = 0;
+                    self->dispatchSemaphore = 0;
+                    self->runLoopActivity = 0;
                     return;
                 }
                 //runloop的两个状态，BeforeSources和AfterWaiting这两个状态区间时间能够检测到是否卡顿
-                if (runLoopActivity == kCFRunLoopBeforeSources || runLoopActivity == kCFRunLoopAfterWaiting) {
+                if (self->runLoopActivity == kCFRunLoopBeforeSources || self->runLoopActivity == kCFRunLoopAfterWaiting) {
                     //出现三次出结果
-                    if (++timeoutCount < 3) {
+                    if (++self->timeoutCount < 3) {
                         continue;
                     }
                     
@@ -65,7 +65,7 @@ singleton_implementation(KKNotFluentMonitor)
                     NSLog(@"lag happen, detail below: \n %@",lagReportString);
                 } //end activity
             }// end semaphore wait
-            timeoutCount = 0;
+            self->timeoutCount = 0;
         }// end while
     });
     

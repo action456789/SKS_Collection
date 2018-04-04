@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Masonry/Masonry.h>
+#import <Masonry.h>
 #import "CommonMacro.h"
 #import "KKSegmentControlAppearance.h"
 

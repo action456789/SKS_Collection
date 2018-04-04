@@ -125,12 +125,12 @@
     [_itemTitles enumerateObjectsUsingBlock:^(NSString *titleString, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton *itemButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [itemButton addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [itemButton setTitle:_itemTitles[idx] forState:UIControlStateNormal];
+        [itemButton setTitle:self->_itemTitles[idx] forState:UIControlStateNormal];
         itemButton.tag = idx;
         
-        [_itemsScrollView addSubview:itemButton];
+        [self->_itemsScrollView addSubview:itemButton];
         
-        [_itemButtons addObject:itemButton];
+        [self->_itemButtons addObject:itemButton];
     }];
     
     [self.layout layoutItemsViews:_itemButtons];
@@ -143,13 +143,13 @@
     
     [_itemsScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         CGFloat widthOffset = -self.layout.config.itemMoreWidth;
-        make.left.mas_equalTo(_containerView.mas_left);
-        make.top.bottom.mas_equalTo(_containerView);
-        make.width.mas_equalTo(_containerView.mas_width).offset(widthOffset);
+        make.left.mas_equalTo(self->_containerView.mas_left);
+        make.top.bottom.mas_equalTo(self->_containerView);
+        make.width.mas_equalTo(self->_containerView.mas_width).offset(widthOffset);
     }];
     
     [_itemMore mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.right.mas_equalTo(_containerView);
+        make.top.right.mas_equalTo(self->_containerView);
         make.height.mas_equalTo(self.layout.config.itemHeightRatio * self.layout.config.headerViewHeight);
         make.width.mas_equalTo(self.layout.config.itemMoreWidth);
     }];
@@ -167,15 +167,15 @@
         [_slide mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(w);
             make.height.mas_equalTo(h);
-            make.centerX.mas_equalTo(_itemButtons.firstObject.mas_centerX);
+            make.centerX.mas_equalTo(self->_itemButtons.firstObject.mas_centerX);
             make.top.mas_equalTo(self.view);
         }];
     } else {
         [_slide mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(w);
             make.height.mas_equalTo(h);
-            make.centerX.mas_equalTo(_itemButtons.firstObject.mas_centerX);
-            make.top.mas_equalTo(_itemButtons.firstObject.mas_bottom).offset(topPadding);
+            make.centerX.mas_equalTo(self->_itemButtons.firstObject.mas_centerX);
+            make.top.mas_equalTo(self->_itemButtons.firstObject.mas_bottom).offset(topPadding);
         }];
     }
 }
@@ -273,7 +273,7 @@
     CGFloat deltaCenterX = button.kk_centerX - _slideBegainCenterX;
     [_slide mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(lineW);
-        make.centerX.mas_equalTo(_itemButtons.firstObject.mas_centerX).offset(deltaCenterX);
+        make.centerX.mas_equalTo(self->_itemButtons.firstObject.mas_centerX).offset(deltaCenterX);
     }];
     [_slide setNeedsLayout];
 
@@ -285,7 +285,7 @@
             
             CGFloat scaleX = self.layout.config.slideTransformScaleX;
             CGFloat scaleY = self.layout.config.slideTransformScaleY;
-            _slide.transform = CGAffineTransformMakeScale(scaleX, scaleY);
+            self->_slide.transform = CGAffineTransformMakeScale(scaleX, scaleY);
             
         } completion:^(BOOL finished) {
         }];

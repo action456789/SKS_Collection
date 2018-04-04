@@ -51,7 +51,7 @@
 {
     [NSFileManager createFoldWithDirectory:kCacheDirectory withFoldName:@"DiskCacheSqlLite" success:^(NSString *newFoldDirectory) {
         [NSFileManager createFileWithDirectory:newFoldDirectory withName:@"Cache.db" success:^(NSString *newFilePath) {
-            _dbFilePath = newFilePath;
+            self->_dbFilePath = newFilePath;
         } failure:nil];
     } failure:nil];
 }
@@ -59,17 +59,17 @@
 - (void)_openDb
 {
     [_dbQueue inDatabase:^(FMDatabase *db) {
-        _db = [FMDatabase databaseWithPath:_dbFilePath];
-        if ([_db open]) {
-            if (_isTableEncrypt) {
-                [_db setKey:DATABASE_KEY];
+        self->_db = [FMDatabase databaseWithPath:self->_dbFilePath];
+        if ([self->_db open]) {
+            if (self->_isTableEncrypt) {
+                [self->_db setKey:DATABASE_KEY];
             }
-            BOOL result = [_db executeUpdate:@"create table if not exists cache_table (key text PRIMARY KEY, value blob, create_date text, update_date text)"];
+            BOOL result = [self->_db executeUpdate:@"create table if not exists cache_table (key text PRIMARY KEY, value blob, create_date text, update_date text)"];
             NSLog(@"DiskCacheSqlLite:creare db %@",result?@"success":@"fail");
         } else {
             NSLog(@"DiskCacheSqlLite:Could not open db.");
         }
-        [_db setShouldCacheStatements:YES];
+        [self->_db setShouldCacheStatements:YES];
     }];
 }
 
@@ -92,7 +92,7 @@
     
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
-        BOOL result = [_db executeUpdate:@"insert into cache_table (key, value, create_date) values (?, ?, ?)", encodeKey, data, [self _nowDateString]];
+        BOOL result = [self->_db executeUpdate:@"insert into cache_table (key, value, create_date) values (?, ?, ?)", encodeKey, data, [self _nowDateString]];
         *rollback = !result;
     }];
 }
@@ -126,7 +126,7 @@
     
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
-        BOOL result = [_db executeUpdate:@"update cache_table set value = ?, update_date = ? where key = ?", data, [self _nowDateString], encodeKey];
+        BOOL result = [self->_db executeUpdate:@"update cache_table set value = ?, update_date = ? where key = ?", data, [self _nowDateString], encodeKey];
         *rollback = !result;
     }];
 }
@@ -139,7 +139,7 @@
     [_memoryCache removeObjectForKey:encodeKey];
     
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
-        BOOL result = [_db executeUpdate:@"delete from cache_table where key = ?", encodeKey];
+        BOOL result = [self->_db executeUpdate:@"delete from cache_table where key = ?", encodeKey];
         *rollback = !result;
     }];
 }

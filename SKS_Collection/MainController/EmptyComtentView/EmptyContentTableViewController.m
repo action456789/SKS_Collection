@@ -108,7 +108,7 @@
 //  vertical alignment of the content view
 - (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return -self.tableView.tableHeaderView.frame.size.height/2.0f;
+    return self.tableView.tableHeaderView.frame.size.height/2.0f;
 }
 
 // you can separate components from each other (default separation is 11 pts):
@@ -146,7 +146,7 @@
     NSLog(@"%s", __func__);
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        _dataCount = 2;
+        self->_dataCount = 2;
         [self.tableView reloadData];
     });
 }

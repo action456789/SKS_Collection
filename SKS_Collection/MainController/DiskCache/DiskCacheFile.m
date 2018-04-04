@@ -37,7 +37,7 @@
 - (void)_createCacheFold
 {
     [NSFileManager createFoldWithDirectory:kCacheDirectory withFoldName:@"DiskCache" success:^(NSString *newFoldDirectory) {
-        _cacheDirectory = newFoldDirectory;
+        self->_cacheDirectory = newFoldDirectory;
         NSLog(@"DiskCacheFile: create fold success");
     } failure:^(NSError *error) {
         NSLog(@"DiskCacheFile: create fold fail");
@@ -52,7 +52,7 @@
     [_memoryCache setObject:object forKey:key];
     
     dispatch_async(_ioSerialQueue, ^{
-        NSString *filePath = [_cacheDirectory stringByAppendingPathComponent:encodedKey];
+        NSString *filePath = [self->_cacheDirectory stringByAppendingPathComponent:encodedKey];
         BOOL written = [NSKeyedArchiver archiveRootObject:object toFile:filePath];
         if (!written) {
             NSLog(@"NetworkInterface: save respnse object to file failed");

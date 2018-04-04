@@ -105,11 +105,11 @@
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            UIViewController *controller = [_cache objectForKey:@(to)];
+            UIViewController *controller = [self->_cache objectForKey:@(to)];
             if (!controller) {
                 controller = [self.delegate segmentControlVC:self viewControllerForPageAtIndex:to];
                 if (controller) {
-                    [_cache setObject:controller forKey:@(to)];
+                    [self->_cache setObject:controller forKey:@(to)];
                 }
             }
             [self.pageVC updateControllerFromIndex:from toIndex:to withController:controller];

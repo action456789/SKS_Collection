@@ -131,10 +131,10 @@
     [self setTitle:t forState:UIControlStateNormal];
     
     _timer = [NSTimer sks_scheduledTimerInCommonModesWithTimeInterval:1.0f repeats:YES block:^{
-        _restTime--;
-        title = [NSString stringWithFormat:@"%lu", (unsigned long)_restTime];
+        self->_restTime--;
+        title = [NSString stringWithFormat:@"%lu", (unsigned long)self->_restTime];
         
-        if (_restTime < 0) {
+        if (self->_restTime < 0) {
             [self reset];
         } else {
             [self setTitle:title forState:UIControlStateNormal];

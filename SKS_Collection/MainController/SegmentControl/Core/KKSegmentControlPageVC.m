@@ -67,8 +67,8 @@
     [self addChildViewController:controller];
     
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.height.width.mas_equalTo(_scrollView);
-        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kTotalW);
+        make.top.height.width.mas_equalTo(self->_scrollView);
+        make.left.mas_equalTo(self->_scrollView.mas_left).offset(index*kTotalW);
     }];
 }
 
@@ -82,8 +82,8 @@
     [self addChildViewController:controller];
 
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.height.width.mas_equalTo(_scrollView);
-        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kTotalW);
+        make.top.height.width.mas_equalTo(self->_scrollView);
+        make.left.mas_equalTo(self->_scrollView.mas_left).offset(index*kTotalW);
     }];
 }
 

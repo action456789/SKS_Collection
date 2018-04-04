@@ -29,7 +29,7 @@
         NSLog(@"%f", cachulator.result);
         
         if (cachulator.result == 10) {
-            [_timer invalidate];
+            [self->_timer invalidate];
         }
     }];
 }
