@@ -6,9 +6,9 @@
 //  Copyright © 2016年 SenKe. All rights reserved.
 //
 
-#import "KKSlideTabBarLayoutAuto.h"
+#import "KKSegmentControlLayoutAuto.h"
 
-@implementation KKSlideTabBarLayoutAuto
+@implementation KKSegmentControlLayoutAuto
 
 -(void)layoutItemsViews:(NSArray *)views {
     __block CGFloat itemX = self.config.firstItemLeftPadding;

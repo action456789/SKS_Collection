@@ -12,5 +12,5 @@
 #import "UIColor+Creator.h"
 
 #import "KKSegmentControlVC.h"
-#import "KKSlideTabBarLayoutAuto.h"
-#import "KKSlideTabBarLayoutBisect.h"
+#import "KKSegmentControlLayoutAuto.h"
+#import "KKSegmentControlLayoutBisect.h"

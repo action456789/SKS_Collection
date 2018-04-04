@@ -1,5 +1,5 @@
 //
-//  KKSlideTabBarLayoutAuto.h
+//  KKSlideTabBarLayoutBisect.h
 //  SKS_Collection
 //
 //  Created by KeSen on 2016/12/21.
@@ -8,6 +8,6 @@
 
 #import "KKSegmentControlBaseLayout.h"
 
-@interface KKSlideTabBarLayoutAuto : KKSegmentControlBaseLayout
+@interface KKSegmentControlLayoutBisect : KKSegmentControlBaseLayout
 
 @end

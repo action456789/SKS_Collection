@@ -103,11 +103,11 @@
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
 		2EFFAA5120751CB90027E44A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */; };
 		2EFFAA6020751D8C0027E44A /* KKSegmentControlPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */; };
-		2EFFAA6120751D8C0027E44A /* KKSlideTabBarLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5720751D8C0027E44A /* KKSlideTabBarLayoutAuto.m */; };
+		2EFFAA6120751D8C0027E44A /* KKSegmentControlLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5720751D8C0027E44A /* KKSegmentControlLayoutAuto.m */; };
 		2EFFAA6320751D8C0027E44A /* KKSegmentControlHeadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5A20751D8C0027E44A /* KKSegmentControlHeadVC.m */; };
 		2EFFAA6420751D8C0027E44A /* KKSegmentControlBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5B20751D8C0027E44A /* KKSegmentControlBaseLayout.m */; };
 		2EFFAA6520751D8C0027E44A /* KKSegmentControlAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5C20751D8C0027E44A /* KKSegmentControlAppearance.m */; };
-		2EFFAA6620751D8C0027E44A /* KKSlideTabBarLayoutBisect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5F20751D8C0027E44A /* KKSlideTabBarLayoutBisect.m */; };
+		2EFFAA6620751D8C0027E44A /* KKSegmentControlLayoutBisect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5F20751D8C0027E44A /* KKSegmentControlLayoutBisect.m */; };
 		2EFFAA6D207523EE0027E44A /* KKSegmentControlDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA6C207523EE0027E44A /* KKSegmentControlDemoVC.swift */; };
 		2EFFAA712075254C0027E44A /* KKSegmentControlDemoPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA702075254C0027E44A /* KKSegmentControlDemoPageVC.swift */; };
 		810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 810A327C1F4EBE260075560D /* NSArray+SafeAccess.m */; };
@@ -412,16 +412,16 @@
 		2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2EFFAA5220751D8B0027E44A /* KKSegmentControlPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlPageVC.h; sourceTree = "<group>"; };
 		2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPageVC.m; sourceTree = "<group>"; };
-		2EFFAA5520751D8B0027E44A /* KKSlideTabBarLayoutAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutAuto.h; sourceTree = "<group>"; };
-		2EFFAA5620751D8B0027E44A /* KKSlideTabBarLayoutBisect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSlideTabBarLayoutBisect.h; sourceTree = "<group>"; };
-		2EFFAA5720751D8C0027E44A /* KKSlideTabBarLayoutAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutAuto.m; sourceTree = "<group>"; };
+		2EFFAA5520751D8B0027E44A /* KKSegmentControlLayoutAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlLayoutAuto.h; sourceTree = "<group>"; };
+		2EFFAA5620751D8B0027E44A /* KKSegmentControlLayoutBisect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlLayoutBisect.h; sourceTree = "<group>"; };
+		2EFFAA5720751D8C0027E44A /* KKSegmentControlLayoutAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlLayoutAuto.m; sourceTree = "<group>"; };
 		2EFFAA5920751D8C0027E44A /* KKSegmentControlBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlBaseLayout.h; sourceTree = "<group>"; };
 		2EFFAA5A20751D8C0027E44A /* KKSegmentControlHeadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlHeadVC.m; sourceTree = "<group>"; };
 		2EFFAA5B20751D8C0027E44A /* KKSegmentControlBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlBaseLayout.m; sourceTree = "<group>"; };
 		2EFFAA5C20751D8C0027E44A /* KKSegmentControlAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlAppearance.m; sourceTree = "<group>"; };
 		2EFFAA5D20751D8C0027E44A /* KKSegmentControlHeadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlHeadVC.h; sourceTree = "<group>"; };
 		2EFFAA5E20751D8C0027E44A /* KKSegmentControlAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlAppearance.h; sourceTree = "<group>"; };
-		2EFFAA5F20751D8C0027E44A /* KKSlideTabBarLayoutBisect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSlideTabBarLayoutBisect.m; sourceTree = "<group>"; };
+		2EFFAA5F20751D8C0027E44A /* KKSegmentControlLayoutBisect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlLayoutBisect.m; sourceTree = "<group>"; };
 		2EFFAA6C207523EE0027E44A /* KKSegmentControlDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSegmentControlDemoVC.swift; sourceTree = "<group>"; };
 		2EFFAA702075254C0027E44A /* KKSegmentControlDemoPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSegmentControlDemoPageVC.swift; sourceTree = "<group>"; };
 		32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKS_Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1678,10 +1678,10 @@
 				2EFFAA5A20751D8C0027E44A /* KKSegmentControlHeadVC.m */,
 				2EFFAA5220751D8B0027E44A /* KKSegmentControlPageVC.h */,
 				2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */,
-				2EFFAA5520751D8B0027E44A /* KKSlideTabBarLayoutAuto.h */,
-				2EFFAA5720751D8C0027E44A /* KKSlideTabBarLayoutAuto.m */,
-				2EFFAA5620751D8B0027E44A /* KKSlideTabBarLayoutBisect.h */,
-				2EFFAA5F20751D8C0027E44A /* KKSlideTabBarLayoutBisect.m */,
+				2EFFAA5520751D8B0027E44A /* KKSegmentControlLayoutAuto.h */,
+				2EFFAA5720751D8C0027E44A /* KKSegmentControlLayoutAuto.m */,
+				2EFFAA5620751D8B0027E44A /* KKSegmentControlLayoutBisect.h */,
+				2EFFAA5F20751D8C0027E44A /* KKSegmentControlLayoutBisect.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -2318,7 +2318,7 @@
 				81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */,
 				81ED55451F96DF980087D1DF /* CommonMacroSwift.swift in Sources */,
 				81ED55371F9612FC0087D1DF /* LightControlPannelProgressView.m in Sources */,
-				2EFFAA6620751D8C0027E44A /* KKSlideTabBarLayoutBisect.m in Sources */,
+				2EFFAA6620751D8C0027E44A /* KKSegmentControlLayoutBisect.m in Sources */,
 				81ED55381F9612FC0087D1DF /* LightControlPannelVC.m in Sources */,
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
 				814ABB332064FA4A006DFA1F /* getgateway.c in Sources */,
@@ -2487,7 +2487,7 @@
 				103A554F1D3CCCF200366D8F /* RotateAnimateViewController.m in Sources */,
 				1032C2E11D47508100D55DE0 /* WKWebViewDemoController.m in Sources */,
 				10DD98D81D226B7D00193A69 /* NSTimer+BlockSupurt.m in Sources */,
-				2EFFAA6120751D8C0027E44A /* KKSlideTabBarLayoutAuto.m in Sources */,
+				2EFFAA6120751D8C0027E44A /* KKSegmentControlLayoutAuto.m in Sources */,
 				2EFFAA6520751D8C0027E44A /* KKSegmentControlAppearance.m in Sources */,
 				10F5B05C1D813B8800382E50 /* SearchDemoController.m in Sources */,
 				81A87BA82064EDA9008F9F4F /* NSString+SubString.m in Sources */,

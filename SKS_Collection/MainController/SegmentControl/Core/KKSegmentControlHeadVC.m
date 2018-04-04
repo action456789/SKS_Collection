@@ -7,8 +7,8 @@
 //
 
 #import "KKSegmentControlHeadVC.h"
-#import "KKSlideTabBarLayoutAuto.h"
-#import "KKSlideTabBarLayoutBisect.h"
+#import "KKSegmentControlLayoutAuto.h"
+#import "KKSegmentControlLayoutBisect.h"
 #import "UIView+Frame.h"
 
 @interface KKSegmentControlHeadVC ()

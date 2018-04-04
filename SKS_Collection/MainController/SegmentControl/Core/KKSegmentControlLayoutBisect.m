@@ -6,9 +6,9 @@
 //  Copyright © 2016年 SenKe. All rights reserved.
 //
 
-#import "KKSlideTabBarLayoutBisect.h"
+#import "KKSegmentControlLayoutBisect.h"
 
-@implementation KKSlideTabBarLayoutBisect
+@implementation KKSegmentControlLayoutBisect
 
 - (void)layoutItemsViews:(NSArray *)views {
     __block CGFloat itemX = self.config.firstItemLeftPadding;
