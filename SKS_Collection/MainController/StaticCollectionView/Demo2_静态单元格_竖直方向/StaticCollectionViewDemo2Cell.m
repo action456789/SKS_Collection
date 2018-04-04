@@ -9,7 +9,7 @@
 #import "StaticCollectionViewDemo2Cell.h"
 #import "CommonMacro.h"
 #import "UIView+CornerRadio.h"
-#import <Masonry/Masonry.h>
+#import <Masonry.h>
 
 @implementation StaticCollectionViewDemo2Cell
 

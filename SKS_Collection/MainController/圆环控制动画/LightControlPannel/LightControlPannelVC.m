@@ -10,7 +10,7 @@
 #import "LightControlPannelProgressView.h"
 #import "CommonMacro.h"
 #import "UIView+Frame.h"
-#import <Masonry/Masonry.h>
+#import <Masonry.h>
 #import "CAGradientLayer+Creator.h"
 #import "UINavigationController+SubView.h"
 

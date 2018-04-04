@@ -7,7 +7,7 @@
 //
 
 #import "KKTipsView.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "UIView+Frame.h"
 #import "KKTipsMaskView.h"
 

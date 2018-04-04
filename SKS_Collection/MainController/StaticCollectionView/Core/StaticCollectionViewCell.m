@@ -8,7 +8,7 @@
 
 #import "StaticCollectionViewCell.h"
 #import "StaticCollectionViewCellItem.h"
-#import "Masonry.h"
+#import <Masonry.h>
 #import "StaticCollectionViewCellItem.h"
 #import "CommonMacro.h"
 #import <SDWebImage/UIImageView+WebCache.h>

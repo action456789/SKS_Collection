@@ -7,7 +7,7 @@
 //
 
 #import "WeekSelectorView.h"
-#import <Masonry/Masonry.h>
+#import <Masonry.h>
 #import "CommonMacro.h"
 #import "KKWeek.h"
 #import "KKDay.h"

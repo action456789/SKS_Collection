@@ -8,7 +8,7 @@
 
 #import "KKSegmentControlDemoVC.h"
 #import "SlideTabBarItemController.h"
-#import "Masonry.h"
+#import <Masonry.h>
 #import "UIColor+Creator.h"
 
 #import "CommonMacro.h"

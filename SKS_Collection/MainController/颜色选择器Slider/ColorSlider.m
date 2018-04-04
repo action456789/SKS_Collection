@@ -8,7 +8,7 @@
 
 #import "ColorSlider.h"
 #import "CommonMacro.h"
-#import "Masonry.h"
+#import <Masonry.h>
 #import "UIView+Color.h"
 
 #define kMinColorTempteraturaValue   3000

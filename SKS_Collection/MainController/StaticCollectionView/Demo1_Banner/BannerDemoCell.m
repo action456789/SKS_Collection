@@ -7,7 +7,7 @@
 //
 
 #import "BannerDemoCell.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "CommonMacro.h"
 
 @implementation BannerDemoCell

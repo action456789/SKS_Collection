@@ -10,8 +10,7 @@
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
 
-@interface KKSegmentControlHeadVC ()
-{
+@interface KKSegmentControlHeadVC () {
     UIView          *_containerView;
     UIScrollView    *_itemsScrollView;
     UIButton        *_itemMore;
@@ -111,12 +110,12 @@
     [_itemTitles enumerateObjectsUsingBlock:^(NSString *titleString, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton *itemButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [itemButton addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [itemButton setTitle:_itemTitles[idx] forState:UIControlStateNormal];
+        [itemButton setTitle:self->_itemTitles[idx] forState:UIControlStateNormal];
         itemButton.tag = idx;
         
-        [_itemsScrollView addSubview:itemButton];
+        [self->_itemsScrollView addSubview:itemButton];
         
-        [_itemButtons addObject:itemButton];
+        [self->_itemButtons addObject:itemButton];
     }];
     
     [self.layout layoutItemsViews:_itemButtons];

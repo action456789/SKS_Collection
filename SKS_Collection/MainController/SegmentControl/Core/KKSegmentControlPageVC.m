@@ -9,7 +9,7 @@
 #import "KKSegmentControlPageVC.h"
 #import "CommonMacro.h"
 #import "KKSegmentControlBaseLayout.h"
-#import "Masonry.h"
+#import <Masonry.h>
 
 @interface KKSegmentControlPageVC () <UIScrollViewDelegate>
 {

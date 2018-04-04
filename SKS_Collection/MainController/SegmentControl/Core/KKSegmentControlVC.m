@@ -11,7 +11,7 @@
 #import "KKSegmentControlPageVC.h"
 #import "KKSegmentControlBaseLayout.h"
 
-#import "Masonry.h"
+#import <Masonry.h>
 
 @interface KKSegmentControlVC () <KKSegmentControlPageVCDelegate, KKSegmentControlHeadVCDelegate>
 

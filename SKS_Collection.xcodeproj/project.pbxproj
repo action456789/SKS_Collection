@@ -101,6 +101,7 @@
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
 		2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE29D1E2E418900498F7F /* ModalFromViewController.m */; };
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
+		2EFFAA5120751CB90027E44A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */; };
 		810A327D1F4EBE260075560D /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 810A327C1F4EBE260075560D /* NSArray+SafeAccess.m */; };
 		810F5AB71F4FDA130048FD2A /* UIColor+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 810F5AB61F4FDA130048FD2A /* UIColor+Component.m */; };
 		8111FB991F5657AD00769233 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8111FB981F5657AD00769233 /* UIView+Snapshot.m */; };
@@ -175,7 +176,6 @@
 		81A87BAD2064EE6A008F9F4F /* UIImage+CoreImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BAC2064EE6A008F9F4F /* UIImage+CoreImage.m */; };
 		81A87BB02064EE76008F9F4F /* UIImage+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BAF2064EE76008F9F4F /* UIImage+QRCode.m */; };
 		81A87BB32064EE93008F9F4F /* NSNumber+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BB22064EE92008F9F4F /* NSNumber+Random.m */; };
-		81A87BB52064EEBE008F9F4F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BB42064EEBE008F9F4F /* UIColor+Extension.swift */; };
 		81A87BB82064EEDB008F9F4F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BB72064EEDB008F9F4F /* UICollectionView+Extension.swift */; };
 		81A87BBB2064EF26008F9F4F /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BBA2064EF26008F9F4F /* UITextField+placeholder.m */; };
 		81A87BBE2064EF3C008F9F4F /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BBC2064EF3C008F9F4F /* NSObject+KVO.m */; };
@@ -407,6 +407,7 @@
 		2EABE29C1E2E418900498F7F /* ModalFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalFromViewController.h; sourceTree = "<group>"; };
 		2EABE29D1E2E418900498F7F /* ModalFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalFromViewController.m; sourceTree = "<group>"; };
 		2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalFromViewController.xib; sourceTree = "<group>"; };
+		2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		32FFBDD407EF7A2F6B247664 /* Pods_SKS_Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKS_Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8107D1AA1F4D2D02000D9C35 /* ALActionBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALActionBlock.h; sourceTree = "<group>"; };
 		8107D1AB1F4D2D02000D9C35 /* ALActionBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALActionBlocks.h; sourceTree = "<group>"; };
@@ -566,7 +567,6 @@
 		81A87BAF2064EE76008F9F4F /* UIImage+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QRCode.m"; sourceTree = "<group>"; };
 		81A87BB12064EE92008F9F4F /* NSNumber+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Random.h"; sourceTree = "<group>"; };
 		81A87BB22064EE92008F9F4F /* NSNumber+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Random.m"; sourceTree = "<group>"; };
-		81A87BB42064EEBE008F9F4F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../../../../../RICISmartSwift/RICISmartSwift/Catergerys/UIColor/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		81A87BB72064EEDB008F9F4F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		81A87BB92064EF26008F9F4F /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
 		81A87BBA2064EF26008F9F4F /* UITextField+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+placeholder.m"; sourceTree = "<group>"; };
@@ -1906,7 +1906,7 @@
 				81D405C61F5005D3005FB382 /* UIColor+Creator.m */,
 				810F5AB51F4FDA130048FD2A /* UIColor+Component.h */,
 				810F5AB61F4FDA130048FD2A /* UIColor+Component.m */,
-				81A87BB42064EEBE008F9F4F /* UIColor+Extension.swift */,
+				2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -2149,7 +2149,7 @@
 		10DD982E1D226B1F00193A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SenKe;
 				TargetAttributes = {
 					10DD98351D226B1F00193A69 = {
@@ -2311,7 +2311,6 @@
 				81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */,
 				81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */,
 				81ED55451F96DF980087D1DF /* CommonMacroSwift.swift in Sources */,
-				81A87BB52064EEBE008F9F4F /* UIColor+Extension.swift in Sources */,
 				81ED55371F9612FC0087D1DF /* LightControlPannelProgressView.m in Sources */,
 				81ED55381F9612FC0087D1DF /* LightControlPannelVC.m in Sources */,
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
@@ -2454,6 +2453,7 @@
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,
 				8126CA601F565608000385C8 /* CALayer+Snapshot.m in Sources */,
 				2E38E9841E28D5BB0086B870 /* StaticCollectionView.m in Sources */,
+				2EFFAA5120751CB90027E44A /* UIColor+Extension.swift in Sources */,
 				8118A5F21EA62BCE00E225CD /* EjectShrinkBtnsDemoVC.m in Sources */,
 				8177E2321FAB0D47009314DB /* NSBundle+Language.m in Sources */,
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
@@ -2532,12 +2532,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2584,12 +2586,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2642,7 +2646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SKS_Collection/SKS_Collection-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2671,7 +2675,7 @@
 				PRODUCT_MODULE_NAME = SKS_Collection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SKS_Collection/SKS_Collection-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

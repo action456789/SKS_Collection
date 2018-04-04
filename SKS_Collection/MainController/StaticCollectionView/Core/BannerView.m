@@ -9,7 +9,7 @@
 #import "BannerView.h"
 #import "StaticCollectionViewCell.h"
 #import "StaticCollectionViewCellItem.h"
-#import "Masonry.h"
+#import <Masonry.h>
 #import "CommonMacro.h"
 
 @interface BannerView() <UIScrollViewDelegate>
