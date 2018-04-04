@@ -1,40 +1,38 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8.1)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
-  - Masonry (1.0.2)
-  - MBProgressHUD (1.0.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
-  - NVActivityIndicatorView (3.7.0):
-    - NVActivityIndicatorView/Presenter (= 3.7.0)
-  - NVActivityIndicatorView/Presenter (3.7.0)
   - pop (1.0.10)
-  - SAMKeychain (1.5.2)
-  - SDCycleScrollView (1.65):
-    - SDWebImage (~> 3.7)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - SAMKeychain (1.5.3)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - Shimmer (1.0.2)
-  - SnapKit (3.2.0)
-  - XHLaunchAd (3.5.6)
+  - SnapKit (4.0.0)
+  - XHLaunchAd (3.9.7):
+    - FLAnimatedImage (~> 1.0.12)
 
 DEPENDENCIES:
   - AFNetworking
@@ -44,32 +42,47 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - MJExtension
-  - NVActivityIndicatorView
   - pop
   - SAMKeychain
   - SDCycleScrollView
-  - SDWebImage (~> 3.8)
+  - SDWebImage
   - Shimmer
-  - SnapKit (~> 3.2.0)
+  - SnapKit (~> 4.0.0)
   - XHLaunchAd
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - DZNEmptyDataSet
+    - FLAnimatedImage
+    - FMDB
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - pop
+    - SAMKeychain
+    - SDCycleScrollView
+    - SDWebImage
+    - Shimmer
+    - SnapKit
+    - XHLaunchAd
+
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
-  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  XHLaunchAd: 76bed9e969483ee90e5d54a087af3844eeb88c53
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  XHLaunchAd: 0dc50c5af00ee5d9e734b9dce6eece7acaa71122
 
-PODFILE CHECKSUM: 0819d4428efb59bf9131cc160f71429122980625
+PODFILE CHECKSUM: 4548faf13abe8d8025bcad285310d8f5bdf9e326
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.0.beta.1

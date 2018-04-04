@@ -93,6 +93,9 @@
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
 		2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E47B0D61E49EB68003F4B44 /* BannerView.m */; };
+		2E83B12D207485600073CC34 /* InputContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E83B12A2074855F0073CC34 /* InputContactView.swift */; };
+		2E83B12E207485600073CC34 /* InputFeedBackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E83B12B2074855F0073CC34 /* InputFeedBackTextView.swift */; };
+		2E83B12F207485600073CC34 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E83B12C2074855F0073CC34 /* FeedBackViewController.swift */; };
 		2EABE2911E2E3E1300498F7F /* PresentBottomUpTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE2901E2E3E1300498F7F /* PresentBottomUpTransitioning.m */; };
 		2EABE29A1E2E417200498F7F /* ModalToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE2981E2E417200498F7F /* ModalToViewController.m */; };
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
@@ -184,9 +187,6 @@
 		81A87BE82064F24A008F9F4F /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BE12064F249008F9F4F /* StaticCellItemGroup.m */; };
 		81A87BE92064F24A008F9F4F /* StaticCellBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BE32064F249008F9F4F /* StaticCellBaseViewController.m */; };
 		81A87BEA2064F24A008F9F4F /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BE62064F249008F9F4F /* StaticCell.m */; };
-		81A87BEE2064F3D5008F9F4F /* InputContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BEB2064F3D4008F9F4F /* InputContactView.swift */; };
-		81A87BEF2064F3D5008F9F4F /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BEC2064F3D4008F9F4F /* FeedBackViewController.swift */; };
-		81A87BF02064F3D5008F9F4F /* InputFeedBackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BED2064F3D4008F9F4F /* InputFeedBackTextView.swift */; };
 		81A87BF32064F4F7008F9F4F /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */; };
 		81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABD41F4EA7A400DAC8E0 /* UITableView+RadioCornerCell.m */; };
 		81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABDB1F4EA7A400DAC8E0 /* UITextView+Placeholder.m */; };
@@ -396,6 +396,9 @@
 		2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestEdgeInsetsButton.m; sourceTree = "<group>"; };
 		2E47B0D51E49EB68003F4B44 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		2E47B0D61E49EB68003F4B44 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		2E83B12A2074855F0073CC34 /* InputContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputContactView.swift; sourceTree = "<group>"; };
+		2E83B12B2074855F0073CC34 /* InputFeedBackTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFeedBackTextView.swift; sourceTree = "<group>"; };
+		2E83B12C2074855F0073CC34 /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		2EABE28F1E2E3E1300498F7F /* PresentBottomUpTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentBottomUpTransitioning.h; sourceTree = "<group>"; };
 		2EABE2901E2E3E1300498F7F /* PresentBottomUpTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentBottomUpTransitioning.m; sourceTree = "<group>"; };
 		2EABE2971E2E417200498F7F /* ModalToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalToViewController.h; sourceTree = "<group>"; };
@@ -585,9 +588,6 @@
 		81A87BE32064F249008F9F4F /* StaticCellBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellBaseViewController.m; sourceTree = "<group>"; };
 		81A87BE52064F249008F9F4F /* StaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCell.h; sourceTree = "<group>"; };
 		81A87BE62064F249008F9F4F /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
-		81A87BEB2064F3D4008F9F4F /* InputContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputContactView.swift; path = ../../../../../../.Trash/InputContactView.swift; sourceTree = "<group>"; };
-		81A87BEC2064F3D4008F9F4F /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = ../../../../../../.Trash/FeedBackViewController.swift; sourceTree = "<group>"; };
-		81A87BED2064F3D4008F9F4F /* InputFeedBackTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputFeedBackTextView.swift; path = ../../../../../../.Trash/InputFeedBackTextView.swift; sourceTree = "<group>"; };
 		81A87BF12064F4F7008F9F4F /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
 		81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
 		81B313961F974034004C0EC8 /* NSObject+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
@@ -1649,13 +1649,6 @@
 			path = UIApplication;
 			sourceTree = "<group>";
 		};
-		8160F8241F53FD38004B7638 /* UIBezierPath */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIBezierPath;
-			sourceTree = "<group>";
-		};
 		8162F5B01FC5536500E6300A /* SegmentControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -1782,9 +1775,6 @@
 		81A87BDB2064F249008F9F4F /* StaticTableView */ = {
 			isa = PBXGroup;
 			children = (
-				81A87BEC2064F3D4008F9F4F /* FeedBackViewController.swift */,
-				81A87BEB2064F3D4008F9F4F /* InputContactView.swift */,
-				81A87BED2064F3D4008F9F4F /* InputFeedBackTextView.swift */,
 				81A87BDC2064F249008F9F4F /* Core */,
 			);
 			path = StaticTableView;
@@ -1793,6 +1783,9 @@
 		81A87BDC2064F249008F9F4F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2E83B12C2074855F0073CC34 /* FeedBackViewController.swift */,
+				2E83B12A2074855F0073CC34 /* InputContactView.swift */,
+				2E83B12B2074855F0073CC34 /* InputFeedBackTextView.swift */,
 				81A87BDD2064F249008F9F4F /* Modal */,
 				81A87BE22064F249008F9F4F /* StaticCellBaseViewController.h */,
 				81A87BE32064F249008F9F4F /* StaticCellBaseViewController.m */,
@@ -1876,7 +1869,6 @@
 				81A87BB62064EECD008F9F4F /* UICollectionView */,
 				8135B9A71F5F9DFB00E8CB62 /* UINavigationCotroller */,
 				8127CDD71F5E58CE00E42FD6 /* UILabel */,
-				8160F8241F53FD38004B7638 /* UIBezierPath */,
 				819B11DD1F5028450029C55B /* UIScrollView */,
 				8160F81C1F53F1EC004B7638 /* UIApplication */,
 				812224CA1F53BC9200117C25 /* UIScreen */,
@@ -1884,7 +1876,6 @@
 				81D405D81F50214D005FB382 /* UIBarButtonItem */,
 				81D405D41F501E96005FB382 /* UIControl */,
 				81C7ABB91F4EA7A400DAC8E0 /* UIAlertController */,
-				81C7ABBE1F4EA7A400DAC8E0 /* UIButton */,
 				81C7ABBF1F4EA7A400DAC8E0 /* UIColor */,
 				81C7ABC31F4EA7A400DAC8E0 /* UIDevice */,
 				81C7ABC81F4EA7A400DAC8E0 /* UIImage */,
@@ -1904,13 +1895,6 @@
 				81C7ABBB1F4EA7A400DAC8E0 /* UIAlertController+KS.m */,
 			);
 			path = UIAlertController;
-			sourceTree = "<group>";
-		};
-		81C7ABBE1F4EA7A400DAC8E0 /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIButton;
 			sourceTree = "<group>";
 		};
 		81C7ABBF1F4EA7A400DAC8E0 /* UIColor */ = {
@@ -2149,7 +2133,6 @@
 				10DD98341D226B1F00193A69 /* Resources */,
 				1079811D1E1533CA008050FA /* Integrate Reveal Server */,
 				334224110903CD3985F79772 /* [CP] Embed Pods Frameworks */,
-				F2F6906A560A47B0BBBA04A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2256,11 +2239,11 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XHLaunchAd/XHLaunchAd.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -2273,11 +2256,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XHLaunchAd.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -2301,22 +2284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F2F6906A560A47B0BBBA04A0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKS_Collection/Pods-SKS_Collection-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2347,13 +2315,13 @@
 				81ED55371F9612FC0087D1DF /* LightControlPannelProgressView.m in Sources */,
 				81ED55381F9612FC0087D1DF /* LightControlPannelVC.m in Sources */,
 				10DD98CF1D226B7D00193A69 /* KSVedioTool.m in Sources */,
-				81A87BF02064F3D5008F9F4F /* InputFeedBackTextView.swift in Sources */,
 				814ABB332064FA4A006DFA1F /* getgateway.c in Sources */,
 				10DD98D11D226B7D00193A69 /* Foundation+Log.m in Sources */,
 				10F7EEFF1D5C128C00801FD6 /* ClassModal.m in Sources */,
 				814ABB2A2064F9C4006DFA1F /* VerificationInput.swift in Sources */,
 				81C7AB701F4E658800DAC8E0 /* NSString+YYHash.m in Sources */,
 				81A87BB32064EE93008F9F4F /* NSNumber+Random.m in Sources */,
+				2E83B12F207485600073CC34 /* FeedBackViewController.swift in Sources */,
 				10DD4E561D6FD54800F7BA25 /* CrossAnimationView.m in Sources */,
 				8111FB991F5657AD00769233 /* UIView+Snapshot.m in Sources */,
 				81A87BB82064EEDB008F9F4F /* UICollectionView+Extension.swift in Sources */,
@@ -2377,6 +2345,7 @@
 				10F5B0691D815C3700382E50 /* MetaDataManager.m in Sources */,
 				10DD4E401D6EF41400F7BA25 /* CheckMarkAnimVc.m in Sources */,
 				10694E4F1D41F5F700D9F486 /* DiskCacheSqlLiteDemoController.m in Sources */,
+				2E83B12D207485600073CC34 /* InputContactView.swift in Sources */,
 				81A87BBB2064EF26008F9F4F /* UITextField+placeholder.m in Sources */,
 				81A87BA52064ED81008F9F4F /* NSString+Regular.m in Sources */,
 				81C7ABF31F4EB4E300DAC8E0 /* NSNumber+String.m in Sources */,
@@ -2407,6 +2376,7 @@
 				10642B991D34D80F001217CF /* RootViewController.m in Sources */,
 				81B313981F974034004C0EC8 /* NSObject+JSON.m in Sources */,
 				10F4DFCF1D3F861900E0D223 /* BlurEffectDemoController.m in Sources */,
+				2E83B12E207485600073CC34 /* InputFeedBackTextView.swift in Sources */,
 				8156A7581F611F3A00AB8E41 /* CAGradientLayer+Creator.m in Sources */,
 				2E3C87F31E25FD29000A267D /* AddClickAreaButtonDemeVC.m in Sources */,
 				81D405E21F50265E005FB382 /* UIView+CoordinateSystem.m in Sources */,
@@ -2451,7 +2421,6 @@
 				81C7AB941F4E751500DAC8E0 /* NSString+Size.m in Sources */,
 				10F4DFE51D40983F00E0D223 /* DiskCacheFile.m in Sources */,
 				8118A5EC1EA62B6300E225CD /* UPEjectShrinkBtnsView.m in Sources */,
-				81A87BEE2064F3D5008F9F4F /* InputContactView.swift in Sources */,
 				8133C5F11F5FF2ED00637CC9 /* UIView+UIKit.m in Sources */,
 				10DD98E61D226B7D00193A69 /* KK_Downloader.m in Sources */,
 				10F4DFF21D40D5DC00E0D223 /* FileCacheDemoController.m in Sources */,
@@ -2480,7 +2449,6 @@
 				8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */,
 				812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
-				81A87BEF2064F3D5008F9F4F /* FeedBackViewController.swift in Sources */,
 				81A87BAA2064EDB2008F9F4F /* String+Extension.swift in Sources */,
 				1032C2CF1D45E22E00D55DE0 /* GradientLayerDemo2Controller.m in Sources */,
 				10DD4E501D6EF7EE00F7BA25 /* BaseLayerAnimationView.m in Sources */,

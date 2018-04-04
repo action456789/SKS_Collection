@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "864BDF69C93530A33D1BC3785A8FCBEF"
-               BuildableName = "libPods-SKS_Collection.a"
+               BlueprintIdentifier = "2A6FA156121E5A64450610B47D672129"
+               BuildableName = "Pods_SKS_Collection.framework"
                BlueprintName = "Pods-SKS_Collection"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "864BDF69C93530A33D1BC3785A8FCBEF"
-            BuildableName = "libPods-SKS_Collection.a"
+            BlueprintIdentifier = "2A6FA156121E5A64450610B47D672129"
+            BuildableName = "Pods_SKS_Collection.framework"
             BlueprintName = "Pods-SKS_Collection"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "864BDF69C93530A33D1BC3785A8FCBEF"
-            BuildableName = "libPods-SKS_Collection.a"
-            BlueprintName = "Pods-SKS_Collection"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

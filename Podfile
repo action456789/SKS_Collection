@@ -13,43 +13,22 @@ target 'SKS_Collection' do
 
   # Pods for SKS_Collection
 
-    pod 'SDWebImage', '~>3.8'
+    pod 'SDWebImage'
     pod 'MBProgressHUD'
-
     pod 'FMDB'
     #pod 'FMDB/SQLCipher'  #if use SQLCipher
-
     pod 'AFNetworking'
-
-    # 切片编程
-    #pod 'Aspects'
-
+    #pod 'Aspects'  # 切片编程
     pod 'Masonry'
-    pod 'SnapKit', '~> 3.2.0'
-    
     pod 'pop'
-
-    # 文字辉光效果
-    pod 'Shimmer'
-
-    # 字典转模型
+    pod 'Shimmer'  # 文字辉光效果
     pod 'MJExtension'
-
-    # gif 图片
-    pod 'FLAnimatedImage'
-
-    # 启动页广告（闪屏）
-    pod 'XHLaunchAd'
-
-    # 钥匙串访问
+    pod 'FLAnimatedImage' # gif 图片
+    pod 'XHLaunchAd'    # 启动页广告（闪屏）
     pod 'SAMKeychain'
-
-    #图片轮播器
-    pod 'SDCycleScrollView'
-
-    # 空数据页面
+    pod 'SDCycleScrollView'  #图片轮播器
     pod 'DZNEmptyDataSet'
-
-    pod 'NVActivityIndicatorView'
+    
+    pod 'SnapKit', '~> 4.0.0'
 
 end

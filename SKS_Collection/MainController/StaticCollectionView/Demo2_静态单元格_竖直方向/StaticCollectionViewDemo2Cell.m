@@ -7,9 +7,9 @@
 //
 
 #import "StaticCollectionViewDemo2Cell.h"
-#import "Masonry.h"
 #import "CommonMacro.h"
 #import "UIView+CornerRadio.h"
+#import <Masonry/Masonry.h>
 
 @implementation StaticCollectionViewDemo2Cell
 

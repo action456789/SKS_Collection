@@ -10,16 +10,15 @@
 #endif
 #endif
 
-#import "NSString+XHLaunchAd.h"
-#import "UIImageView+XHLaunchAdCache.h"
 #import "XHLaunchAd.h"
 #import "XHLaunchAdButton.h"
 #import "XHLaunchAdCache.h"
 #import "XHLaunchAdConfiguration.h"
+#import "XHLaunchAdConst.h"
 #import "XHLaunchAdController.h"
 #import "XHLaunchAdDownloader.h"
-#import "XHLaunchAdImage.h"
 #import "XHLaunchAdImageManager.h"
+#import "XHLaunchAdImageView+XHLaunchAdCache.h"
 #import "XHLaunchAdView.h"
 #import "XHLaunchImageView.h"
 

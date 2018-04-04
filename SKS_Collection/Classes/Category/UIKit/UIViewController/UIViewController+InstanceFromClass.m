@@ -11,10 +11,8 @@
 @implementation UIViewController (InstanceFromClass)
 
 // 根据类名得到控制器的实例: 包含从 xib 加载控制器
-+ (instancetype)controllerWithClass:(Class)class
-{
++ (instancetype)controllerWithClass:(Class)class {
     // 优先使用同名的 xib 文件初始化 VC
-    
     UIViewController *controller = nil;
     
     // fix bug: swift 使用 NSStringFromClass 得到的字符串为 DemoProject.ClassName
