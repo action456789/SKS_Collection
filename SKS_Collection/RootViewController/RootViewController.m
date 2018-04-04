@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "CoutdownBtnDemoVC.h"
 #import "RotateAnimateViewController.h"
-#import "KKSegmentControlDemoVC.h"
+#import "KKSegmentControlVC.h"
 #import "BlurEffectDemoController.h"
 #import "FileCacheDemoController.h"
 #import "DiskCacheSqlLiteDemoController.h"

@@ -9,23 +9,27 @@
 #import "KKSegmentControlHeadVC.h"
 #import "KKSlideTabBarLayoutAuto.h"
 #import "KKSlideTabBarLayoutBisect.h"
+#import "UIView+Frame.h"
 
-@interface KKSegmentControlHeadVC () {
+@interface KKSegmentControlHeadVC ()
+{
     UIView          *_containerView;
     UIScrollView    *_itemsScrollView;
     UIButton        *_itemMore;
-    UIView          *_itemLine;
+    UIView          *_slide;
     
     UIButton        *_selectedItem;
-    CGRect          _itemLinePreFrame;
     
     NSMutableArray<UIButton *>  *_itemButtons;
     NSMutableArray<UIButton *>  *_notNeedToSrollToCenterBtns;
     NSArray<NSString *>  *_itemTitles;
+    
+    CGFloat _slideBegainCenterX;
+    
+    NSInteger _viewAppearCount;
 }
 
 @property (nonatomic, assign) CGFloat itemScrollViewContentW;
-@property (nonatomic, strong) KKSegmentControlBaseLayout *layout;
 
 @end
 
@@ -36,10 +40,8 @@
     if (self = [super init]) {
         _itemTitles = itemTitles;
         _layout = layout;
-        
+        _viewAppearCount = 0;
         _itemButtons = [NSMutableArray array];
-        [self createSubviews];
-        [self _autoLayoutSubviews];
     }
     return self;
 }
@@ -48,8 +50,25 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self createSubviews];
+    [self autoLayoutSubviews];
+    
+    [self setupTransform];
 }
-
+    
+- (void)setupTransform {
+    if (_itemButtons.count > 0) {
+        
+        [self updateItemButtonWithButton:_itemButtons.firstObject];
+        
+        // slide
+        CGFloat scaleX = self.layout.config.slideTransformScaleX;
+        CGFloat scaleY = self.layout.config.slideTransformScaleY;
+        _slide.transform = CGAffineTransformMakeScale(scaleX, scaleY);
+    }
+}
+    
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 }
@@ -57,17 +76,19 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    self.view.backgroundColor = SegmentControl_HeaderBackgroundColor;
-    
-    _itemsScrollView.contentSize = CGSizeMake(self.itemScrollViewContentW + kScreenWidth * 0.1, 0);
-    [self createNotNeedToSrollToCenterBtns];
-    
-    // 是否显示滑块
-    BOOL isShowItemLine = YES;
-    if ([self.delegate respondsToSelector:@selector(isShowItemLineForSegmentControlHeadVC:)]) {
-        isShowItemLine = [self.delegate isShowItemLineForSegmentControlHeadVC:self];
+    _viewAppearCount++;
+    if (_viewAppearCount == 1) { // 首次进入
+        self.view.backgroundColor = self.layout.config.headerBackgroundColor;
+        
+        _itemsScrollView.contentSize = CGSizeMake(self.itemScrollViewContentW + kScreenWidth * 0.1, 0);
+        
+        [self createNotNeedToSrollToCenterBtns];
+        
+        // 是否显示滑块
+        BOOL isShowSlide = self.layout.config.isShowSlide;
+        _slide.hidden = !isShowSlide;
+        _slideBegainCenterX = _slide.kk_centerX;
     }
-    _itemLine.hidden = !isShowItemLine;
 }
 
 
@@ -80,54 +101,48 @@
     _itemsScrollView.backgroundColor = [UIColor clearColor];
     _itemsScrollView.showsHorizontalScrollIndicator = NO;
     _itemsScrollView.showsVerticalScrollIndicator = NO;
-    _itemsScrollView.bounces = NO;
+    _itemsScrollView.bounces = YES;
     _itemsScrollView.scrollEnabled = self.layout.itemScrollViewScrollEnable;
     [_containerView addSubview:_itemsScrollView];
     
-    [self _createItems];
+    [self createItems];
     
     _itemMore = [UIButton buttonWithType:UIButtonTypeCustom];
     [_itemMore setTitle:@"更多" forState:UIControlStateNormal];
     _itemMore.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [_itemMore.titleLabel setFont:[UIFont systemFontOfSize:SegmentControl_HeaderItemFontSize]];
+    [_itemMore.titleLabel setFont:[UIFont systemFontOfSize:self.layout.config.itemFontSize]];
 //    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontNormalColor) forState:UIControlStateNormal];
 //    [_itemMore setTitleColor:kSTBColorWithHex(kSTBItemFontSelectedColor) forState:UIControlStateSelected];
     [_itemMore addTarget:self action:@selector(itemMoreClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_containerView addSubview:_itemMore];
     
-    _itemLine = [UIView new];
-    _itemLine.backgroundColor = SegmentControl_HeaderSliderColor;
-    CGFloat w = [self.layout lineWidthWithIndex:0];
-    CGFloat h = 2;
-    CGFloat x = SegmentControl_HeaderFirstItemLeftPadding - SegmentControl_HeaderItemLineLeftOverWidtht;
-    CGFloat y = SegmentControl_HeaderViewHeight * SegmentControl_HeaderItemHeightRatio;
-    _itemLine.frame = CGRectMake(x, y, w, h);
-    _itemLinePreFrame = _itemLine.frame;
-    [_itemsScrollView addSubview:_itemLine];
+    _slide = [UIView new];
+    _slide.backgroundColor = self.layout.config.sliderColor;
+    [_itemsScrollView addSubview:_slide];
 }
 
-- (void)_createItems {
+- (void)createItems {
     [_itemTitles enumerateObjectsUsingBlock:^(NSString *titleString, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton *itemButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [itemButton addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [itemButton setTitle:self->_itemTitles[idx] forState:UIControlStateNormal];
+        [itemButton setTitle:_itemTitles[idx] forState:UIControlStateNormal];
         itemButton.tag = idx;
         
-        [self->_itemsScrollView addSubview:itemButton];
+        [_itemsScrollView addSubview:itemButton];
         
-        [self->_itemButtons addObject:itemButton];
+        [_itemButtons addObject:itemButton];
     }];
     
     [self.layout layoutItemsViews:_itemButtons];
 }
 
-- (void)_autoLayoutSubviews {
+- (void)autoLayoutSubviews {
     [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
     
     [_itemsScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        CGFloat widthOffset = -SegmentControl_HeaderItemMoreWidth;
+        CGFloat widthOffset = -self.layout.config.itemMoreWidth;
         make.left.mas_equalTo(_containerView.mas_left);
         make.top.bottom.mas_equalTo(_containerView);
         make.width.mas_equalTo(_containerView.mas_width).offset(widthOffset);
@@ -135,9 +150,34 @@
     
     [_itemMore mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.right.mas_equalTo(_containerView);
-        make.height.mas_equalTo(SegmentControl_HeaderItemHeightRatio * SegmentControl_HeaderViewHeight);
-        make.width.mas_equalTo(SegmentControl_HeaderItemMoreWidth);
+        make.height.mas_equalTo(self.layout.config.itemHeightRatio * self.layout.config.headerViewHeight);
+        make.width.mas_equalTo(self.layout.config.itemMoreWidth);
     }];
+    
+    if (!_itemButtons || _itemButtons.count == 0) {
+        return;
+    }
+    
+    CGFloat w = [self.layout lineWidthWithIndex:0];
+    CGFloat h = self.layout.config.slideHeight;
+    CGFloat topPadding = self.layout.config.slideTopPaddingForItem;
+    // 滑块在顶部时
+    SegmentControlSlidePosition posion = self.layout.config.slidePosition;
+    if (posion == SegmentControlSlidePositionTop) {
+        [_slide mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(w);
+            make.height.mas_equalTo(h);
+            make.centerX.mas_equalTo(_itemButtons.firstObject.mas_centerX);
+            make.top.mas_equalTo(self.view);
+        }];
+    } else {
+        [_slide mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(w);
+            make.height.mas_equalTo(h);
+            make.centerX.mas_equalTo(_itemButtons.firstObject.mas_centerX);
+            make.top.mas_equalTo(_itemButtons.firstObject.mas_bottom).offset(topPadding);
+        }];
+    }
 }
 
 - (CGFloat)itemScrollViewContentW {
@@ -145,7 +185,7 @@
     for (NSNumber *value in self.layout.itemStringWidths) {
         _itemScrollViewContentW += [value floatValue];
     }
-    _itemScrollViewContentW += (_itemTitles.count - 1) * SegmentControl_HeaderItemHorizontalSpace;
+    _itemScrollViewContentW += (_itemTitles.count - 1) * self.layout.config.itemHorizontalSpace;
     return _itemScrollViewContentW;
 }
 
@@ -159,11 +199,11 @@
     CGFloat tailMinX = 0;
     CGFloat width = self.view.bounds.size.width;
     
-    if ((lastBtn.frame.origin.x + SegmentControl_HeaderLastItemRightPadding) > (width - SegmentControl_HeaderItemMoreWidth)) {
-        tailMaxX = lastBtn.frame.origin.x + lastBtn.frame.size.width + SegmentControl_HeaderLastItemRightPadding;
-        tailMinX = tailMaxX - (width * 0.5 - SegmentControl_HeaderItemMoreWidth);
+    if ((lastBtn.frame.origin.x + self.layout.config.lastItemRightPadding) > (width - self.layout.config.itemMoreWidth)) {
+        tailMaxX = lastBtn.frame.origin.x + lastBtn.frame.size.width + self.layout.config.lastItemRightPadding;
+        tailMinX = tailMaxX - (width * 0.5 - self.layout.config.itemMoreWidth);
     } else {
-        tailMaxX = lastBtn.frame.origin.x + lastBtn.frame.size.width + SegmentControl_HeaderLastItemRightPadding;
+        tailMaxX = lastBtn.frame.origin.x + lastBtn.frame.size.width + self.layout.config.lastItemRightPadding;
         tailMinX = width * 0.5;
     }
     _notNeedToSrollToCenterBtns = [NSMutableArray array];
@@ -181,8 +221,6 @@
 }
 
 - (void)itemPressed:(UIButton *)sender {
-    [self _updateItemLineWithButton:sender animate:YES];
-    
     NSInteger from = _selectedItem.tag;
     NSInteger to = sender.tag;
     [self autoScrollItemsScrollViewFromIndex:from toIndex:to animate:YES];
@@ -197,17 +235,16 @@
 - (void)autoScrollItemsScrollViewFromIndex:(NSUInteger)from
                                    toIndex:(NSUInteger)to
                                    animate:(BOOL)animate {
+    UIButton *btnTo = _itemButtons[to];
+    [self updateSlideWithButton:btnTo animate:YES];
+    [self updateItemButtonWithButton:btnTo];
+
     // 最左边不需要滚动的按钮
     CGFloat totalW = self.view.bounds.size.width;
-    
     UIButton *lastBtn = _itemButtons.lastObject;
-    if ((lastBtn.frame.origin.x + lastBtn.frame.size.width) < (totalW - SegmentControl_HeaderItemMoreWidth - SegmentControl_HeaderLastItemRightPadding)) {
+    if ((lastBtn.frame.origin.x + lastBtn.frame.size.width) < (totalW - self.layout.config.itemMoreWidth - self.layout.config.lastItemRightPadding)) {
         return;
     }
-    
-    UIButton *btnTo = _itemButtons[to];
-    [self _updateItemLineWithButton:btnTo animate:YES];
-    [self _updateItemButtonWithButton:btnTo];
     
     CGFloat screenCenterX = totalW * 0.5;
     CGFloat contentOffsetY = _itemsScrollView.contentOffset.y;
@@ -221,41 +258,51 @@
                 [_itemsScrollView setContentOffset:CGPointMake(0, contentOffsetY) animated:animate];
             }
         } else { // 滚动到屏幕最右边
-            CGFloat tailX = lastBtn.frame.origin.x + lastBtn.frame.size.width + SegmentControl_HeaderLastItemRightPadding - (totalW - SegmentControl_HeaderItemMoreWidth);
+            CGFloat tailX = lastBtn.frame.origin.x + lastBtn.frame.size.width + self.layout.config.lastItemRightPadding - (totalW - self.layout.config.itemMoreWidth);
             [_itemsScrollView setContentOffset:CGPointMake(tailX, contentOffsetY) animated:animate];
         }
     }
 }
 
-- (void)_updateItemLineWithButton:(UIButton *)button animate:(BOOL)animate {
-    CGFloat lineX = _itemLinePreFrame.origin.x;
-    CGFloat lineY = _itemLinePreFrame.origin.y;
-    CGFloat lineW = [self.layout lineWidthWithIndex:button.tag];
-    CGFloat lineH = _itemLinePreFrame.size.height;
-    
-    if (animate) {
-        [UIView animateWithDuration:0.3f delay:0.0f usingSpringWithDamping:1.0f initialSpringVelocity:0.0f options:UIViewAnimationOptionLayoutSubviews animations:^{
-            if (button.center.x > 0) {
-                _itemLine.frame = CGRectMake(lineX, lineY, lineW, lineH);
-                CGPoint center = CGPointMake(button.center.x, _itemLine.center.y);
-                _itemLine.center = center;
-            } else {
-                _itemLine.frame = CGRectMake(SegmentControl_HeaderFirstItemLeftPadding - SegmentControl_HeaderItemLineLeftOverWidtht, lineY, lineW, lineH);
-            }
-        } completion:nil];
-    } else {
-        if (button.center.x > 0) {
-            _itemLine.frame = CGRectMake(lineX, lineY, lineW, lineH);
-            CGPoint center = CGPointMake(button.center.x, _itemLine.center.y);
-            _itemLine.center = center;
-        } else {
-            _itemLine.frame = CGRectMake(SegmentControl_HeaderFirstItemLeftPadding - SegmentControl_HeaderItemLineLeftOverWidtht, lineY, lineW, lineH);
-        }
+- (void)updateSlideWithButton:(UIButton *)button animate:(BOOL)animate {
+    if (!_itemButtons || _itemButtons.count == 0) {
+        return;
     }
-    _itemLinePreFrame = _itemLine.frame;
+
+    CGFloat lineW = [self.layout lineWidthWithIndex:button.tag];
+    CGFloat deltaCenterX = button.kk_centerX - _slideBegainCenterX;
+    [_slide mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(lineW);
+        make.centerX.mas_equalTo(_itemButtons.firstObject.mas_centerX).offset(deltaCenterX);
+    }];
+    [_slide setNeedsLayout];
+
+    if (animate) {
+        _slide.transform = CGAffineTransformIdentity;
+        
+        [UIView animateWithDuration:0.33 animations:^{
+            [self.view layoutIfNeeded];
+            
+            CGFloat scaleX = self.layout.config.slideTransformScaleX;
+            CGFloat scaleY = self.layout.config.slideTransformScaleY;
+            _slide.transform = CGAffineTransformMakeScale(scaleX, scaleY);
+            
+        } completion:^(BOOL finished) {
+        }];
+    } else {
+        [self.view layoutIfNeeded];
+    }
 }
 
-- (void)_updateItemButtonWithButton:(UIButton *)button {
+- (void)updateItemButtonWithButton:(UIButton *)button {
+    _selectedItem.transform = CGAffineTransformIdentity;
+    
+    [UIView animateWithDuration:0.33 animations:^{
+        CGFloat scaleX = self.layout.config.itemSelectedTransformScaleX;
+        CGFloat scaleY = self.layout.config.itemSelectedTransformScaleY;
+        button.transform = CGAffineTransformMakeScale(scaleX, scaleY);
+    }];
+    
     _selectedItem.selected = NO;
     button.selected = YES;
     _selectedItem = button;

@@ -7,12 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class KKSegmentControlPageVC;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol KKSegmentControlPageVCDelegate <NSObject>
 @optional
-- (void)segmentControlPageVC:(KKSegmentControlPageVC *)vc pageChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
+/**
+ @param vc 翻页回调
+ @param from 起始页面index
+ @param to 结束页面index
+ @param isUserOperate 是否是用户在本控制器中滑动scrollView导致的翻页
+ */
+- (void)segmentControlPageVC:(KKSegmentControlPageVC *)vc
+        pageChangedFromIndex:(NSUInteger)from
+                     toIndex:(NSUInteger)to
+               isUserOperate:(BOOL)isUserOperate;
 @end
 
 
@@ -25,7 +35,7 @@
 
 @property (nonatomic, assign) id <KKSegmentControlPageVCDelegate> delegate;
 
-- (instancetype)initWithItemCount:(NSInteger)count
+- (instancetype)initWithPageCount:(NSInteger)count
                       controllers:(NSMutableArray<__kindof UIViewController *> *)controllers;
 
 /// when not init all page controllers once a time, you need update or add page controller real time when user slide the slider
@@ -34,15 +44,17 @@
                    withController:(UIViewController *)controller;
 
 /// 滚到到某个 index
-- (void)autoScrollBottomScrollViewFromIndex:(NSUInteger)from
-                                    toIndex:(NSUInteger)to
-                                    animate:(BOOL)animate;
+- (void)autoScrollFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate;
 
-/// set the current page, and the slider and page controller will slide suitably
-- (void)setCurrentPage:(NSUInteger)currentPage withAnimate:(BOOL)animate;
+- (void)setCurrentPage:(NSUInteger)page isUserOperate:(BOOL)isScrollManal;
+
+// 当前页
+- (NSInteger)currentPageIndex;
 
 @end
 
 @interface KKSegmentControlPlaceholdVC : UIViewController
 
 @end
+
+NS_ASSUME_NONNULL_END

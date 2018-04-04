@@ -8,23 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import "CommonMacro.h"
-@class KKSegmentControlBaseLayout;
+#import "KKSegmentControlBaseLayout.h"
+
 @class KKSegmentControlHeadVC;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol KKSegmentControlHeadVCDelegate <NSObject>
+
 @optional
 - (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemMoreClicked:(UIButton *)itemMore;
 
 - (void)segmentControlHeadVC:(KKSegmentControlHeadVC *)vc itemChangedFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
-
-// 是否显示滑块
-- (BOOL)isShowItemLineForSegmentControlHeadVC:(KKSegmentControlHeadVC *)vc;
 
 @end
 
 @interface KKSegmentControlHeadVC : UIViewController
 
 @property (nonatomic, assign) id <KKSegmentControlHeadVCDelegate> delegate;
+
+@property (nonatomic, strong, readonly) KKSegmentControlBaseLayout *layout;
 
 - (instancetype)initWithItemTitles:(NSMutableArray *)itemTitles
                             layout:(KKSegmentControlBaseLayout *)layout;
@@ -34,3 +37,5 @@
                                    animate:(BOOL)animate;
 
 @end
+
+NS_ASSUME_NONNULL_END

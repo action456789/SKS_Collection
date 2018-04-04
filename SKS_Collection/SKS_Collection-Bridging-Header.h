@@ -9,3 +9,8 @@
 #import "StaticCollectionViewDemo2Cell.h"
 #import "KKDay.h"
 #import "NSString+Regular.h"
+#import "UIColor+Creator.h"
+
+#import "KKSegmentControlVC.h"
+#import "KKSlideTabBarLayoutAuto.h"
+#import "KKSlideTabBarLayoutBisect.h"

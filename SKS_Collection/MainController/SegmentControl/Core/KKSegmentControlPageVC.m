@@ -10,27 +10,34 @@
 #import "CommonMacro.h"
 #import "KKSegmentControlBaseLayout.h"
 #import <Masonry.h>
+#import "UIView+Frame.h"
+
+#define kTotalW self.view.bounds.size.width
 
 @interface KKSegmentControlPageVC () <UIScrollViewDelegate>
 {
-    UIView          *_containerView;
     NSUInteger      _itemCount;
     NSMutableArray<__kindof UIViewController *>  *_controllers;
 }
 @property (nonatomic, assign) NSUInteger currentPage;
-
 @end
 
 @implementation KKSegmentControlPageVC
 
-- (instancetype)initWithItemCount:(NSInteger)count controllers:(NSMutableArray *)controllers {
+- (instancetype)initWithPageCount:(NSInteger)count
+                      controllers:(NSMutableArray<__kindof UIViewController *> *)controllers {
     if (self = [super init]) {
         _controllers = [NSMutableArray array];
         _currentPage = -1;
         _itemCount = count;
         _realtimePage = controllers == nil;
-        [self _createSubViewsWithControllers:controllers];
-
+        
+        [self.view addSubview:self.scrollView];
+        [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(self.view);
+        }];
+        
+        [self addControllers:controllers];
     }
     return self;
 }
@@ -38,138 +45,117 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self autoScrollBottomScrollViewFromIndex:-1 toIndex:0 animate:YES];
-    
-    self.view.backgroundColor = SegmentControl_PageBackgroundColor;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    [self _autoLayoutSubviews];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"%f", _itemCount * _scrollView.frame.size.width);
-    NSLog(@"%@", NSStringFromCGRect(_scrollView.frame));
     _scrollView.contentSize = CGSizeMake(_itemCount * _scrollView.frame.size.width, 0);
-    
 }
 
-- (void)_createSubViewsWithControllers:(NSMutableArray *)controllers {
-    _containerView = [UIView new];
-    _containerView.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:_containerView];
-    
-    _scrollView = [UIScrollView new];
-    _scrollView.showsHorizontalScrollIndicator = YES;
-    _scrollView.backgroundColor = [UIColor clearColor];
-    _scrollView.pagingEnabled = YES;
-    _scrollView.bounces = NO;
-    _scrollView.delegate = self;
-    [_containerView addSubview:_scrollView];
-    
-    [self _addControllerViewsWithController:controllers];
-}
-
-- (void)_addControllerViewsWithController:(NSMutableArray *)controllers {
+- (void)addControllers:(NSMutableArray *)controllers {
     for (int i=0; i<controllers.count; i++) {
         UIViewController *vc = controllers[i];
-        [self _addControllerAtIndex:i withController:vc];
+        [self addControllerAtIndex:i withController:vc];
     }
 }
 
-- (void)_addControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller {
+- (void)addControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller {
     [_controllers insertObject:controller atIndex:index];
+    
     [_scrollView addSubview:controller.view];
+    [self addChildViewController:controller];
+    
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.height.width.mas_equalTo(_scrollView);
-        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kScreenWidth);
+        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kTotalW);
     }];
 }
 
-- (void)_replaceControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller {
+- (void)replaceControllerAtIndex:(NSUInteger)index withController:(UIViewController *)controller {
     UIViewController *vc = _controllers[index];
     [_controllers replaceObjectAtIndex:index withObject:controller];
     [vc.view removeFromSuperview];
+    [vc removeFromParentViewController];
+    
     [_scrollView addSubview:controller.view];
+    [self addChildViewController:controller];
+
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.height.width.mas_equalTo(_scrollView);
-        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kScreenWidth);
+        make.left.mas_equalTo(_scrollView.mas_left).offset(index*kTotalW);
     }];
 }
 
 - (void)updateControllerFromIndex:(NSUInteger)from toIndex:(NSUInteger)to withController:(UIViewController *)controller {
     NSInteger count = _controllers.count;
     if (to == count) { // first
-        [self _addControllerAtIndex:to withController:controller];
+        [self addControllerAtIndex:to withController:controller];
         
     } else if (to < count) {
         BOOL sameKindOfObject = [_controllers[to] isKindOfClass:[KKSegmentControlPlaceholdVC class]];
         if (self.realtimePage || sameKindOfObject) {
-            [self _replaceControllerAtIndex:to withController:controller];
+            [self replaceControllerAtIndex:to withController:controller];
         }
     } else {// jump
         for (NSUInteger i=from+1; i<to; i++) {
             KKSegmentControlPlaceholdVC *placeholdController = [[KKSegmentControlPlaceholdVC alloc] init];
-            [self _addControllerAtIndex:i withController:placeholdController];
+            [self addControllerAtIndex:i withController:placeholdController];
         }
         [self updateControllerFromIndex:from toIndex:to withController:controller];
     }
 }
 
-- (void)_autoLayoutSubviews {
-    [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
-    }];
-    
-    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(_containerView);
-    }];
-}
-
-- (void)autoScrollBottomScrollViewFromIndex:(NSUInteger)from
-                                    toIndex:(NSUInteger)to
-                                    animate:(BOOL)animate {
-    CGFloat x = to * kScreenWidth;
-    CGFloat y = _scrollView.frame.origin.y;
-    [_scrollView setContentOffset:CGPointMake(x, y) animated:animate];
+- (void)autoScrollFromIndex:(NSUInteger)from toIndex:(NSUInteger)to animate:(BOOL)animate {
+    CGFloat x = to * kTotalW;
+    [_scrollView setContentOffset:CGPointMake(x, 0) animated:animate];
 }
 
 @synthesize currentPage = _currentPage;
 - (NSUInteger)currentPage {
-    return _scrollView.contentOffset.x / kScreenWidth;
+    return _scrollView.contentOffset.x / kTotalW;
 }
 
-#pragma mark setter
+#pragma mark getter, setter
 
-- (void)setCurrentPage:(NSUInteger)currentPage {
-    [self setCurrentPage:currentPage withAnimate:YES];
-}
-
-- (void)setCurrentPage:(NSUInteger)currentPage withAnimate:(BOOL)animate {
-    [self autoScrollBottomScrollViewFromIndex:_currentPage toIndex:currentPage animate:animate];
-    
-    if (_currentPage != currentPage) {
-        if ([self.delegate respondsToSelector:@selector(segmentControlPageVC:pageChangedFromIndex:toIndex:)]) {
-            [self.delegate segmentControlPageVC:self pageChangedFromIndex:_currentPage toIndex:currentPage];
+- (void)setCurrentPage:(NSUInteger)page isUserOperate:(BOOL)isUserOperate {
+    if (!isUserOperate) {
+        [self autoScrollFromIndex:_currentPage toIndex:page animate:YES];
+    }
+    if (_currentPage != page) {
+        if ([self.delegate respondsToSelector:@selector(segmentControlPageVC:pageChangedFromIndex:toIndex:isUserOperate:)]) {
+            [self.delegate segmentControlPageVC:self
+                           pageChangedFromIndex:_currentPage
+                                        toIndex:page
+                                  isUserOperate:isUserOperate];
         }
     }
+    
+    _currentPage = page;
+}
 
-    _currentPage = currentPage;
+- (UIScrollView *)scrollView {
+    if (_scrollView == nil) {
+        _scrollView = [UIScrollView new];
+        _scrollView.showsHorizontalScrollIndicator = YES;
+        _scrollView.backgroundColor = [UIColor clearColor];
+        _scrollView.pagingEnabled = YES;
+        _scrollView.bounces = NO;
+        _scrollView.delegate = self;
+    }
+    return _scrollView;
 }
 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    int page = scrollView.contentOffset.x / scrollView.bounds.size.width;
-    self.currentPage = page;
+    int page = scrollView.contentOffset.x / self.view.bounds.size.width;
+    [self setCurrentPage:page isUserOperate:YES];
+}
+
+- (NSInteger)currentPageIndex {
+    int page = _scrollView.contentOffset.x / self.view.bounds.size.width;
+    return page;
 }
 
 @end

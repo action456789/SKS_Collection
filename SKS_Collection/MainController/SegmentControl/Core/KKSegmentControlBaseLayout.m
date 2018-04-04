@@ -22,11 +22,21 @@
     return self;
 }
 
+- (instancetype)initWithItemTitles:(NSArray<NSString *> *)itemTitles
+                            config:(__kindof KKSegmentControlAppearance *)config {
+    self = [super init];
+    if (self) {
+        _itemTitles = itemTitles;
+        _config = config;
+    }
+    return self;
+}
+
 - (NSMutableArray *)itemStringWidths
 {
     if (!_itemStringWidths) {
         _itemStringWidths = [NSMutableArray array];
-        NSDictionary *attrs = @{NSFontAttributeName : [UIFont systemFontOfSize:SegmentControl_HeaderItemFontSize]};
+        NSDictionary *attrs = @{NSFontAttributeName : [UIFont systemFontOfSize:self.config.itemFontSize]};
         for (NSString *title in _itemTitles) {
             CGFloat w = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size.width;
             [_itemStringWidths addObject:@(ceil(w))];

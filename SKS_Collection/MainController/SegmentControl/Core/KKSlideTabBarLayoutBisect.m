@@ -11,8 +11,7 @@
 @implementation KKSlideTabBarLayoutBisect
 
 - (void)layoutItemsViews:(NSArray *)views {
-    
-    __block CGFloat itemX = SegmentControl_HeaderFirstItemLeftPadding;
+    __block CGFloat itemX = self.config.firstItemLeftPadding;
     
     [views enumerateObjectsUsingBlock:^(id view, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton *itemButton;
@@ -24,20 +23,20 @@
         
         [itemButton setTitle:self.itemTitles[idx] forState:UIControlStateNormal];
         itemButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-        itemButton.titleLabel.font = [UIFont systemFontOfSize:SegmentControl_HeaderItemFontSize];
+        itemButton.titleLabel.font = [UIFont systemFontOfSize:self.config.itemFontSize];
         
-        [itemButton setTitleColor:SegmentControl_HeaderItemFontNormalColor forState:UIControlStateNormal];
-        [itemButton setTitleColor:SegmentControl_HeaderItemFontSelectedColor forState:UIControlStateSelected];
+        [itemButton setTitleColor:self.config.itemFontNormalColor forState:UIControlStateNormal];
+        [itemButton setTitleColor:self.config.itemFontSelectedColor forState:UIControlStateSelected];
         
-        CGFloat seperaterWidthsSum = (self.itemTitles.count - 1) * SegmentControl_HeaderSperaterWidth;
-        CGFloat w = (kScreenWidth - SegmentControl_HeaderFirstItemLeftPadding - SegmentControl_HeaderLastItemRightPadding - seperaterWidthsSum) / views.count;
-        CGFloat offsetX = (w + SegmentControl_HeaderSperaterWidth) * idx ;
+        CGFloat seperaterWidthsSum = (self.itemTitles.count - 1) * self.config.itemSeperaterWidth;
+        CGFloat w = (kScreenWidth - self.config.firstItemLeftPadding - self.config.lastItemRightPadding - seperaterWidthsSum) / views.count;
+        CGFloat offsetX = (w + self.config.itemSeperaterWidth) * idx ;
         
         UIView *superView = itemButton.superview;
         
         [itemButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(superView.mas_top);
-            make.height.mas_equalTo(@(SegmentControl_HeaderViewHeight * SegmentControl_HeaderItemHeightRatio));
+            make.height.mas_equalTo(@(self.config.headerViewHeight * self.config.itemHeightRatio));
             make.left.mas_equalTo(superView.mas_left).offset(offsetX);
             make.width.mas_equalTo(@(w));
         }];
@@ -46,13 +45,13 @@
         
         if (self.showSeperater && idx != self.itemTitles.count - 1) {
             UIView *seperaterView = [UIView new];
-            seperaterView.backgroundColor = SegmentControl_HeaderItemSeperaterColor;
+            seperaterView.backgroundColor = self.config.itemSeperaterColor;
             [superView addSubview:seperaterView];
             
             [seperaterView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(itemButton.mas_right);
-                make.width.mas_equalTo(SegmentControl_HeaderSperaterWidth);
-                make.height.mas_equalTo(SegmentControl_HeaderSperaterHeight);
+                make.width.mas_equalTo(self.config.itemSeperaterWidth);
+                make.height.mas_equalTo(self.config.itemSperaterHeight);
                 make.centerY.mas_equalTo(itemButton);
             }];
         }
@@ -60,7 +59,11 @@
 }
 
 - (CGFloat)lineWidthWithIndex:(NSInteger)index {
-    return (kScreenWidth / self.itemTitles.count) - ((SegmentControl_HeaderFirstItemLeftPadding - SegmentControl_HeaderItemLineLeftOverWidtht) * 2);
+    CGFloat w = self.config.slideWidth;
+    if (self.config.slideWidthAuto) {
+        w = (kScreenWidth / self.itemTitles.count) - ((self.config.firstItemLeftPadding - self.config.slideLeftRightOverWidth) * 2);
+    }
+    return w;
 }
 
 - (BOOL)itemScrollViewScrollEnable {
