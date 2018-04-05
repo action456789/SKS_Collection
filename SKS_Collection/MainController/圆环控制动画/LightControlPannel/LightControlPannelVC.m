@@ -34,7 +34,7 @@
     [self.bgColorView.layer addSublayer:layer];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_progressView showWithProgress:80];
+        [self->_progressView showWithProgress:80];
     });
 }
 

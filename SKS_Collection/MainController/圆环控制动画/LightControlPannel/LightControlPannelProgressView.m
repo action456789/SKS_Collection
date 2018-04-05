@@ -163,7 +163,7 @@
     _progress.completedUnitCount = progress;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        _outOvarLayer.strokeEnd = progress * 0.01;
+        self->_outOvarLayer.strokeEnd = progress * 0.01;
     });
 }
 

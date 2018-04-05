@@ -120,7 +120,7 @@ TipsView
     _contentViewSize = contentViewSize;
     
     [_containertView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(_contentViewSize);
+        make.size.mas_equalTo(self->_contentViewSize);
     }];
 }
 
@@ -145,11 +145,11 @@ TipsView
         [_containertView addSubview:_contentView];
         
         [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(_containertView);
+            make.edges.mas_equalTo(self->_containertView);
         }];
     } else {
         [_containertView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(_containertView);
+            make.edges.mas_equalTo(self->_containertView);
         }];
     }
 }
@@ -186,16 +186,16 @@ TipsView
             }
             
             [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:25.f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                _containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height-offset);
-                _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+                self->_containertView.transform = CGAffineTransformMakeTranslation(0, -self.contentViewSize.height-offset);
+                self->_maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:^(BOOL finished) {
-                _isAnimating = NO;
+                self->_isAnimating = NO;
             }];
             
         } else {
             [UIView transitionWithView:superViewOrKeyWindows duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 [superViewOrKeyWindows addSubview:self];
-                _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+                self->_maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             } completion:nil];
         }
     } else {
@@ -221,11 +221,11 @@ TipsView
                 _isAnimating = NO;
             } else {
                 [UIView animateWithDuration:0.3f delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:5.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                    _containertView.transform = CGAffineTransformIdentity;
-                    _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+                    self->_containertView.transform = CGAffineTransformIdentity;
+                    self->_maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
                 } completion:^(BOOL finished) {
                     [self removeFromSuperview];
-                    _isAnimating = NO;
+                    self->_isAnimating = NO;
                 }];
             }
         } else {

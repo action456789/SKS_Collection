@@ -101,6 +101,7 @@
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
 		2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE29D1E2E418900498F7F /* ModalFromViewController.m */; };
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
+		2EE990BB2076408A0020E2BF /* LivePlayer in Resources */ = {isa = PBXBuildFile; fileRef = 2EE990BA2076408A0020E2BF /* LivePlayer */; };
 		2EFFAA5120751CB90027E44A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */; };
 		2EFFAA6020751D8C0027E44A /* KKSegmentControlPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */; };
 		2EFFAA6120751D8C0027E44A /* KKSegmentControlLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5720751D8C0027E44A /* KKSegmentControlLayoutAuto.m */; };
@@ -409,6 +410,7 @@
 		2EABE29C1E2E418900498F7F /* ModalFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalFromViewController.h; sourceTree = "<group>"; };
 		2EABE29D1E2E418900498F7F /* ModalFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalFromViewController.m; sourceTree = "<group>"; };
 		2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalFromViewController.xib; sourceTree = "<group>"; };
+		2EE990BA2076408A0020E2BF /* LivePlayer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LivePlayer; sourceTree = "<group>"; };
 		2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2EFFAA5220751D8B0027E44A /* KKSegmentControlPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlPageVC.h; sourceTree = "<group>"; };
 		2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPageVC.m; sourceTree = "<group>"; };
@@ -816,6 +818,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2EE990BA2076408A0020E2BF /* LivePlayer */,
 				814ABB342064FAE3006DFA1F /* 色盘 */,
 				814ABB2B2064FA2C006DFA1F /* WifiManager */,
 				814ABB282064F9BB006DFA1F /* VerificationInput */,
@@ -2203,6 +2206,7 @@
 				10DD98461D226B1F00193A69 /* Assets.xcassets in Resources */,
 				10DD99231D22802A00193A69 /* play_bg_p.png in Resources */,
 				81E2F2141F988DF6008ECB04 /* WeekSelectorVCDemo.xib in Resources */,
+				2EE990BB2076408A0020E2BF /* LivePlayer in Resources */,
 				2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */,
 				10DD98441D226B1F00193A69 /* Main.storyboard in Resources */,
 				816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */,

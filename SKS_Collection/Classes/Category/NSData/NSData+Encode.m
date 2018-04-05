@@ -20,7 +20,7 @@
     return @"";
 }
 
-- (NSString *)hexString {
+- (NSString *)kk_hexString {
     NSUInteger length = self.length;
     NSMutableString *result = [NSMutableString stringWithCapacity:length * 2];
     const unsigned char *byte = self.bytes;

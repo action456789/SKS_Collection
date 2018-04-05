@@ -11,7 +11,7 @@
 
 @implementation NSString (Hash)
 
-- (NSString *)md5String
+- (NSString *)kk_md5String
 {
 	const char *string = self.UTF8String;
 	int length = (int)strlen(string);

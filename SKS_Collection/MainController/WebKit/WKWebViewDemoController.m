@@ -178,13 +178,13 @@
 *  @param frame             主窗口
 *  @param completionHandler 警告框消失调用
 */
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(void (^)())completionHandler
-{
+
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"%s", __func__);
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:_webView.title
-                                                                              message:message
-                                                                       preferredStyle:UIAlertControllerStyleAlert];
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
                                                         style:UIAlertActionStyleCancel
                                                       handler:nil]];

@@ -17,7 +17,7 @@ class VerificationInput: NSObject {
     var errorMessage: String?
 }
 
-class VerificationSpecialChar: VerificationInput {
+@objc class VerificationSpecialChar: VerificationInput {
     let set = CharacterSet.init(charactersIn: "~`!@#$%^&*()+=-/;:\"\'{}[]<>^?, ")
     
     override func validate(input: String) -> Bool {

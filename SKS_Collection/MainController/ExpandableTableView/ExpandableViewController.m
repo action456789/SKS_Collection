@@ -155,7 +155,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{ //TODO 为什么不加这个线程代码就没有动画效果呢？
         self->_isSectionFirstLoad = YES;
         
-        NSIndexSet *indexSet  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, _dataArray.count)];
+        NSIndexSet *indexSet  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self->_dataArray.count)];
         [self->_tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

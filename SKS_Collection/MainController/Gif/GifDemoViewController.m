@@ -61,13 +61,13 @@
              dispatch_async(dispatch_get_main_queue(), ^{
                  CGFloat pecent = fabs((CGFloat)receivedSize/(CGFloat)expectedSize);
                  NSLog(@"%.2f", pecent);
-                 [_progressView showWithProgress:pecent];
+                 [self->_progressView showWithProgress:pecent];
              });
          } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
              NSLog(@"下载完成");
              
              dispatch_async(dispatch_get_main_queue(), ^{
-                 _gifData = data;
+                 self->_gifData = data;
                  [self createGifImage];
              });
              

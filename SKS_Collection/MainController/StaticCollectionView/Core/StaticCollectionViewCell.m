@@ -11,7 +11,7 @@
 #import <Masonry.h>
 #import "StaticCollectionViewCellItem.h"
 #import "CommonMacro.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <UIImageView+WebCache.h>
 #import "CommonMacro.h"
 
 // 图片占据整个cell的高度
