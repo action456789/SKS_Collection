@@ -72,7 +72,7 @@
              });
              
              // 缓存数据
-             [SDImageCache.sharedImageCache storeImage:image forKey:_url.absoluteString toDisk:YES];
+             [SDImageCache.sharedImageCache storeImage:image forKey:self->_url.absoluteString toDisk:YES];
          }];
 
     }

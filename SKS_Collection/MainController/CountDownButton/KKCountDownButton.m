@@ -6,19 +6,19 @@
 //  Copyright © 2016 KeSen. All rights reserved.
 //
 
-#import "SKSCountDownButton.h"
+#import "KKCountDownButton.h"
 #import "NSTimer+BlockSupurt.h"
 
-@interface SKSCountDownButton()
+@interface KKCountDownButton()
 
 @end
 
-@implementation SKSCountDownButton {
+@implementation KKCountDownButton {
     NSTimer           *_timer;
     NSString          *_titleForNormal;
     
     NSTimeInterval    _enterBackgroudTime; // 进入后台持续的时间
-
+    
     NSTimeInterval    _restTime; // 剩下的时间
     
     BOOL _isRunning; // 正在倒计时
@@ -31,6 +31,13 @@
         [self addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         _clickHandle = [handle copy];
         
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self == [super initWithFrame:frame]) {
         [self commonInit];
     }
     return self;
@@ -108,7 +115,7 @@
 
 #pragma mark - private method
 
-- (void)btnClicked:(SKSCountDownButton *)sender {
+- (void)btnClicked:(KKCountDownButton *)sender {
     if (_clickHandle) {
         _clickHandle(sender);
     }
@@ -131,10 +138,10 @@
     [self setTitle:t forState:UIControlStateNormal];
     
     _timer = [NSTimer sks_scheduledTimerInCommonModesWithTimeInterval:1.0f repeats:YES block:^{
-        self->_restTime--;
-        title = [NSString stringWithFormat:@"%lu", (unsigned long)self->_restTime];
+        _restTime--;
+        title = [NSString stringWithFormat:@"%lu", (unsigned long)_restTime];
         
-        if (self->_restTime < 0) {
+        if (_restTime < 0) {
             [self reset];
         } else {
             [self setTitle:title forState:UIControlStateNormal];

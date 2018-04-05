@@ -101,7 +101,7 @@
 		2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE2991E2E417200498F7F /* ModalToViewController.xib */; };
 		2EABE29F1E2E418900498F7F /* ModalFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABE29D1E2E418900498F7F /* ModalFromViewController.m */; };
 		2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */; };
-		2EE990BB2076408A0020E2BF /* LivePlayer in Resources */ = {isa = PBXBuildFile; fileRef = 2EE990BA2076408A0020E2BF /* LivePlayer */; };
+		2EE990BE207652E00020E2BF /* CountDownBtnDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE990BC207652E00020E2BF /* CountDownBtnDemoVC.swift */; };
 		2EFFAA5120751CB90027E44A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */; };
 		2EFFAA6020751D8C0027E44A /* KKSegmentControlPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */; };
 		2EFFAA6120751D8C0027E44A /* KKSegmentControlLayoutAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFAA5720751D8C0027E44A /* KKSegmentControlLayoutAuto.m */; };
@@ -152,8 +152,6 @@
 		8160F8231F53F2DF004B7638 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160F8221F53F2DF004B7638 /* UIApplication+AppInfo.m */; };
 		8162F5C81FC5536600E6300A /* KKSegmentControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5BF1FC5536500E6300A /* KKSegmentControlVC.m */; };
 		8162F5C91FC5536600E6300A /* SlideTabBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162F5C11FC5536500E6300A /* SlideTabBarItemController.m */; };
-		816F08181F989CD800CCF924 /* CoutdownBtnDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */; };
-		816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */; };
 		8177E22F1FAB0D47009314DB /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8177E2251FAB0D46009314DB /* NSObject+Swizzle.m */; };
 		8177E2301FAB0D47009314DB /* UIImage+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8177E2271FAB0D46009314DB /* UIImage+Swizzle.m */; };
 		8177E2311FAB0D47009314DB /* NSBundle+Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8177E2291FAB0D46009314DB /* NSBundle+Resource.m */; };
@@ -190,7 +188,7 @@
 		81A87BE82064F24A008F9F4F /* StaticCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BE12064F249008F9F4F /* StaticCellItemGroup.m */; };
 		81A87BE92064F24A008F9F4F /* StaticCellBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BE32064F249008F9F4F /* StaticCellBaseViewController.m */; };
 		81A87BEA2064F24A008F9F4F /* StaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BE62064F249008F9F4F /* StaticCell.m */; };
-		81A87BF32064F4F7008F9F4F /* SKSCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */; };
+		81A87BF32064F4F7008F9F4F /* KKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A87BF22064F4F7008F9F4F /* KKCountDownButton.m */; };
 		81B312EA1F96E904004C0EC8 /* UITableView+RadioCornerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABD41F4EA7A400DAC8E0 /* UITableView+RadioCornerCell.m */; };
 		81B312EB1F96E93A004C0EC8 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABDB1F4EA7A400DAC8E0 /* UITextView+Placeholder.m */; };
 		81B312EE1F96EA1B004C0EC8 /* UIViewController+InstanceFromClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C7ABEB1F4EA7A400DAC8E0 /* UIViewController+InstanceFromClass.m */; };
@@ -410,7 +408,7 @@
 		2EABE29C1E2E418900498F7F /* ModalFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalFromViewController.h; sourceTree = "<group>"; };
 		2EABE29D1E2E418900498F7F /* ModalFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalFromViewController.m; sourceTree = "<group>"; };
 		2EABE29E1E2E418900498F7F /* ModalFromViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalFromViewController.xib; sourceTree = "<group>"; };
-		2EE990BA2076408A0020E2BF /* LivePlayer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LivePlayer; sourceTree = "<group>"; };
+		2EE990BC207652E00020E2BF /* CountDownBtnDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownBtnDemoVC.swift; sourceTree = "<group>"; };
 		2EFFAA5020751CB90027E44A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2EFFAA5220751D8B0027E44A /* KKSegmentControlPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSegmentControlPageVC.h; sourceTree = "<group>"; };
 		2EFFAA5420751D8B0027E44A /* KKSegmentControlPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlPageVC.m; sourceTree = "<group>"; };
@@ -523,9 +521,6 @@
 		8162F5BF1FC5536500E6300A /* KKSegmentControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSegmentControlVC.m; sourceTree = "<group>"; };
 		8162F5C01FC5536500E6300A /* SlideTabBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarItemController.h; sourceTree = "<group>"; };
 		8162F5C11FC5536500E6300A /* SlideTabBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarItemController.m; sourceTree = "<group>"; };
-		816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoutdownBtnDemoVC.h; sourceTree = "<group>"; };
-		816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoutdownBtnDemoVC.m; sourceTree = "<group>"; };
-		816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoutdownBtnDemoVC.xib; sourceTree = "<group>"; };
 		8177E2231FAB0D45009314DB /* NSBundle+Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Resource.h"; sourceTree = "<group>"; };
 		8177E2241FAB0D45009314DB /* UIImage+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Swizzle.h"; sourceTree = "<group>"; };
 		8177E2251FAB0D46009314DB /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
@@ -594,8 +589,8 @@
 		81A87BE32064F249008F9F4F /* StaticCellBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCellBaseViewController.m; sourceTree = "<group>"; };
 		81A87BE52064F249008F9F4F /* StaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticCell.h; sourceTree = "<group>"; };
 		81A87BE62064F249008F9F4F /* StaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticCell.m; sourceTree = "<group>"; };
-		81A87BF12064F4F7008F9F4F /* SKSCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSCountDownButton.h; sourceTree = "<group>"; };
-		81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSCountDownButton.m; sourceTree = "<group>"; };
+		81A87BF12064F4F7008F9F4F /* KKCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCountDownButton.h; sourceTree = "<group>"; };
+		81A87BF22064F4F7008F9F4F /* KKCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCountDownButton.m; sourceTree = "<group>"; };
 		81B313961F974034004C0EC8 /* NSObject+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		81B313971F974034004C0EC8 /* NSObject+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		81B6D9D01F98A3EC009E0E54 /* EditMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMenuView.xib; sourceTree = "<group>"; };
@@ -818,7 +813,6 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
-				2EE990BA2076408A0020E2BF /* LivePlayer */,
 				814ABB342064FAE3006DFA1F /* 色盘 */,
 				814ABB2B2064FA2C006DFA1F /* WifiManager */,
 				814ABB282064F9BB006DFA1F /* VerificationInput */,
@@ -859,7 +853,7 @@
 				10F4DFD61D4097DB00E0D223 /* DiskCache */,
 				10F4DFCC1D3F85FE00E0D223 /* BlurEffect */,
 				103A55421D3CCCF200366D8F /* AnimatePauseAndResume */,
-				103A55451D3CCCF200366D8F /* 倒计时按钮 */,
+				103A55451D3CCCF200366D8F /* CountDownButton */,
 			);
 			path = MainController;
 			sourceTree = "<group>";
@@ -873,16 +867,14 @@
 			path = AnimatePauseAndResume;
 			sourceTree = "<group>";
 		};
-		103A55451D3CCCF200366D8F /* 倒计时按钮 */ = {
+		103A55451D3CCCF200366D8F /* CountDownButton */ = {
 			isa = PBXGroup;
 			children = (
-				81A87BF12064F4F7008F9F4F /* SKSCountDownButton.h */,
-				81A87BF22064F4F7008F9F4F /* SKSCountDownButton.m */,
-				816F08151F989CD800CCF924 /* CoutdownBtnDemoVC.h */,
-				816F08161F989CD800CCF924 /* CoutdownBtnDemoVC.m */,
-				816F08171F989CD800CCF924 /* CoutdownBtnDemoVC.xib */,
+				81A87BF12064F4F7008F9F4F /* KKCountDownButton.h */,
+				81A87BF22064F4F7008F9F4F /* KKCountDownButton.m */,
+				2EE990BC207652E00020E2BF /* CountDownBtnDemoVC.swift */,
 			);
-			path = "倒计时按钮";
+			path = CountDownButton;
 			sourceTree = "<group>";
 		};
 		103A55541D3CCCFA00366D8F /* BaseClasses */ = {
@@ -2206,10 +2198,8 @@
 				10DD98461D226B1F00193A69 /* Assets.xcassets in Resources */,
 				10DD99231D22802A00193A69 /* play_bg_p.png in Resources */,
 				81E2F2141F988DF6008ECB04 /* WeekSelectorVCDemo.xib in Resources */,
-				2EE990BB2076408A0020E2BF /* LivePlayer in Resources */,
 				2EABE29B1E2E417200498F7F /* ModalToViewController.xib in Resources */,
 				10DD98441D226B1F00193A69 /* Main.storyboard in Resources */,
-				816F08191F989CD800CCF924 /* CoutdownBtnDemoVC.xib in Resources */,
 				10DD99211D22802A00193A69 /* girl.png in Resources */,
 				2EABE2A01E2E418900498F7F /* ModalFromViewController.xib in Resources */,
 				10DD4E4C1D6EF6D100F7BA25 /* CheckMark.sketch in Resources */,
@@ -2308,6 +2298,7 @@
 				8177E22F1FAB0D47009314DB /* NSObject+Swizzle.m in Sources */,
 				81D2EF661F98B4070008BCE3 /* StaticCollectionViewDemo2Cell.m in Sources */,
 				81D2EF651F98B3800008BCE3 /* BannerDemoCell.m in Sources */,
+				2EE990BE207652E00020E2BF /* CountDownBtnDemoVC.swift in Sources */,
 				81E7CF7320230C9F00CBD015 /* NSBundle+LocalizationSwizzle.m in Sources */,
 				81D2EF671F98B4570008BCE3 /* BanberDemoVC.m in Sources */,
 				814ABB122064F7DB006DFA1F /* LXReorderableCollectionViewFlowLayout.m in Sources */,
@@ -2454,7 +2445,6 @@
 				81A87BC72064F1C1008F9F4F /* UITableViewCell+Seperator.m in Sources */,
 				103A03941D98C7A100A8F8A1 /* KSPhotoTool.m in Sources */,
 				81D405C41F5004D5005FB382 /* YYCGUtiilites.m in Sources */,
-				816F08181F989CD800CCF924 /* CoutdownBtnDemoVC.m in Sources */,
 				8160F8151F53D158004B7638 /* UIDevice+Memory.m in Sources */,
 				812224CD1F53BCAE00117C25 /* UIScreen+Size.m in Sources */,
 				10DD98D21D226B7D00193A69 /* NSDate+KS.m in Sources */,
@@ -2482,7 +2472,7 @@
 				10DD4E2A1D6BFAD400F7BA25 /* NSObject+Utils.m in Sources */,
 				8140197F1EC2B36A00C5B854 /* NSString+random.m in Sources */,
 				8160F8201F53F259004B7638 /* UIApplication+Sandbox.m in Sources */,
-				81A87BF32064F4F7008F9F4F /* SKSCountDownButton.m in Sources */,
+				81A87BF32064F4F7008F9F4F /* KKCountDownButton.m in Sources */,
 				2EFFAA6420751D8C0027E44A /* KKSegmentControlBaseLayout.m in Sources */,
 				8127CDDA1F5E592F00E42FD6 /* UILabel+NumberIncreaseAnim.m in Sources */,
 				81E2F2211F989617008ECB04 /* ColorSliderDemoVC.m in Sources */,

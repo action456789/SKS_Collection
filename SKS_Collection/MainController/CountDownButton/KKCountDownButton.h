@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SKSCountDownButton;
+@class KKCountDownButton;
 
 /** fix bug:
  * 注意：如果 Button 的类型不是 UIButtonTypeCustomer，会出现闪烁的效果
@@ -15,11 +15,13 @@
  * 参见：http://blog.csdn.net/chenyblog/article/details/49795645
  **/
 
-@interface SKSCountDownButton : UIButton
+NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^TouchUpInsideBlock)(SKSCountDownButton *sender);
+@interface KKCountDownButton : UIButton
 
-- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(TouchUpInsideBlock)handle;
+typedef void (^TouchUpInsideBlock)(KKCountDownButton *sender);
+
+- (instancetype)initWithTimeLenth:(NSTimeInterval)timeLenth clickdHandle:(nullable TouchUpInsideBlock)handle;
 
 - (void)startCountDown;
 
@@ -28,3 +30,5 @@ typedef void (^TouchUpInsideBlock)(SKSCountDownButton *sender);
 @property (nonatomic, copy) TouchUpInsideBlock clickHandle;
 
 @end
+
+NS_ASSUME_NONNULL_END

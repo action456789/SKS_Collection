@@ -7,7 +7,6 @@
 //
 
 #import "RootViewController.h"
-#import "CoutdownBtnDemoVC.h"
 #import "RotateAnimateViewController.h"
 #import "KKSegmentControlVC.h"
 #import "BlurEffectDemoController.h"
@@ -60,7 +59,7 @@
 
 - (void)initData
 {
-    NSArray *items = @[ [StaticCellItem itemWithTitle:@" 1. 倒计时按钮" icon:nil objectClass:[CoutdownBtnDemoVC class]]
+    NSArray *items = @[ [StaticCellItem itemWithTitle:@" 1. 倒计时按钮" icon:nil     objectClass:[CountDownBtnDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"2. 转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
                         ,[StaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSegmentControlDemoVC class]]
                         ,[StaticCellItem itemWithTitle:@"4. 模糊效果" icon:nil objectClass:[BlurEffectDemoController class]]
