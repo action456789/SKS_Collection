@@ -93,6 +93,9 @@
 		2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */; };
 		2E3C87F71E25FD3C000A267D /* HitTestEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */; };
 		2E47B0D71E49EB68003F4B44 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E47B0D61E49EB68003F4B44 /* BannerView.m */; };
+		2E7B3D772098C3FE00ED197D /* NSTimer+WeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B3D762098C3FD00ED197D /* NSTimer+WeakTimer.m */; };
+		2E7FC14320A9990A00C3D441 /* UIImageTransformTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7FC14120A9990A00C3D441 /* UIImageTransformTestVC.m */; };
+		2E7FC14420A9990A00C3D441 /* UIImageTransformTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E7FC14220A9990A00C3D441 /* UIImageTransformTestVC.xib */; };
 		2E83B12D207485600073CC34 /* InputContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E83B12A2074855F0073CC34 /* InputContactView.swift */; };
 		2E83B12E207485600073CC34 /* InputFeedBackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E83B12B2074855F0073CC34 /* InputFeedBackTextView.swift */; };
 		2E83B12F207485600073CC34 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E83B12C2074855F0073CC34 /* FeedBackViewController.swift */; };
@@ -397,6 +400,11 @@
 		2E3C87F61E25FD3C000A267D /* HitTestEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestEdgeInsetsButton.m; sourceTree = "<group>"; };
 		2E47B0D51E49EB68003F4B44 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		2E47B0D61E49EB68003F4B44 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		2E7B3D752098C3FD00ED197D /* NSTimer+WeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WeakTimer.h"; sourceTree = "<group>"; };
+		2E7B3D762098C3FD00ED197D /* NSTimer+WeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WeakTimer.m"; sourceTree = "<group>"; };
+		2E7FC14020A9990A00C3D441 /* UIImageTransformTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageTransformTestVC.h; sourceTree = "<group>"; };
+		2E7FC14120A9990A00C3D441 /* UIImageTransformTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageTransformTestVC.m; sourceTree = "<group>"; };
+		2E7FC14220A9990A00C3D441 /* UIImageTransformTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIImageTransformTestVC.xib; sourceTree = "<group>"; };
 		2E83B12A2074855F0073CC34 /* InputContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputContactView.swift; sourceTree = "<group>"; };
 		2E83B12B2074855F0073CC34 /* InputFeedBackTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFeedBackTextView.swift; sourceTree = "<group>"; };
 		2E83B12C2074855F0073CC34 /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
@@ -813,6 +821,7 @@
 		103A55411D3CCCF200366D8F /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2E7FC13F20A998DB00C3D441 /* 颜色转换 */,
 				814ABB342064FAE3006DFA1F /* 色盘 */,
 				814ABB2B2064FA2C006DFA1F /* WifiManager */,
 				814ABB282064F9BB006DFA1F /* VerificationInput */,
@@ -1164,6 +1173,8 @@
 			children = (
 				10DD987E1D226B7D00193A69 /* NSTimer+BlockSupurt.h */,
 				10DD987F1D226B7D00193A69 /* NSTimer+BlockSupurt.m */,
+				2E7B3D752098C3FD00ED197D /* NSTimer+WeakTimer.h */,
+				2E7B3D762098C3FD00ED197D /* NSTimer+WeakTimer.m */,
 			);
 			path = NSTimer;
 			sourceTree = "<group>";
@@ -1448,6 +1459,16 @@
 				2E3C87F21E25FD29000A267D /* AddClickAreaButtonDemeVC.xib */,
 			);
 			path = "增加按钮点击区域";
+			sourceTree = "<group>";
+		};
+		2E7FC13F20A998DB00C3D441 /* 颜色转换 */ = {
+			isa = PBXGroup;
+			children = (
+				2E7FC14020A9990A00C3D441 /* UIImageTransformTestVC.h */,
+				2E7FC14120A9990A00C3D441 /* UIImageTransformTestVC.m */,
+				2E7FC14220A9990A00C3D441 /* UIImageTransformTestVC.xib */,
+			);
+			path = "颜色转换";
 			sourceTree = "<group>";
 		};
 		2EABE28E1E2E3C6900498F7F /* 自定义转场动画 */ = {
@@ -2157,6 +2178,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 33UJTTK2KL;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -2189,6 +2211,7 @@
 				81E2F2221F989617008ECB04 /* ColorSliderDemoVC.xib in Resources */,
 				10D78CC01D48B1BD00ACDBF8 /* test.html in Resources */,
 				817C6E331F98A00B0086A05B /* TipsViewDemoVC.xib in Resources */,
+				2E7FC14420A9990A00C3D441 /* UIImageTransformTestVC.xib in Resources */,
 				10DD4E4B1D6EF6D100F7BA25 /* CheckMark.png in Resources */,
 				10DD98491D226B1F00193A69 /* LaunchScreen.storyboard in Resources */,
 				2E3C87F41E25FD29000A267D /* AddClickAreaButtonDemeVC.xib in Resources */,
@@ -2459,6 +2482,7 @@
 				10DD98D61D226B7D00193A69 /* NSString+Hash.m in Sources */,
 				10DD983B1D226B1F00193A69 /* main.m in Sources */,
 				814ABB272064F9AE006DFA1F /* ArchiverTool.swift in Sources */,
+				2E7B3D772098C3FE00ED197D /* NSTimer+WeakTimer.m in Sources */,
 				81A87BBE2064EF3C008F9F4F /* NSObject+KVO.m in Sources */,
 				814ABB262064F9AE006DFA1F /* SQLiteTool.swift in Sources */,
 				8160F8121F53D148004B7638 /* UIDevice+DiskSpace.m in Sources */,
@@ -2466,6 +2490,7 @@
 				814ABB162064F81A006DFA1F /* KKTextField.m in Sources */,
 				2E38E9861E28D5BB0086B870 /* StaticCollectionViewCellItem.m in Sources */,
 				10F7EEFB1D5C0EC200801FD6 /* ExpandableViewController.m in Sources */,
+				2E7FC14320A9990A00C3D441 /* UIImageTransformTestVC.m in Sources */,
 				10DD4E361D6D8DEF00F7BA25 /* AppSharedDataManager.m in Sources */,
 				103DBDBB1DB3519000BEFBBE /* KSBlockButton.m in Sources */,
 				81E2F21D1F9894B9008ECB04 /* ColorSlider.m in Sources */,
@@ -2630,6 +2655,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 33UJTTK2KL;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2646,11 +2673,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SenKe.SKS-Collection";
 				PRODUCT_MODULE_NAME = SKS_Collection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SKS_Collection/SKS_Collection-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2660,6 +2688,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 33UJTTK2KL;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2676,10 +2706,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SenKe.SKS-Collection";
 				PRODUCT_MODULE_NAME = SKS_Collection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SKS_Collection/SKS_Collection-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

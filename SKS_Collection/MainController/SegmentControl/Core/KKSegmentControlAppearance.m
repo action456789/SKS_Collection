@@ -16,7 +16,7 @@
 }
 
 - (CGFloat)headerViewWidth {
-    return kScreenWidth * 0.7;
+    return kScreenWidth;
 }
     
 - (UIColor *)headerBackgroundColor {
