@@ -98,4 +98,51 @@
     return image;
 }
 
+- (unsigned char *)kk_toBytes {
+    CGFloat w = self.size.width;
+    CGFloat h = self.size.height;
+    CGImageRef imageRef = self.CGImage;
+    void *data = malloc(w * h * 4); // rgba中，每个单元占4个字节
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(data, w, h, 8, w * 4, colorSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), imageRef);
+    
+    CGColorSpaceRelease(colorSpace);
+    CGContextRelease(context);
+    
+    return (unsigned char *)data;
+}
+
++ (UIImage *)kk_fromBytes:(unsigned char *)data originImageW:(CGFloat)w originImageH:(CGFloat)h {
+    NSInteger dataLength = w * h * 4; // rgba4个component
+    NSInteger bitPerComponet = 8;
+    NSInteger bitPerPixel = 32;
+    NSInteger bytesPerRow = w * 4;
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
+    CGDataProviderRef provide = CGDataProviderCreateWithData(NULL, data, dataLength, NULL);
+    CGColorRenderingIntent renderIntent = kCGRenderingIntentDefault;
+    
+    CGImageRef imageRef = CGImageCreate( w,
+                                          h,
+                                          bitPerComponet,
+                                          bitPerPixel,
+                                          bytesPerRow,
+                                          colorSpaceRef,
+                                          bitmapInfo,
+                                          provide,
+                                          NULL,
+                                          NO,
+                                          renderIntent);
+    
+    UIImage *imageNew = [UIImage imageWithCGImage:imageRef];
+    
+    CFRelease(imageRef);
+    CGColorSpaceRelease(colorSpaceRef);
+    CGDataProviderRelease(provide);
+    
+    return imageNew;
+}
+
 @end

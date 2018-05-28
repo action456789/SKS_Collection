@@ -47,6 +47,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)kk_scaleToWidth:(CGFloat)width;
 
+// 将UIImage转为字节数据
+- (unsigned char *)kk_toBytes;
+
+/**
+ @param data 从字节数据中返回UIImage
+ @param w 原始图片数据的宽度
+ @param h 原始图片数据的高度
+ @return 新的的图片
+ */
++ (UIImage *)kk_fromBytes:(unsigned char *)data originImageW:(CGFloat)w originImageH:(CGFloat)h;
+
 @end
 
 NS_ASSUME_NONNULL_END
