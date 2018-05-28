@@ -30,10 +30,14 @@
         CGFloat titleStringW = [self.itemStringWidths[idx] floatValue];
         CGFloat x = itemX + idx * self.config.itemHorizontalSpace;
         
+        // ScrollView
         UIView *superView = itemButton.superview;
         
+        // 最外层View
+        UIView *rootView = [superView superview];
+        
         [itemButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(superView.mas_top);
+            make.top.mas_equalTo(rootView.mas_top);
             make.height.mas_equalTo(@(self.config.headerViewHeight * self.config.itemHeightRatio));
             make.left.mas_equalTo(superView.mas_left).offset(x);
             make.width.mas_equalTo(@(titleStringW));

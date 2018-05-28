@@ -11,10 +11,17 @@
 
 // 判断是否是横屏
 #define kLandscape UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+
+// 不同版本下，返回的结果不同，因此不可用
 // 宽度
-#define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+//#define kScreenWidth    (kLandscape ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 // 高度
-#define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
+//#define kScreenHeight   (kLandscape ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen]  bounds].size.height)
+
+// 宽度
+#define kScreenWidth    ([UIApplication sharedApplication].keyWindow.rootViewController.view.bounds.size.width)
+// 高度
+#define kScreenHeight   ([UIApplication sharedApplication].keyWindow.rootViewController.view.bounds.size.height)
 
 // 设备唯一标识符
 #define kDeviceUUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString]

@@ -48,15 +48,15 @@
 }
 
 - (CGFloat)slideLeftRightOverWidth {
-    return 10.f;
+    return 5.f;
 }
 
 - (CGFloat)firstItemLeftPadding {
-    return self.slideLeftRightOverWidth;
+    return 20;
 }
 
 - (CGFloat)lastItemRightPadding {
-    return self.slideLeftRightOverWidth;
+    return 20;
 }
 
 - (CGFloat)itemHorizontalSpace {
