@@ -6,14 +6,14 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "StaticCell.h"
-#import "StaticCellItem.h"
+#import "KKStaticCell.h"
+#import "KKStaticCellItem.h"
 #import "CommonMacro.h"
 #import "UIView+Frame.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
 
-@interface StaticCell()
+@interface KKStaticCell()
 
 @property (nonatomic, strong) UISwitch *rightContentSwitchView;
 
@@ -25,7 +25,7 @@
 
 // 这里最好用懒加载，因为所有控件只在特定的 cell 类型下才会使用
 
-@implementation StaticCell
+@implementation KKStaticCell
 {
     UIView *_selectedBgView;
 }
@@ -80,7 +80,7 @@
     [self.detailTextLabel setTextColor: kColorWithHex(0x666666)];
 }
 
-- (void)setItem:(StaticCellItem *)item {
+- (void)setItem:(KKStaticCellItem *)item {
     _item = item;
     
     [self _setupData];
@@ -127,11 +127,11 @@
     }
     
     // 开关
-    if (_item.switchValue != StaticCellSwitchValueNone) {
+    if (_item.switchValue != KKStaticCellSwitchValueNone) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.accessoryView = self.rightContentSwitchView;
         
-        if (_item.switchValue == StaticCellSwitchValueDefault && IsValidateString(self.item.title)) {
+        if (_item.switchValue == KKStaticCellSwitchValueDefault && IsValidateString(self.item.title)) {
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             self.rightContentSwitchView.on = [defaults boolForKey:self.item.title];
         } else {
@@ -150,7 +150,7 @@
 
 - (void)_setupType {
     switch (_item.cellType) {
-        case StaticCellTypeCheckMark: {
+        case KKStaticCellTypeCheckMark: {
             self.selectionStyle = UITableViewCellSelectionStyleNone;
             self.accessoryType = UITableViewCellAccessoryCheckmark;
             

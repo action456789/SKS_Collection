@@ -9,7 +9,7 @@
 #import "NSObject+Utils.h"
 #import <MJExtension/MJExtension.h>
 #import <objc/runtime.h>
-#import "StaticCellItem.h"
+#import "KKStaticCellItem.h"
 
 @implementation NSObject (Utils)
 

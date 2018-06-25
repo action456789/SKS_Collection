@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class StaticCellItem;
+@class KKStaticCellItem;
 
-@interface StaticCellItemGroup : NSObject
+@interface KKStaticCellItemGroup : NSObject
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,7 +28,7 @@ typedef void (^DidSelectedRowBlock)(NSArray<NSIndexPath *> *selectedIndexPaths);
 @property (nonatomic, assign) CGFloat headerHeight;
 @property (nonatomic, assign) CGFloat footerHeight;
 
-@property (nonatomic, strong) NSArray<StaticCellItem *> *items;
+@property (nonatomic, strong) NSArray<KKStaticCellItem *> *items;
 
 @property (nonatomic, assign) GroupType type;
 

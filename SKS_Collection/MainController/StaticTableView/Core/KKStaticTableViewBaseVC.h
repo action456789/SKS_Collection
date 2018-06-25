@@ -6,15 +6,15 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "StaticCellItem.h"
-#import "StaticCellItemGroup.h"
-#import "StaticCell.h"
+#import "KKStaticCellItem.h"
+#import "KKStaticCellItemGroup.h"
+#import "KKStaticCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StaticCellBaseViewController : UIViewController
+@interface KKStaticTableViewBaseVC : UIViewController
 
-@property (nonatomic, strong) NSArray<StaticCellItemGroup *> * dataArray;
+@property (nonatomic, strong) NSArray<KKStaticCellItemGroup *> * dataArray;
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIView * __nullable)viewForFooterInSection:(NSInteger)section;
 
 // 自定义 TableViewCell 界面风格，如字体等
-- (void)setupStaticCellAppearence:(StaticCell *)cell;
+- (void)setupStaticCellAppearence:(KKStaticCell *)cell;
 
 // 设置UITableViewStyle，由子类重载
 - (UITableViewStyle)tableViewStyle;

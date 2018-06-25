@@ -6,12 +6,12 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "StaticCellItemGroup.h"
+#import "KKStaticCellItemGroup.h"
 
-@implementation StaticCellItemGroup
+@implementation KKStaticCellItemGroup
 
 + (instancetype)itemGroupWithItems:(NSArray *)items {
-    StaticCellItemGroup *group = [[StaticCellItemGroup alloc] init];
+    KKStaticCellItemGroup *group = [[KKStaticCellItemGroup alloc] init];
     group.items = items;
     group.headerTitle = nil;
     group.footerTitle = nil;

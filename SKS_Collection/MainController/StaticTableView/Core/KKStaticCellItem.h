@@ -8,21 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, StaticCellType) {
-    StaticCellTypeNone,
-    StaticCellTypeCheckMark,
+typedef NS_ENUM(NSUInteger, KKStaticCellType) {
+    KKStaticCellTypeNone,
+    KKStaticCellTypeCheckMark,
 };
 
-typedef NS_ENUM(NSInteger, StaticCellSwitchValue) {
-    StaticCellSwitchValueNone = -2, // 非开关类型
-    StaticCellSwitchValueDefault = -1, // default，根据上次的值获取（存储在沙盒中）
-    StaticCellSwitchValueOff, // 0 关
-    StaticCellSwitchValueOn, // 1 开
+typedef NS_ENUM(NSInteger, KKStaticCellSwitchValue) {
+    KKStaticCellSwitchValueNone = -2, // 非开关类型
+    KKStaticCellSwitchValueDefault = -1, // default，根据上次的值获取（存储在沙盒中）
+    KKStaticCellSwitchValueOff, // 0 关
+    KKStaticCellSwitchValueOn, // 1 开
 };
 
 #define kStaticCellUpdataNofication @"kStaticCellUpdataNofication"
 
-@interface StaticCellItem : NSObject
+@interface KKStaticCellItem : NSObject
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -51,7 +51,7 @@ typedef void (^kk_CellSwitchValueChangeHandle)(UISwitch * s);
 
 @property (nonatomic, strong) Class _Nullable objectClass;
 
-@property (nonatomic, assign) StaticCellType cellType;
+@property (nonatomic, assign) KKStaticCellType cellType;
 
 // 自定义 TalbleViewCell 内容
 @property (nonatomic, strong) UIView *_Nullable customerView;
@@ -60,7 +60,7 @@ typedef void (^kk_CellSwitchValueChangeHandle)(UISwitch * s);
 @property (nonatomic, copy) kk_CellLeftScrollDeleteHandle deleteHandle;
 
 // 开关默认值
-@property (nonatomic, assign) StaticCellSwitchValue switchValue;
+@property (nonatomic, assign) KKStaticCellSwitchValue switchValue;
 
 // 右边为 Switch 时，UISwitch Value Change 事件回调
 @property (nonatomic, copy) kk_CellSwitchValueChangeHandle switchValueChangeHandle;

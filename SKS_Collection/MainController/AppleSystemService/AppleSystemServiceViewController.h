@@ -7,8 +7,8 @@
 //
 
 
-#import "StaticCellBaseViewController.h"
+#import "KKStaticTableViewBaseVC.h"
 
-@interface AppleSystemServiceViewController : StaticCellBaseViewController
+@interface AppleSystemServiceViewController : KKStaticTableViewBaseVC
 
 @end

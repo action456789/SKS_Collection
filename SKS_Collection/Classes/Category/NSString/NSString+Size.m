@@ -48,7 +48,7 @@
     return size.width;
 }
 
-- (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width {
+- (CGFloat)kk_heightForFont:(UIFont *)font width:(CGFloat)width {
     CGSize size = [self kk_sizeForFont:font size:CGSizeMake(width, HUGE) mode:NSLineBreakByWordWrapping];
     return size.height;
 }

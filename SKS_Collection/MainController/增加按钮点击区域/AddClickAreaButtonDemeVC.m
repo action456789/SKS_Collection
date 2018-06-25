@@ -7,11 +7,11 @@
 //
 
 #import "AddClickAreaButtonDemeVC.h"
-#import "HitTestEdgeInsetsButton.h"
+#import "KKHitTestEdgeInsetsButton.h"
 
 @interface AddClickAreaButtonDemeVC ()
 
-@property (weak, nonatomic) IBOutlet HitTestEdgeInsetsButton *button;
+@property (weak, nonatomic) IBOutlet KKHitTestEdgeInsetsButton *button;
 
 @end
 

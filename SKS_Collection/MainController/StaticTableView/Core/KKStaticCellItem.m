@@ -6,19 +6,19 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "StaticCellItem.h"
+#import "KKStaticCellItem.h"
 
-@implementation StaticCellItem
+@implementation KKStaticCellItem
 
-+ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(StaticCellType)type {
-    StaticCellItem *item  = [[[self class] alloc] init];
++ (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon type:(KKStaticCellType)type {
+    KKStaticCellItem *item  = [[[self class] alloc] init];
     item.icon = icon;
     item.title = title;
     item.detail = nil;
     item.isShowIndicator = YES;
     item.clickedHandle = nil;
     item.objectClass = nil;
-    item.switchValue = StaticCellSwitchValueNone;
+    item.switchValue = KKStaticCellSwitchValueNone;
     item.cellType = type;
     item.isSelectionStyleEnable = YES;
     
@@ -26,7 +26,7 @@
 }
 
 + (instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon objectClass:(Class)objectClass {
-    StaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:StaticCellTypeNone];
+    KKStaticCellItem *item = [[self class] itemWithTitle:title icon:icon type:KKStaticCellTypeNone];
     item.objectClass = objectClass;
 
     return item;

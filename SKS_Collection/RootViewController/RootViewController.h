@@ -6,8 +6,8 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "StaticCellBaseViewController.h"
+#import "KKStaticTableViewBaseVC.h"
 
-@interface RootViewController : StaticCellBaseViewController
+@interface RootViewController : KKStaticTableViewBaseVC
 
 @end

@@ -7,22 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-@class StaticCellItem;
-@class StaticCell;
+@class KKStaticCellItem;
+@class KKStaticCell;
 
 #define kStaticCellH 50.f
 #define kStaticCellDeviderH 5
 
 @protocol StaticCellDelegate <NSObject>
 @optional
-- (void)staticCellSetupAppearance:(StaticCell *)cell;
+- (void)staticCellSetupAppearance:(KKStaticCell *)cell;
 @end
 
-@interface StaticCell : UITableViewCell
+@interface KKStaticCell : UITableViewCell
 
 @property (nonatomic,weak) id<StaticCellDelegate> delegate;
 
-@property (nonatomic, strong) StaticCellItem *item;
+@property (nonatomic, strong) KKStaticCellItem *item;
 
 @property (nonatomic, assign) BOOL isShowBgDivider;
 

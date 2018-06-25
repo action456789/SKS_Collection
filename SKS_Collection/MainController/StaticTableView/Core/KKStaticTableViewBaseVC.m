@@ -6,20 +6,20 @@
 //  Copyright © 2016 SenKe. All rights reserved.
 //
 
-#import "StaticCellBaseViewController.h"
-#import "StaticCell.h"
+#import "KKStaticTableViewBaseVC.h"
+#import "KKStaticCell.h"
 #import "CommonMacro.h"
 #import "UIView+CornerRadio.h"
 #import "UIViewController+InstanceFromClass.h"
 #import "UITableView+RadioCornerCell.h"
 
-@interface StaticCellBaseViewController() <UITableViewDelegate, UITableViewDataSource, StaticCellDelegate> {
+@interface KKStaticTableViewBaseVC() <UITableViewDelegate, UITableViewDataSource, StaticCellDelegate> {
     NSInteger _selectedIndex;
 }
 
 @end
 
-@implementation StaticCellBaseViewController
+@implementation KKStaticTableViewBaseVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,7 +59,7 @@
     
 }
 
-- (void)setupStaticCellAppearence:(StaticCell *)cell {
+- (void)setupStaticCellAppearence:(KKStaticCell *)cell {
     
 }
 
@@ -94,7 +94,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
+    KKStaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     
     if (item.customerView) {
         return item.customerView.bounds.size.height;
@@ -114,7 +114,7 @@
 
 #pragma mark - tableView delegate
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(StaticCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView willDisplayCell:(KKStaticCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.backgroundColor = [UIColor whiteColor];
     
     BOOL isLastCell = indexPath.row == self.dataArray[indexPath.section].items.count - 1 && indexPath.section == self.dataArray.count - 1;
@@ -128,8 +128,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    StaticCellItemGroup *group = self.dataArray[indexPath.section];
-    StaticCellItem *item = group.items[indexPath.row];
+    KKStaticCellItemGroup *group = self.dataArray[indexPath.section];
+    KKStaticCellItem *item = group.items[indexPath.row];
     
     UITableViewCellStyle style;
     if (item.detail != nil || item.detailAttributeString != nil) {
@@ -139,7 +139,7 @@
     }
     
     // 因为每个 cell 都可能不同，所以不使用 cell 重用。所以本框架不适用于数据量很大的情况
-    StaticCell *cell = [[StaticCell alloc] initWithStyle:style reuseIdentifier:@""];
+    KKStaticCell *cell = [[KKStaticCell alloc] initWithStyle:style reuseIdentifier:@""];
     cell.delegate = self;
     
     // 多选、单选、可取消的单选状态下，默认选中的 item
@@ -149,7 +149,7 @@
                         ||  group.type == GroupTypeSingleCheckMark);
     if (shouldShowCheckMark) {
         group.defaultSelectedIndex = -1;
-        item.cellType = StaticCellTypeCheckMark;
+        item.cellType = KKStaticCellTypeCheckMark;
         _selectedIndex = indexPath.row;
         
         [group.selectedIndexPaths addObject:indexPath];
@@ -164,14 +164,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    StaticCell *cell = (StaticCell *)[tableView cellForRowAtIndexPath:indexPath];
+    KKStaticCell *cell = (KKStaticCell *)[tableView cellForRowAtIndexPath:indexPath];
     if (!cell.item.isSelectionStyleEnable) {
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         cell.selected = NO;
     }
     
-    StaticCellItemGroup *group = self.dataArray[indexPath.section];
-    StaticCellItem *item = group.items[indexPath.row];
+    KKStaticCellItemGroup *group = self.dataArray[indexPath.section];
+    KKStaticCellItem *item = group.items[indexPath.row];
     
     if (item.objectClass) {
         UIViewController *controller = [UIViewController controllerWithClass:item.objectClass];
@@ -185,8 +185,8 @@
     
     // 单选
     if (group.type == GroupTypeSingleCheckMark && _selectedIndex != indexPath.row) {
-        group.items[_selectedIndex].cellType = StaticCellTypeNone;
-        item.cellType = StaticCellTypeCheckMark;
+        group.items[_selectedIndex].cellType = KKStaticCellTypeNone;
+        item.cellType = KKStaticCellTypeCheckMark;
         _selectedIndex = indexPath.row;
         
         [group.selectedIndexPaths removeAllObjects];
@@ -198,12 +198,12 @@
     else if (group.type == GroupTypeSingleCheckMarkCanCancle) {
         [group.selectedIndexPaths removeAllObjects];
 
-        StaticCellType originalType = item.cellType;
-        for (StaticCellItem *i in group.items) {
-            i.cellType = StaticCellTypeNone;
+        KKStaticCellType originalType = item.cellType;
+        for (KKStaticCellItem *i in group.items) {
+            i.cellType = KKStaticCellTypeNone;
         }
-        if (originalType == StaticCellTypeNone) {
-            item.cellType = StaticCellTypeCheckMark;
+        if (originalType == KKStaticCellTypeNone) {
+            item.cellType = KKStaticCellTypeCheckMark;
             [group.selectedIndexPaths addObject:indexPath];
         }
         
@@ -211,11 +211,11 @@
     }
     // 多选
     else if (group.type == GroupTypeMultipleCheckMark) {
-        if (item.cellType == StaticCellTypeNone) {
-            item.cellType = StaticCellTypeCheckMark;
+        if (item.cellType == KKStaticCellTypeNone) {
+            item.cellType = KKStaticCellTypeCheckMark;
             [group.selectedIndexPaths addObject:indexPath];
-        } else if (item.cellType == StaticCellTypeCheckMark) {
-            item.cellType = StaticCellTypeNone;
+        } else if (item.cellType == KKStaticCellTypeCheckMark) {
+            item.cellType = KKStaticCellTypeNone;
             [group.selectedIndexPaths removeObject:indexPath];
         }
         
@@ -247,7 +247,7 @@
 #pragma - mark Edit
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
+    KKStaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     return item.deleteHandle != nil;
 }
 
@@ -260,7 +260,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    StaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
+    KKStaticCellItem *item = self.dataArray[indexPath.section].items[indexPath.row];
     if (item.deleteHandle) {
         kk_CellLeftScrollDeleteHandle handleCopy = [item.deleteHandle copy];
         handleCopy(indexPath);
@@ -274,7 +274,7 @@
 
 # pragma mark - StaticCellDelegate
 
-- (void)staticCellSetupAppearance:(StaticCell *)cell {
+- (void)staticCellSetupAppearance:(KKStaticCell *)cell {
     [self setupStaticCellAppearence:cell];
 }
 

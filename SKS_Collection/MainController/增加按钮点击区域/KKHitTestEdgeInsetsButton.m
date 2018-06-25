@@ -6,9 +6,9 @@
 //  Copyright © 2017年 SenKe. All rights reserved.
 //
 
-#import "HitTestEdgeInsetsButton.h"
+#import "KKHitTestEdgeInsetsButton.h"
 
-@implementation HitTestEdgeInsetsButton
+@implementation KKHitTestEdgeInsetsButton
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     if (self.userInteractionEnabled == NO || self.hidden == YES || self.alpha <= 0.01) return nil;

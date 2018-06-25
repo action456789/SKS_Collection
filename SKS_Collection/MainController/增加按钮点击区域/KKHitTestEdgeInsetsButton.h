@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HitTestEdgeInsetsButton : UIButton
+@interface KKHitTestEdgeInsetsButton : UIButton
 
 // 四周增加同样的点击区域
 @property (nonatomic, assign) CGFloat padding;

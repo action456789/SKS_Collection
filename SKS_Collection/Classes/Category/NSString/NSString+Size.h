@@ -57,6 +57,6 @@
  @return       The height of the resulting string's bounding box. These values
  may be rounded up to the nearest whole number.
  */
-- (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width;
+- (CGFloat)kk_heightForFont:(UIFont *)font width:(CGFloat)width;
 
 @end
