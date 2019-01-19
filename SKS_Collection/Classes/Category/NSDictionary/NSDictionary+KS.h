@@ -15,17 +15,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  返回 url 中的参数列表
  */
-+ (instancetype)ks_dictionaryInURL:(NSString *)url;
++ (instancetype)kk_dictionaryInURL:(NSString *)url;
 
 /**
  *  JSON 字符串返回字典
  */
-+ (instancetype)ks_dictionaryFromString:(NSString *)jsonString;
++ (instancetype)kk_dictionaryFromString:(NSString *)jsonString;
 
 /**
  *  字典返回json字符串
  */
-- (NSString *)ks_jsonString;
+- (NSString *)kk_jsonString;
 
 @end
 

@@ -60,6 +60,12 @@
 
 - (void)initData
 {
+    KKStaticCellItem *item = [KKStaticCellItem itemWithTitle:@"28. 自定义转场动画" icon:nil objectClass:nil];
+    item.clickedHandle = ^(NSIndexPath * _Nonnull indexPath) {
+        ModalFromViewController *vc = [[ModalFromViewController alloc] initWithNibName:@"ModalFromViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    
     NSArray *items = @[ [KKStaticCellItem itemWithTitle:@" 1. 倒计时按钮" icon:nil     objectClass:[CountDownBtnDemoVC class]]
                         ,[KKStaticCellItem itemWithTitle:@"2. 转动动画的暂停与恢复" icon:nil objectClass:[RotateAnimateViewController class]]
                         ,[KKStaticCellItem itemWithTitle:@"3. Slide Tab Bar" icon:nil objectClass:[KKSegmentControlDemoVC class]]
@@ -89,7 +95,7 @@
                         ,[KKStaticCellItem itemWithTitle:@"25. 静态CollectionViewCell demo1 无限循环View" icon:nil objectClass:[BanberDemoVC class]]
                         ,[KKStaticCellItem itemWithTitle:@"26. 静态CollectionViewCell demo2" icon:nil objectClass:[StaticCollectionViewDemo2VC class]]
                         ,[KKStaticCellItem itemWithTitle:@"27. 静态CollectionViewCell demo3" icon:nil objectClass:[StaticCollectionViewDemo3VC class]]
-                        ,[KKStaticCellItem itemWithTitle:@"28. 自定义转场动画" icon:nil objectClass:[ModalFromViewController class]]
+                        ,item
                         ,[KKStaticCellItem itemWithTitle:@"29. 弹性按钮" icon:nil objectClass:[EjectShrinkBtnsDemoVC class]]
                         ,[KKStaticCellItem itemWithTitle:@"30. 彩色滑块" icon:nil objectClass:[ColorSliderDemoVC class]]
                         ,[KKStaticCellItem itemWithTitle:@"31. 圆环控制动画控制器" icon:nil objectClass:[LightControlPannelVC class]]
